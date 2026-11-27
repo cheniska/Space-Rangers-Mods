@@ -1,0 +1,404 @@
+{
+  "LangDatIn": "CFG\\Rus\\Lang.txt",
+  "LangDatOut": "CFG\\Rus\\Lang.dat",
+  "MainDatIn": "CFG\\Main.txt",
+  "MainDatOut": "CFG\\Main.dat",
+  "CacheDatIn": "CFG\\CacheData.txt",
+  "CacheDatOut": "CFG\\CacheData.dat",
+  "ExportLangTxt": true,
+  "ExportLangDat": true,
+  "FileID":  573785173,
+  "FileVersion":  8,
+  "ViewPos.x":  -688,
+  "ViewPos.y":  -643,
+  "ScriptName":  "Mod_RefSpAgHybrid",
+  "ScriptFileOut": "DATA\\Script\\Mod_RefSpAgHybrid.scr",
+  "ScriptTextOut": "DATA\\Script\\Mod_RefSpAgHybrid.txt",
+  "Visual.Objects":  
+  [
+    {
+      "Groups":      
+      [
+        {
+          "Type":  "TGroup",
+          "Name":  "GroupNew",
+          "Pos.x":  -100,
+          "Pos.y":  0,
+          "Parent":  -1,
+          "#":  4,
+          "Owner":  62,
+          "Group.Type":  126,
+          "CntShipMin":  1,
+          "CntShipMax":  1,
+          "SpeedMin":  100,
+          "SpeedMax":  10000,
+          "Weapon":  0,
+          "CargoHook":  0,
+          "EmptySpace":  0,
+          "AddPlayer":  true,
+          "StatusTraderMin":  0,
+          "StatusTraderMax":  100,
+          "StatusWarriorMin":  0,
+          "StatusWarriorMax":  100,
+          "StatusPirateMin":  0,
+          "StatusPirateMax":  100,
+          "DistSearch":  10000,
+          "Dialog":  -1,
+          "StrengthMin":  "0",
+          "StrengthMax":  "0",
+          "Ruins":  ""        
+        }      
+      ],
+      "Items":      
+      [
+        {
+          "Type":  "TItem",
+          "Name":  "HybridBdup",
+          "Pos.x":  80,
+          "Pos.y":  -150,
+          "Parent":  -1,
+          "#":  18,
+          "Class":  5,
+          "Item.Type":  0,
+          "Size":  10,
+          "Level":  1,
+          "Radius":  150,
+          "Owner":  6,
+          "Useless":  ""        
+        }      
+      ],
+      "Operations":      
+      [
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  -50,
+          "Pos.y":  -90,
+          "Parent":  -1,
+          "#":  5,
+          "Code.Type":  "Global",
+          "Code":          
+          [
+              "if(!GCntRun(GScriptName)) GRun();"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  -50,
+          "Pos.y":  -130,
+          "Parent":  -1,
+          "#":  6,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "if(!CoalitionDefeated()) {",
+              "    if(GetValueFromScript('PC_fem_rangers','shu_state')) {",
+              "        if(Wait) Wait = Wait - 1;",
+              "        else {",
+              "            if(!Flag) {",
+              "                Flag = 1;",
+              "                lastShipId = GalaxyShipId(); //существующим - через инфошку при посадке (раньше список новых начинался с 0 и дроид ставился всем сразу)",
+              "                for(i=0;GalaxyStars()>i;i=i+1) {",
+              "                    star = GalaxyStar(i);",
+              "                    for(j=0;StarShips(star)>j;j=j+1) {",
+              "                        ship = StarShips(star,j);",
+              "                        if(ShipType(ship) == 'FemRanger') ShipAddCustomShipInfo(ship,'RefAutoInstaller','NoShow');",
+              "                    }",
+              "                }",
+              "            }",
+              "            else {",
+              "                if(GalaxyShipId()>lastShipId) {",
+              "                    tdwd=BuildListOfNewShips(tempArr,lastShipId,1+2+4+8+16+256+4096+8192,1+2+4+8+16+128,1,'');",
+              "                    if(tdwd) {    //Если найден хотя бы один корабль",
+              "                        for(i=0;i<ArrayDim(tempArr);i=i+1) {",
+              "                            tdwd=0;    //Обнуляем флаг",
+              "                            ship=tempArr[i];    //Выбираем корабль",
+              "                            if(IsPlayer(ship)) continue;",
+              "                            tStr=ShipType(ship);",
+              "                            if(tStr == 'FemRanger') g_GiveDroid(ship);",
+              "                        }",
+              "                    }",
+              "                    lastShipId=GalaxyShipId();    //Обновляем Id последнего рожденного корабля",
+              "                }",
+              "            }",
+              "        }",
+              "    }",
+              "}"
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  -10,
+          "Pos.y":  -110,
+          "Parent":  -1,
+          "#":  8,
+          "Code.Type":  "Init",
+          "Code":          
+          [
+              "Wait = Rnd(365,730);",
+              "",
+              "function g_GiveDroid(dword Tship) {",
+              "    //Создаём гибридного дроида",
+              "    dword cur_item = CreateEquipment(t_RepairRobot, 20, GalaxyTechLevel(), 2);",
+              "    LinkItemToScript(cur_item,HybridBdup);",
+              "    ItemOnActCode(cur_item, GenerateCodeStringFromBlock('ActCodeBlocksList.HybridDroidActCode'));",
+              "    ScriptItemData(cur_item, 1, 300);",
+              "    ScriptItemData(cur_item, 2, 300);",
+              "    ScriptItemData(cur_item, 3, 300);",
+              "    SpecialToEquipment(FindBonusByNameInCfg('491'), cur_item);",
+              "    AddItemToShip(Tship, cur_item);",
+              "",
+              "    //Проверяем наличие слота, пуст ли он и заставляем непися пихнуть туда гибридку",
+              "    while(ShipSlots(Tship,5) < 1) {",
+              "        ShipSpecialBonuses(Tship,bonSlotDroid,ShipSpecialBonuses(Tship,bonSlotDroid)+1);",
+              "    }",
+              "",
+              "    if(ShipEqInSlot(Tship,t_RepairRobot)) {",
+              "        FreeItem(GetItemFromShip(Tship,ShipEqInSlot(Tship,t_RepairRobot)));",
+              "    }",
+              "",
+              "    //Чтобы глупенькая девочка не стягивала гибридник с себя",
+              "    ItemExtraSpecialsAddByType(cur_item,FindBonusByNameInCfg('RefHybridValue'));",
+              "",
+              "    ArrangeItems(Tship);",
+              "}"          
+          ]        
+        }      
+      ],
+      "Planets":      
+      [
+        {
+          "Type":  "TPlanet",
+          "Name":  "PlanetNew",
+          "Pos.x":  -100,
+          "Pos.y":  -30,
+          "Parent":  -1,
+          "#":  1,
+          "Race":  62,
+          "Owner":  62,
+          "Economy":  14,
+          "Goverment":  62,
+          "RangeMin":  0,
+          "RangeMax":  100,
+          "Dialog":  -1        
+        }      
+      ],
+      "Ships":      
+      [
+        {
+          "Type":  "TStarShip",
+          "Name":  "",
+          "Pos.x":  -100,
+          "Pos.y":  -90,
+          "Parent":  -1,
+          "#":  2,
+          "Count":  1,
+          "Owner":  62,
+          "Ship.Type":  126,
+          "Player":  true,
+          "SpeedMin":  0,
+          "SpeedMax":  10000,
+          "Weapon":  0,
+          "CargoHook":  0,
+          "EmptySpace":  0,
+          "StatusTraderMin":  0,
+          "StatusTraderMax":  100,
+          "StatusWarriorMin":  0,
+          "StatusWarriorMax":  100,
+          "StatusPirateMin":  0,
+          "StatusPirateMax":  100,
+          "StrengthMin":  "0",
+          "StrengthMax":  "0",
+          "Ruins":  ""        
+        }      
+      ],
+      "Stars":      
+      [
+        {
+          "Type":  "TStar",
+          "Name":  "StarNew",
+          "Pos.x":  -100,
+          "Pos.y":  -60,
+          "Parent":  -1,
+          "#":  0,
+          "Constellation":  0,
+          "Priority":  0,
+          "NoKling":  false,
+          "NoComeKling":  false        
+        }      
+      ],
+      "States":      
+      [
+        {
+          "Type":  "TState",
+          "Name":  "StateNew",
+          "Pos.x":  -100,
+          "Pos.y":  30,
+          "Parent":  -1,
+          "#":  3,
+          "Move":  0,
+          "MoveObj":  -1,
+          "Attack.Count":  0,
+          "TakeItem":  -1,
+          "TakeAllItem":  false,
+          "OnTalk":  "",
+          "OnActCode":  "",
+          "EType":  1,
+          "EUnique":  "",
+          "EMsg":  ""        
+        }      
+      ],
+      "Variables":      
+      [
+        {
+          "Type":  "TVar",
+          "Name":  "Wait",
+          "Pos.x":  -100,
+          "Pos.y":  -170,
+          "Parent":  -1,
+          "#":  7,
+          "Var.Type":  "Int",
+          "Init":  "0",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "i",
+          "Pos.x":  -100,
+          "Pos.y":  -200,
+          "Parent":  -1,
+          "#":  9,
+          "Var.Type":  "Int",
+          "Init":  "",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "j",
+          "Pos.x":  -60,
+          "Pos.y":  -200,
+          "Parent":  -1,
+          "#":  10,
+          "Var.Type":  "Int",
+          "Init":  "",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "Flag",
+          "Pos.x":  -100,
+          "Pos.y":  -230,
+          "Parent":  -1,
+          "#":  11,
+          "Var.Type":  "Int",
+          "Init":  "0",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "star",
+          "Pos.x":  -100,
+          "Pos.y":  -260,
+          "Parent":  -1,
+          "#":  12,
+          "Var.Type":  "Dword",
+          "Init":  "",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "ship",
+          "Pos.x":  -100,
+          "Pos.y":  -290,
+          "Parent":  -1,
+          "#":  13,
+          "Var.Type":  "Dword",
+          "Init":  "",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "lastShipId",
+          "Pos.x":  -20,
+          "Pos.y":  -290,
+          "Parent":  -1,
+          "#":  14,
+          "Var.Type":  "Dword",
+          "Init":  "",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "tempArr",
+          "Pos.x":  -20,
+          "Pos.y":  -260,
+          "Parent":  -1,
+          "#":  15,
+          "Var.Type":  "Array",
+          "Init":  "",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "tdwd",
+          "Pos.x":  -20,
+          "Pos.y":  -230,
+          "Parent":  -1,
+          "#":  16,
+          "Var.Type":  "Dword",
+          "Init":  "",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "tStr",
+          "Pos.x":  -20,
+          "Pos.y":  -170,
+          "Parent":  -1,
+          "#":  17,
+          "Var.Type":  "Str",
+          "Init":  "",
+          "Global":  false        
+        }      
+      ]    
+    }  
+  ],
+  "Visual.Links":  
+  [
+    {
+      "Type":  "TGraphLink",
+      "Begin":  2,
+      "End":  0,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  1,
+      "End":  0,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  4,
+      "End":  1,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  4,
+      "End":  3,
+      "Nom":  0,
+      "Arrow":  true    
+    }  
+  ],
+  "BlockPar.EC.Total.Strings":  0,
+  "BlockPar.EC":  
+  [
+  
+  ]
+}

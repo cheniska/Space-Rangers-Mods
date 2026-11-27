@@ -1,0 +1,847 @@
+{
+    "FileID": 573785173,
+    "FileVersion": 8,
+    "ViewPos.x": -683,
+    "ViewPos.y": -635,
+    "ScriptName": "Mod_RefBridgeCamo",
+    "ScriptFileOut": "DATA\\Script\\Mod_RefBridgeCamo.scr",
+    "ScriptTextOut": "DATA\\Script\\Mod_RefBridgeCamo.txt",
+    "LangDatIn": "CFG\\Rus\\Lang.txt",
+    "LangDatOut": "CFG\\Rus\\Lang.dat",
+    "MainDatIn": "CFG\\Main.txt",
+    "MainDatOut": "CFG\\Main.dat",
+    "CacheDatIn": "CFG\\CacheData.txt",
+    "CacheDatOut": "CFG\\CacheData.dat",
+    "ExportLangTxt": true,
+    "ExportLangDat": true,
+    "Visual.Objects": 
+    [
+        {
+            "DialogAnswers": 
+            [
+                {
+                    "Type": "TDialogAnswer",
+                    "Name": "",
+                    "Pos.x": 100,
+                    "Pos.y": 0,
+                    "Parent": -1,
+                    "#": 20,
+                    "Msg": "Активировать камуфляж келлероидной серии",
+                    "AMsg.Num": "0"
+                },
+                {
+                    "Type": "TDialogAnswer",
+                    "Name": "block",
+                    "Pos.x": 140,
+                    "Pos.y": 0,
+                    "Parent": -1,
+                    "#": 21,
+                    "Msg": "Активировать камуфляж келлероидной серии",
+                    "AMsg.Num": "1"
+                },
+                {
+                    "Type": "TDialogAnswer",
+                    "Name": "",
+                    "Pos.x": 180,
+                    "Pos.y": 0,
+                    "Parent": -1,
+                    "#": 22,
+                    "Msg": "Активировать камуфляж терроноидной серии",
+                    "AMsg.Num": "2"
+                },
+                {
+                    "Type": "TDialogAnswer",
+                    "Name": "block",
+                    "Pos.x": 220,
+                    "Pos.y": 0,
+                    "Parent": -1,
+                    "#": 23,
+                    "Msg": "Активировать камуфляж терроноидной серии",
+                    "AMsg.Num": "3"
+                },
+                {
+                    "Type": "TDialogAnswer",
+                    "Name": "",
+                    "Pos.x": 260,
+                    "Pos.y": 0,
+                    "Parent": -1,
+                    "#": 24,
+                    "Msg": "Активировать камуфляж блазероидной серии",
+                    "AMsg.Num": "4"
+                },
+                {
+                    "Type": "TDialogAnswer",
+                    "Name": "block",
+                    "Pos.x": 300,
+                    "Pos.y": 0,
+                    "Parent": -1,
+                    "#": 25,
+                    "Msg": "Активировать камуфляж блазероидной серии",
+                    "AMsg.Num": "5"
+                },
+                {
+                    "Type": "TDialogAnswer",
+                    "Name": "restart",
+                    "Pos.x": 220,
+                    "Pos.y": -90,
+                    "Parent": -1,
+                    "#": 26,
+                    "Msg": "В меню настроек",
+                    "AMsg.Num": "6"
+                },
+                {
+                    "Type": "TDialogAnswer",
+                    "Name": "",
+                    "Pos.x": 100,
+                    "Pos.y": 160,
+                    "Parent": -1,
+                    "#": 33,
+                    "Msg": "Вернуться к управлению камуфляжами",
+                    "AMsg.Num": "7"
+                },
+                {
+                    "Type": "TDialogAnswer",
+                    "Name": "restart",
+                    "Pos.x": 260,
+                    "Pos.y": 160,
+                    "Parent": -1,
+                    "#": 34,
+                    "Msg": "Вернуться в меню настроек",
+                    "AMsg.Num": "8"
+                }
+            ],
+            "DialogMessages": 
+            [
+                {
+                    "Type": "TDialogMsg",
+                    "Name": "",
+                    "Pos.x": 100,
+                    "Pos.y": -90,
+                    "Parent": -1,
+                    "#": 9,
+                    "Msg": "Вы запустили панель управления камуфлирующим устройством.\r\n\r\nДоступные камуфляжи:\r\nТерроноидной серии: <T> шт.\r\nБлазероидной серии: <B> шт.\r\nКеллероидной серии: <K> шт.\r\n\r\nТекущий камуфляж: <temp_str>",
+                    "DMsg.Num": "0"
+                },
+                {
+                    "Type": "TDialogMsg",
+                    "Name": "",
+                    "Pos.x": 100,
+                    "Pos.y": 90,
+                    "Parent": -1,
+                    "#": 30,
+                    "Msg": "Камуфляж серии <clr>Келлер<clrEnd> активирован!\r\n\r\nОсталось <K> шт. камуфляжей этой серии.",
+                    "DMsg.Num": "1"
+                },
+                {
+                    "Type": "TDialogMsg",
+                    "Name": "",
+                    "Pos.x": 180,
+                    "Pos.y": 90,
+                    "Parent": -1,
+                    "#": 31,
+                    "Msg": "Камуфляж серии <clr>Террон<clrEnd> активирован!\r\n\r\nОсталось <T> шт. камуфляжей этой серии.",
+                    "DMsg.Num": "2"
+                },
+                {
+                    "Type": "TDialogMsg",
+                    "Name": "",
+                    "Pos.x": 260,
+                    "Pos.y": 90,
+                    "Parent": -1,
+                    "#": 32,
+                    "Msg": "Камуфляж серии <clr>Блазер<clrEnd> активирован!\r\n\r\nОсталось <B> шт. камуфляжей этой серии.",
+                    "DMsg.Num": "3"
+                }
+            ],
+            "Dialogs": 
+            [
+                {
+                    "Type": "TDialog",
+                    "Name": "CamoDialog",
+                    "Pos.x": 100,
+                    "Pos.y": -130,
+                    "Parent": -1,
+                    "#": 8
+                }
+            ],
+            "Groups": 
+            [
+                {
+                    "Type": "TGroup",
+                    "Name": "GroupNew",
+                    "Pos.x": -100,
+                    "Pos.y": 0,
+                    "Parent": -1,
+                    "#": 4,
+                    "Owner": 62,
+                    "Group.Type": 126,
+                    "CntShipMin": 1,
+                    "CntShipMax": 1,
+                    "SpeedMin": 100,
+                    "SpeedMax": 10000,
+                    "Weapon": 0,
+                    "CargoHook": 0,
+                    "EmptySpace": 0,
+                    "AddPlayer": true,
+                    "StatusTraderMin": 0,
+                    "StatusTraderMax": 100,
+                    "StatusWarriorMin": 0,
+                    "StatusWarriorMax": 100,
+                    "StatusPirateMin": 0,
+                    "StatusPirateMax": 100,
+                    "DistSearch": 10000,
+                    "Dialog": -1,
+                    "StrengthMin": "0",
+                    "StrengthMax": "0",
+                    "Ruins": ""
+                }
+            ],
+            "Operations": 
+            [
+                {
+                    "Type": "Top",
+                    "Name": "",
+                    "Pos.x": -50,
+                    "Pos.y": -90,
+                    "Parent": -1,
+                    "#": 5,
+                    "Code.Type": "Global",
+                    "Code": 
+                    [
+                        "if(!GCntRun(GScriptName)) GRun();"
+                    ]
+                },
+                {
+                    "Type": "Top",
+                    "Name": "",
+                    "Pos.x": 0,
+                    "Pos.y": -90,
+                    "Parent": -1,
+                    "#": 6,
+                    "Code.Type": "DialogBegin",
+                    "Code": 
+                    [
+                        "AddDialogInject('CamoDialog',\"\",\"Управление камуфляжем\",20);",
+                        "if(PlayerChameleonCurType() == -1) temp_str = \"Неактивен\";",
+                        "if(PlayerChameleonCurType() == 0) temp_str = \"Блазероидной серии\";",
+                        "if(PlayerChameleonCurType() == 1) temp_str = \"Келлероидной серии\";",
+                        "if(PlayerChameleonCurType() == 2) temp_str = \"Терроноидной серии\";",
+                        "K = PlayerChameleonCharges(1); //серии: 0 - Блазер, 1 - Келлер, 2 - Террон (K и B были перепутаны)",
+                        "B = PlayerChameleonCharges(0);",
+                        "T = PlayerChameleonCharges(2);"
+                    ]
+                },
+                {
+                    "Type": "Top",
+                    "Name": "",
+                    "Pos.x": 100,
+                    "Pos.y": 40,
+                    "Parent": -1,
+                    "#": 27,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "PlayerChameleonCharges(1,PlayerChameleonCharges(1) - 1);",
+                        "//Возврат заряда серии, выбранной ранее в этом же разговоре (раньше Flag менялся до возврата - заряд тут же возвращался,",
+                        "//а сам камуфляж не включался)",
+                        "if(Flag != 3) PlayerChameleonCharges(Flag,PlayerChameleonCharges(Flag) + 1);",
+                        "Flag = 1;",
+                        "PlayerChameleonCurType(1);",
+                        "Chameleon(Player()); //обновить облик, как при включении камуфляжа в игре",
+                        "K = PlayerChameleonCharges(1);"
+                    ]
+                },
+                {
+                    "Type": "Top",
+                    "Name": "",
+                    "Pos.x": 180,
+                    "Pos.y": 40,
+                    "Parent": -1,
+                    "#": 28,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "PlayerChameleonCharges(2,PlayerChameleonCharges(2) - 1);",
+                        "//Возврат заряда серии, выбранной ранее в этом же разговоре (раньше Flag менялся до возврата - заряд тут же возвращался,",
+                        "//а сам камуфляж не включался)",
+                        "if(Flag != 3) PlayerChameleonCharges(Flag,PlayerChameleonCharges(Flag) + 1);",
+                        "Flag = 2;",
+                        "PlayerChameleonCurType(2);",
+                        "Chameleon(Player()); //обновить облик, как при включении камуфляжа в игре",
+                        "T = PlayerChameleonCharges(2);"
+                    ]
+                },
+                {
+                    "Type": "Top",
+                    "Name": "",
+                    "Pos.x": 260,
+                    "Pos.y": 40,
+                    "Parent": -1,
+                    "#": 29,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "PlayerChameleonCharges(0,PlayerChameleonCharges(0) - 1);",
+                        "//Возврат заряда серии, выбранной ранее в этом же разговоре (раньше Flag менялся до возврата - заряд тут же возвращался,",
+                        "//а сам камуфляж не включался)",
+                        "if(Flag != 3) PlayerChameleonCharges(Flag,PlayerChameleonCharges(Flag) + 1);",
+                        "Flag = 0;",
+                        "PlayerChameleonCurType(0);",
+                        "Chameleon(Player()); //обновить облик, как при включении камуфляжа в игре",
+                        "B = PlayerChameleonCharges(0);"
+                    ]
+                },
+                {
+                    "Type": "Top",
+                    "Name": "",
+                    "Pos.x": 50,
+                    "Pos.y": 160,
+                    "Parent": -1,
+                    "#": 35,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "//визуальный костыль",
+                        "K = PlayerChameleonCharges(1); //серии: 0 - Блазер, 1 - Келлер, 2 - Террон (K и B были перепутаны)",
+                        "B = PlayerChameleonCharges(0);",
+                        "T = PlayerChameleonCharges(2);"
+                    ]
+                },
+                {
+                    "Type": "Top",
+                    "Name": "",
+                    "Pos.x": 40,
+                    "Pos.y": -140,
+                    "Parent": -1,
+                    "#": 37,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "Flag = 3;"
+                    ]
+                }
+            ],
+            "Planets": 
+            [
+                {
+                    "Type": "TPlanet",
+                    "Name": "PlanetNew",
+                    "Pos.x": -100,
+                    "Pos.y": -30,
+                    "Parent": -1,
+                    "#": 1,
+                    "Race": 62,
+                    "Owner": 62,
+                    "Economy": 14,
+                    "Goverment": 62,
+                    "RangeMin": 0,
+                    "RangeMax": 100,
+                    "Dialog": -1
+                }
+            ],
+            "Ships": 
+            [
+                {
+                    "Type": "TStarShip",
+                    "Name": "",
+                    "Pos.x": -100,
+                    "Pos.y": -90,
+                    "Parent": -1,
+                    "#": 2,
+                    "Count": 1,
+                    "Owner": 62,
+                    "Ship.Type": 126,
+                    "Player": true,
+                    "SpeedMin": 0,
+                    "SpeedMax": 10000,
+                    "Weapon": 0,
+                    "CargoHook": 0,
+                    "EmptySpace": 0,
+                    "StatusTraderMin": 0,
+                    "StatusTraderMax": 100,
+                    "StatusWarriorMin": 0,
+                    "StatusWarriorMax": 100,
+                    "StatusPirateMin": 0,
+                    "StatusPirateMax": 100,
+                    "StrengthMin": "0",
+                    "StrengthMax": "0",
+                    "Ruins": ""
+                }
+            ],
+            "Stars": 
+            [
+                {
+                    "Type": "TStar",
+                    "Name": "StarNew",
+                    "Pos.x": -100,
+                    "Pos.y": -60,
+                    "Parent": -1,
+                    "#": 0,
+                    "Constellation": 0,
+                    "Priority": 0,
+                    "NoKling": false,
+                    "NoComeKling": false
+                }
+            ],
+            "Statements": 
+            [
+                {
+                    "Type": "Tif",
+                    "Name": "",
+                    "Pos.x": 0,
+                    "Pos.y": -140,
+                    "Parent": -1,
+                    "#": 7,
+                    "Code.Type": "DialogBegin",
+                    "Code": 
+                    [
+                        "PlayerBridge()==12"
+                    ]
+                },
+                {
+                    "Type": "Tif",
+                    "Name": "",
+                    "Pos.x": 100,
+                    "Pos.y": -40,
+                    "Parent": -1,
+                    "#": 14,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "K > 0 && PlayerChameleonCurType() != 1"
+                    ]
+                },
+                {
+                    "Type": "Tif",
+                    "Name": "",
+                    "Pos.x": 140,
+                    "Pos.y": -40,
+                    "Parent": -1,
+                    "#": 15,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "K == 0 || PlayerChameleonCurType() == 1"
+                    ]
+                },
+                {
+                    "Type": "Tif",
+                    "Name": "",
+                    "Pos.x": 180,
+                    "Pos.y": -40,
+                    "Parent": -1,
+                    "#": 16,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "T > 0 && PlayerChameleonCurType() != 2"
+                    ]
+                },
+                {
+                    "Type": "Tif",
+                    "Name": "",
+                    "Pos.x": 220,
+                    "Pos.y": -40,
+                    "Parent": -1,
+                    "#": 17,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "T == 0 || PlayerChameleonCurType() == 2"
+                    ]
+                },
+                {
+                    "Type": "Tif",
+                    "Name": "",
+                    "Pos.x": 260,
+                    "Pos.y": -40,
+                    "Parent": -1,
+                    "#": 18,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "B > 0 && PlayerChameleonCurType() != 0"
+                    ]
+                },
+                {
+                    "Type": "Tif",
+                    "Name": "",
+                    "Pos.x": 300,
+                    "Pos.y": -40,
+                    "Parent": -1,
+                    "#": 19,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "B == 0 || PlayerChameleonCurType() == 0"
+                    ]
+                }
+            ],
+            "States": 
+            [
+                {
+                    "Type": "TState",
+                    "Name": "StateNew",
+                    "Pos.x": -100,
+                    "Pos.y": 30,
+                    "Parent": -1,
+                    "#": 3,
+                    "Move": 0,
+                    "MoveObj": -1,
+                    "Attack.Count": 0,
+                    "TakeItem": -1,
+                    "TakeAllItem": false,
+                    "OnTalk": "",
+                    "OnActCode": "",
+                    "EType": 1,
+                    "EUnique": "",
+                    "EMsg": ""
+                }
+            ],
+            "Variables": 
+            [
+                {
+                    "Type": "TVar",
+                    "Name": "K",
+                    "Pos.x": -50,
+                    "Pos.y": -130,
+                    "Parent": -1,
+                    "#": 10,
+                    "Var.Type": "Int",
+                    "Init": "",
+                    "Global": false
+                },
+                {
+                    "Type": "TVar",
+                    "Name": "T",
+                    "Pos.x": -50,
+                    "Pos.y": -150,
+                    "Parent": -1,
+                    "#": 11,
+                    "Var.Type": "Int",
+                    "Init": "",
+                    "Global": false
+                },
+                {
+                    "Type": "TVar",
+                    "Name": "B",
+                    "Pos.x": -50,
+                    "Pos.y": -170,
+                    "Parent": -1,
+                    "#": 12,
+                    "Var.Type": "Int",
+                    "Init": "",
+                    "Global": false
+                },
+                {
+                    "Type": "TVar",
+                    "Name": "temp_str",
+                    "Pos.x": -50,
+                    "Pos.y": -190,
+                    "Parent": -1,
+                    "#": 13,
+                    "Var.Type": "Str",
+                    "Init": "",
+                    "Global": false
+                },
+                {
+                    "Type": "TVar",
+                    "Name": "Flag",
+                    "Pos.x": -50,
+                    "Pos.y": -210,
+                    "Parent": -1,
+                    "#": 36,
+                    "Var.Type": "Int",
+                    "Init": "3",
+                    "Global": false
+                }
+            ]
+        }
+    ],
+    "Visual.Links": 
+    [
+        {
+            "Type": "TGraphLink",
+            "Begin": 2,
+            "End": 0,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 1,
+            "End": 0,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 4,
+            "End": 1,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 4,
+            "End": 3,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 7,
+            "End": 6,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 8,
+            "End": 9,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 9,
+            "End": 14,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 9,
+            "End": 15,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 9,
+            "End": 16,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 9,
+            "End": 17,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 9,
+            "End": 18,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 9,
+            "End": 19,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 14,
+            "End": 20,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 15,
+            "End": 21,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 16,
+            "End": 22,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 17,
+            "End": 23,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 18,
+            "End": 24,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 19,
+            "End": 25,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 9,
+            "End": 26,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 20,
+            "End": 27,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 22,
+            "End": 28,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 24,
+            "End": 29,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 29,
+            "End": 32,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 28,
+            "End": 31,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 27,
+            "End": 30,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 33,
+            "End": 35,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 30,
+            "End": 34,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 31,
+            "End": 34,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 32,
+            "End": 34,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 32,
+            "End": 33,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 31,
+            "End": 33,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 30,
+            "End": 33,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 35,
+            "End": 9,
+            "Nom": 0,
+            "Arrow": true
+        }
+    ],
+    "BlockPar.EC.Total.Strings": 12,
+    "BlockPar.EC": 
+    [
+        {
+            "#": "10",
+            "String": "Активировать камуфляж блазероидной серии"
+        },
+        {
+            "#": "11",
+            "String": "В меню настроек"
+        },
+        {
+            "#": "12",
+            "String": "Вернуться к управлению камуфляжами"
+        },
+        {
+            "#": "13",
+            "String": "Вернуться в меню настроек"
+        },
+        {
+            "#": "2",
+            "String": "Управление камуфляжем"
+        },
+        {
+            "#": "3",
+            "String": ""
+        },
+        {
+            "#": "4",
+            "String": "Вы запустили панель управления камуфлирующим устройством.<br><br>Доступные камуфляжи:<br>Терроноидной серии: <0> шт.<br>Блазероидной серии: <1> шт.<br>Келлероидной серии: <2> шт.<br><br>Текущий камуфляж: <3>"
+        },
+        {
+            "#": "5",
+            "String": "Камуфляж серии <clr>Келлер<clrEnd> активирован!<br><br>Осталось <0> шт. камуфляжей этой серии."
+        },
+        {
+            "#": "6",
+            "String": "Камуфляж серии <clr>Террон<clrEnd> активирован!<br><br>Осталось <0> шт. камуфляжей этой серии."
+        },
+        {
+            "#": "7",
+            "String": "Камуфляж серии <clr>Блазер<clrEnd> активирован!<br><br>Осталось <0> шт. камуфляжей этой серии."
+        },
+        {
+            "#": "8",
+            "String": "Активировать камуфляж келлероидной серии"
+        },
+        {
+            "#": "9",
+            "String": "Активировать камуфляж терроноидной серии"
+        }
+    ]
+}

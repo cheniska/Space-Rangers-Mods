@@ -1,0 +1,11 @@
+[Space Rangers Universe Final]
+Name=Man_billionairesEvening
+Author=Mannarox
+Conflict=SR1Faces
+Dependence=
+Section=OtherMods
+Standalone=
+Compatibility=
+SmallDescription=billionairesEvening v0.85
+FullDescription=Добавление небольшого квеста отсылки к Mass Effect 2 V 0.85 Квест, где рейнджера просят помоч агенту коалиции. Миллиардер и контрабандист убил предыдущего агента
+ и похитил у него важный голодиск. Вам предстоит с агентом Такасуми пойти на его вечеринку и вернуть его. Квест выдаётся в центре рейнджеров.

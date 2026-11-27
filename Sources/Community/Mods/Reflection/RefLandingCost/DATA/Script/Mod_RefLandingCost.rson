@@ -1,0 +1,1022 @@
+{
+  "MainDatIn": "CFG\\Main.txt",
+  "MainDatOut": "CFG\\Main.dat",
+  "CacheDatIn": "CFG\\CacheData.txt",
+  "CacheDatOut": "CFG\\CacheData.dat",
+  "FileID":  573785173,
+  "FileVersion":  8,
+  "ViewPos.x":  -686,
+  "ViewPos.y":  -632,
+  "ScriptName":  "Mod_RefLandingCost",
+  "ScriptFileOut": "DATA\\Script\\Mod_RefLandingCost.scr",
+  "ScriptTextOut": "DATA\\Script\\Mod_RefLandingCost.txt",
+    "ExportLangDat": true,
+    "ExportLangTxt": true,
+    "LangDatOut": "CFG\\Rus\\Lang.dat",
+    "LangDatIn": "CFG\\Rus\\Lang.txt",
+  "Visual.Objects":  
+  [
+    {
+      "DialogAnswers":      
+      [
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "",
+          "Pos.x":  140,
+          "Pos.y":  -120,
+          "Parent":  -1,
+          "#":  17,
+          "Msg":  "Оплатить задолженности",
+          "AMsg.Num":  "0"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "restart",
+          "Pos.x":  180,
+          "Pos.y":  -200,
+          "Parent":  -1,
+          "#":  18,
+          "Msg":  "Вернуться",
+          "AMsg.Num":  "1"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "",
+          "Pos.x":  340,
+          "Pos.y":  -120,
+          "Parent":  -1,
+          "#":  24,
+          "Msg":  "Оплатить задолженности",
+          "AMsg.Num":  "2"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "block",
+          "Pos.x":  340,
+          "Pos.y":  -80,
+          "Parent":  -1,
+          "#":  29,
+          "Msg":  "Оплатить задолженности",
+          "AMsg.Num":  "3"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "restart",
+          "Pos.x":  460,
+          "Pos.y":  -120,
+          "Parent":  -1,
+          "#":  32,
+          "Msg":  "Вернуться к списку",
+          "AMsg.Num":  "4"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "",
+          "Pos.x":  140,
+          "Pos.y":  0,
+          "Parent":  -1,
+          "#":  34,
+          "Msg":  "Подождать",
+          "AMsg.Num":  "5"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "",
+          "Pos.x":  180,
+          "Pos.y":  40,
+          "Parent":  -1,
+          "#":  36,
+          "Msg":  "Подождать ещё",
+          "AMsg.Num":  "6"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "",
+          "Pos.x":  220,
+          "Pos.y":  0,
+          "Parent":  -1,
+          "#":  38,
+          "Msg":  "Ждать быстрее...",
+          "AMsg.Num":  "7"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "",
+          "Pos.x":  220,
+          "Pos.y":  -80,
+          "Parent":  -1,
+          "#":  40,
+          "Msg":  "Нажать \"Сделать исключение для этого сайта\"",
+          "AMsg.Num":  "8"        
+        }      
+      ],
+      "DialogMessages":      
+      [
+        {
+          "Type":  "TDialogMsg",
+          "Name":  "",
+          "Pos.x":  140,
+          "Pos.y":  -200,
+          "Parent":  -1,
+          "#":  16,
+          "Msg":  "Вы оказались на сайте ГосуУслуги. Обычный белый сайт, иконка в виде двух уголков синего и голубого цвета.\r\n\r\nПосередине находился небольшой прямоугольник с текстом шрифтом, известным как Times New London:\r\n\r\nНеоплаченных посадок на планеты: <counting>\r\n\r\nНиже появился список доступных функций.",
+          "DMsg.Num":  "0"        
+        },
+        {
+          "Type":  "TDialogMsg",
+          "Name":  "",
+          "Pos.x":  260,
+          "Pos.y":  -120,
+          "Parent":  -1,
+          "#":  22,
+          "Msg":  "Появился счёт, который в сокращённом виде гласил:\r\n\r\nК оплате <counting> посадок по тарифу <payment> за единицу.\r\nК оплате <MarriageCount> заключений контрактов со спецагентками по тарифу <mcost> за единицу",
+          "DMsg.Num":  "1"        
+        },
+        {
+          "Type":  "TDialogMsg",
+          "Name":  "",
+          "Pos.x":  420,
+          "Pos.y":  -120,
+          "Parent":  -1,
+          "#":  31,
+          "Msg":  "Все задолженности успешно оплачены!",
+          "DMsg.Num":  "2"        
+        },
+        {
+          "Type":  "TDialogMsg",
+          "Name":  "",
+          "Pos.x":  140,
+          "Pos.y":  -40,
+          "Parent":  -1,
+          "#":  33,
+          "Msg":  "Вы нажали на большую красную кнопку \"ОПЛАТИТЬ ЗАДОЛЖЕННОСТИ\"\r\n\r\nКнопка подумала с минуту в состоянии нажатой, после чего началась загружка следующего сайта.",
+          "DMsg.Num":  "3"        
+        },
+        {
+          "Type":  "TDialogMsg",
+          "Name":  "",
+          "Pos.x":  140,
+          "Pos.y":  40,
+          "Parent":  -1,
+          "#":  35,
+          "Msg":  "Сайт всё ещё... Не отвечает",
+          "DMsg.Num":  "4"        
+        },
+        {
+          "Type":  "TDialogMsg",
+          "Name":  "",
+          "Pos.x":  220,
+          "Pos.y":  40,
+          "Parent":  -1,
+          "#":  37,
+          "Msg":  "И снова загрузка",
+          "DMsg.Num":  "5"        
+        },
+        {
+          "Type":  "TDialogMsg",
+          "Name":  "",
+          "Pos.x":  220,
+          "Pos.y":  -40,
+          "Parent":  -1,
+          "#":  39,
+          "Msg":  "Наконец, загрузка завершилась...\r\n\r\nПеред вами показалось уведомление:\r\n\"Автоматическая система защиты отметила данный сайт как опасный. Злоумышленники могут использовать его для получения ваших данных и вымогательства денежных средств\"",
+          "DMsg.Num":  "6"        
+        }      
+      ],
+      "Dialogs":      
+      [
+        {
+          "Type":  "TDialog",
+          "Name":  "GosuUslugi",
+          "Pos.x":  140,
+          "Pos.y":  -240,
+          "Parent":  -1,
+          "#":  15        
+        }      
+      ],
+      "Groups":      
+      [
+        {
+          "Type":  "TGroup",
+          "Name":  "GroupNew",
+          "Pos.x":  -100,
+          "Pos.y":  0,
+          "Parent":  -1,
+          "#":  4,
+          "Owner":  62,
+          "Group.Type":  126,
+          "CntShipMin":  1,
+          "CntShipMax":  1,
+          "SpeedMin":  100,
+          "SpeedMax":  10000,
+          "Weapon":  0,
+          "CargoHook":  0,
+          "EmptySpace":  0,
+          "AddPlayer":  true,
+          "StatusTraderMin":  0,
+          "StatusTraderMax":  100,
+          "StatusWarriorMin":  0,
+          "StatusWarriorMax":  100,
+          "StatusPirateMin":  0,
+          "StatusPirateMax":  100,
+          "DistSearch":  10000,
+          "Dialog":  -1,
+          "StrengthMin":  "0",
+          "StrengthMax":  "0",
+          "Ruins":  ""        
+        }      
+      ],
+      "Operations":      
+      [
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  -50,
+          "Pos.y":  -90,
+          "Parent":  -1,
+          "#":  5,
+          "Code.Type":  "Global",
+          "Code":          
+          [
+              "if(!GCntRun(GScriptName)) GRun();"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  -10,
+          "Pos.y":  -90,
+          "Parent":  -1,
+          "#":  6,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "if(GetShipRuins(Player()) == 0) {",
+              "    if(PlanetOwner(GetShipPlanet(Player())) < 6) counting = counting + 1;",
+              "}"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  30,
+          "Pos.y":  -90,
+          "Parent":  -1,
+          "#":  10,
+          "Code.Type":  "Init",
+          "Code":          
+          [
+              "if(GalaxyDiffLevels() > 49) payment = 3;",
+              "if(GalaxyDiffLevels() > 99) payment = 4;",
+              "if(GalaxyDiffLevels() > 149) payment = 5;",
+              "if(GalaxyDiffLevels() > 199) payment = 7;",
+              "if(GalaxyDiffLevels() > 249) payment = 10;",
+              "if(GalaxyDiffLevels() > 299) payment = 15;",
+              "if(GalaxyDiffLevels() > 349) payment = 20;",
+              "if(GalaxyDiffLevels() > 399) payment = 30;",
+              "if(GalaxyDiffLevels() > 449) payment = 40;",
+              "if(GalaxyDiffLevels() > 479) payment = 50;",
+              "",
+              "function PlayerActCode() {",
+              "    if(ScriptItemActionType(t_OnPlayerTalkedWithShip)) {",
+              "        if(ShipType(ScriptItemActObject1()) == 'FemRanger') {",
+              "            j = 0;",
+              "            for(i=0;ShipPartners(Player())>i;i=i+1) {",
+              "                if(ShipType(ShipPartners(Player(),i)) == 'FemRanger') j = j + 1;",
+              "            }",
+              "            if(j > WivesCnt) {",
+              "                NewsAdd(\"Уважаемый рейнджер!<br>До сведения наших органов дошла информация о том, что вы заключили контракт о взаимоотношениях особого рода с пилотом женского пола. Ввиду текущей политики Галактического Совета такие взаимоотношения рассматриваются как облагаемые налогом, ввиду чего вы должны оплатить пошлину в размере\"+' '+mcost+' '+\"cr. на сайте Госууслуг.<br>С уважением.\");",
+              "                Sound('Sound.NewMsg');",
+              "                MarriageCount = MarriageCount + 1;",
+              "            }",
+              "            //Запоминаем число спецагенток-напарниц (раньше WivesCnt всегда 0 -> налог при каждом разговоре со спецагенткой)",
+              "            WivesCnt = j;",
+              "        }",
+              "    }",
+              "}"
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  70,
+          "Pos.y":  -90,
+          "Parent":  -1,
+          "#":  11,
+          "Code.Type":  "DialogBegin",
+          "Code":          
+          [
+              "AddDialogInject('GosuUslugi', '', \"Сайт Госууслуги\", 9);"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  30,
+          "Pos.y":  -130,
+          "Parent":  -1,
+          "#":  13,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "if(Flag == 0) {",
+              "    if(counting > 5) {",
+              "        NewsAdd(\"Уважаемый рейнджер! Вы не оплатили задолженности за посадку на планеты. Зайдите на сайт ГосуУслуги и оплатите счёт, пока не поздно.\");",
+              "        Flag = 1;",
+              "    }",
+              "}",
+              "if(Flag == 1) {",
+              "    if(counting > 10) {",
+              "        NewsAdd(\"Уважаемый рейнджер! Вы не оплатили задолженности за посадку на планеты. Зайдите на сайт ГосуУслуги и оплатите счёт, пока не поздно.\");",
+              "        Flag = 2;",
+              "    }",
+              "}",
+              "if(Flag == 2) {",
+              "    if(counting > 15) {",
+              "        NewsAdd(\"Уважаемый рейнджер! Вы не оплатили задолженности за посадку на планеты. Зайдите на сайт ГосуУслуги и оплатите счёт, пока не поздно.\");",
+              "        Flag = 3;",
+              "    }",
+              "}",
+              "if(Flag == 3) {",
+              "    if(counting > 20) {",
+              "        NewsAdd(\"Уважаемый рейнджер! Вы не оплатили задолженности за посадку на планеты. Зайдите на сайт ГосуУслуги и оплатите счёт, пока не поздно.\");",
+              "        ChangeGlobalRelationsPlanets(Player(),0,3,25,31);",
+              "        Flag = 4;",
+              "    }",
+              "}",
+              "if(Flag == 4) {",
+              "    if(counting > 25) {",
+              "        NewsAdd(\"Уважаемый рейнджер! Вы не оплатили задолженности за посадку на планеты. Зайдите на сайт ГосуУслуги и оплатите счёт, пока не поздно.\");",
+              "        ChangeGlobalRelationsPlanets(Player(),0,3,25,31);",
+              "        Flag = 5;",
+              "    }",
+              "}",
+              "if(Flag == 5) {",
+              "    if(counting > 30) {",
+              "        NewsAdd(\"Уважаемый рейнджер! Вы не оплатили задолженности за посадку на планеты. Зайдите на сайт ГосуУслуги и оплатите счёт, пока не поздно.\");",
+              "        ChangeGlobalRelationsPlanets(Player(),0,3,35,31);",
+              "        Flag = 6;",
+              "    }",
+              "}",
+              "if(Flag == 6) {",
+              "    if(counting > 35) {",
+              "        NewsAdd(\"Уважаемый рейнджер! Вы не оплатили задолженности за посадку на планеты. Зайдите на сайт ГосуУслуги и оплатите счёт, пока не поздно.\");",
+              "        ChangeGlobalRelationsPlanets(Player(),0,3,45,31);",
+              "        Flag = 7;",
+              "    }",
+              "}",
+              "if(Flag == 7) {",
+              "    if(counting > 40) {",
+              "        NewsAdd(\"Уважаемый рейнджер! Вы не оплатили задолженности за посадку на планеты. Зайдите на сайт ГосуУслуги и оплатите счёт, пока не поздно.\");",
+              "        ChangeGlobalRelationsPlanets(Player(),0,3,45,31);",
+              "        Flag = 8;",
+              "    }",
+              "}",
+              "if(Flag == 8) {",
+              "    if(counting > 45) {",
+              "        NewsAdd(\"Уважаемый рейнджер! Вы не оплатили задолженности за посадку на планеты. Зайдите на сайт ГосуУслуги и оплатите счёт, пока не поздно.\");",
+              "        ChangeGlobalRelationsPlanets(Player(),0,3,55,31);",
+              "        Flag = 9;",
+              "    }",
+              "}",
+              "if(Flag == 9) {",
+              "    if(counting > 55) {",
+              "        NewsAdd(\"Уважаемый рейнджер! Вы не оплатили задолженности за посадку на планеты. Зайдите на сайт ГосуУслуги и оплатите счёт, пока не поздно.\");",
+              "        ChangeGlobalRelationsPlanets(Player(),0,3,65,31);",
+              "        Flag = 10;",
+              "    }",
+              "}",
+              "if(Flag == 10) {",
+              "    if(counting > 60) {",
+              "        NewsAdd(\"Уважаемый рейнджер! Вы не оплатили задолженности за посадку на планеты. Зайдите на сайт ГосуУслуги и оплатите счёт, пока не поздно.\");",
+              "        ChangeGlobalRelationsPlanets(Player(),0,3,85,31);",
+              "        Flag = 11;",
+              "    }",
+              "}",
+              "",
+              "if(CurTurn() > 9065) mcost = 5000;"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  220,
+          "Pos.y":  -120,
+          "Parent":  -1,
+          "#":  23,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "money = counting * payment + mcost * MarriageCount;",
+              "joke_flag = 1;"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  380,
+          "Pos.y":  -120,
+          "Parent":  -1,
+          "#":  30,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "counting = 0;",
+              "//Оплачены и контракты, предупреждения начинаются заново (раньше контракты оставались к оплате навсегда,",
+              "//а уровень предупреждений не сбрасывался - после 11-го они прекращались совсем)",
+              "MarriageCount = 0;",
+              "Flag = 0;",
+              "ShipMoney(Player(),ShipMoney(Player()) - money);",
+              "Sound('Sound.Buy');"
+          ]        
+        }      
+      ],
+      "Planets":      
+      [
+        {
+          "Type":  "TPlanet",
+          "Name":  "PlanetNew",
+          "Pos.x":  -100,
+          "Pos.y":  -30,
+          "Parent":  -1,
+          "#":  1,
+          "Race":  62,
+          "Owner":  62,
+          "Economy":  14,
+          "Goverment":  62,
+          "RangeMin":  0,
+          "RangeMax":  100,
+          "Dialog":  -1        
+        }      
+      ],
+      "Ships":      
+      [
+        {
+          "Type":  "TStarShip",
+          "Name":  "",
+          "Pos.x":  -100,
+          "Pos.y":  -90,
+          "Parent":  -1,
+          "#":  2,
+          "Count":  1,
+          "Owner":  62,
+          "Ship.Type":  126,
+          "Player":  true,
+          "SpeedMin":  0,
+          "SpeedMax":  10000,
+          "Weapon":  0,
+          "CargoHook":  0,
+          "EmptySpace":  0,
+          "StatusTraderMin":  0,
+          "StatusTraderMax":  100,
+          "StatusWarriorMin":  0,
+          "StatusWarriorMax":  100,
+          "StatusPirateMin":  0,
+          "StatusPirateMax":  100,
+          "StrengthMin":  "0",
+          "StrengthMax":  "0",
+          "Ruins":  ""        
+        }      
+      ],
+      "Stars":      
+      [
+        {
+          "Type":  "TStar",
+          "Name":  "StarNew",
+          "Pos.x":  -100,
+          "Pos.y":  -60,
+          "Parent":  -1,
+          "#":  0,
+          "Constellation":  0,
+          "Priority":  0,
+          "NoKling":  false,
+          "NoComeKling":  false        
+        }      
+      ],
+      "Statements":      
+      [
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  -10,
+          "Pos.y":  -130,
+          "Parent":  -1,
+          "#":  7,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "ShipIsTakeoff(Player())"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  70,
+          "Pos.y":  -130,
+          "Parent":  -1,
+          "#":  12,
+          "Code.Type":  "DialogBegin",
+          "Code":          
+          [
+              "PlayerBridge() == 11"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  140,
+          "Pos.y":  -80,
+          "Parent":  -1,
+          "#":  20,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "joke_flag == 0"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  180,
+          "Pos.y":  -120,
+          "Parent":  -1,
+          "#":  21,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "joke_flag > 0"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  140,
+          "Pos.y":  -160,
+          "Parent":  -1,
+          "#":  26,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "counting > 0 || MarriageCount > 0"
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  300,
+          "Pos.y":  -120,
+          "Parent":  -1,
+          "#":  27,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "ShipMoney(Player()) >= money"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  300,
+          "Pos.y":  -80,
+          "Parent":  -1,
+          "#":  28,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "ShipMoney(Player()) < money"          
+          ]        
+        }      
+      ],
+      "States":      
+      [
+        {
+          "Type":  "TState",
+          "Name":  "StateNew",
+          "Pos.x":  -100,
+          "Pos.y":  30,
+          "Parent":  -1,
+          "#":  3,
+          "Move":  0,
+          "MoveObj":  -1,
+          "Attack.Count":  0,
+          "TakeItem":  -1,
+          "TakeAllItem":  false,
+          "OnTalk":  "",
+          "OnActCode":  "[t_OnPlayerTalkedWithShip,t_OnStep|11]\r\nPlayerActCode();",
+          "EType":  1,
+          "EUnique":  "",
+          "EMsg":  ""        
+        }      
+      ],
+      "Variables":      
+      [
+        {
+          "Type":  "TVar",
+          "Name":  "counting",
+          "Pos.x":  -100,
+          "Pos.y":  -130,
+          "Parent":  -1,
+          "#":  8,
+          "Var.Type":  "Int",
+          "Init":  "",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "payment",
+          "Pos.x":  -100,
+          "Pos.y":  -160,
+          "Parent":  -1,
+          "#":  9,
+          "Var.Type":  "Int",
+          "Init":  "",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "Flag",
+          "Pos.x":  -100,
+          "Pos.y":  -190,
+          "Parent":  -1,
+          "#":  14,
+          "Var.Type":  "Int",
+          "Init":  "0",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "joke_flag",
+          "Pos.x":  -100,
+          "Pos.y":  -220,
+          "Parent":  -1,
+          "#":  19,
+          "Var.Type":  "Int",
+          "Init":  "0",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "money",
+          "Pos.x":  10,
+          "Pos.y":  -190,
+          "Parent":  -1,
+          "#":  25,
+          "Var.Type":  "Int",
+          "Init":  "",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "MarriageCount",
+          "Pos.x":  -100,
+          "Pos.y":  -250,
+          "Parent":  -1,
+          "#":  41,
+          "Var.Type":  "Int",
+          "Init":  "0",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "money2",
+          "Pos.x":  10,
+          "Pos.y":  -220,
+          "Parent":  -1,
+          "#":  42,
+          "Var.Type":  "Int",
+          "Init":  "",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "WivesCnt",
+          "Pos.x":  -100,
+          "Pos.y":  -280,
+          "Parent":  -1,
+          "#":  43,
+          "Var.Type":  "Int",
+          "Init":  "0",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "i",
+          "Pos.x":  10,
+          "Pos.y":  -280,
+          "Parent":  -1,
+          "#":  44,
+          "Var.Type":  "Int",
+          "Init":  "",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "j",
+          "Pos.x":  60,
+          "Pos.y":  -280,
+          "Parent":  -1,
+          "#":  45,
+          "Var.Type":  "Int",
+          "Init":  "",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "mcost",
+          "Pos.x":  -100,
+          "Pos.y":  -310,
+          "Parent":  -1,
+          "#":  46,
+          "Var.Type":  "Int",
+          "Init":  "350",
+          "Global":  false        
+        }      
+      ]    
+    }  
+  ],
+  "Visual.Links":  
+  [
+    {
+      "Type":  "TGraphLink",
+      "Begin":  2,
+      "End":  0,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  1,
+      "End":  0,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  4,
+      "End":  1,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  4,
+      "End":  3,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  7,
+      "End":  6,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  12,
+      "End":  11,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  15,
+      "End":  16,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  16,
+      "End":  18,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  17,
+      "End":  20,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  17,
+      "End":  21,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  21,
+      "End":  23,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  23,
+      "End":  22,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  16,
+      "End":  26,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  26,
+      "End":  17,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  22,
+      "End":  28,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  28,
+      "End":  29,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  22,
+      "End":  27,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  27,
+      "End":  24,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  31,
+      "End":  32,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  30,
+      "End":  31,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  24,
+      "End":  30,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  20,
+      "End":  33,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  33,
+      "End":  34,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  34,
+      "End":  35,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  35,
+      "End":  36,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  36,
+      "End":  37,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  37,
+      "End":  38,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  38,
+      "End":  39,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  39,
+      "End":  40,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  40,
+      "End":  23,
+      "Nom":  0,
+      "Arrow":  true    
+    }  
+  ],
+  "BlockPar.EC.Total.Strings":  17,
+  "BlockPar.EC":  
+  [
+    {
+      "#":  "0",
+      "String":  "Сайт Госууслуги"    
+    },
+    {
+      "#":  "1",
+      "String":  "Вы оказались на сайте ГосуУслуги. Обычный белый сайт, иконка в виде двух уголков синего и голубого цвета.<br><br>Посередине находился небольшой прямоугольник с текстом шрифтом, известным как Times New London:<br><br>Неоплаченных посадок на планеты: <0><br><br>Ниже появился список доступных функций."    
+    },
+    {
+      "#":  "10",
+      "String":  "Наконец, загрузка завершилась...<br><br>Перед вами показалось уведомление:<br>\"Автоматическая система защиты отметила данный сайт как опасный. Злоумышленники могут использовать его для получения ваших данных и вымогательства денежных средств\""    
+    },
+    {
+      "#":  "11",
+      "String":  "Подождать"    
+    },
+    {
+      "#":  "12",
+      "String":  "Подождать ещё"    
+    },
+    {
+      "#":  "13",
+      "String":  "Ждать быстрее..."    
+    },
+    {
+      "#":  "14",
+      "String":  "Нажать \"Сделать исключение для этого сайта\""    
+    },
+    {
+      "#":  "15",
+      "String":  "cr. на сайте Госууслуг.<br>С уважением."    
+    },
+    {
+      "#":  "16",
+      "String":  "Уважаемый рейнджер!<br>До сведения наших органов дошла информация о том, что вы заключили контракт о взаимоотношениях особого рода с пилотом женского пола. Ввиду текущей политики Галактического Совета такие взаимоотношения рассматриваются как облагаемые налогом, ввиду чего вы должны оплатить пошлину в размере"    
+    },
+    {
+      "#":  "2",
+      "String":  "Появился счёт, который в сокращённом виде гласил:<br><br>К оплате <0> посадок по тарифу <1> за единицу.<br>К оплате <2> заключений контрактов со спецагентками по тарифу <3> за единицу"    
+    },
+    {
+      "#":  "3",
+      "String":  "Оплатить задолженности"    
+    },
+    {
+      "#":  "4",
+      "String":  "Вернуться"    
+    },
+    {
+      "#":  "5",
+      "String":  "Все задолженности успешно оплачены!"    
+    },
+    {
+      "#":  "6",
+      "String":  "Вернуться к списку"    
+    },
+    {
+      "#":  "7",
+      "String":  "Вы нажали на большую красную кнопку \"ОПЛАТИТЬ ЗАДОЛЖЕННОСТИ\"<br><br>Кнопка подумала с минуту в состоянии нажатой, после чего началась загружка следующего сайта."    
+    },
+    {
+      "#":  "8",
+      "String":  "Сайт всё ещё... Не отвечает"    
+    },
+    {
+      "#":  "9",
+      "String":  "И снова загрузка"    
+    }  
+  ]
+}

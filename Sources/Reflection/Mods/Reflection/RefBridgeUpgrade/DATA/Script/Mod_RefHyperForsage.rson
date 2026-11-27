@@ -1,0 +1,492 @@
+{
+    "FileID": 573785173,
+    "FileVersion": 8,
+    "ViewPos.x": -613,
+    "ViewPos.y": -494,
+    "ScriptName": "Mod_RefHyperForsage",
+    "ScriptFileOut": "DATA\\Script\\Mod_RefHyperForsage.scr",
+    "ScriptTextOut": "DATA\\Script\\Mod_RefHyperForsage.txt",
+    "LangDatIn": "CFG\\Rus\\Lang.txt",
+    "LangDatOut": "CFG\\Rus\\Lang.dat",
+    "MainDatIn": "CFG\\Main.txt",
+    "MainDatOut": "CFG\\Main.dat",
+    "CacheDatIn": "CFG\\CacheData.txt",
+    "CacheDatOut": "CFG\\CacheData.dat",
+    "ExportLangTxt": true,
+    "ExportLangDat": true,
+    "Visual.Objects": 
+    [
+        {
+            "Dialogs": 
+            [
+                {
+                    "Type": "TDialog",
+                    "Name": "RefForsageOn",
+                    "Pos.x": 70,
+                    "Pos.y": -40,
+                    "Parent": -1,
+                    "#": 9
+                },
+                {
+                    "Type": "TDialog",
+                    "Name": "RefForsageOff",
+                    "Pos.x": 120,
+                    "Pos.y": 0,
+                    "Parent": -1,
+                    "#": 10
+                }
+            ],
+            "Groups": 
+            [
+                {
+                    "Type": "TGroup",
+                    "Name": "GroupNew",
+                    "Pos.x": -100,
+                    "Pos.y": 0,
+                    "Parent": -1,
+                    "#": 4,
+                    "Owner": 62,
+                    "Group.Type": 126,
+                    "CntShipMin": 1,
+                    "CntShipMax": 1,
+                    "SpeedMin": 100,
+                    "SpeedMax": 10000,
+                    "Weapon": 0,
+                    "CargoHook": 0,
+                    "EmptySpace": 0,
+                    "AddPlayer": true,
+                    "StatusTraderMin": 0,
+                    "StatusTraderMax": 100,
+                    "StatusWarriorMin": 0,
+                    "StatusWarriorMax": 100,
+                    "StatusPirateMin": 0,
+                    "StatusPirateMax": 100,
+                    "DistSearch": 10000,
+                    "Dialog": -1,
+                    "StrengthMin": "0",
+                    "StrengthMax": "0",
+                    "Ruins": ""
+                }
+            ],
+            "Operations": 
+            [
+                {
+                    "Type": "Top",
+                    "Name": "",
+                    "Pos.x": -30,
+                    "Pos.y": -90,
+                    "Parent": -1,
+                    "#": 5,
+                    "Code.Type": "Global",
+                    "Code": 
+                    [
+                        "if(!GCntRun(GScriptName)) GRun();"
+                    ]
+                },
+                {
+                    "Type": "Top",
+                    "Name": "",
+                    "Pos.x": 10,
+                    "Pos.y": -90,
+                    "Parent": -1,
+                    "#": 6,
+                    "Code.Type": "DialogBegin",
+                    "Code": 
+                    [
+                        "if(!ShipCustomShipInfoData(Player(),'RefHyperMainInfo',3))",
+                        "{",
+                        "    temp_str=\"Отключен\";",
+                        "    AddDialogInject('RefForsageOn',\"Гипер-форсаж: <temp_str>\",\"Включить гипер-форсаж\",13);",
+                        "}",
+                        "else",
+                        "{",
+                        "    temp_str=\"Включен\";",
+                        "    AddDialogInject('RefForsageOff',\"Гипер-форсаж: <temp_str>\",\"Отключить гипер-форсаж\",13);",
+                        "}"
+                    ]
+                },
+                {
+                    "Type": "Top",
+                    "Name": "",
+                    "Pos.x": 70,
+                    "Pos.y": 40,
+                    "Parent": -1,
+                    "#": 11,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "if(ShipInNormalSpace(Player())) {",
+                        "    //Без двигателя прочность 0 (ItemDurability(0) не вызываем)",
+                        "    eng = ShipEqInSlot(Player(),t_Engine);",
+                        "    engdur = 0;",
+                        "    if(eng) engdur = ItemDurability(eng);",
+                        "    if(engdur > 60) {",
+                        "        Sound('Sound.ForsageOn');",
+                        "        JumpSave = GetEquipmentStats(ShipEqInSlot(Player(),t_Engine),1);",
+                        "        if(JumpSave < 20) JumpBon = 6;",
+                        "        else if(JumpSave < 30) JumpBon = 12;",
+                        "        else if(JumpSave < 45) JumpBon = 20;",
+                        "        else if(JumpSave < 55) JumpBon = 24;",
+                        "        else if(JumpSave < 70) JumpBon = 29;",
+                        "        else JumpBon = 35;",
+                        "        ShipSpecialBonuses(Player(),bonJump,ShipSpecialBonuses(Player(),bonJump) + JumpBon);",
+                        "        ShipCustomShipInfoData(Player(),'RefHyperMainInfo',1,JumpBon);",
+                        "        ShipCustomShipInfoData(Player(),'RefHyperMainInfo',2,JumpSave);",
+                        "        ShipCustomShipInfoData(Player(),'RefHyperMainInfo',3,1); //Вместо HFFlag",
+                        "    }",
+                        "    else MessageBox(CT('Script.Mod_RefHyperForsage.TooDamaged'));",
+                        "}",
+                        "else MessageBox(CT('Script.Mod_RefHyperForsage.OnlyInSpace'));",
+                        "Sound('Sound.ButtonInfoEnter');",
+                        "DAnswer('main');"
+                    ]
+                },
+                {
+                    "Type": "Top",
+                    "Name": "",
+                    "Pos.x": 120,
+                    "Pos.y": 40,
+                    "Parent": -1,
+                    "#": 12,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "DAnswer('main');",
+                        "Sound('Sound.ButtonInfoEnter');",
+                        "Sound('Sound.ForsageOff');",
+                        "if(InHyp == 0) {",
+                        "    ShipCustomShipInfoData(Player(),'RefHyperMainInfo',3,0);",
+                        "    ShipSpecialBonuses(Player(),bonJump,ShipSpecialBonuses(Player(),bonJump) - ShipCustomShipInfoData(Player(),'RefHyperMainInfo',1));",
+                        "}"
+                    ]
+                },
+                {
+                    "Type": "Top",
+                    "Name": "",
+                    "Pos.x": -30,
+                    "Pos.y": -130,
+                    "Parent": -1,
+                    "#": 13,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "if(ShipCustomShipInfoData(Player(),'RefHyperMainInfo',3)) {",
+                        "    //Игрок где-то",
+                        "    if(ShipInHyperSpace(Player()) && !ShipInHole(Player())) InHyp = 1;",
+                        "    //Игрок летит в гипере",
+                        "    if(InHyp) {",
+                        "        if(ShipInNormalSpace(Player())) {",
+                        "            InHyp = 0;",
+                        "            ShipCustomShipInfoData(Player(),'RefHyperMainInfo',3,0);",
+                        "            ShipSpecialBonuses(Player(),bonJump,ShipSpecialBonuses(Player(),bonJump) - ShipCustomShipInfoData(Player(),'RefHyperMainInfo',1));",
+                        "            if(EqModule(ShipEqInSlot(Player(),t_Engine)) != -1) {",
+                        "                if(CT('MicroModuls.'+BonusNumInCfg(EqModule(ShipEqInSlot(Player(),t_Engine)))+'.Fragility') > 0) {",
+                        "                    ItemDurability(ShipEqInSlot(Player(),t_Engine),-1);",
+                        "                    Ether(8,'',\"Двигатель критически повредился при перерасходе его ресурса гипер-форсажем\");",
+                        "                }",
+                        "            }",
+                        "            else {",
+                        "                ItemDurability(ShipEqInSlot(Player(),t_Engine),-1);",
+                        "                Ether(8,'',\"Двигатель критически повредился при перерасходе его ресурса гипер-форсажем\");",
+                        "            }",
+                        "            Sound('Sound.ForsageOff');",
+                        "        }",
+                        "    }",
+                        "    else {",
+                        "        if(!ShipInHyperSpace(Player())) {",
+                        "            //Без двигателя прочность 0 (ItemDurability(0) не вызываем)",
+                        "            eng = ShipEqInSlot(Player(),t_Engine);",
+                        "            engdur = 0;",
+                        "            if(eng) engdur = ItemDurability(eng);",
+                        "            if(engdur < 50) {",
+                        "                ShipCustomShipInfoData(Player(),'RefHyperMainInfo',3,0);",
+                        "                ShipSpecialBonuses(Player(),bonJump,ShipSpecialBonuses(Player(),bonJump) - ShipCustomShipInfoData(Player(),'RefHyperMainInfo',1));",
+                        "                Sound('Sound.ForsageOff');",
+                        "                CustomEther('CantUse',8,'',\"Двигатель слишком сильно повредился, использование гипер-форсажа невозможно!\");",
+                        "            }",
+                        "        }",
+                        "        if(GetEquipmentStats(ShipEqInSlot(Player(),t_Engine),1) != ShipCustomShipInfoData(Player(),'RefHyperMainInfo',2)) {",
+                        "            ShipCustomShipInfoData(Player(),'RefHyperMainInfo',3,0);",
+                        "            ShipSpecialBonuses(Player(),bonJump,ShipSpecialBonuses(Player(),bonJump) - ShipCustomShipInfoData(Player(),'RefHyperMainInfo',1));",
+                        "            NewsAdd(\"Ввиду смены двигателя режим гипер-форсажа отключён и готов к повторной активации\");",
+                        "            Sound('Sound.ForsageOff');",
+                        "        }",
+                        "    }",
+                        "}",
+                        "",
+                        "if(ShipFindCustomShipInfoByType(Player(),'RefHyperMainInfo') == -1) ShipAddCustomShipInfo(Player(),'RefHyperMainInfo','NoShow'); //раньше < 1: при индексе 0 добавлялась ещё одна каждый ход"
+                    ]
+                },
+                {
+                    "Type": "Top",
+                    "Name": "",
+                    "Pos.x": 10,
+                    "Pos.y": -50,
+                    "Parent": -1,
+                    "#": 17,
+                    "Code.Type": "Init",
+                    "Code": 
+                    [
+                        "if(ShipFindCustomShipInfoByType(Player(),'RefHyperMainInfo') == -1) ShipAddCustomShipInfo(Player(),'RefHyperMainInfo','NoShow');"
+                    ]
+                }
+            ],
+            "Planets": 
+            [
+                {
+                    "Type": "TPlanet",
+                    "Name": "PlanetNew",
+                    "Pos.x": -100,
+                    "Pos.y": -30,
+                    "Parent": -1,
+                    "#": 1,
+                    "Race": 62,
+                    "Owner": 62,
+                    "Economy": 14,
+                    "Goverment": 62,
+                    "RangeMin": 0,
+                    "RangeMax": 100,
+                    "Dialog": -1
+                }
+            ],
+            "Ships": 
+            [
+                {
+                    "Type": "TStarShip",
+                    "Name": "",
+                    "Pos.x": -100,
+                    "Pos.y": -90,
+                    "Parent": -1,
+                    "#": 2,
+                    "Count": 1,
+                    "Owner": 62,
+                    "Ship.Type": 126,
+                    "Player": true,
+                    "SpeedMin": 0,
+                    "SpeedMax": 10000,
+                    "Weapon": 0,
+                    "CargoHook": 0,
+                    "EmptySpace": 0,
+                    "StatusTraderMin": 0,
+                    "StatusTraderMax": 100,
+                    "StatusWarriorMin": 0,
+                    "StatusWarriorMax": 100,
+                    "StatusPirateMin": 0,
+                    "StatusPirateMax": 100,
+                    "StrengthMin": "0",
+                    "StrengthMax": "0",
+                    "Ruins": ""
+                }
+            ],
+            "Stars": 
+            [
+                {
+                    "Type": "TStar",
+                    "Name": "StarNew",
+                    "Pos.x": -100,
+                    "Pos.y": -60,
+                    "Parent": -1,
+                    "#": 0,
+                    "Constellation": 0,
+                    "Priority": 0,
+                    "NoKling": false,
+                    "NoComeKling": false
+                }
+            ],
+            "Statements": 
+            [
+                {
+                    "Type": "Tif",
+                    "Name": "",
+                    "Pos.x": 10,
+                    "Pos.y": -130,
+                    "Parent": -1,
+                    "#": 7,
+                    "Code.Type": "DialogBegin",
+                    "Code": 
+                    [
+                        "PlayerBridge()==12"
+                    ]
+                }
+            ],
+            "States": 
+            [
+                {
+                    "Type": "TState",
+                    "Name": "StateNew",
+                    "Pos.x": -100,
+                    "Pos.y": 30,
+                    "Parent": -1,
+                    "#": 3,
+                    "Move": 0,
+                    "MoveObj": -1,
+                    "Attack.Count": 0,
+                    "TakeItem": -1,
+                    "TakeAllItem": false,
+                    "OnTalk": "",
+                    "OnActCode": "",
+                    "EType": 1,
+                    "EUnique": "",
+                    "EMsg": ""
+                }
+            ],
+            "Variables": 
+            [
+                {
+                    "Type": "TVar",
+                    "Name": "temp_str",
+                    "Pos.x": 100,
+                    "Pos.y": -120,
+                    "Parent": -1,
+                    "#": 8,
+                    "Var.Type": "Str",
+                    "Init": "",
+                    "Global": false
+                },
+                {
+                    "Type": "TVar",
+                    "Name": "JumpBon",
+                    "Pos.x": 100,
+                    "Pos.y": -90,
+                    "Parent": -1,
+                    "#": 14,
+                    "Var.Type": "Int",
+                    "Init": "0",
+                    "Global": false
+                },
+                {
+                    "Type": "TVar",
+                    "Name": "InHyp",
+                    "Pos.x": 100,
+                    "Pos.y": -150,
+                    "Parent": -1,
+                    "#": 15,
+                    "Var.Type": "Int",
+                    "Init": "0",
+                    "Global": false
+                },
+                {
+                    "Type": "TVar",
+                    "Name": "JumpSave",
+                    "Pos.x": 100,
+                    "Pos.y": -180,
+                    "Parent": -1,
+                    "#": 16,
+                    "Var.Type": "Int",
+                    "Init": "0",
+                    "Global": false
+                },
+                {
+                    "Type": "TVar",
+                    "Name": "engdur",
+                    "Pos.x": -80,
+                    "Pos.y": -420,
+                    "Parent": -1,
+                    "#": 19,
+                    "Var.Type": "Int",
+                    "Init": "0",
+                    "Global": false
+                },
+                {
+                    "Type": "TVar",
+                    "Name": "eng",
+                    "Pos.x": -80,
+                    "Pos.y": -420,
+                    "Parent": -1,
+                    "#": 18,
+                    "Var.Type": "Dword",
+                    "Init": "0",
+                    "Global": false
+                }
+            ]
+        }
+    ],
+    "Visual.Links": 
+    [
+        {
+            "Type": "TGraphLink",
+            "Begin": 2,
+            "End": 0,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 1,
+            "End": 0,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 4,
+            "End": 1,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 4,
+            "End": 3,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 7,
+            "End": 6,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 10,
+            "End": 12,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 9,
+            "End": 11,
+            "Nom": 0,
+            "Arrow": true
+        }
+    ],
+    "BlockPar.EC.Total.Strings": 8,
+    "BlockPar.EC": 
+    [
+        {
+            "#": "2",
+            "String": "Отключить гипер-форсаж"
+        },
+        {
+            "#": "3",
+            "String": "Гипер-форсаж: <0>"
+        },
+        {
+            "#": "4",
+            "String": "Включен"
+        },
+        {
+            "#": "5",
+            "String": "Включить гипер-форсаж"
+        },
+        {
+            "#": "6",
+            "String": "Отключен"
+        },
+        {
+            "#": "7",
+            "String": "Ввиду смены двигателя режим гипер-форсажа отключён и готов к повторной активации"
+        },
+        {
+            "#": "8",
+            "String": "Двигатель критически повредился при перерасходе его ресурса гипер-форсажем"
+        },
+        {
+            "#": "9",
+            "String": "Двигатель слишком сильно повредился, использование гипер-форсажа невозможно!"
+        }
+    ]
+}

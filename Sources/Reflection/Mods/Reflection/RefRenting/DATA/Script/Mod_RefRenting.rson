@@ -1,0 +1,4578 @@
+{
+  "LangDatIn": "CFG\\Rus\\Lang.txt",
+  "LangDatOut": "CFG\\Rus\\Lang.dat",
+  "MainDatIn": "CFG\\Main.txt",
+  "MainDatOut": "CFG\\Main.dat",
+  "CacheDatIn": "CFG\\CacheData.txt",
+  "CacheDatOut": "CFG\\CacheData.dat",
+  "ExportLangTxt": true,
+  "ExportLangDat": true,
+  "FileID":  573785173,
+  "FileVersion":  8,
+  "ViewPos.x":  -717,
+  "ViewPos.y":  -209,
+  "ScriptName":  "Mod_RefRenting",
+  "ScriptFileOut":  "DATA\\Script\\Mod_RefRenting.scr",
+  "ScriptTextOut":  "DATA\\Script\\Mod_RefRenting.txt",
+  "Visual.Objects":  
+  [
+    {
+      "DialogAnswers":      
+      [
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "restart",
+          "Pos.x":  140,
+          "Pos.y":  -60,
+          "Parent":  -1,
+          "#":  9,
+          "Msg":  "Нет, пожалуй, лучше своё куплю",
+          "AMsg.Num":  "0"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "",
+          "Pos.x":  100,
+          "Pos.y":  -20,
+          "Parent":  -1,
+          "#":  10,
+          "Msg":  "А что, неплохая идея! Что вы мне можете предложить?",
+          "AMsg.Num":  "1"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "restart",
+          "Pos.x":  140,
+          "Pos.y":  20,
+          "Parent":  -1,
+          "#":  12,
+          "Msg":  "Нет, пожалуй, в другой раз",
+          "AMsg.Num":  "2"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "",
+          "Pos.x":  100,
+          "Pos.y":  60,
+          "Parent":  -1,
+          "#":  13,
+          "Msg":  "Огласите весь список, пожалуйста!",
+          "AMsg.Num":  "3"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "",
+          "Pos.x":  70,
+          "Pos.y":  140,
+          "Parent":  -1,
+          "#":  15,
+          "Msg":  "Двигатель",
+          "AMsg.Num":  "4"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "",
+          "Pos.x":  110,
+          "Pos.y":  140,
+          "Parent":  -1,
+          "#":  16,
+          "Msg":  "Топливный бак",
+          "AMsg.Num":  "5"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "",
+          "Pos.x":  150,
+          "Pos.y":  140,
+          "Parent":  -1,
+          "#":  17,
+          "Msg":  "Дроид",
+          "AMsg.Num":  "6"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "",
+          "Pos.x":  190,
+          "Pos.y":  140,
+          "Parent":  -1,
+          "#":  18,
+          "Msg":  "Захват",
+          "AMsg.Num":  "7"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "",
+          "Pos.x":  230,
+          "Pos.y":  140,
+          "Parent":  -1,
+          "#":  19,
+          "Msg":  "Генератор поля",
+          "AMsg.Num":  "8"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "",
+          "Pos.x":  270,
+          "Pos.y":  140,
+          "Parent":  -1,
+          "#":  20,
+          "Msg":  "Радар",
+          "AMsg.Num":  "9"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "",
+          "Pos.x":  310,
+          "Pos.y":  140,
+          "Parent":  -1,
+          "#":  21,
+          "Msg":  "Сканер",
+          "AMsg.Num":  "10"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "restart",
+          "Pos.x":  230,
+          "Pos.y":  100,
+          "Parent":  -1,
+          "#":  30,
+          "Msg":  "Нет, пожалуй, я откажусь",
+          "AMsg.Num":  "11"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "",
+          "Pos.x":  200,
+          "Pos.y":  530,
+          "Parent":  -1,
+          "#":  38,
+          "Msg":  "Нет, беру!",
+          "AMsg.Num":  "12"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "",
+          "Pos.x":  30,
+          "Pos.y":  450,
+          "Parent":  -1,
+          "#":  39,
+          "Msg":  "Ещё подумаю",
+          "AMsg.Num":  "13"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "",
+          "Pos.x":  -20,
+          "Pos.y":  0,
+          "Parent":  -1,
+          "#":  44,
+          "Msg":  "Я хочу вернуть оборудование",
+          "AMsg.Num":  "14"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "",
+          "Pos.x":  430,
+          "Pos.y":  60,
+          "Parent":  -1,
+          "#":  50,
+          "Msg":  "Хочу выплатить долг за утрату оборудования",
+          "AMsg.Num":  "15"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "restart",
+          "Pos.x":  220,
+          "Pos.y":  -20,
+          "Parent":  -1,
+          "#":  56,
+          "Msg":  "Ладно, пойду тогда..",
+          "AMsg.Num":  "16"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "",
+          "Pos.x":  -100,
+          "Pos.y":  140,
+          "Parent":  -1,
+          "#":  58,
+          "Msg":  "М-м-м... Пожалуй, сейчас я... не смогу. В другой раз",
+          "AMsg.Num":  "17"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "restart",
+          "Pos.x":  -100,
+          "Pos.y":  60,
+          "Parent":  -1,
+          "#":  60,
+          "Msg":  "Я подумаю",
+          "AMsg.Num":  "18"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "restart",
+          "Pos.x":  220,
+          "Pos.y":  60,
+          "Parent":  -1,
+          "#":  66,
+          "Msg":  "Ладно, ладно...",
+          "AMsg.Num":  "19"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "restart",
+          "Pos.x":  200,
+          "Pos.y":  650,
+          "Parent":  -1,
+          "#":  67,
+          "Msg":  "Хорошо, спасибо!",
+          "AMsg.Num":  "20"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "",
+          "Pos.x":  430,
+          "Pos.y":  180,
+          "Parent":  -1,
+          "#":  70,
+          "Msg":  "У меня нет таких денег",
+          "AMsg.Num":  "21"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "",
+          "Pos.x":  470,
+          "Pos.y":  140,
+          "Parent":  -1,
+          "#":  72,
+          "Msg":  "Да, плачу",
+          "AMsg.Num":  "22"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "restart",
+          "Pos.x":  450,
+          "Pos.y":  260,
+          "Parent":  -1,
+          "#":  74,
+          "Msg":  "Я пойду, пожалуй",
+          "AMsg.Num":  "23"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "",
+          "Pos.x":  350,
+          "Pos.y":  140,
+          "Parent":  -1,
+          "#":  82,
+          "Msg":  "Оружие",
+          "AMsg.Num":  "24"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "",
+          "Pos.x":  -180,
+          "Pos.y":  180,
+          "Parent":  -1,
+          "#":  97,
+          "Msg":  "Ну, давайте посмотрим, что я могу вернуть вам",
+          "AMsg.Num":  "25"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "",
+          "Pos.x":  -20,
+          "Pos.y":  180,
+          "Parent":  -1,
+          "#":  98,
+          "Msg":  "Ну, давайте посмотрим, что я могу вернуть вам",
+          "AMsg.Num":  "26"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "restart",
+          "Pos.x":  -100,
+          "Pos.y":  180,
+          "Parent":  -1,
+          "#":  110,
+          "Msg":  "Эм... Пожалуй, пойду я отсюда подобру-поздорову",
+          "AMsg.Num":  "27"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "restart",
+          "Pos.x":  -100,
+          "Pos.y":  260,
+          "Parent":  -1,
+          "#":  115,
+          "Msg":  "Я вернусь, когда подсоберу денег",
+          "AMsg.Num":  "28"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "block",
+          "Pos.x":  -100,
+          "Pos.y":  340,
+          "Parent":  -1,
+          "#":  116,
+          "Msg":  "Да, я готов платить",
+          "AMsg.Num":  "29"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "",
+          "Pos.x":  -180,
+          "Pos.y":  380,
+          "Parent":  -1,
+          "#":  119,
+          "Msg":  "Да, я готов платить",
+          "AMsg.Num":  "30"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "",
+          "Pos.x":  -20,
+          "Pos.y":  380,
+          "Parent":  -1,
+          "#":  120,
+          "Msg":  "Да, я готов платить",
+          "AMsg.Num":  "31"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "restart",
+          "Pos.x":  -180,
+          "Pos.y":  500,
+          "Parent":  -1,
+          "#":  123,
+          "Msg":  "Хорошо",
+          "AMsg.Num":  "32"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "restart",
+          "Pos.x":  -20,
+          "Pos.y":  500,
+          "Parent":  -1,
+          "#":  124,
+          "Msg":  "Хорошо",
+          "AMsg.Num":  "33"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "block",
+          "Pos.x":  240,
+          "Pos.y":  530,
+          "Parent":  -1,
+          "#":  139,
+          "Msg":  "Нет, беру!",
+          "AMsg.Num":  "34"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "",
+          "Pos.x":  280,
+          "Pos.y":  530,
+          "Parent":  -1,
+          "#":  141,
+          "Msg":  "Увы, у меня сейчас нет таких денег",
+          "AMsg.Num":  "35"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "restart",
+          "Pos.x":  280,
+          "Pos.y":  650,
+          "Parent":  -1,
+          "#":  143,
+          "Msg":  "Хорошо, обязательно",
+          "AMsg.Num":  "36"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "",
+          "Pos.x":  220,
+          "Pos.y":  270,
+          "Parent":  -1,
+          "#":  154,
+          "Msg":  "Нет, не надо",
+          "AMsg.Num":  "37"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "",
+          "Pos.x":  260,
+          "Pos.y":  270,
+          "Parent":  -1,
+          "#":  155,
+          "Msg":  "Да",
+          "AMsg.Num":  "38"        
+        }      
+      ],
+      "DialogMessages":      
+      [
+        {
+          "Type":  "TDialogMsg",
+          "Name":  "",
+          "Pos.x":  100,
+          "Pos.y":  -60,
+          "Parent":  -1,
+          "#":  8,
+          "Msg":  "Итак, некоторое время назад наш аналитический отдел провёл некоторые вычисления и сопоставил несколько статистических таблиц. Итогом этого всего стал вывод - многие пилоты, в число которых вошли и относительно недавно вновь появившиеся рейнджеры, испытывают сильные затруднения при оснащении своего корабля новым оборудованием для борьбы с доминаторами.\r\nВ качестве выхода мы предлагаем всем пилотам взять оборудование напрокат, под проценты. Обычным пилотам требуется предъявить информацию о наличии страховки; рейнджерам же этого не требуется. Более того, для них действуют льготные условия проката оборудования.",
+          "DMsg.Num":  "0"        
+        },
+        {
+          "Type":  "TDialogMsg",
+          "Name":  "",
+          "Pos.x":  100,
+          "Pos.y":  20,
+          "Parent":  -1,
+          "#":  11,
+          "Msg":  "Итак, в нашем центре доступно для аренды всё оборудование, включая вооружение, которое только изобрели учёные Коалиции;\r\n\r\nСтоимость аренды рассчитывается как:\r\nK * G + 3500\r\nГде:\r\nK - коэффициент данного оборудования\r\nG - условная техническая сложность оборудования\r\nЕжемесячные выплаты считаются как 5% от стоимости аренды + 750 cr.\r\n\r\nПри сдаче оборудование должно быть в идеальном техническом состоянии - аналогичном тому, что было при получении.\r\n\r\nВ случае уничтожения оборудования в качестве неустойки вы будете обязаны выплатить 200% стоимости оборудования",
+          "DMsg.Num":  "1"        
+        },
+        {
+          "Type":  "TDialogMsg",
+          "Name":  "",
+          "Pos.x":  110,
+          "Pos.y":  100,
+          "Parent":  -1,
+          "#":  14,
+          "Msg":  "Итак, выбирайте!\r\n\r\nКстати, вы в курсе, что мы отпускаем в одни руки не больше <clr>5<clrEnd> единиц оборудования? Для рейнджеров лимит повышен до <clr>15<clrEnd>, но всё же.",
+          "DMsg.Num":  "2"        
+        },
+        {
+          "Type":  "TDialogMsg",
+          "Name":  "",
+          "Pos.x":  240,
+          "Pos.y":  450,
+          "Parent":  -1,
+          "#":  33,
+          "Msg":  "====================================\r\n             ЧЕК-ЛИСТ\r\n====================================\r\nВыбранное оборудование: <equip_Name>\r\nВыбранный микромодуль: <mm_Name>\r\nРаса-производитель: <strRace>\r\nСрок аренды: <dayss> мес.\r\nАрендная плата: <arendnaya> cr.\r\nПлата за месяц свыше трёх: <monthly> cr.\r\nСпособ оплаты: <plata>\r\n====================================\r\nИТОГО: <money> cr.\r\n\r\n====================================\r\nПРИМЕЧАНИЕ О МИКРОМОДУЛЕ:\r\n<mm_Text>\r\n====================================\r\n\r\nИтак, утверждаем этот список, или хотите ещё подумать?\r\n\r\n====================================\r\n",
+          "DMsg.Num":  "3"        
+        },
+        {
+          "Type":  "TDialogMsg",
+          "Name":  "",
+          "Pos.x":  200,
+          "Pos.y":  610,
+          "Parent":  -1,
+          "#":  42,
+          "Msg":  "Отлично! Оборудование поступило к вам на склад. Можете начинать пользоваться им хоть прямо сейчас. Но, конечно, не забудьте, что в течении <clr>2<clrEnd> месяцев после окончания срока пользования вы должны будете вернуть оборудование на любой центр нашей сети!",
+          "DMsg.Num":  "4"        
+        },
+        {
+          "Type":  "TDialogMsg",
+          "Name":  "",
+          "Pos.x":  -20,
+          "Pos.y":  140,
+          "Parent":  -1,
+          "#":  48,
+          "Msg":  "О, сдать?\r\nНу, что же, поздравляем: вы прибыли без опозданий.\r\nНаши специалисты готовы выгрузить наше оборудование с вашего корабля.\r\nПриступаем?",
+          "DMsg.Num":  "5"        
+        },
+        {
+          "Type":  "TDialogMsg",
+          "Name":  "",
+          "Pos.x":  -180,
+          "Pos.y":  140,
+          "Parent":  -1,
+          "#":  49,
+          "Msg":  "Итак...\r\nА-га-а-а... Рейнджер, да вы - злостный неплательщик! По крайней мере, сдавать в срок взятое напрокат вы не приучены. У вас и пеня набежала, которую вы оплатите вместе со сдачей оборудования!",
+          "DMsg.Num":  "6"        
+        },
+        {
+          "Type":  "TDialogMsg",
+          "Name":  "",
+          "Pos.x":  430,
+          "Pos.y":  100,
+          "Parent":  -1,
+          "#":  51,
+          "Msg":  "Хм. Пожалуй, да, здесь есть пара записей.\r\nЕсли хотите погасить долг перед сетью - пожалуйста. <moneySlomano> cr. на счёт сети и мы в расчёте.",
+          "DMsg.Num":  "7"        
+        },
+        {
+          "Type":  "TDialogMsg",
+          "Name":  "",
+          "Pos.x":  180,
+          "Pos.y":  -20,
+          "Parent":  -1,
+          "#":  55,
+          "Msg":  "Рейнджер, в нашей базе данных значится, что вы нарушили правила пользования нашим сервисом и до сих пор не ликвидировали это упущение. Мы вынуждены отказать вам в доступе к сервису проката оборудрования.",
+          "DMsg.Num":  "8"        
+        },
+        {
+          "Type":  "TDialogMsg",
+          "Name":  "",
+          "Pos.x":  -100,
+          "Pos.y":  100,
+          "Parent":  -1,
+          "#":  59,
+          "Msg":  "Другой-не другой, а ведь вы, рейнджер, можете себе получить таким образом не только огромный штраф, но и злейшего врага в виде сети бизнес-центров! Одумайтесь и верните то, что должны.",
+          "DMsg.Num":  "9"        
+        },
+        {
+          "Type":  "TDialogMsg",
+          "Name":  "",
+          "Pos.x":  180,
+          "Pos.y":  60,
+          "Parent":  -1,
+          "#":  65,
+          "Msg":  "Извините, но вы и так взяли у нас напрокат слишком много оборудования! Сначала верните предыдущее!",
+          "DMsg.Num":  "10"        
+        },
+        {
+          "Type":  "TDialogMsg",
+          "Name":  "",
+          "Pos.x":  430,
+          "Pos.y":  220,
+          "Parent":  -1,
+          "#":  71,
+          "Msg":  "Значит, раздобудьте. Как финансовый аналитик говорю вам - у рейнджера масса возможностей подзаработать, в отличие от, например, пирата или капитана торгового судна. Так что - за штурвал и вперёд!",
+          "DMsg.Num":  "11"        
+        },
+        {
+          "Type":  "TDialogMsg",
+          "Name":  "",
+          "Pos.x":  470,
+          "Pos.y":  220,
+          "Parent":  -1,
+          "#":  73,
+          "Msg":  "Отлично! Теперь ваша задолженность закрыта. Рады иметь с вами дело, рейнджер!",
+          "DMsg.Num":  "12"        
+        },
+        {
+          "Type":  "TDialogMsg",
+          "Name":  "",
+          "Pos.x":  -100,
+          "Pos.y":  220,
+          "Parent":  -1,
+          "#":  109,
+          "Msg":  "Это оборудование сейчас нельзя сдать: выберите предмет из списка или восстановите полностью сломанное оборудование. Если предмет утрачен, выберите его в списке и оплатите неустойку.",
+          "DMsg.Num":  "13"        
+        },
+        {
+          "Type":  "TDialogMsg",
+          "Name":  "",
+          "Pos.x":  -180,
+          "Pos.y":  300,
+          "Parent":  -1,
+          "#":  112,
+          "Msg":  "Стоимость закрытия выбранной аренды с учётом долга и, при утрате предмета, неустойки составляет <money1> cr. Оплачиваете?",
+          "DMsg.Num":  "14"        
+        },
+        {
+          "Type":  "TDialogMsg",
+          "Name":  "",
+          "Pos.x":  -20,
+          "Pos.y":  300,
+          "Parent":  -1,
+          "#":  113,
+          "Msg":  "Стоимость закрытия выбранной аренды с учётом долга и, при утрате предмета, неустойки составляет <money1> cr. Оплачиваете?",
+          "DMsg.Num":  "15"        
+        },
+        {
+          "Type":  "TDialogMsg",
+          "Name":  "",
+          "Pos.x":  -180,
+          "Pos.y":  460,
+          "Parent":  -1,
+          "#":  121,
+          "Msg":  "Платёж принят. Выбранная аренда закрыта.",
+          "DMsg.Num":  "16"        
+        },
+        {
+          "Type":  "TDialogMsg",
+          "Name":  "",
+          "Pos.x":  -20,
+          "Pos.y":  460,
+          "Parent":  -1,
+          "#":  122,
+          "Msg":  "Платёж принят. Выбранная аренда закрыта.",
+          "DMsg.Num":  "17"        
+        },
+        {
+          "Type":  "TDialogMsg",
+          "Name":  "",
+          "Pos.x":  280,
+          "Pos.y":  610,
+          "Parent":  -1,
+          "#":  142,
+          "Msg":  "Что же - не беда. Наш сервис обслуживает рейнджеров в любое время суток, поэтому прилетайте, когда сможете взять что-нибудь из нашего ассортимента!",
+          "DMsg.Num":  "18"        
+        },
+        {
+          "Type":  "TDialogMsg",
+          "Name":  "",
+          "Pos.x":  240,
+          "Pos.y":  230,
+          "Parent":  -1,
+          "#":  153,
+          "Msg":  "Хотите установить микромодуль?",
+          "DMsg.Num":  "19"        
+        }      
+      ],
+      "Dialogs":      
+      [
+        {
+          "Type":  "TDialog",
+          "Name":  "DialogRant",
+          "Pos.x":  100,
+          "Pos.y":  -100,
+          "Parent":  -1,
+          "#":  6        
+        }      
+      ],
+      "Groups":      
+      [
+        {
+          "Type":  "TGroup",
+          "Name":  "GroupNew",
+          "Pos.x":  -100,
+          "Pos.y":  -60,
+          "Parent":  -1,
+          "#":  4,
+          "Owner":  62,
+          "Group.Type":  126,
+          "CntShipMin":  1,
+          "CntShipMax":  1,
+          "SpeedMin":  100,
+          "SpeedMax":  10000,
+          "Weapon":  0,
+          "CargoHook":  0,
+          "EmptySpace":  0,
+          "AddPlayer":  true,
+          "StatusTraderMin":  0,
+          "StatusTraderMax":  100,
+          "StatusWarriorMin":  0,
+          "StatusWarriorMax":  100,
+          "StatusPirateMin":  0,
+          "StatusPirateMax":  100,
+          "DistSearch":  10000,
+          "Dialog":  -1,
+          "StrengthMin":  "0",
+          "StrengthMax":  "0",
+          "Ruins":  ""        
+        }      
+      ],
+      "Operations":      
+      [
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  -100,
+          "Pos.y":  -190,
+          "Parent":  -1,
+          "#":  5,
+          "Code.Type":  "Global",
+          "Code":          
+          [
+              "if(!GCntRun(GScriptName)) GRun();"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  -80,
+          "Pos.y":  -190,
+          "Parent":  -1,
+          "#":  7,
+          "Code.Type":  "DialogBegin",
+          "Code":          
+          [
+              "if(GetTalkShip() == 0) {",
+              "    if(GetShipRuins(Player()) != 0) {",
+              "        if(ShipType(GetShipRuins(Player())) == 'BK') {",
+              "            AddDialogInject('DialogRant',\"Также можете воспользоваться нашим сервисом проката оборудования\",\"Прокат оборудования\",10);",
+              "        }",
+              "    }",
+              "}"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  70,
+          "Pos.y":  180,
+          "Parent":  -1,
+          "#":  22,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "EquipFlag = 1;"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  110,
+          "Pos.y":  180,
+          "Parent":  -1,
+          "#":  23,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "EquipFlag = 2;"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  150,
+          "Pos.y":  180,
+          "Parent":  -1,
+          "#":  24,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "EquipFlag = 3;"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  190,
+          "Pos.y":  180,
+          "Parent":  -1,
+          "#":  25,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "EquipFlag = 4;"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  230,
+          "Pos.y":  180,
+          "Parent":  -1,
+          "#":  26,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "EquipFlag = 5;"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  270,
+          "Pos.y":  180,
+          "Parent":  -1,
+          "#":  27,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "EquipFlag = 6;"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  310,
+          "Pos.y":  180,
+          "Parent":  -1,
+          "#":  28,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "EquipFlag = 7;"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  240,
+          "Pos.y":  350,
+          "Parent":  -1,
+          "#":  29,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "//Первичные настройки и получение ГТУ    \\/ \\/ \\/",
+              "//",
+              "GTL = GalaxyTechLevel();",
+              "g = 0;",
+              "f = 0;",
+              "k = 0;",
+              "w = 0;",
+              "ArrayClear(temp_arr1);",
+              "while(1) {",
+              "    returnFlag = 1;",
+              "    i = NumberBox('Bm.Items.2Minerals',\"Выберите ТУ оборудования\",1,8,GTL);",
+              "    j = ListBox(\"Выберите расу оборудования\",temp_arr2);",
+              "    k = ListBox(\"Выберите способ оплаты\",temp_arr3);",
+              "    dayss = NumberBox('Bm.ItemsUseless.2Usl_Elus_s',\"На сколько месяцев арендуется?\",3,60,60,'',6);",
+              "    if(~i && ~k && ~j && ~dayss) returnFlag = 0;",
+              "",
+              "    if(MessageBoxYesNo(\"Вы уверены в своём выборе?\") == 1) break;",
+              "}"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  350,
+          "Pos.y":  100,
+          "Parent":  -1,
+          "#":  32,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "EquipFlag = 0;"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  30,
+          "Pos.y":  100,
+          "Parent":  -1,
+          "#":  40,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "EquipFlag = 0;",
+              "MMFlag = 0;",
+              "ArrayClear(temp_arr1);",
+              "ArrayClear(temp_arr5);"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  200,
+          "Pos.y":  570,
+          "Parent":  -1,
+          "#":  41,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "int fg = 0;",
+              "TotalEquip = TotalEquip + 1;",
+              "EquipFlag = 0;",
+              "MMFlag = 0;",
+              "if(j == 1) tempItem = CreateEquipment(EquipType,Rnd(30,55),i,Maloc);",
+              "if(j == 2) tempItem = CreateEquipment(EquipType,Rnd(25,40),i,Peleng);",
+              "if(j == 3) tempItem = CreateEquipment(EquipType,Rnd(25,40),i,People);",
+              "if(j == 4) tempItem = CreateEquipment(EquipType,Rnd(25,35),i,Gaal);",
+              "if(j == 5) tempItem = CreateEquipment(EquipType,Rnd(25,40),i,Fei);",
+              "if(j == 6) tempItem = CreateEquipment(EquipType,Rnd(25,45),i,PirateClan);",
+              "tempid = Id(tempItem);",
+              "dayss = dayss * 30;",
+              "ArrayAdd(timer,dayss);",
+              "if(ShipCustomShipInfoDescription(Player(),'RefRentInfo') != 'NoShow') infoStr = ShipCustomShipInfoDescription(Player(),'RefRentInfo');",
+              "infoStr = infoStr + Format('<br>') + Name(tempItem);",
+              "infoStr = infoStr + \"(на \" + dayss + ' ' + \" дн. до\"+ ' ' + GameDateTxtByTurn(CurTurn()+dayss) + ')';",
+              "ArrayAdd(namesArr,Name(tempItem));",
+              "ArrayAdd(strsArchive,Format('<br>') + Name(tempItem) + ' ' + \"(на \" + ' ' + dayss+ ' ' + \" дн. до \" + ' ' + GameDateTxtByTurn(CurTurn()+dayss) + ')');",
+              "ShipCustomShipInfoDescription(Player(),'RefRentInfo',infoStr);",
+              "SpecialToEquipment(FindBonusByNameInCfg('Ref_RentAcryn'),tempItem);",
+              "if(tdwd != -1) ModuleToEquipment(tdwd,tempItem);",
+              "ArrayAdd(EquipArr,tempid);",
+              "ArrayAdd(penya,0);",
+              "if(k == 2) fg = monthly * dayss / 30;",
+              "if(k == 3) fg = arendnaya + (monthly * dayss / 30) + 3500;",
+              "ArrayAdd(payment,fg);",
+              "ArrayAdd(bonk,0);",
+              "ArrayAdd(bonkFlag,0);",
+              "ArrayClear(temp_arr1);",
+              "ArrayClear(temp_arr5);",
+              "ShipMoney(Player(),ShipMoney(Player()) - money);",
+              "AddItemToShip(Player(),tempItem);",
+              "Sound('Sound.Sell');"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  -60,
+          "Pos.y":  -190,
+          "Parent":  -1,
+          "#":  45,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "if(!ShipIsTakeoff(Player())) {",
+              "    for(i=GalaxyEvents()-1; i>=0; i=i-1) {",
+              "        if(GalaxyEventDate(i) < CurTurn()) break;",
+              "        if(GalaxyEventType(i)=='RuinsDestroyed') {",
+              "            if(GalaxyEventData(i,0) != t_BK) continue;",
+              "            BKcount = BKcount - 1;",
+              "        }",
+              "        if(GalaxyEventType(i)=='RuinsCreated') {",
+              "            if(GalaxyEventData(i,0) != t_BK) continue;",
+              "            BKcount = BKcount + 1;",
+              "        }",
+              "    }",
+              "}",
+              "for(y = 1; y < ArrayDim(timer); y = y + 1) {",
+              "    if(timer[y] > 0) {",
+              "        timer[y] = timer[y] - 1;",
+              "    }",
+              "    else if(bonkFlag[y] == 0) {",
+              "        bonk[y] = 60;",
+              "        if(PlayerMedPolicy() > 0) {",
+              "            bonk[y] = bonk[y] + 30;",
+              "            Ether(0,'',\"Рейнджер <Player>!<br>Уведомляем вас, что подошло время возвращать оборудование! У вас есть три месяца, чтобы прибыть в ближайшее отделение сети бизнес-центров и сдать оборудование.\");",
+              "        }",
+              "        else Ether(0,'',\"Рейнджер <Player>!<br>Уведомляем вас, что подошло время возвращать оборудование! У вас есть два месяца, чтобы прибыть в ближайшее отделение сети бизнес-центров и сдать оборудование.\");",
+              "        bonkFlag[y] = 1;",
+              "    }",
+              "    if(bonk[y] != 0 && bonkFlag[y] == 1) bonk[y] = bonk[y] - 1;",
+              "    if(bonk[y] == 0 && bonkFlag[y] == 1) {",
+              "        Alarm = Alarm + 1;",
+              "        Ether(0,'',\"Рейнджер <Player>!<br>Уведомляем вас, что вы просрочили сдачу оборудования на бизнес-центр! Если вы продолжите игнорировать наши требования, то наши контрмеры не заставят себя ждать!\");",
+              "        bonkFlag[y] = 2;",
+              "        penya[y] = 3500;",
+              "    }",
+              "    if(bonkFlag[y] == 2) {",
+              "        if(bonk[y] == 180) {",
+              "            if(PlayerDeposit() > 0) {",
+              "                Ether(0,'',\"Рейнджер <Player>!<br>Напоминаем вам, что вы просрочили сдачу оборудования на бизнес-центр! Более того, вы решили, что в прошедшие полгода у вас были более важные дела, чем вернуть свой долг. Руководство сети решило, что у него тоже есть более важные дела, чем хранить ваши деньги на депозитном счету. Поэтому их там больше нет.<br>С уважением, сеть бизнес-центров.\");",
+              "                if(PlayerDeposit() > 0) bonk[y] = 0;",
+              "                if(PlayerDeposit() > 150000) bonk[y] = -60;",
+              "                if(PlayerDeposit() > 400000) bonk[y] = -90;",
+              "                if(PlayerDeposit() > 1000000) bonk[y] = -120;",
+              "                if(PlayerDeposit() > 3000000) bonk[y] = -150;",
+              "                PlayerDeposit(0);",
+              "                PlayerDepositPercent(0);",
+              "            }",
+              "            else {",
+              "                Ether(0,'',\"Рейнджер <Player>!<br>Напоминаем вам, что вы просрочили сдачу оборудования на бизнес-центр! Более того, вы решили, что в прошедшие полгода у вас были более важные дела, чем вернуть свой долг. Мы уже озаботились этим вопросом, и уведомили планетарные правительства о вашем поведении.<br>С уважением, сеть бизнес-центров.\");",
+              "                bonkFlag[y] = 3;",
+              "                bonk[y] = 0;",
+              "                if(PlayerMedPolicy() > 0) PlayerMedPolicy(0);",
+              "            }",
+              "        }",
+              "        bonk[y] = bonk[y] + 1;",
+              "    }",
+              "    if(bonkFlag[y] == 3) {",
+              "        bonk[y] = bonk[y] + 1;",
+              "        if(bonk[y] == 90) {",
+              "            Ether(0,'',\"Рейнджер <Player>!<br>Вы ещё не забыли, что должны вернуть наше оборудование? Так вот, чтобы наше напоминание жило в вашей памяти подольше, мы озаботились тем, чтобы и пираты, и силы правопорядка узнали, что вы за гражданин.<br>С уважением, сеть бизнес-центров.\");",
+              "            penya[y] = penya[y] + 7500;",
+              "            if(ShipRank(Player()) < 6) {",
+              "                ChangeGlobalRelationsPlanets(Player(),0,3,-25,31);",
+              "                ChangeGlobalRelationsShips(Player(),0,0,30,1,31);",
+              "                ChangeGlobalRelationsShips(Player(),0,3,-20,4,31);",
+              "                ChangeGlobalRelationsShips(Player(),0,3,-30,8,31);",
+              "                ChangeGlobalRelationsShips(Player(),0,3,-30,16,31);",
+              "                ChangeGlobalRelationsShips(Player(),0,3,-30,32,31);",
+              "            }",
+              "            else {",
+              "                ChangeGlobalRelationsPlanets(Player(),0,3,-15,31);",
+              "                ChangeGlobalRelationsShips(Player(),0,0,40,1,31);",
+              "                ChangeGlobalRelationsShips(Player(),0,3,-10,4,31);",
+              "                ChangeGlobalRelationsShips(Player(),0,3,-20,8,31);",
+              "                ChangeGlobalRelationsShips(Player(),0,3,-20,16,31);",
+              "                ChangeGlobalRelationsShips(Player(),0,3,-20,32,31);",
+              "            }",
+              "            ConChangeRelationToRanger(StarToCon(ShipStar(Player())),Player(),-30);",
+              "            if(PirateWin() != 3 && PirateWin() != 4) {",
+              "                if(GetShipPirateRank(Player()) < 6) ConChangeRelationToRanger(StarToCon(PlanetToStar(PlanetPirateClan())),Player(),-60);",
+              "            }",
+              "        }",
+              "    }",
+              "    if(ItemDestroy(IdToItem(EquipArr[y]))) {",
+              "        Alarm = Alarm + 1;",
+              "        SlomFlag = SlomFlag + 1;",
+              "        temp_money = ItemCost(IdToItem(EquipArr[y])) * 2;",
+              "        temp_money = temp_money + payment[y] + penya[y];",
+              "        Ether(0,'',\"Рейнджер <Player>!<br>Судя по информации с наших датчиков, вы допустили потерю нашего дорогостоящего оборудования! Его стоимость, включая остаток по арендным выплатам (<temp_money> cr.) будет вычтена из ваших средств.<br>С уважением, сеть бизнес-центров.\");",
+              "        moneySlomano = moneySlomano + temp_money;",
+              "        ArrayDelete(strsArchive,y);",
+              "        if(ArrayDim(strsArchive) > 1) {",
+              "            infoStr = '';",
+              "            for(l = 1; l < ArrayDim(strsArchive); l = l + 1) {",
+              "                infoStr = infoStr + strsArchive[l];",
+              "            }",
+              "            ShipCustomShipInfoDescription(Player(),'RefRentInfo',infoStr);",
+              "        }",
+              "        else ShipCustomShipInfoDescription(Player(),'RefRentInfo','NoShow');",
+              "        ArrayDelete(payment,y);",
+              "        ArrayDelete(EquipArr,y);",
+              "        ArrayDelete(bonk,y);",
+              "        ArrayDelete(bonkFlag,y);",
+              "        ArrayDelete(timer,y);",
+              "        ArrayDelete(namesArr,y);",
+              "        ArrayDelete(penya,y);",
+              "        TotalEquip = TotalEquip - 1;",
+              "        y = y - 1;",
+              "    }",
+              "}",
+              "if(landingFlag == 1) {",
+              "    SpecialToEquipment(FindBonusByNameInCfg('Ref_RentAcryn'),IdToItem(tempid));",
+              "    landingFlag = 0;",
+              "}"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  -40,
+          "Pos.y":  -190,
+          "Parent":  -1,
+          "#":  61,
+          "Code.Type":  "Init",
+          "Code":          
+          [
+              "//расы оборудования",
+              "ArrayAdd(temp_arr2,\"Малокское\");",
+              "ArrayAdd(temp_arr2,\"Пеленгское\");",
+              "ArrayAdd(temp_arr2,\"Человеческое\");",
+              "ArrayAdd(temp_arr2,\"Гаальское\");",
+              "ArrayAdd(temp_arr2,\"Фэянское\");",
+              "ArrayAdd(temp_arr2,\"Пиратское\");",
+              "//типы оплаты",
+              "ArrayAdd(temp_arr3,\"Немедленно\");",
+              "ArrayAdd(temp_arr3,\"Проценты при возвращении\");",
+              "ArrayAdd(temp_arr3,\"Всё при возвращении\");",
+              "//типы оружия",
+              "ArrayAdd(temp_arr4,\"Промышленный лазер\");",
+              "ArrayAdd(temp_arr4,\"Осколочное орудие\");",
+              "ArrayAdd(temp_arr4,\"Лезка\");",
+              "ArrayAdd(temp_arr4,\"Ракетомёт\");",
+              "ArrayAdd(temp_arr4,\"Третон\");",
+              "ArrayAdd(temp_arr4,\"Волновой фазер\");",
+              "ArrayAdd(temp_arr4,\"Потоковый бластер\");",
+              "ArrayAdd(temp_arr4,\"Электронный резак\");",
+              "ArrayAdd(temp_arr4,\"Мультирезонатор\");",
+              "ArrayAdd(temp_arr4,\"Атомный визион\");",
+              "ArrayAdd(temp_arr4,\"Дезинтегратор\");",
+              "ArrayAdd(temp_arr4,\"Турбогравир\");",
+              "ArrayAdd(temp_arr4,\"Эсодафер\");",
+              "ArrayAdd(temp_arr4,\"Кафаситор\");",
+              "ArrayAdd(temp_arr4,\"Лирекрон\");",
+              "//Инфошка об арендах",
+              "ShipAddCustomShipInfo(Player(),'RefRentInfo','NoShow');",
+              "//Едрить, пожелайте мне удачи",
+              "//Вносим в массивы все ванильные микромодули...",
+              "//",
+              "//",
+              "//Микромодули для Сканера",
+              "ArrayAdd(ScanerMM,\"Стоплай\");",
+              "ArrayAdd(ScanerMM,\"Конвектор\");",
+              "ArrayAdd(ScanerMM,\"Сжим\");",
+              "ArrayAdd(ScanerMM,\"Спаай\");",
+              "ArrayAdd(ScanerMM,\"Патч 0.95 бета\");",
+              "ArrayAdd(ScanerMM,\"Оптиматор\");",
+              "ArrayAdd(ScanerMM,\"Миниразмерный\");",
+              "ArrayAdd(ScanerMM,\"Цент\");",
+              "ArrayAdd(ScanerMM,\"Платинос\");",
+              "ArrayAdd(ScanerMM,\"Универс\");",
+              "ArrayAdd(ScanerMM,\"Иикебанит\");",
+              "ArrayAdd(ScanerMM,\"Микроразмерный\");",
+              "ArrayAdd(ScanerMM,\"Патч 0.96 альфа\");",
+              "ArrayAdd(ScanerMM,\"Ламбалд\");",
+              "ArrayAdd(ScanerMM,\"Антент\");",
+              "//",
+              "//Микромодули для Радара",
+              "ArrayAdd(RadarMM,\"Аппер\");",
+              "ArrayAdd(RadarMM,\"Стоплай\");",
+              "ArrayAdd(RadarMM,\"Конвектор\");",
+              "ArrayAdd(RadarMM,\"Сжим\");",
+              "ArrayAdd(RadarMM,\"Колебратор\");",
+              "ArrayAdd(RadarMM,\"Спаай\");",
+              "ArrayAdd(RadarMM,\"Дальстар\");",
+              "ArrayAdd(RadarMM,\"Патч 0.95 бета\");",
+              "ArrayAdd(RadarMM,\"Оптиматор\");",
+              "ArrayAdd(RadarMM,\"Миниразмерный\");",
+              "ArrayAdd(RadarMM,\"Цент\");",
+              "ArrayAdd(RadarMM,\"Платинос\");",
+              "ArrayAdd(RadarMM,\"Универс\");",
+              "ArrayAdd(RadarMM,\"Иикебанит\");",
+              "ArrayAdd(RadarMM,\"Минивизион\");",
+              "ArrayAdd(RadarMM,\"Микроразмерный\");",
+              "ArrayAdd(RadarMM,\"Патч 0.96 альфа\");",
+              "ArrayAdd(RadarMM,\"Ламбалд\");",
+              "ArrayAdd(RadarMM,\"Антент\");",
+              "//",
+              "//Микромодули для Захвата",
+              "ArrayAdd(ZahvatMM,\"Магникум\");",
+              "ArrayAdd(ZahvatMM,\"Стоплай\");",
+              "ArrayAdd(ZahvatMM,\"Парагон\");",
+              "ArrayAdd(ZahvatMM,\"Сжим\");",
+              "ArrayAdd(ZahvatMM,\"Колебратор\");",
+              "ArrayAdd(ZahvatMM,\"Оптиматор\");",
+              "ArrayAdd(ZahvatMM,\"Миниразмерный\");",
+              "ArrayAdd(ZahvatMM,\"Цент\");",
+              "ArrayAdd(ZahvatMM,\"Платинос\");",
+              "ArrayAdd(ZahvatMM,\"Универс\");",
+              "ArrayAdd(ZahvatMM,\"Иикебанит\");",
+              "ArrayAdd(ZahvatMM,\"Микроразмерный\");",
+              "ArrayAdd(ZahvatMM,\"Хокус\");",
+              "ArrayAdd(ZahvatMM,\"Ламбалд\");",
+              "//",
+              "//Микромодули для Движка",
+              "ArrayAdd(EngineMM,\"Аппер\");",
+              "ArrayAdd(EngineMM,\"Фэйджоуль\");",
+              "ArrayAdd(EngineMM,\"Стоплай\");",
+              "ArrayAdd(EngineMM,\"Стратер\");",
+              "ArrayAdd(EngineMM,\"Сжим\");",
+              "ArrayAdd(EngineMM,\"Микрострел\");",
+              "ArrayAdd(EngineMM,\"Сдвиг\");",
+              "ArrayAdd(EngineMM,\"Дальстар\");",
+              "ArrayAdd(EngineMM,\"Эксплодер\");",
+              "ArrayAdd(EngineMM,\"Патч 0.95 бета\");",
+              "ArrayAdd(EngineMM,\"Оптиматор\");",
+              "ArrayAdd(EngineMM,\"Миниразмерный\");",
+              "ArrayAdd(EngineMM,\"Цент\");",
+              "ArrayAdd(EngineMM,\"Платинос\");",
+              "ArrayAdd(EngineMM,\"Гугаал\");",
+              "ArrayAdd(EngineMM,\"Джампгейтор 3.11\");",
+              "ArrayAdd(EngineMM,\"Джейк\");",
+              "ArrayAdd(EngineMM,\"Универс\");",
+              "ArrayAdd(EngineMM,\"Иикебанит\");",
+              "ArrayAdd(EngineMM,\"Микроразмерный\");",
+              "ArrayAdd(EngineMM,\"Жампа\");",
+              "ArrayAdd(EngineMM,\"Патч 0.96 альфа\");",
+              "ArrayAdd(EngineMM,\"Двима\");",
+              "ArrayAdd(EngineMM,\"Редуза\");",
+              "ArrayAdd(EngineMM,\"Ламбалд\");",
+              "ArrayAdd(EngineMM,\"Стаксер\");",
+              "ArrayAdd(EngineMM,\"Вихрь\");",
+              "//",
+              "//Микромодули для Бака",
+              "ArrayAdd(FuelMM,\"Стоплай\");",
+              "ArrayAdd(FuelMM,\"Сжим\");",
+              "ArrayAdd(FuelMM,\"Объемник\");",
+              "ArrayAdd(FuelMM,\"Патч 0.95 бета\");",
+              "ArrayAdd(FuelMM,\"Оптиматор\");",
+              "ArrayAdd(FuelMM,\"Миниразмерный\");",
+              "ArrayAdd(FuelMM,\"Цент\");",
+              "ArrayAdd(FuelMM,\"Платинос\");",
+              "ArrayAdd(FuelMM,\"Универс\");",
+              "ArrayAdd(FuelMM,\"Иикебанит\");",
+              "ArrayAdd(FuelMM,\"Микроразмерный\");",
+              "ArrayAdd(FuelMM,\"Бач\");",
+              "ArrayAdd(FuelMM,\"Ламбалд\");",
+              "//",
+              "//Микромодули для ГЗП",
+              "ArrayAdd(ShieldMM,\"Стоплай\");",
+              "ArrayAdd(ShieldMM,\"Сжим\");",
+              "ArrayAdd(ShieldMM,\"Шелест\");",
+              "ArrayAdd(ShieldMM,\"Диощит\");",
+              "ArrayAdd(ShieldMM,\"Колебратор\");",
+              "ArrayAdd(ShieldMM,\"Оптиматор\");",
+              "ArrayAdd(ShieldMM,\"Миниразмерный\");",
+              "ArrayAdd(ShieldMM,\"Цент\");",
+              "ArrayAdd(ShieldMM,\"Платинос\");",
+              "ArrayAdd(ShieldMM,\"Пакстон\");",
+              "ArrayAdd(ShieldMM,\"Универс\");",
+              "ArrayAdd(ShieldMM,\"Иикебанит\");",
+              "ArrayAdd(ShieldMM,\"Микроразмерный\");",
+              "ArrayAdd(ShieldMM,\"Броинг\");",
+              "ArrayAdd(ShieldMM,\"Ламбалд\");",
+              "ArrayAdd(ShieldMM,\"Бронд\");",
+              "//",
+              "//Микромодули для Дроида",
+              "ArrayAdd(DroidMM,\"Стоплай\");",
+              "ArrayAdd(DroidMM,\"Сжим\");",
+              "ArrayAdd(DroidMM,\"Дронз\");",
+              "ArrayAdd(DroidMM,\"Патч 0.95 бета\");",
+              "ArrayAdd(DroidMM,\"Оптиматор\");",
+              "ArrayAdd(DroidMM,\"Миниразмерный\");",
+              "ArrayAdd(DroidMM,\"Цент\");",
+              "ArrayAdd(DroidMM,\"Громодрын\");",
+              "ArrayAdd(DroidMM,\"Платинос\");",
+              "ArrayAdd(DroidMM,\"Универс\");",
+              "ArrayAdd(DroidMM,\"Иикебанит\");",
+              "ArrayAdd(DroidMM,\"Микроразмерный\");",
+              "ArrayAdd(DroidMM,\"Патч 0.96 альфа\");",
+              "ArrayAdd(DroidMM,\"Ламбалд\");",
+              "ArrayAdd(DroidMM,\"Боттер\");",
+              "//",
+              "//Микромодули для Ракетного",
+              "ArrayAdd(MissileMM,\"Интегратор\");",
+              "ArrayAdd(MissileMM,\"Сжим\");",
+              "ArrayAdd(MissileMM,\"Микрострел\");",
+              "ArrayAdd(MissileMM,\"Диощит\");",
+              "ArrayAdd(MissileMM,\"Маформ\");",
+              "ArrayAdd(MissileMM,\"Тюринг\");",
+              "ArrayAdd(MissileMM,\"Дальстар\");",
+              "ArrayAdd(MissileMM,\"Патч 0.95 бета\");",
+              "ArrayAdd(MissileMM,\"Горанд\");",
+              "ArrayAdd(MissileMM,\"Цент\");",
+              "ArrayAdd(MissileMM,\"Платинос\");",
+              "ArrayAdd(MissileMM,\"Клейн\");",
+              "ArrayAdd(MissileMM,\"Ракетон\");",
+              "ArrayAdd(MissileMM,\"Универс\");",
+              "ArrayAdd(MissileMM,\"Иикебанит\");",
+              "ArrayAdd(MissileMM,\"Патч 0.96 альфа\");",
+              "ArrayAdd(MissileMM,\"Антифэй\");",
+              "ArrayAdd(MissileMM,\"Жжения\");",
+              "ArrayAdd(MissileMM,\"Ламбалд\");",
+              "ArrayAdd(MissileMM,\"Берсерк\");",
+              "ArrayAdd(MissileMM,\"Дальномет\");",
+              "//",
+              "//Микромодули для Энергетического",
+              "ArrayAdd(EnergyMM,\"Электро\");",
+              "ArrayAdd(EnergyMM,\"Интегратор\");",
+              "ArrayAdd(EnergyMM,\"Сжим\");",
+              "ArrayAdd(EnergyMM,\"Микрострел\");",
+              "ArrayAdd(EnergyMM,\"Маформ\");",
+              "ArrayAdd(EnergyMM,\"Энергос\");",
+              "ArrayAdd(EnergyMM,\"Тюринг\");",
+              "ArrayAdd(EnergyMM,\"Дальстар\");",
+              "ArrayAdd(EnergyMM,\"Эскалибур\");",
+              "ArrayAdd(EnergyMM,\"Патч 0.95 бета\");",
+              "ArrayAdd(EnergyMM,\"Горанд\");",
+              "ArrayAdd(EnergyMM,\"Цент\");",
+              "ArrayAdd(EnergyMM,\"Платинос\");",
+              "ArrayAdd(EnergyMM,\"Клейн\");",
+              "ArrayAdd(EnergyMM,\"Ракетон\");",
+              "ArrayAdd(EnergyMM,\"Универс\");",
+              "ArrayAdd(EnergyMM,\"Иикебанит\");",
+              "ArrayAdd(EnergyMM,\"Патч 0.96 альфа\");",
+              "ArrayAdd(EnergyMM,\"Дальпун\");",
+              "ArrayAdd(EnergyMM,\"Жжения\");",
+              "ArrayAdd(EnergyMM,\"Ламбалд\");",
+              "ArrayAdd(EnergyMM,\"Берсерк\");",
+              "ArrayAdd(EnergyMM,\"Дальномет\");",
+              "//",
+              "//Микромодули для Осколочного",
+              "ArrayAdd(SplinterMM,\"Интегратор\");",
+              "ArrayAdd(SplinterMM,\"Сжим\");",
+              "ArrayAdd(SplinterMM,\"Микрострел\");",
+              "ArrayAdd(SplinterMM,\"Маформ\");",
+              "ArrayAdd(SplinterMM,\"Сплинтер\");",
+              "ArrayAdd(SplinterMM,\"Тюринг\");",
+              "ArrayAdd(SplinterMM,\"Дальстар\");",
+              "ArrayAdd(SplinterMM,\"Патч 0.95 бета\");",
+              "ArrayAdd(SplinterMM,\"Горанд\");",
+              "ArrayAdd(SplinterMM,\"Миниразмерный\");",
+              "ArrayAdd(SplinterMM,\"Цент\");",
+              "ArrayAdd(SplinterMM,\"Платинос\");",
+              "ArrayAdd(SplinterMM,\"Клейн\");",
+              "ArrayAdd(SplinterMM,\"Универс\");",
+              "ArrayAdd(SplinterMM,\"Иикебанит\");",
+              "ArrayAdd(SplinterMM,\"Винтарь\");",
+              "ArrayAdd(SplinterMM,\"Патч 0.96 альфа\");",
+              "ArrayAdd(SplinterMM,\"Дальпун\");",
+              "ArrayAdd(SplinterMM,\"Жжения\");",
+              "ArrayAdd(SplinterMM,\"Ламбалд\");",
+              "ArrayAdd(SplinterMM,\"Берсерк\");",
+              "ArrayAdd(SplinterMM,\"Дальномет\");",
+              "//Считаем БЦшки",
+              "for(i=0;GalaxyStars()>i;i=i+1) {",
+              "    for(j=0;StarShips(GalaxyStar(i))>j;j=j+1) {",
+              "        if(ShipTypeN(StarShips(GalaxyStar(i),j)) == t_BK) BKcount = BKcount + 1;",
+              "    }",
+              "}"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  470,
+          "Pos.y":  180,
+          "Parent":  -1,
+          "#":  75,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "ShipMoney(Player(),ShipMoney(Player()) - moneySlomano);",
+              "Alarm = Alarm - SlomFlag;",
+              "moneySlomano = 0;",
+              "SlomFlag = 0;",
+              "Sound('Sound.Sell');"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  350,
+          "Pos.y":  180,
+          "Parent":  -1,
+          "#":  83,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "EquipFlag = 8;"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  -20,
+          "Pos.y":  420,
+          "Parent":  -1,
+          "#":  85,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "int z;",
+              "ShipMoney(Player(),ShipMoney(Player()) - money1);",
+              "if(propusk == 1 && IdToItem(EquipArr[h]) != 0 && ItemIn(IdToItem(EquipArr[h]),Player())) {",
+              "    if(ShipEqInSlot(Player(),ItemType(IdToItem(EquipArr[h]))) == IdToItem(EquipArr[h])) DeleteEquipment(Player(),ItemType(IdToItem(EquipArr[h])));",
+              "    else if(ItemType(IdToItem(EquipArr[h])) > 49 && ItemType(IdToItem(EquipArr[h])) < 69) {",
+              "        if(ShipEqInSlot(Player(),t_Weapon1,1) == IdToItem(EquipArr[h])) DeleteEquipment(Player(),ItemType(IdToItem(EquipArr[h])));",
+              "        if(ShipEqInSlot(Player(),t_Weapon1,2) == IdToItem(EquipArr[h])) DeleteEquipment(Player(),ItemType(IdToItem(EquipArr[h])));",
+              "        if(ShipEqInSlot(Player(),t_Weapon1,3) == IdToItem(EquipArr[h])) DeleteEquipment(Player(),ItemType(IdToItem(EquipArr[h])));",
+              "        if(ShipEqInSlot(Player(),t_Weapon1,4) == IdToItem(EquipArr[h])) DeleteEquipment(Player(),ItemType(IdToItem(EquipArr[h])));",
+              "        if(ShipEqInSlot(Player(),t_Weapon1,5) == IdToItem(EquipArr[h])) DeleteEquipment(Player(),ItemType(IdToItem(EquipArr[h])));",
+              "    }",
+              "    else GetItemFromShip(Player(),IdToItem(EquipArr[h]));",
+              "    FreeItem(IdToItem(EquipArr[h]));",
+              "}",
+              "ArrayDelete(payment,h);",
+              "ArrayDelete(EquipArr,h);",
+              "ArrayDelete(bonk,h);",
+              "ArrayDelete(bonkFlag,h);",
+              "ArrayDelete(timer,h);",
+              "ArrayDelete(namesArr,h);",
+              "ArrayDelete(penya,h);",
+              "ArrayDelete(strsArchive,h);",
+              "TotalEquip = TotalEquip - 1;",
+              "Sound('Sound.Sell');",
+              "if(TotalEquip == 0) ShipCustomShipInfoDescription(Player(),'RefRentInfo','NoShow');",
+              "else {",
+              "    infoStr = '';",
+              "    for(z = 1; z < ArrayDim(timer); z = z + 1) {",
+              "        infoStr = infoStr + strsArchive[z];",
+              "    }",
+              "    ShipCustomShipInfoDescription(Player(),'RefRentInfo',infoStr);",
+              "}"
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  -180,
+          "Pos.y":  420,
+          "Parent":  -1,
+          "#":  86,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "int z;",
+              "if(ArrayDim(timer) > 1) {",
+              "    for(z = 1; z < ArrayDim(timer); z = z + 1) {",
+              "        infoStr = namesArr[z];",
+              "    }",
+              "    ShipCustomShipInfoDescription(Player(),'RefRentInfo',infoStr);",
+              "}",
+              "else ShipCustomShipInfoDescription(Player(),'RefRentInfo','NoShow');",
+              "ShipMoney(Player(),ShipMoney(Player()) - money1);",
+              "if(propusk == 1 && IdToItem(EquipArr[h]) != 0 && ItemIn(IdToItem(EquipArr[h]),Player())) {",
+              "    if(ShipEqInSlot(Player(),ItemType(IdToItem(EquipArr[h]))) == IdToItem(EquipArr[h])) DeleteEquipment(Player(),ItemType(IdToItem(EquipArr[h])));",
+              "    else if(ItemType(IdToItem(EquipArr[h])) > 49 && ItemType(IdToItem(EquipArr[h])) < 69) {",
+              "        if(ShipEqInSlot(Player(),t_Weapon1,1) == IdToItem(EquipArr[h])) DeleteEquipment(Player(),ItemType(IdToItem(EquipArr[h])));",
+              "        if(ShipEqInSlot(Player(),t_Weapon1,2) == IdToItem(EquipArr[h])) DeleteEquipment(Player(),ItemType(IdToItem(EquipArr[h])));",
+              "        if(ShipEqInSlot(Player(),t_Weapon1,3) == IdToItem(EquipArr[h])) DeleteEquipment(Player(),ItemType(IdToItem(EquipArr[h])));",
+              "        if(ShipEqInSlot(Player(),t_Weapon1,4) == IdToItem(EquipArr[h])) DeleteEquipment(Player(),ItemType(IdToItem(EquipArr[h])));",
+              "        if(ShipEqInSlot(Player(),t_Weapon1,5) == IdToItem(EquipArr[h])) DeleteEquipment(Player(),ItemType(IdToItem(EquipArr[h])));",
+              "    }",
+              "    else GetItemFromShip(Player(),IdToItem(EquipArr[h]));",
+              "    FreeItem(IdToItem(EquipArr[h]));",
+              "}",
+              "ArrayDelete(payment,h);",
+              "ArrayDelete(EquipArr,h);",
+              "ArrayDelete(bonk,h);",
+              "ArrayDelete(bonkFlag,h);",
+              "ArrayDelete(timer,h);",
+              "ArrayDelete(namesArr,h);",
+              "ArrayDelete(penya,h);",
+              "ArrayDelete(strsArchive,h);",
+              "TotalEquip = TotalEquip - 1;",
+              "Sound('Sound.Sell');",
+              "if(TotalEquip == 0) ShipCustomShipInfoDescription(Player(),'RefRentInfo','NoShow');",
+              "infoStr = '';",
+              "for(z = 1; z < ArrayDim(timer); z = z + 1) {",
+              "    infoStr = infoStr + strsArchive[z];",
+              "}",
+              "ShipCustomShipInfoDescription(Player(),'RefRentInfo',infoStr);"
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  -180,
+          "Pos.y":  220,
+          "Parent":  -1,
+          "#":  99,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "propusk = 0;",
+              "h = ListBox(\"Выберите оборудование, которое хотите вернуть\",namesArr);",
+              "if(h > 0 && h < ArrayDim(EquipArr)) {",
+              "    money1 = payment[h] + penya[h];",
+              "    if(IdToItem(EquipArr[h]) == 0) {",
+              "        money1 = money1 + 7000;",
+              "        propusk = 2;",
+              "    }",
+              "    else if(!ItemIn(IdToItem(EquipArr[h]),Player())) {",
+              "        money1 = money1 + ItemCost(IdToItem(EquipArr[h])) * 2;",
+              "        propusk = 2;",
+              "    }",
+              "    else if(ItemIsBroken(IdToItem(EquipArr[h]))) propusk = 0;",
+              "    else propusk = 1;",
+              "}"
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  -20,
+          "Pos.y":  220,
+          "Parent":  -1,
+          "#":  100,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "propusk = 0;",
+              "h = ListBox(\"Выберите оборудование, которое хотите вернуть\",namesArr);",
+              "if(h > 0 && h < ArrayDim(EquipArr)) {",
+              "    money1 = payment[h] + penya[h];",
+              "    if(IdToItem(EquipArr[h]) == 0) {",
+              "        money1 = money1 + 7000;",
+              "        propusk = 2;",
+              "    }",
+              "    else if(!ItemIn(IdToItem(EquipArr[h]),Player())) {",
+              "        money1 = money1 + ItemCost(IdToItem(EquipArr[h])) * 2;",
+              "        propusk = 2;",
+              "    }",
+              "    else if(ItemIsBroken(IdToItem(EquipArr[h]))) propusk = 0;",
+              "    else propusk = 1;",
+              "}"
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  280,
+          "Pos.y":  570,
+          "Parent":  -1,
+          "#":  144,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "EquipFlag = 0;",
+              "MMFlag = 0;",
+              "ArrayClear(temp_arr1);",
+              "ArrayClear(temp_arr5);"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  220,
+          "Pos.y":  310,
+          "Parent":  -1,
+          "#":  156,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "MMFlag = 0;"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  260,
+          "Pos.y":  310,
+          "Parent":  -1,
+          "#":  157,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "MMFlag = 1;"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  240,
+          "Pos.y":  380,
+          "Parent":  -1,
+          "#":  174,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "//",
+              "//Первичные настройки и получение ГТУ     /\\ /\\ /\\",
+              "//                                        || || ||",
+              "//Выбор типа оплаты                       \\/ \\/ \\/",
+              "//",
+              "if(k == 1) {",
+              "    plata = \"Немедленная выплата всей суммы\";",
+              "}",
+              "if(k == 2) {",
+              "    FlagPoSdache = 1;",
+              "    plata = \"Выплата за аренду, проценты - при возвращении\";",
+              "}",
+              "if(k == 3) {",
+              "    FlagPoSdache = 2;",
+              "    plata = \"Выплата при возвращении\";",
+              "    money = 0;",
+              "}",
+              "//",
+              "//Выбор типа оплаты               /\\ /\\ /\\",
+              "//                                || || ||",
+              "//Выбор типа арендуемой оборудки  \\/ \\/ \\/",
+              "//",
+              "if(EquipFlag == 1) {",
+              "    equip_Name = \"Двигатель\";",
+              "    arendnaya = 2800;",
+              "    EquipType = 44;",
+              "}",
+              "if(EquipFlag == 2) {",
+              "    equip_Name = \"Топливный бак\";",
+              "    arendnaya = 1750;",
+              "    EquipType = 43;",
+              "}",
+              "if(EquipFlag == 3) {",
+              "    equip_Name = \"Дроид\";",
+              "    arendnaya = 2350;",
+              "    EquipType = 47;",
+              "}",
+              "if(EquipFlag == 4) {",
+              "    equip_Name = \"Захват\";",
+              "    arendnaya = 2000;",
+              "    EquipType = 48;",
+              "}",
+              "if(EquipFlag == 5) {",
+              "    equip_Name = \"Генератор поля\";",
+              "    arendnaya = 2575;",
+              "    EquipType = 49;",
+              "}",
+              "if(EquipFlag == 6) {",
+              "    equip_Name = \"Радар\";",
+              "    arendnaya = 1975;",
+              "    EquipType = 45;",
+              "}",
+              "if(EquipFlag == 7) {",
+              "    equip_Name = \"Сканер\";",
+              "    arendnaya = 1800;",
+              "    EquipType = 46;",
+              "}",
+              "if(EquipFlag == 8) {",
+              "    while(1) {",
+              "        f = ListBox(\"Выберите тип вооружения\",temp_arr4);",
+              "        if(f == 1) {",
+              "            equip_Name = \"Пром. лазер\";",
+              "            arendnaya = 950;",
+              "            EquipType = 50;",
+              "        }",
+              "        if(f == 2) {",
+              "            equip_Name = \"Оск. орудие\";",
+              "            arendnaya = 1225;",
+              "            EquipType = 51;",
+              "        }",
+              "        if(f == 3) {",
+              "            equip_Name = \"Лезка\";",
+              "            arendnaya = 1345;",
+              "            EquipType = 52;",
+              "        }",
+              "        if(f == 4) {",
+              "            equip_Name = \"Ракетомёт\";",
+              "            arendnaya = 1950;",
+              "            EquipType = 53;",
+              "        }",
+              "        if(f == 5) {",
+              "            equip_Name = \"Третон\";",
+              "            arendnaya = 1100;",
+              "            EquipType = 54;",
+              "        }",
+              "        if(f == 6) {",
+              "            equip_Name = \"Волн. фазер\";",
+              "            arendnaya = 1875;",
+              "            EquipType = 55;",
+              "            if(GTL < 4) {",
+              "                MessageBox(\"Это оборудование ещё не доступно!\");",
+              "                equip_Name = \"Пром. лазер\";",
+              "                arendnaya = 950;",
+              "                EquipType = 50;",
+              "                f = 1;",
+              "            }",
+              "        }",
+              "        if(f == 7) {",
+              "            equip_Name = \"Поток. бластер\";",
+              "            arendnaya = 2125;",
+              "            EquipType = 56;",
+              "            if(GTL < 4) {",
+              "                MessageBox(\"Это оборудование ещё не доступно!\");",
+              "                equip_Name = \"Пром. лазер\";",
+              "                arendnaya = 950;",
+              "                EquipType = 50;",
+              "                f = 1;",
+              "            }",
+              "        }",
+              "        if(f == 8) {",
+              "            equip_Name = \"Элек. резак\";",
+              "            arendnaya = 2025;",
+              "            EquipType = 57;",
+              "            if(GTL < 4) {",
+              "                MessageBox(\"Это оборудование ещё не доступно!\");",
+              "                equip_Name = \"Пром. лазер\";",
+              "                arendnaya = 950;",
+              "                EquipType = 50;",
+              "                f = 1;",
+              "            }",
+              "        }",
+              "        if(f == 9) {",
+              "            equip_Name = \"Мультирезонатор\";",
+              "            arendnaya = 2750;",
+              "            EquipType = 58;",
+              "            if(GTL < 5) {",
+              "                MessageBox(\"Это оборудование ещё не доступно!\");",
+              "                equip_Name = \"Пром. лазер\";",
+              "                arendnaya = 950;",
+              "                EquipType = 50;",
+              "                f = 1;",
+              "            }",
+              "        }",
+              "        if(f == 10) {",
+              "            equip_Name = \"Атом. визион\";",
+              "            arendnaya = 3650;",
+              "            EquipType = 59;",
+              "            if(GTL < 6) {",
+              "                MessageBox(\"Это оборудование ещё не доступно!\");",
+              "                equip_Name = \"Пром. лазер\";",
+              "                arendnaya = 950;",
+              "                EquipType = 50;",
+              "                f = 1;",
+              "            }",
+              "        }",
+              "        if(f == 11) {",
+              "            equip_Name = \"Дезинтегратор\";",
+              "            arendnaya = 3250;",
+              "            EquipType = 60;",
+              "            if(GTL < 7) {",
+              "                MessageBox(\"Это оборудование ещё не доступно!\");",
+              "                equip_Name = \"Пром. лазер\";",
+              "                arendnaya = 950;",
+              "                EquipType = 50;",
+              "                f = 1;",
+              "            }",
+              "        }",
+              "        if(f == 12) {",
+              "            equip_Name = \"Турбогравир\";",
+              "            arendnaya = 3800;",
+              "            EquipType = 61;",
+              "            if(GTL < 7) {",
+              "                MessageBox(\"Это оборудование ещё не доступно!\");",
+              "                equip_Name = \"Пром. лазер\";",
+              "                arendnaya = 950;",
+              "                EquipType = 50;",
+              "                f = 1;",
+              "            }",
+              "        }",
+              "        if(f == 13) {",
+              "            equip_Name = \"Эсодафер\";",
+              "            arendnaya = 2250;",
+              "            EquipType = 65;",
+              "            if(GTL < 6) {",
+              "                MessageBox(\"Это оборудование ещё не доступно!\");",
+              "                equip_Name = \"Пром. лазер\";",
+              "                arendnaya = 950;",
+              "                EquipType = 50;",
+              "                f = 1;",
+              "            }",
+              "        }",
+              "        if(f == 14) {",
+              "            equip_Name = \"Кафаситор\";",
+              "            arendnaya = 1750;",
+              "            EquipType = 66;",
+              "        }",
+              "        if(f == 15) {",
+              "            equip_Name = \"Лирекрон\";",
+              "            arendnaya = 1850;",
+              "            EquipType = 67;",
+              "        }",
+              "        if(MessageBoxYesNo(\"Вы уверены в своём выборе?\") == 1) break;",
+              "    }",
+              "}",
+              "",
+              "if(f<0) returnFlag = 1;"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  240,
+          "Pos.y":  410,
+          "Parent":  -1,
+          "#":  176,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "//",
+              "//Выбор типа арендуемой оборудки     /\\ /\\ /\\",
+              "//                                   || || ||",
+              "//Выбор ММки                         \\/ \\/ \\/",
+              "//",
+              "if(MMFlag == 1) {",
+              "    while(1) {",
+              "        if(EquipFlag == 1) {",
+              "            w = ListBox(\"Выберите микромодуль из списка\",EngineMM);",
+              "        }",
+              "        if(EquipFlag == 2) {",
+              "            w = ListBox(\"Выберите микромодуль из списка\",FuelMM);",
+              "        }",
+              "        if(EquipFlag == 3) {",
+              "            w = ListBox(\"Выберите микромодуль из списка\",DroidMM);",
+              "        }",
+              "        if(EquipFlag == 4) {",
+              "            w = ListBox(\"Выберите микромодуль из списка\",ZahvatMM);",
+              "        }",
+              "        if(EquipFlag == 5) {",
+              "            w = ListBox(\"Выберите микромодуль из списка\",ShieldMM);",
+              "        }",
+              "        if(EquipFlag == 6) {",
+              "            w = ListBox(\"Выберите микромодуль из списка\",RadarMM);",
+              "        }",
+              "        if(EquipFlag == 7) {",
+              "            w = ListBox(\"Выберите микромодуль из списка\",ScanerMM);",
+              "        }",
+              "        if(EquipFlag == 8) {",
+              "            if(f == 15 || f == 4) {",
+              "                w = ListBox(\"Выберите микромодуль из списка\",MissileMM);",
+              "            } //ракетное",
+              "            if(f == 14 || f == 12 || f == 11 || f == 10 || f == 8 || f == 6 || f == 5 || f == 3 || f == 1) {",
+              "                w = ListBox(\"Выберите микромодуль из списка\",EnergyMM);",
+              "            } //энерго",
+              "            if(f == 13 || f == 9 || f == 7 || f == 2) {",
+              "                w = ListBox(\"Выберите микромодуль из списка\",SplinterMM);",
+              "            } //осколка",
+              "        }",
+              "        if(MessageBoxYesNo(\"Вы уверены в своём выборе?\") == 1) break;",
+              "    }",
+              "}",
+              "if(MMFlag == 0) {",
+              "    mm_Name = \"Не устанавливается\";",
+              "    mm_Text = \"Микромодуль не выбран\";",
+              "    tdwd = -1;",
+              "}",
+              "if(MMFlag == 1 && w >= 0) {",
+              "    //SFT('RefRenting1 '+w);",
+              "    //SFT('RefRenting2 '+EngineMM[w]);",
+              "    //SFT('RefRenting2 '+EngineMM[23]);",
+              "    //SFT('RefRenting3 '+ArrayDim(EngineMM));",
+              "    //SFT('RefRenting4 '+FindBonusByName(EngineMM[w]));",
+              "    if(EquipFlag == 1) {",
+              "        tdwd = FindBonusByName(EngineMM[w]);",
+              "        mm_Name = EngineMM[w];",
+              "        mm_Text = BonusText(FindBonusByName(EngineMM[w]));",
+              "    }",
+              "    if(EquipFlag == 2) {",
+              "        tdwd = FindBonusByName(FuelMM[w]);",
+              "        mm_Name = FuelMM[w];",
+              "        mm_Text = BonusText(FindBonusByName(FuelMM[w]));",
+              "    }",
+              "    if(EquipFlag == 3) {",
+              "        tdwd = FindBonusByName(DroidMM[w]);",
+              "        mm_Name = DroidMM[w];",
+              "        mm_Text = BonusText(FindBonusByName(DroidMM[w]));",
+              "    }",
+              "    if(EquipFlag == 4) {",
+              "        tdwd = FindBonusByName(ZahvatMM[w]);",
+              "        mm_Name = ZahvatMM[w];",
+              "        mm_Text = BonusText(FindBonusByName(ZahvatMM[w]));",
+              "    }",
+              "    if(EquipFlag == 5) {",
+              "        tdwd = FindBonusByName(ShieldMM[w]);",
+              "        mm_Name = ShieldMM[w];",
+              "        mm_Text = BonusText(FindBonusByName(ShieldMM[w]));",
+              "    }",
+              "    if(EquipFlag == 6) {",
+              "        tdwd = FindBonusByName(RadarMM[w]);",
+              "        mm_Name = RadarMM[w];",
+              "        mm_Text = BonusText(FindBonusByName(RadarMM[w]));",
+              "    }",
+              "    if(EquipFlag == 7) {",
+              "        tdwd = FindBonusByName(ScanerMM[w]);",
+              "        mm_Name = ScanerMM[w];",
+              "        mm_Text = BonusText(FindBonusByName(ScanerMM[w]));",
+              "    }",
+              "    if(EquipFlag == 8) {",
+              "        if(f == 15 || f == 4) {",
+              "            tdwd = FindBonusByName(MissileMM[w]);",
+              "            mm_Name = MissileMM[w];",
+              "            mm_Text = BonusText(FindBonusByName(MissileMM[w]));",
+              "        } //ракетное",
+              "        if(f == 14 || f == 12 || f == 11 || f == 10 || f == 8 || f == 6 || f == 5 || f == 3 || f == 1) {",
+              "            tdwd = FindBonusByName(EnergyMM[w]);",
+              "            mm_Name = EnergyMM[w];",
+              "            mm_Text = BonusText(FindBonusByName(EnergyMM[w]));",
+              "        } //энерго",
+              "        if(f == 13 || f == 9 || f == 7 || f == 2) {",
+              "            tdwd = FindBonusByName(SplinterMM[w]);",
+              "            mm_Name = SplinterMM[w];",
+              "            mm_Text = BonusText(FindBonusByName(SplinterMM[w]));",
+              "        } //осколка",
+              "    }",
+              "    //if(tdwd > 0) {",
+              "    //    SFT('RefRenting1 '+w);",
+              "    //    SFT('RefRenting2 '+tdwd);",
+              "    //    SFT('RefRenting3 '+f);",
+              "    //    mm_Name = Name(tdwd);",
+              "    //    mm_Text = BonusText(tdwd);",
+              "    //}",
+              "}",
+              "else {",
+              "    mm_Name = \"Не устанавливается\";",
+              "    mm_Text = \"Микромодуль не выбран\";",
+              "    tdwd = -1;",
+              "    MMFlag = 0;",
+              "}",
+              "//",
+              "//Выбор ММки                /\\ /\\ /\\",
+              "//                          || || ||",
+              "//Расчёт платы за аренду    \\/ \\/ \\/",
+              "//",
+              "arendnaya = arendnaya * i / 3 * 2;",
+              "if(j == 1) {",
+              "    arendnaya = arendnaya / 13 * 10;",
+              "    strRace = \"Малоки\";",
+              "}",
+              "if(j == 2) {",
+              "    arendnaya = arendnaya / 11 * 10;",
+              "    strRace = \"Пеленги\";",
+              "}",
+              "if(j == 3) {",
+              "    arendnaya = arendnaya * 6 / 5;",
+              "    strRace = \"Люди\";",
+              "}",
+              "if(j == 4) {",
+              "    arendnaya = arendnaya * 3;",
+              "    strRace = \"Гаальцы\";",
+              "}",
+              "if(j == 5) {",
+              "    arendnaya = arendnaya * 2;",
+              "    strRace = \"Фэяне\";",
+              "}",
+              "if(j == 6) {",
+              "    arendnaya = arendnaya * 11 / 10;",
+              "    strRace = \"Пираты\";",
+              "}",
+              "monthly = arendnaya / 20;",
+              "monthly = monthly + 750;",
+              "money = 0;",
+              "if(k == 1) money = money + arendnaya + (monthly * dayss) + 3500;",
+              "if(k == 2) money = money + arendnaya + 3500;",
+              "if(tdwd != -1) money = 2 * money - (money * BonusPriority(tdwd) / 100);",
+              "//",
+              "//Расчёт платы за аренду                              /\\ /\\ /\\",
+              "//                                                    || || ||",
+              "//Костылёнок на случай, если игрок прожмёт крестик    \\/ \\/ \\/",
+              "//",
+              "if(i == -1 || i == 0 || dayss == 0 || j == -1 || k == -1 || f == -1 || w == -1) returnFlag = 1;",
+              "//",
+              "//Костылёнок на случай, если игрок прожмёт крестик    /\\ /\\ /\\",
+              "//                                                    || || ||",
+              "//Проверка на возможность вставки ММки                \\/ \\/ \\/",
+              "//",
+              "if(j == 1) tempItem = CreateEquipment(EquipType,Rnd(30,55),i,Maloc);",
+              "if(j == 2) tempItem = CreateEquipment(EquipType,Rnd(25,40),i,Peleng);",
+              "if(j == 3) tempItem = CreateEquipment(EquipType,Rnd(25,40),i,People);",
+              "if(j == 4) tempItem = CreateEquipment(EquipType,Rnd(25,35),i,Gaal);",
+              "if(j == 5) tempItem = CreateEquipment(EquipType,Rnd(25,40),i,Fei);",
+              "if(j == 6) tempItem = CreateEquipment(EquipType,Rnd(25,45),i,PirateClan);",
+              "if(tdwd != -1) { if(!MayAddBonusToEq(tdwd,tempItem)) {",
+              "    returnFlag = 1;",
+              "    MessageBox(\"Выбранный микромодуль в данное оборудование вставить невозможно! Процесс сбора варианта для аренды отменён.\");",
+              "} }",
+              "FreeItem(tempItem); //проверочный экземпляр больше не нужен"
+          ]        
+        }      
+      ],
+      "Planets":      
+      [
+        {
+          "Type":  "TPlanet",
+          "Name":  "PlanetNew",
+          "Pos.x":  -100,
+          "Pos.y":  -90,
+          "Parent":  -1,
+          "#":  1,
+          "Race":  62,
+          "Owner":  62,
+          "Economy":  14,
+          "Goverment":  62,
+          "RangeMin":  0,
+          "RangeMax":  100,
+          "Dialog":  -1        
+        }      
+      ],
+      "Ships":      
+      [
+        {
+          "Type":  "TStarShip",
+          "Name":  "",
+          "Pos.x":  -100,
+          "Pos.y":  -150,
+          "Parent":  -1,
+          "#":  2,
+          "Count":  1,
+          "Owner":  62,
+          "Ship.Type":  126,
+          "Player":  true,
+          "SpeedMin":  0,
+          "SpeedMax":  10000,
+          "Weapon":  0,
+          "CargoHook":  0,
+          "EmptySpace":  0,
+          "StatusTraderMin":  0,
+          "StatusTraderMax":  100,
+          "StatusWarriorMin":  0,
+          "StatusWarriorMax":  100,
+          "StatusPirateMin":  0,
+          "StatusPirateMax":  100,
+          "StrengthMin":  "0",
+          "StrengthMax":  "0",
+          "Ruins":  ""        
+        }      
+      ],
+      "Stars":      
+      [
+        {
+          "Type":  "TStar",
+          "Name":  "StarNew",
+          "Pos.x":  -100,
+          "Pos.y":  -120,
+          "Parent":  -1,
+          "#":  0,
+          "Constellation":  0,
+          "Priority":  0,
+          "NoKling":  false,
+          "NoComeKling":  false        
+        }      
+      ],
+      "Statements":      
+      [
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  -180,
+          "Pos.y":  60,
+          "Parent":  -1,
+          "#":  46,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "Alarm > 0"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  -20,
+          "Pos.y":  60,
+          "Parent":  -1,
+          "#":  47,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "Alarm == 0"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  60,
+          "Pos.y":  -20,
+          "Parent":  -1,
+          "#":  53,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "Alarm == 0"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  140,
+          "Pos.y":  -20,
+          "Parent":  -1,
+          "#":  54,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "Alarm != 0"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  430,
+          "Pos.y":  140,
+          "Parent":  -1,
+          "#":  57,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "ShipMoney(Player()) < moneySlomano"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  60,
+          "Pos.y":  60,
+          "Parent":  -1,
+          "#":  62,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "TotalEquip < 15"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  140,
+          "Pos.y":  60,
+          "Parent":  -1,
+          "#":  64,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "TotalEquip >= 15"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  470,
+          "Pos.y":  100,
+          "Parent":  -1,
+          "#":  69,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "ShipMoney(Player()) >= moneySlomano"
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  -20,
+          "Pos.y":  260,
+          "Parent":  -1,
+          "#":  106,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "propusk > 0"
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  -60,
+          "Pos.y":  220,
+          "Parent":  -1,
+          "#":  107,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "propusk == 0"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  -140,
+          "Pos.y":  220,
+          "Parent":  -1,
+          "#":  108,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "propusk == 0"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  -180,
+          "Pos.y":  260,
+          "Parent":  -1,
+          "#":  111,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "propusk > 0"
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  -100,
+          "Pos.y":  300,
+          "Parent":  -1,
+          "#":  114,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "ShipMoney(Player()) < money1"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  -180,
+          "Pos.y":  340,
+          "Parent":  -1,
+          "#":  117,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "ShipMoney(Player()) >= money1"
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  -20,
+          "Pos.y":  340,
+          "Parent":  -1,
+          "#":  118,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "ShipMoney(Player()) >= money1"
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  60,
+          "Pos.y":  -60,
+          "Parent":  -1,
+          "#":  134,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "TotalEquip != 0"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  300,
+          "Pos.y":  60,
+          "Parent":  -1,
+          "#":  135,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "SlomFlag > 0"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  200,
+          "Pos.y":  490,
+          "Parent":  -1,
+          "#":  137,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "ShipMoney(Player()) > money"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  240,
+          "Pos.y":  490,
+          "Parent":  -1,
+          "#":  138,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "ShipMoney(Player()) <= money"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  280,
+          "Pos.y":  490,
+          "Parent":  -1,
+          "#":  140,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "ShipMoney(Player()) <= money"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  280,
+          "Pos.y":  350,
+          "Parent":  -1,
+          "#":  147,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "returnFlag == 0"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  70,
+          "Pos.y":  350,
+          "Parent":  -1,
+          "#":  148,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "returnFlag == 1"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  280,
+          "Pos.y":  380,
+          "Parent":  -1,
+          "#":  175,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "returnFlag == 0"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  280,
+          "Pos.y":  410,
+          "Parent":  -1,
+          "#":  177,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "returnFlag == 0"          
+          ]        
+        }      
+      ],
+      "States":      
+      [
+        {
+          "Type":  "TState",
+          "Name":  "StateNew",
+          "Pos.x":  -100,
+          "Pos.y":  -30,
+          "Parent":  -1,
+          "#":  3,
+          "Move":  0,
+          "MoveObj":  -1,
+          "Attack.Count":  0,
+          "TakeItem":  -1,
+          "TakeAllItem":  false,
+          "OnTalk":  "",
+          "OnActCode":  "",
+          "EType":  1,
+          "EUnique":  "",
+          "EMsg":  ""        
+        }      
+      ],
+      "Variables":      
+      [
+        {
+          "Type":  "TVar",
+          "Name":  "EquipFlag",
+          "Pos.x":  290,
+          "Pos.y":  -140,
+          "Parent":  -1,
+          "#":  31,
+          "Var.Type":  "Int",
+          "Init":  "0",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "equip_Name",
+          "Pos.x":  290,
+          "Pos.y":  -80,
+          "Parent":  -1,
+          "#":  34,
+          "Var.Type":  "Str",
+          "Init":  "",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "dayss",
+          "Pos.x":  290,
+          "Pos.y":  -50,
+          "Parent":  -1,
+          "#":  35,
+          "Var.Type":  "Dword",
+          "Init":  "0",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "arendnaya",
+          "Pos.x":  410,
+          "Pos.y":  -110,
+          "Parent":  -1,
+          "#":  36,
+          "Var.Type":  "Int",
+          "Init":  "",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "monthly",
+          "Pos.x":  410,
+          "Pos.y":  -80,
+          "Parent":  -1,
+          "#":  37,
+          "Var.Type":  "Int",
+          "Init":  "",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "plata",
+          "Pos.x":  290,
+          "Pos.y":  -110,
+          "Parent":  -1,
+          "#":  43,
+          "Var.Type":  "Str",
+          "Init":  "",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "Alarm",
+          "Pos.x":  290,
+          "Pos.y":  -170,
+          "Parent":  -1,
+          "#":  52,
+          "Var.Type":  "Int",
+          "Init":  "",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "TotalEquip",
+          "Pos.x":  530,
+          "Pos.y":  -140,
+          "Parent":  -1,
+          "#":  63,
+          "Var.Type":  "Int",
+          "Init":  "",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "money1",
+          "Pos.x":  410,
+          "Pos.y":  -140,
+          "Parent":  -1,
+          "#":  68,
+          "Var.Type":  "Int",
+          "Init":  "0",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "al",
+          "Pos.x":  920,
+          "Pos.y":  -40,
+          "Parent":  -1,
+          "#":  76,
+          "Var.Type":  "Int",
+          "Init":  "",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "eq",
+          "Pos.x":  920,
+          "Pos.y":  -70,
+          "Parent":  -1,
+          "#":  77,
+          "Var.Type":  "Int",
+          "Init":  "",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "temp_arr1",
+          "Pos.x":  970,
+          "Pos.y":  180,
+          "Parent":  -1,
+          "#":  78,
+          "Var.Type":  "Array",
+          "Init":  "1",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "temp_arr2",
+          "Pos.x":  970,
+          "Pos.y":  210,
+          "Parent":  -1,
+          "#":  79,
+          "Var.Type":  "Array",
+          "Init":  "1",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "temp_arr3",
+          "Pos.x":  970,
+          "Pos.y":  240,
+          "Parent":  -1,
+          "#":  80,
+          "Var.Type":  "Array",
+          "Init":  "1",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "temp_arr4",
+          "Pos.x":  970,
+          "Pos.y":  270,
+          "Parent":  -1,
+          "#":  81,
+          "Var.Type":  "Array",
+          "Init":  "1",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "temp_arr5",
+          "Pos.x":  970,
+          "Pos.y":  300,
+          "Parent":  -1,
+          "#":  84,
+          "Var.Type":  "Array",
+          "Init":  "1",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "EquipType",
+          "Pos.x":  530,
+          "Pos.y":  -110,
+          "Parent":  -1,
+          "#":  87,
+          "Var.Type":  "Int",
+          "Init":  "",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "timer",
+          "Pos.x":  680,
+          "Pos.y":  130,
+          "Parent":  -1,
+          "#":  88,
+          "Var.Type":  "Array",
+          "Init":  "1",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "tempid",
+          "Pos.x":  410,
+          "Pos.y":  -20,
+          "Parent":  -1,
+          "#":  89,
+          "Var.Type":  "Dword",
+          "Init":  "",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "EquipArr",
+          "Pos.x":  680,
+          "Pos.y":  160,
+          "Parent":  -1,
+          "#":  90,
+          "Var.Type":  "Array",
+          "Init":  "1",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "bonk",
+          "Pos.x":  680,
+          "Pos.y":  190,
+          "Parent":  -1,
+          "#":  91,
+          "Var.Type":  "Array",
+          "Init":  "1",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "bonkFlag",
+          "Pos.x":  680,
+          "Pos.y":  220,
+          "Parent":  -1,
+          "#":  92,
+          "Var.Type":  "Array",
+          "Init":  "1",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "moneySlomano",
+          "Pos.x":  530,
+          "Pos.y":  -80,
+          "Parent":  -1,
+          "#":  93,
+          "Var.Type":  "Int",
+          "Init":  "",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "SlomFlag",
+          "Pos.x":  530,
+          "Pos.y":  -50,
+          "Parent":  -1,
+          "#":  94,
+          "Var.Type":  "Int",
+          "Init":  "",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "payment",
+          "Pos.x":  680,
+          "Pos.y":  250,
+          "Parent":  -1,
+          "#":  95,
+          "Var.Type":  "Array",
+          "Init":  "1",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "penya",
+          "Pos.x":  680,
+          "Pos.y":  280,
+          "Parent":  -1,
+          "#":  96,
+          "Var.Type":  "Array",
+          "Init":  "1",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "h",
+          "Pos.x":  850,
+          "Pos.y":  -70,
+          "Parent":  -1,
+          "#":  101,
+          "Var.Type":  "Dword",
+          "Init":  "",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "strEquip",
+          "Pos.x":  710,
+          "Pos.y":  -150,
+          "Parent":  -1,
+          "#":  102,
+          "Var.Type":  "Str",
+          "Init":  "",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "namesArr",
+          "Pos.x":  680,
+          "Pos.y":  310,
+          "Parent":  -1,
+          "#":  103,
+          "Var.Type":  "Array",
+          "Init":  "1",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "infoStr",
+          "Pos.x":  710,
+          "Pos.y":  -120,
+          "Parent":  -1,
+          "#":  104,
+          "Var.Type":  "Str",
+          "Init":  "",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "propusk",
+          "Pos.x":  410,
+          "Pos.y":  -200,
+          "Parent":  -1,
+          "#":  105,
+          "Var.Type":  "Int",
+          "Init":  "",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "temp_money",
+          "Pos.x":  530,
+          "Pos.y":  -20,
+          "Parent":  -1,
+          "#":  125,
+          "Var.Type":  "Int",
+          "Init":  "",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "g",
+          "Pos.x":  850,
+          "Pos.y":  -160,
+          "Parent":  -1,
+          "#":  126,
+          "Var.Type":  "Dword",
+          "Init":  "",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "f",
+          "Pos.x":  850,
+          "Pos.y":  -130,
+          "Parent":  -1,
+          "#":  127,
+          "Var.Type":  "Dword",
+          "Init":  "",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "j",
+          "Pos.x":  850,
+          "Pos.y":  -100,
+          "Parent":  -1,
+          "#":  128,
+          "Var.Type":  "Dword",
+          "Init":  "",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "k",
+          "Pos.x":  920,
+          "Pos.y":  -100,
+          "Parent":  -1,
+          "#":  129,
+          "Var.Type":  "Dword",
+          "Init":  "",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "l",
+          "Pos.x":  920,
+          "Pos.y":  -130,
+          "Parent":  -1,
+          "#":  130,
+          "Var.Type":  "Dword",
+          "Init":  "",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "i",
+          "Pos.x":  920,
+          "Pos.y":  -160,
+          "Parent":  -1,
+          "#":  131,
+          "Var.Type":  "Dword",
+          "Init":  "",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "GTL",
+          "Pos.x":  850,
+          "Pos.y":  -40,
+          "Parent":  -1,
+          "#":  132,
+          "Var.Type":  "Int",
+          "Init":  "",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "y",
+          "Pos.x":  850,
+          "Pos.y":  -10,
+          "Parent":  -1,
+          "#":  133,
+          "Var.Type":  "Dword",
+          "Init":  "",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "money",
+          "Pos.x":  410,
+          "Pos.y":  -170,
+          "Parent":  -1,
+          "#":  136,
+          "Var.Type":  "Int",
+          "Init":  "0",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "strRace",
+          "Pos.x":  710,
+          "Pos.y":  -90,
+          "Parent":  -1,
+          "#":  145,
+          "Var.Type":  "Str",
+          "Init":  "",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "returnFlag",
+          "Pos.x":  530,
+          "Pos.y":  -170,
+          "Parent":  -1,
+          "#":  146,
+          "Var.Type":  "Int",
+          "Init":  "",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "landingFlag",
+          "Pos.x":  530,
+          "Pos.y":  -200,
+          "Parent":  -1,
+          "#":  149,
+          "Var.Type":  "Int",
+          "Init":  "",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "tempItem",
+          "Pos.x":  410,
+          "Pos.y":  -50,
+          "Parent":  -1,
+          "#":  150,
+          "Var.Type":  "Dword",
+          "Init":  "",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "strsArchive",
+          "Pos.x":  680,
+          "Pos.y":  340,
+          "Parent":  -1,
+          "#":  151,
+          "Var.Type":  "Array",
+          "Init":  "1",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "FlagPoSdache",
+          "Pos.x":  530,
+          "Pos.y":  -230,
+          "Parent":  -1,
+          "#":  152,
+          "Var.Type":  "Int",
+          "Init":  "0",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "MMFlag",
+          "Pos.x":  290,
+          "Pos.y":  -200,
+          "Parent":  -1,
+          "#":  158,
+          "Var.Type":  "Int",
+          "Init":  "0",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "RadarMM",
+          "Pos.x":  830,
+          "Pos.y":  130,
+          "Parent":  -1,
+          "#":  159,
+          "Var.Type":  "Array",
+          "Init":  "",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "ScanerMM",
+          "Pos.x":  830,
+          "Pos.y":  160,
+          "Parent":  -1,
+          "#":  160,
+          "Var.Type":  "Array",
+          "Init":  "",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "EngineMM",
+          "Pos.x":  830,
+          "Pos.y":  190,
+          "Parent":  -1,
+          "#":  161,
+          "Var.Type":  "Array",
+          "Init":  "",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "FuelMM",
+          "Pos.x":  830,
+          "Pos.y":  220,
+          "Parent":  -1,
+          "#":  162,
+          "Var.Type":  "Array",
+          "Init":  "",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "ZahvatMM",
+          "Pos.x":  830,
+          "Pos.y":  250,
+          "Parent":  -1,
+          "#":  163,
+          "Var.Type":  "Array",
+          "Init":  "",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "DroidMM",
+          "Pos.x":  830,
+          "Pos.y":  280,
+          "Parent":  -1,
+          "#":  164,
+          "Var.Type":  "Array",
+          "Init":  "",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "ShieldMM",
+          "Pos.x":  830,
+          "Pos.y":  310,
+          "Parent":  -1,
+          "#":  165,
+          "Var.Type":  "Array",
+          "Init":  "",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "SplinterMM",
+          "Pos.x":  830,
+          "Pos.y":  340,
+          "Parent":  -1,
+          "#":  166,
+          "Var.Type":  "Array",
+          "Init":  "",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "EnergyMM",
+          "Pos.x":  830,
+          "Pos.y":  370,
+          "Parent":  -1,
+          "#":  167,
+          "Var.Type":  "Array",
+          "Init":  "",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "MissileMM",
+          "Pos.x":  830,
+          "Pos.y":  400,
+          "Parent":  -1,
+          "#":  168,
+          "Var.Type":  "Array",
+          "Init":  "",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "w",
+          "Pos.x":  920,
+          "Pos.y":  -10,
+          "Parent":  -1,
+          "#":  169,
+          "Var.Type":  "Dword",
+          "Init":  "",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "mm_Name",
+          "Pos.x":  710,
+          "Pos.y":  -60,
+          "Parent":  -1,
+          "#":  170,
+          "Var.Type":  "Str",
+          "Init":  "",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "mm_Text",
+          "Pos.x":  710,
+          "Pos.y":  -30,
+          "Parent":  -1,
+          "#":  171,
+          "Var.Type":  "Str",
+          "Init":  "",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "tdwd",
+          "Pos.x":  410,
+          "Pos.y":  -230,
+          "Parent":  -1,
+          "#":  172,
+          "Var.Type":  "Dword",
+          "Init":  "0",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "BKcount",
+          "Pos.x":  290,
+          "Pos.y":  -230,
+          "Parent":  -1,
+          "#":  173,
+          "Var.Type":  "Int",
+          "Init":  "",
+          "Global":  false        
+        }      
+      ]    
+    }  
+  ],
+  "Visual.Links":  
+  [
+    {
+      "Type":  "TGraphLink",
+      "Begin":  2,
+      "End":  0,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  1,
+      "End":  0,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  4,
+      "End":  1,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  4,
+      "End":  3,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  8,
+      "End":  9,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  14,
+      "End":  15,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  14,
+      "End":  16,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  14,
+      "End":  17,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  14,
+      "End":  18,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  14,
+      "End":  19,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  14,
+      "End":  20,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  14,
+      "End":  21,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  15,
+      "End":  22,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  16,
+      "End":  23,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  17,
+      "End":  24,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  18,
+      "End":  25,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  19,
+      "End":  26,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  20,
+      "End":  27,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  21,
+      "End":  28,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  33,
+      "End":  39,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  39,
+      "End":  40,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  40,
+      "End":  14,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  38,
+      "End":  41,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  41,
+      "End":  42,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  44,
+      "End":  47,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  44,
+      "End":  46,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  50,
+      "End":  51,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  54,
+      "End":  55,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  55,
+      "End":  56,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  53,
+      "End":  11,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  49,
+      "End":  58,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  48,
+      "End":  58,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  58,
+      "End":  59,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  59,
+      "End":  60,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  13,
+      "End":  62,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  62,
+      "End":  14,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  13,
+      "End":  64,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  64,
+      "End":  65,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  65,
+      "End":  66,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  51,
+      "End":  57,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  42,
+      "End":  67,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  57,
+      "End":  70,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  70,
+      "End":  71,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  71,
+      "End":  74,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  51,
+      "End":  69,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  69,
+      "End":  72,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  73,
+      "End":  74,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  72,
+      "End":  75,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  75,
+      "End":  73,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  14,
+      "End":  82,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  82,
+      "End":  83,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  49,
+      "End":  97,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  48,
+      "End":  98,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  97,
+      "End":  99,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  98,
+      "End":  100,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  99,
+      "End":  108,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  108,
+      "End":  109,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  109,
+      "End":  110,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  100,
+      "End":  107,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  107,
+      "End":  109,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  100,
+      "End":  106,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  99,
+      "End":  111,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  47,
+      "End":  48,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  106,
+      "End":  113,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  111,
+      "End":  112,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  112,
+      "End":  114,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  114,
+      "End":  115,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  114,
+      "End":  116,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  113,
+      "End":  118,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  112,
+      "End":  117,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  113,
+      "End":  114,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  118,
+      "End":  120,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  117,
+      "End":  119,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  119,
+      "End":  86,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  120,
+      "End":  85,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  86,
+      "End":  121,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  121,
+      "End":  123,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  85,
+      "End":  122,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  122,
+      "End":  124,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  46,
+      "End":  49,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  8,
+      "End":  134,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  134,
+      "End":  44,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  6,
+      "End":  8,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  135,
+      "End":  50,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  8,
+      "End":  10,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  14,
+      "End":  30,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  30,
+      "End":  32,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  8,
+      "End":  135,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  10,
+      "End":  54,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  10,
+      "End":  53,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  11,
+      "End":  12,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  11,
+      "End":  13,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  33,
+      "End":  137,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  137,
+      "End":  38,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  33,
+      "End":  138,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  138,
+      "End":  139,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  33,
+      "End":  140,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  142,
+      "End":  143,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  140,
+      "End":  141,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  141,
+      "End":  144,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  144,
+      "End":  142,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  29,
+      "End":  147,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  29,
+      "End":  148,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  148,
+      "End":  40,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  22,
+      "End":  153,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  23,
+      "End":  153,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  24,
+      "End":  153,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  25,
+      "End":  153,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  26,
+      "End":  153,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  27,
+      "End":  153,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  28,
+      "End":  153,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  83,
+      "End":  153,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  153,
+      "End":  155,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  155,
+      "End":  157,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  157,
+      "End":  29,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  153,
+      "End":  154,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  154,
+      "End":  156,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  156,
+      "End":  29,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  174,
+      "End":  148,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  176,
+      "End":  148,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  147,
+      "End":  174,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  174,
+      "End":  175,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  175,
+      "End":  176,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  176,
+      "End":  177,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  177,
+      "End":  33,
+      "Nom":  0,
+      "Arrow":  true    
+    }  
+  ],
+  "BlockPar.EC.Total.Strings":  179,
+  "BlockPar.EC":  
+  [
+    {
+      "#":  "10",
+      "String":  "Рейнджер, в нашей базе данных значится, что вы нарушили правила пользования нашим сервисом и до сих пор не ликвидировали это упущение. Мы вынуждены отказать вам в доступе к сервису проката оборудрования."    
+    },
+    {
+      "#":  "100",
+      "String":  "Двима"    
+    },
+    {
+      "#":  "101",
+      "String":  "Жампа"    
+    },
+    {
+      "#":  "102",
+      "String":  "Джейк"    
+    },
+    {
+      "#":  "103",
+      "String":  "Джампгейтор 3.11"    
+    },
+    {
+      "#":  "104",
+      "String":  "Гугаал"    
+    },
+    {
+      "#":  "105",
+      "String":  "Эксплодер"    
+    },
+    {
+      "#":  "106",
+      "String":  "Сдвиг"    
+    },
+    {
+      "#":  "107",
+      "String":  "Стратер"    
+    },
+    {
+      "#":  "108",
+      "String":  "Фэйджоуль"    
+    },
+    {
+      "#":  "109",
+      "String":  "Аппер"    
+    },
+    {
+      "#":  "11",
+      "String":  "Другой-не другой, а ведь вы, рейнджер, можете себе получить таким образом не только огромный штраф, но и злейшего врага в виде сети бизнес-центров! Одумайтесь и верните то, что должны."    
+    },
+    {
+      "#":  "110",
+      "String":  "Хокус"    
+    },
+    {
+      "#":  "111",
+      "String":  "Парагон"    
+    },
+    {
+      "#":  "112",
+      "String":  "Магникум"    
+    },
+    {
+      "#":  "113",
+      "String":  "Антент"    
+    },
+    {
+      "#":  "114",
+      "String":  "Минивизион"    
+    },
+    {
+      "#":  "115",
+      "String":  "Спаай"    
+    },
+    {
+      "#":  "116",
+      "String":  "Конвектор"    
+    },
+    {
+      "#":  "117",
+      "String":  "Лирекрон"    
+    },
+    {
+      "#":  "118",
+      "String":  "Кафаситор"    
+    },
+    {
+      "#":  "119",
+      "String":  "Эсодафер"    
+    },
+    {
+      "#":  "12",
+      "String":  "Извините, но вы и так взяли у нас напрокат слишком много оборудования! Сначала верните предыдущее!"    
+    },
+    {
+      "#":  "120",
+      "String":  "Турбогравир"    
+    },
+    {
+      "#":  "121",
+      "String":  "Дезинтегратор"    
+    },
+    {
+      "#":  "122",
+      "String":  "Атомный визион"    
+    },
+    {
+      "#":  "123",
+      "String":  "Мультирезонатор"    
+    },
+    {
+      "#":  "124",
+      "String":  "Электронный резак"    
+    },
+    {
+      "#":  "125",
+      "String":  "Потоковый бластер"    
+    },
+    {
+      "#":  "126",
+      "String":  "Волновой фазер"    
+    },
+    {
+      "#":  "127",
+      "String":  "Третон"    
+    },
+    {
+      "#":  "128",
+      "String":  "Ракетомёт"    
+    },
+    {
+      "#":  "129",
+      "String":  "Лезка"    
+    },
+    {
+      "#":  "13",
+      "String":  "Значит, раздобудьте. Как финансовый аналитик говорю вам - у рейнджера масса возможностей подзаработать, в отличие от, например, пирата или капитана торгового судна. Так что - за штурвал и вперёд!"    
+    },
+    {
+      "#":  "130",
+      "String":  "Осколочное орудие"    
+    },
+    {
+      "#":  "131",
+      "String":  "Промышленный лазер"    
+    },
+    {
+      "#":  "132",
+      "String":  "Всё при возвращении"    
+    },
+    {
+      "#":  "133",
+      "String":  "Проценты при возвращении"    
+    },
+    {
+      "#":  "134",
+      "String":  "Немедленно"    
+    },
+    {
+      "#":  "135",
+      "String":  "Пиратское"    
+    },
+    {
+      "#":  "136",
+      "String":  "Фэянское"    
+    },
+    {
+      "#":  "137",
+      "String":  "Гаальское"    
+    },
+    {
+      "#":  "138",
+      "String":  "Человеческое"    
+    },
+    {
+      "#":  "139",
+      "String":  "Пеленгское"    
+    },
+    {
+      "#":  "14",
+      "String":  "Отлично! Теперь ваша задолженность закрыта. Рады иметь с вами дело, рейнджер!"    
+    },
+    {
+      "#":  "140",
+      "String":  "Малокское"    
+    },
+    {
+      "#":  "141",
+      "String":  "Выбранный микромодуль в данное оборудование вставить невозможно! Процесс сбора варианта для аренды отменён."    
+    },
+    {
+      "#":  "142",
+      "String":  "Пираты"    
+    },
+    {
+      "#":  "143",
+      "String":  "Фэяне"    
+    },
+    {
+      "#":  "144",
+      "String":  "Гаальцы"    
+    },
+    {
+      "#":  "145",
+      "String":  "Люди"    
+    },
+    {
+      "#":  "146",
+      "String":  "Пеленги"    
+    },
+    {
+      "#":  "147",
+      "String":  "Малоки"    
+    },
+    {
+      "#":  "148",
+      "String":  "Микромодуль не выбран"    
+    },
+    {
+      "#":  "149",
+      "String":  "Не устанавливается"    
+    },
+    {
+      "#":  "15",
+      "String":  "Рейнджер, о чём мы говорили при заключении сделки? Почему оборудование в таком состоянии?!<br><br>Почините его, и тогда мы сможем поговорить о возвращении нам оборудования и закрытии задолженности."    
+    },
+    {
+      "#":  "151",
+      "String":  "Выберите микромодуль из списка"    
+    },
+    {
+      "#":  "152",
+      "String":  "Пром. лазер"    
+    },
+    {
+      "#":  "153",
+      "String":  "Это оборудование ещё не доступно!"    
+    },
+    {
+      "#":  "154",
+      "String":  "Атом. визион"    
+    },
+    {
+      "#":  "155",
+      "String":  "Элек. резак"    
+    },
+    {
+      "#":  "156",
+      "String":  "Поток. бластер"    
+    },
+    {
+      "#":  "157",
+      "String":  "Волн. фазер"    
+    },
+    {
+      "#":  "158",
+      "String":  "Оск. орудие"    
+    },
+    {
+      "#":  "159",
+      "String":  "Выберите тип вооружения"    
+    },
+    {
+      "#":  "16",
+      "String":  "Итак... Рейнджер <Player>, вы задолжали нам целых <0> cr.!<br><br>Будете платить или у вас теперь нет денег? Пеня продолжит капать - если что."    
+    },
+    {
+      "#":  "160",
+      "String":  "Выплата при возвращении"    
+    },
+    {
+      "#":  "161",
+      "String":  "Выплата за аренду, проценты - при возвращении"    
+    },
+    {
+      "#":  "162",
+      "String":  "Немедленная выплата всей суммы"    
+    },
+    {
+      "#":  "163",
+      "String":  "На сколько месяцев арендуется?"    
+    },
+    {
+      "#":  "164",
+      "String":  "Выберите способ оплаты"    
+    },
+    {
+      "#":  "165",
+      "String":  "Выберите расу оборудования"    
+    },
+    {
+      "#":  "166",
+      "String":  "Выберите ТУ оборудования"    
+    },
+    {
+      "#":  "167",
+      "String":  "Рейнджер <Player>!<br>Судя по информации с наших датчиков, вы допустили потерю нашего дорогостоящего оборудования! Его стоимость, включая остаток по арендным выплатам (<0> cr.) будет вычтена из ваших средств.<br>С уважением, сеть бизнес-центров."    
+    },
+    {
+      "#":  "168",
+      "String":  "Рейнджер <Player>!<br>Вы ещё не забыли, что должны вернуть наше оборудование? Так вот, чтобы наше напоминание жило в вашей памяти подольше, мы озаботились тем, чтобы и пираты, и силы правопорядка узнали, что вы за гражданин.<br>С уважением, сеть бизнес-центров."    
+    },
+    {
+      "#":  "169",
+      "String":  "Рейнджер <Player>!<br>Напоминаем вам, что вы просрочили сдачу оборудования на бизнес-центр! Более того, вы решили, что в прошедшие полгода у вас были более важные дела, чем вернуть свой долг. Мы уже озаботились этим вопросом, и уведомили планетарные правительства о вашем поведении.<br>С уважением, сеть бизнес-центров."    
+    },
+    {
+      "#":  "17",
+      "String":  "Итак, рейнджер, аренда оборудования выходит вам в <0> cr.<br>Оплачиваете?"    
+    },
+    {
+      "#":  "170",
+      "String":  "Рейнджер <Player>!<br>Напоминаем вам, что вы просрочили сдачу оборудования на бизнес-центр! Более того, вы решили, что в прошедшие полгода у вас были более важные дела, чем вернуть свой долг. Руководство сети решило, что у него тоже есть более важные дела, чем хранить ваши деньги на депозитном счету. Поэтому их там больше нет.<br>С уважением, сеть бизнес-центров."    
+    },
+    {
+      "#":  "171",
+      "String":  "Рейнджер <Player>!<br>Уведомляем вас, что вы просрочили сдачу оборудования на бизнес-центр! Если вы продолжите игнорировать наши требования, то наши контрмеры не заставят себя ждать!"    
+    },
+    {
+      "#":  "172",
+      "String":  "Рейнджер <Player>!<br>Уведомляем вас, что подошло время возвращать оборудование! У вас есть два месяца, чтобы прибыть в ближайшее отделение сети бизнес-центров и сдать оборудование."    
+    },
+    {
+      "#":  "173",
+      "String":  "Рейнджер <Player>!<br>Уведомляем вас, что подошло время возвращать оборудование! У вас есть три месяца, чтобы прибыть в ближайшее отделение сети бизнес-центров и сдать оборудование."    
+    },
+    {
+      "#":  "174",
+      "String":  "Прокат оборудования"    
+    },
+    {
+      "#":  "175",
+      "String":  "Также можете воспользоваться нашим сервисом проката оборудования"    
+    },
+    {
+      "#":  "177",
+      "String":  "(на "    
+    },
+    {
+      "#":  "178",
+      "String":  "Выберите оборудование, которое хотите вернуть"    
+    },
+    {
+      "#":  "179",
+      "String":  "Оборудование должно быть на борту корабля, чтобы его можно было сдать!"    
+    },
+    {
+      "#":  "18",
+      "String":  "Итак, деньги списаны. Оборудование снова у нас. Заходите, если вам потребуется что-то ещё. Только не стоит задерживать возвращение оборудования..."    
+    },
+    {
+      "#":  "180",
+      "String":  "Вы уверены в своём выборе?"    
+    },
+    {
+      "#":  "181",
+      "String":  " дн. до "    
+    },
+    {
+      "#":  "182",
+      "String":  " дн. до"    
+    },
+    {
+      "#":  "19",
+      "String":  "Итак, деньги списаны. Оборудование снова у нас. Заходите, если вам потребуется что-то ещё. "    
+    },
+    {
+      "#":  "2",
+      "String":  "Итак, некоторое время назад наш аналитический отдел провёл некоторые вычисления и сопоставил несколько статистических таблиц. Итогом этого всего стал вывод - многие пилоты, в число которых вошли и относительно недавно вновь появившиеся рейнджеры, испытывают сильные затруднения при оснащении своего корабля новым оборудованием для борьбы с доминаторами.<br>В качестве выхода мы предлагаем всем пилотам взять оборудование напрокат, под проценты. Обычным пилотам требуется предъявить информацию о наличии страховки; рейнджерам же этого не требуется. Более того, для них действуют льготные условия проката оборудования."    
+    },
+    {
+      "#":  "20",
+      "String":  "Нет, пожалуй, лучше своё куплю"    
+    },
+    {
+      "#":  "21",
+      "String":  "А что, неплохая идея! Что вы мне можете предложить?"    
+    },
+    {
+      "#":  "22",
+      "String":  "Нет, пожалуй, в другой раз"    
+    },
+    {
+      "#":  "23",
+      "String":  "Огласите весь список, пожалуйста!"    
+    },
+    {
+      "#":  "24",
+      "String":  "Двигатель"    
+    },
+    {
+      "#":  "25",
+      "String":  "Топливный бак"    
+    },
+    {
+      "#":  "26",
+      "String":  "Дроид"    
+    },
+    {
+      "#":  "27",
+      "String":  "Захват"    
+    },
+    {
+      "#":  "28",
+      "String":  "Генератор поля"    
+    },
+    {
+      "#":  "29",
+      "String":  "Радар"    
+    },
+    {
+      "#":  "3",
+      "String":  "Итак, в нашем центре доступно для аренды всё оборудование, включая вооружение, которое только изобрели учёные Коалиции;<br><br>Стоимость аренды рассчитывается как:<br>K * G + 3500<br>Где:<br>K - коэффициент данного оборудования<br>G - условная техническая сложность оборудования<br>Ежемесячные выплаты считаются как 5% от стоимости аренды + 750 cr.<br><br>При сдаче оборудование должно быть в идеальном техническом состоянии - аналогичном тому, что было при получении.<br><br>В случае уничтожения оборудования в качестве неустойки вы будете обязаны выплатить 200% стоимости оборудования"    
+    },
+    {
+      "#":  "30",
+      "String":  "Сканер"    
+    },
+    {
+      "#":  "31",
+      "String":  "Нет, пожалуй, я откажусь"    
+    },
+    {
+      "#":  "32",
+      "String":  "Нет, беру!"    
+    },
+    {
+      "#":  "33",
+      "String":  "Ещё подумаю"    
+    },
+    {
+      "#":  "34",
+      "String":  "Я хочу вернуть оборудование"    
+    },
+    {
+      "#":  "35",
+      "String":  "Хочу выплатить долг за утрату оборудования"    
+    },
+    {
+      "#":  "36",
+      "String":  "Ладно, пойду тогда.."    
+    },
+    {
+      "#":  "37",
+      "String":  "М-м-м... Пожалуй, сейчас я... не смогу. В другой раз"    
+    },
+    {
+      "#":  "38",
+      "String":  "Я подумаю"    
+    },
+    {
+      "#":  "39",
+      "String":  "Ладно, ладно..."    
+    },
+    {
+      "#":  "4",
+      "String":  "Итак, выбирайте!<br><br>Кстати, вы в курсе, что мы отпускаем в одни руки не больше <clr>5<clrEnd> единиц оборудования? Для рейнджеров лимит повышен до <clr>15<clrEnd>, но всё же."    
+    },
+    {
+      "#":  "40",
+      "String":  "Хорошо, спасибо!"    
+    },
+    {
+      "#":  "41",
+      "String":  "У меня нет таких денег"    
+    },
+    {
+      "#":  "42",
+      "String":  "Да, плачу"    
+    },
+    {
+      "#":  "43",
+      "String":  "Я пойду, пожалуй"    
+    },
+    {
+      "#":  "44",
+      "String":  "Оружие"    
+    },
+    {
+      "#":  "45",
+      "String":  "Ну, давайте посмотрим, что я могу вернуть вам"    
+    },
+    {
+      "#":  "46",
+      "String":  "Я вернусь, когда подсоберу денег"    
+    },
+    {
+      "#":  "47",
+      "String":  "Да, я готов платить"    
+    },
+    {
+      "#":  "48",
+      "String":  "Хорошо"    
+    },
+    {
+      "#":  "49",
+      "String":  "Эм... Пожалуй, пойду я отсюда подобру-поздорову"    
+    },
+    {
+      "#":  "5",
+      "String":  "====================================<br>             ЧЕК-ЛИСТ<br>====================================<br>Выбранное оборудование: <0><br>Выбранный микромодуль: <1><br>Раса-производитель: <2><br>Срок аренды: <3> мес.<br>Арендная плата: <4> cr.<br>Плата за месяц свыше трёх: <5> cr.<br>Способ оплаты: <6><br>====================================<br>ИТОГО: <7> cr.<br><br>====================================<br>ПРИМЕЧАНИЕ О МИКРОМОДУЛЕ:<br><8><br>====================================<br><br>Итак, утверждаем этот список, или хотите ещё подумать?<br><br>====================================<br>"    
+    },
+    {
+      "#":  "50",
+      "String":  "Что же - не беда. Наш сервис обслуживает рейнджеров в любое время суток, поэтому прилетайте, когда сможете взять что-нибудь из нашего ассортимента!"    
+    },
+    {
+      "#":  "51",
+      "String":  "Увы, у меня сейчас нет таких денег"    
+    },
+    {
+      "#":  "52",
+      "String":  "Хорошо, обязательно"    
+    },
+    {
+      "#":  "53",
+      "String":  "Хотите установить микромодуль?"    
+    },
+    {
+      "#":  "54",
+      "String":  "Нет, не надо"    
+    },
+    {
+      "#":  "55",
+      "String":  "Да"    
+    },
+    {
+      "#":  "56",
+      "String":  "Дальномет"    
+    },
+    {
+      "#":  "57",
+      "String":  "Берсерк"    
+    },
+    {
+      "#":  "58",
+      "String":  "Ламбалд"    
+    },
+    {
+      "#":  "59",
+      "String":  "Жжения"    
+    },
+    {
+      "#":  "6",
+      "String":  "Отлично! Оборудование поступило к вам на склад. Можете начинать пользоваться им хоть прямо сейчас. Но, конечно, не забудьте, что в течении <clr>2<clrEnd> месяцев после окончания срока пользования вы должны будете вернуть оборудование на любой центр нашей сети!"    
+    },
+    {
+      "#":  "60",
+      "String":  "Дальпун"    
+    },
+    {
+      "#":  "61",
+      "String":  "Патч 0.96 альфа"    
+    },
+    {
+      "#":  "62",
+      "String":  "Винтарь"    
+    },
+    {
+      "#":  "63",
+      "String":  "Иикебанит"    
+    },
+    {
+      "#":  "64",
+      "String":  "Универс"    
+    },
+    {
+      "#":  "65",
+      "String":  "Клейн"    
+    },
+    {
+      "#":  "66",
+      "String":  "Платинос"    
+    },
+    {
+      "#":  "67",
+      "String":  "Цент"    
+    },
+    {
+      "#":  "68",
+      "String":  "Миниразмерный"    
+    },
+    {
+      "#":  "69",
+      "String":  "Горанд"    
+    },
+    {
+      "#":  "7",
+      "String":  "О, сдать?<br>Ну, что же, поздравляем: вы прибыли без опозданий.<br>Наши специалисты готовы выгрузить наше оборудование с вашего корабля.<br>Приступаем?"    
+    },
+    {
+      "#":  "70",
+      "String":  "Патч 0.95 бета"    
+    },
+    {
+      "#":  "71",
+      "String":  "Дальстар"    
+    },
+    {
+      "#":  "72",
+      "String":  "Тюринг"    
+    },
+    {
+      "#":  "73",
+      "String":  "Сплинтер"    
+    },
+    {
+      "#":  "74",
+      "String":  "Маформ"    
+    },
+    {
+      "#":  "75",
+      "String":  "Микрострел"    
+    },
+    {
+      "#":  "76",
+      "String":  "Сжим"    
+    },
+    {
+      "#":  "77",
+      "String":  "Интегратор"    
+    },
+    {
+      "#":  "78",
+      "String":  "Ракетон"    
+    },
+    {
+      "#":  "79",
+      "String":  "Эскалибур"    
+    },
+    {
+      "#":  "8",
+      "String":  "Итак...<br>А-га-а-а... Рейнджер, да вы - злостный неплательщик! По крайней мере, сдавать в срок взятое напрокат вы не приучены. У вас и пеня набежала, которую вы оплатите вместе со сдачей оборудования!"    
+    },
+    {
+      "#":  "80",
+      "String":  "Энергос"    
+    },
+    {
+      "#":  "81",
+      "String":  "Электро"    
+    },
+    {
+      "#":  "82",
+      "String":  "Антифэй"    
+    },
+    {
+      "#":  "83",
+      "String":  "Диощит"    
+    },
+    {
+      "#":  "84",
+      "String":  "Боттер"    
+    },
+    {
+      "#":  "85",
+      "String":  "Микроразмерный"    
+    },
+    {
+      "#":  "86",
+      "String":  "Громодрын"    
+    },
+    {
+      "#":  "87",
+      "String":  "Оптиматор"    
+    },
+    {
+      "#":  "88",
+      "String":  "Дронз"    
+    },
+    {
+      "#":  "89",
+      "String":  "Стоплай"    
+    },
+    {
+      "#":  "9",
+      "String":  "Хм. Пожалуй, да, здесь есть пара записей.<br>Если хотите погасить долг перед сетью - пожалуйста. <0> cr. на счёт сети и мы в расчёте."    
+    },
+    {
+      "#":  "90",
+      "String":  "Бронд"    
+    },
+    {
+      "#":  "91",
+      "String":  "Броинг"    
+    },
+    {
+      "#":  "92",
+      "String":  "Пакстон"    
+    },
+    {
+      "#":  "93",
+      "String":  "Колебратор"    
+    },
+    {
+      "#":  "94",
+      "String":  "Шелест"    
+    },
+    {
+      "#":  "95",
+      "String":  "Бач"    
+    },
+    {
+      "#":  "96",
+      "String":  "Объемник"    
+    },
+    {
+      "#":  "97",
+      "String":  "Вихрь"    
+    },
+    {
+      "#":  "98",
+      "String":  "Стаксер"    
+    },
+    {
+      "#":  "99",
+      "String":  "Редуза"    
+    }  
+  ]
+}

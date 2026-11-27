@@ -1,0 +1,341 @@
+{
+  "LangDatIn": "CFG\\Rus\\Lang.txt",
+  "LangDatOut": "CFG\\Rus\\Lang.dat",
+  "MainDatIn": "CFG\\Main.txt",
+  "MainDatOut": "CFG\\Main.dat",
+  "CacheDatIn": "CFG\\CacheData.txt",
+  "CacheDatOut": "CFG\\CacheData.dat",
+  "ExportLangTxt": true,
+  "ExportLangDat": true,
+  "FileID":  573785173,
+  "FileVersion":  8,
+  "ViewPos.x":  -683,
+  "ViewPos.y":  -639,
+  "ScriptName":  "Mod_RefMoreBeautifulDrop",
+  "ScriptFileOut": "DATA\\Script\\Mod_RefMoreBeautifulDrop.scr",
+  "ScriptTextOut": "DATA\\Script\\Mod_RefMoreBeautifulDrop.txt",
+  "Visual.Objects":  
+  [
+    {
+      "Dialogs":      
+      [
+        {
+          "Type":  "TDialog",
+          "Name":  "DropOn",
+          "Pos.x":  50,
+          "Pos.y":  -140,
+          "Parent":  -1,
+          "#":  7        
+        },
+        {
+          "Type":  "TDialog",
+          "Name":  "DropOff",
+          "Pos.x":  90,
+          "Pos.y":  -110,
+          "Parent":  -1,
+          "#":  8        
+        }      
+      ],
+      "Groups":      
+      [
+        {
+          "Type":  "TGroup",
+          "Name":  "GroupNew",
+          "Pos.x":  -100,
+          "Pos.y":  0,
+          "Parent":  -1,
+          "#":  4,
+          "Owner":  62,
+          "Group.Type":  126,
+          "CntShipMin":  1,
+          "CntShipMax":  1,
+          "SpeedMin":  100,
+          "SpeedMax":  10000,
+          "Weapon":  0,
+          "CargoHook":  0,
+          "EmptySpace":  0,
+          "AddPlayer":  true,
+          "StatusTraderMin":  0,
+          "StatusTraderMax":  100,
+          "StatusWarriorMin":  0,
+          "StatusWarriorMax":  100,
+          "StatusPirateMin":  0,
+          "StatusPirateMax":  100,
+          "DistSearch":  10000,
+          "Dialog":  -1,
+          "StrengthMin":  "0",
+          "StrengthMax":  "0",
+          "Ruins":  ""        
+        }      
+      ],
+      "Operations":      
+      [
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  -50,
+          "Pos.y":  -90,
+          "Parent":  -1,
+          "#":  5,
+          "Code.Type":  "Global",
+          "Code":          
+          [
+              "if(!GCntRun(GScriptName)) GRun();"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  0,
+          "Pos.y":  -90,
+          "Parent":  -1,
+          "#":  6,
+          "Code.Type":  "DialogBegin",
+          "Code":          
+          [
+              "if(DropFlag==0)",
+              "{",
+              "    temp_str=\"Обычный\";",
+              "    AddDialogInject('DropOn',\"Сброс предметов из трюма: <temp_str>\",\"Сделать сброс более плавным, как у NPC\",17);",
+              "}",
+              "if(DropFlag==1)",
+              "{",
+              "    temp_str=\"Как у NPC\";",
+              "    AddDialogInject('DropOff',\"Сброс предметов из трюма: <temp_str>\",\"Вернуть сброс к обычному состоянию\",17);",
+              "}"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  50,
+          "Pos.y":  -90,
+          "Parent":  -1,
+          "#":  9,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "ShipAddCustomShipInfo(Player(),'RefDroppingInfo','NoShow');",
+              "DAnswer('main');",
+              "DropFlag = 1;"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  90,
+          "Pos.y":  -60,
+          "Parent":  -1,
+          "#":  10,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "ShipDeleteCustomShipInfo(Player(),'RefDroppingInfo');",
+              "DAnswer('main');",
+              "DropFlag = 0;"          
+          ]        
+        }      
+      ],
+      "Planets":      
+      [
+        {
+          "Type":  "TPlanet",
+          "Name":  "PlanetNew",
+          "Pos.x":  -100,
+          "Pos.y":  -30,
+          "Parent":  -1,
+          "#":  1,
+          "Race":  62,
+          "Owner":  62,
+          "Economy":  14,
+          "Goverment":  62,
+          "RangeMin":  0,
+          "RangeMax":  100,
+          "Dialog":  -1        
+        }      
+      ],
+      "Ships":      
+      [
+        {
+          "Type":  "TStarShip",
+          "Name":  "",
+          "Pos.x":  -100,
+          "Pos.y":  -90,
+          "Parent":  -1,
+          "#":  2,
+          "Count":  1,
+          "Owner":  62,
+          "Ship.Type":  126,
+          "Player":  true,
+          "SpeedMin":  0,
+          "SpeedMax":  10000,
+          "Weapon":  0,
+          "CargoHook":  0,
+          "EmptySpace":  0,
+          "StatusTraderMin":  0,
+          "StatusTraderMax":  100,
+          "StatusWarriorMin":  0,
+          "StatusWarriorMax":  100,
+          "StatusPirateMin":  0,
+          "StatusPirateMax":  100,
+          "StrengthMin":  "0",
+          "StrengthMax":  "0",
+          "Ruins":  ""        
+        }      
+      ],
+      "Stars":      
+      [
+        {
+          "Type":  "TStar",
+          "Name":  "StarNew",
+          "Pos.x":  -100,
+          "Pos.y":  -60,
+          "Parent":  -1,
+          "#":  0,
+          "Constellation":  0,
+          "Priority":  0,
+          "NoKling":  false,
+          "NoComeKling":  false        
+        }      
+      ],
+      "Statements":      
+      [
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  0,
+          "Pos.y":  -140,
+          "Parent":  -1,
+          "#":  11,
+          "Code.Type":  "DialogBegin",
+          "Code":          
+          [
+              "PlayerBridge()==12"          
+          ]        
+        }      
+      ],
+      "States":      
+      [
+        {
+          "Type":  "TState",
+          "Name":  "StateNew",
+          "Pos.x":  -100,
+          "Pos.y":  30,
+          "Parent":  -1,
+          "#":  3,
+          "Move":  0,
+          "MoveObj":  -1,
+          "Attack.Count":  0,
+          "TakeItem":  -1,
+          "TakeAllItem":  false,
+          "OnTalk":  "",
+          "OnActCode":  "",
+          "EType":  1,
+          "EUnique":  "",
+          "EMsg":  ""        
+        }      
+      ],
+      "Variables":      
+      [
+        {
+          "Type":  "TVar",
+          "Name":  "DropFlag",
+          "Pos.x":  -60,
+          "Pos.y":  -180,
+          "Parent":  -1,
+          "#":  12,
+          "Var.Type":  "Int",
+          "Init":  "0",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "temp_str",
+          "Pos.x":  -60,
+          "Pos.y":  -210,
+          "Parent":  -1,
+          "#":  13,
+          "Var.Type":  "Str",
+          "Init":  "",
+          "Global":  false        
+        }      
+      ]    
+    }  
+  ],
+  "Visual.Links":  
+  [
+    {
+      "Type":  "TGraphLink",
+      "Begin":  2,
+      "End":  0,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  1,
+      "End":  0,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  4,
+      "End":  1,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  4,
+      "End":  3,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  8,
+      "End":  10,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  7,
+      "End":  9,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  11,
+      "End":  6,
+      "Nom":  0,
+      "Arrow":  true    
+    }  
+  ],
+  "BlockPar.EC.Total.Strings":  5,
+  "BlockPar.EC":  
+  [
+    {
+      "#":  "0",
+      "String":  "Вернуть сброс к обычному состоянию"    
+    },
+    {
+      "#":  "2",
+      "String":  "Как у NPC"    
+    },
+    {
+      "#":  "3",
+      "String":  "Сделать сброс более плавным, как у NPC"    
+    },
+    {
+      "#":  "4",
+      "String":  "Сброс предметов из трюма: <0>"    
+    },
+    {
+      "#":  "5",
+      "String":  "Обычный"    
+    }  
+  ]
+}

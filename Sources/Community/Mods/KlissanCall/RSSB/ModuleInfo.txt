@@ -1,0 +1,12 @@
+Name=RSSB
+Author=KlissanCall
+Conflict=
+Dependence=
+Priority=1
+Section=Прочие моды
+SectionEng=Other Mods
+Languages=Rus,Eng
+SmallDescription=Реальные фоны звёздных систем <color=0,132,15>(легален)</color>
+FullDescription=Заменены все стандартные фоны систем на реальные снимки звёздного пространства.
+SmallDescriptionEng=Real star system backgrounds <color=0,132,15>(legal)</color>
+FullDescriptionEng=All standard star system backgrounds are replaced with real photos of outer space.

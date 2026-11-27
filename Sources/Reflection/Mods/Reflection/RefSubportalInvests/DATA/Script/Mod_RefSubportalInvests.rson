@@ -1,0 +1,1317 @@
+{
+    "FileID": 573785173,
+    "FileVersion": 8,
+    "ViewPos.x": -703,
+    "ViewPos.y": -618,
+    "ScriptName": "Mod_RefSubportalInvests",
+    "ScriptFileOut": "DATA\\Script\\Mod_RefSubportalInvests.scr",
+    "ScriptTextOut": "DATA\\Script\\Mod_RefSubportalInvests.txt",
+    "LangDatIn": "CFG\\Rus\\Lang.txt",
+    "LangDatOut": "CFG\\Rus\\Lang.dat",
+    "MainDatIn": "CFG\\Main.txt",
+    "MainDatOut": "CFG\\Main.dat",
+    "CacheDatIn": "CFG\\CacheData.txt",
+    "CacheDatOut": "CFG\\CacheData.dat",
+    "ExportLangTxt": true,
+    "ExportLangDat": true,
+    "Visual.Objects": 
+    [
+        {
+            "DialogAnswers": 
+            [
+                {
+                    "Type": "TDialogAnswer",
+                    "Name": "restart",
+                    "Pos.x": 180,
+                    "Pos.y": -110,
+                    "Parent": -1,
+                    "#": 13,
+                    "Msg": "Сейчас мне это неинтересно",
+                    "AMsg.Num": "0"
+                },
+                {
+                    "Type": "TDialogAnswer",
+                    "Name": "",
+                    "Pos.x": 140,
+                    "Pos.y": -70,
+                    "Parent": -1,
+                    "#": 14,
+                    "Msg": "Каскада? О чём идёт речь?",
+                    "AMsg.Num": "1"
+                },
+                {
+                    "Type": "TDialogAnswer",
+                    "Name": "",
+                    "Pos.x": 140,
+                    "Pos.y": 10,
+                    "Parent": -1,
+                    "#": 18,
+                    "Msg": "Да, всегда готов! Начинаем прямо сейчас!",
+                    "AMsg.Num": "2"
+                },
+                {
+                    "Type": "TDialogAnswer",
+                    "Name": "",
+                    "Pos.x": 180,
+                    "Pos.y": -30,
+                    "Parent": -1,
+                    "#": 19,
+                    "Msg": "Нет, мне это неинтересно и я никогда не захочу участвовать в подобном!",
+                    "AMsg.Num": "3"
+                },
+                {
+                    "Type": "TDialogAnswer",
+                    "Name": "hangar",
+                    "Pos.x": 140,
+                    "Pos.y": 130,
+                    "Parent": -1,
+                    "#": 24,
+                    "Msg": "Уже вылетаю!",
+                    "AMsg.Num": "4"
+                },
+                {
+                    "Type": "TDialogAnswer",
+                    "Name": "",
+                    "Pos.x": 200,
+                    "Pos.y": -250,
+                    "Parent": -1,
+                    "#": 35,
+                    "Msg": "Ого, это, получается, он что с таким-то эффектом делает?",
+                    "AMsg.Num": "5"
+                },
+                {
+                    "Type": "TDialogAnswer",
+                    "Name": "restart",
+                    "Pos.x": 240,
+                    "Pos.y": -290,
+                    "Parent": -1,
+                    "#": 37,
+                    "Msg": "Ого... Ясно. Спасибо, может, загляну.",
+                    "AMsg.Num": "6"
+                },
+                {
+                    "Type": "TDialogAnswer",
+                    "Name": "restart",
+                    "Pos.x": 400,
+                    "Pos.y": 10,
+                    "Parent": -1,
+                    "#": 38,
+                    "Msg": "Нет, пожалуй, не сейчас",
+                    "AMsg.Num": "7"
+                },
+                {
+                    "Type": "TDialogAnswer",
+                    "Name": "restart",
+                    "Pos.x": 540,
+                    "Pos.y": 10,
+                    "Parent": -1,
+                    "#": 46,
+                    "Msg": "Ладно, вернусь попозже",
+                    "AMsg.Num": "8"
+                },
+                {
+                    "Type": "TDialogAnswer",
+                    "Name": "restart",
+                    "Pos.x": 500,
+                    "Pos.y": 10,
+                    "Parent": -1,
+                    "#": 48,
+                    "Msg": "Пожалуй, на сегодня всё!",
+                    "AMsg.Num": "9"
+                },
+                {
+                    "Type": "TDialogAnswer",
+                    "Name": "",
+                    "Pos.x": 400,
+                    "Pos.y": -30,
+                    "Parent": -1,
+                    "#": 49,
+                    "Msg": "Хочу улучшить ещё один Субпортал",
+                    "AMsg.Num": "10"
+                },
+                {
+                    "Type": "TDialogAnswer",
+                    "Name": "restart",
+                    "Pos.x": 260,
+                    "Pos.y": 10,
+                    "Parent": -1,
+                    "#": 53,
+                    "Msg": "",
+                    "AMsg.Num": "11"
+                }
+            ],
+            "DialogMessages": 
+            [
+                {
+                    "Type": "TDialogMsg",
+                    "Name": "",
+                    "Pos.x": 140,
+                    "Pos.y": -110,
+                    "Parent": -1,
+                    "#": 12,
+                    "Msg": "Да, добровольца.\r\n\r\nВы, рейнджер, провели немало времени, изучая чёрные дыры и помогая в исследованиях нашему отделу - за что вам наша безмерная благодарность.\r\n\r\nТеперь же нас интересует интереснейшее явление - Каскад, и если вы снова поможете вам, то, конечно, мы найдём, чем вас отблагодарить.",
+                    "DMsg.Num": "0"
+                },
+                {
+                    "Type": "TDialogMsg",
+                    "Name": "",
+                    "Pos.x": 140,
+                    "Pos.y": -30,
+                    "Parent": -1,
+                    "#": 15,
+                    "Msg": "Итак, с чего бы начать...\r\n\r\nКак вы понимаете, природа \"проколов\" пространства довольно удивительна, и имеет ряд своих особенностей.\r\nТак вот, мы обнаружили, что при некоторых, довольно редких обстоятельствах, проколы начинают \"репроецировать\" себя дальше, создавая всё новые проколы.\r\n\r\nТак вот, в ходе ряда экспериментов нам удалось подобрать такие условия. Мы можем заставить прокол \"спроецировать\" себя, но что будет дальше - мы не знаем. Возможно, благодаря нашему импульсу он начнёт <clr>проецировать себя дальше<clrEnd> - это нам неизвестно.\r\n\r\nИменно поэтому нам нужна ваша помощь. Если вы проделаете весь этот путь, то мы щедро наградим вас. Как в денежном эквиваленте, так и... Пожалуй, поделимся с вами <clr>результатами наших экспериментов<clrEnd>...",
+                    "DMsg.Num": "1"
+                },
+                {
+                    "Type": "TDialogMsg",
+                    "Name": "",
+                    "Pos.x": 260,
+                    "Pos.y": -30,
+                    "Parent": -1,
+                    "#": 20,
+                    "Msg": "Жаль, очень жаль. Ну, что же - дело ваше, а мы найдём на ваше место другого кандидата.",
+                    "DMsg.Num": "2"
+                },
+                {
+                    "Type": "TDialogMsg",
+                    "Name": "",
+                    "Pos.x": 140,
+                    "Pos.y": 50,
+                    "Parent": -1,
+                    "#": 22,
+                    "Msg": "Ну, что же?\r\n\r\nВ течение <clr>месяца<clrEnd> мы будем поддерживать созданный нами прокол около нашей базы.\r\n\r\nКак только вы залететите в прокол, мы создадим мощный импульс, который начнёт явление репроецирования.\r\n\r\nУдачи, рейнджер! Она вам пригодится!",
+                    "DMsg.Num": "3"
+                },
+                {
+                    "Type": "TDialogMsg",
+                    "Name": "",
+                    "Pos.x": 360,
+                    "Pos.y": -30,
+                    "Parent": -1,
+                    "#": 25,
+                    "Msg": "Отлично!\r\n\r\nТекущая цена - <Money> cr. Весь список наличных у вас Субпорталов мы уже привели.",
+                    "DMsg.Num": "4"
+                },
+                {
+                    "Type": "TDialogMsg",
+                    "Name": "",
+                    "Pos.x": 200,
+                    "Pos.y": -290,
+                    "Parent": -1,
+                    "#": 34,
+                    "Msg": "Отлично, рейнджер!\r\n\r\nВаши изыскания очень помогли нам.\r\nВы, наверное, заметили, что в конце ваших перемещений вы стали попадать <clr>в одно и то же место<clrEnd>?\r\n\r\nИмпульс, приданый нами, достаточно ослаб, и дал интересный эффект - зациклился между двумя случайными системами.\r\n\r\nМы смогли вычислить мощность импульса, который сможет повторить такое с точностью 99.997864%, и смогли таким образом завершить наше передовое исследование - <clr>Субпортал 2.0<clrEnd>, как мы его называем.",
+                    "DMsg.Num": "5"
+                },
+                {
+                    "Type": "TDialogMsg",
+                    "Name": "",
+                    "Pos.x": 240,
+                    "Pos.y": -250,
+                    "Parent": -1,
+                    "#": 36,
+                    "Msg": "Во-первых, Субпортал, улучшенный нами, может выстраивать кротовые дыры по заданному вами маршруту.\r\n\r\nВо-вторых, его заряд настроен так, что такая дыра не схлопнется сразу после очистки \"схваченного\" ею гиперпространственного пузыря, а продолжит существовать.\r\n\r\nК слову, мы готовы улучшить за небольшую плату <clr>любой ваш Субпортал<clrEnd>. Увы, создавать такие устройства с нуля слишком трудозатратно.",
+                    "DMsg.Num": "6"
+                },
+                {
+                    "Type": "TDialogMsg",
+                    "Name": "",
+                    "Pos.x": 540,
+                    "Pos.y": -30,
+                    "Parent": -1,
+                    "#": 45,
+                    "Msg": "К сожалению, у вас недостаточно средств на счету. Мы вынуждены отказать вам.",
+                    "DMsg.Num": "7"
+                },
+                {
+                    "Type": "TDialogMsg",
+                    "Name": "",
+                    "Pos.x": 500,
+                    "Pos.y": -30,
+                    "Parent": -1,
+                    "#": 47,
+                    "Msg": "Отлично! Новый Субпортал v 2.0 уже перемещён в ваш трюм!",
+                    "DMsg.Num": "8"
+                }
+            ],
+            "Dialogs": 
+            [
+                {
+                    "Type": "TDialog",
+                    "Name": "TakeQuest",
+                    "Pos.x": 140,
+                    "Pos.y": -150,
+                    "Parent": -1,
+                    "#": 9
+                },
+                {
+                    "Type": "TDialog",
+                    "Name": "Upgrade",
+                    "Pos.x": 360,
+                    "Pos.y": -110,
+                    "Parent": -1,
+                    "#": 10
+                },
+                {
+                    "Type": "TDialog",
+                    "Name": "WinQuest",
+                    "Pos.x": 240,
+                    "Pos.y": -330,
+                    "Parent": -1,
+                    "#": 33
+                },
+                {
+                    "Type": "TDialog",
+                    "Name": "Buy",
+                    "Pos.x": 500,
+                    "Pos.y": -110,
+                    "Parent": -1,
+                    "#": 41
+                }
+            ],
+            "Groups": 
+            [
+                {
+                    "Type": "TGroup",
+                    "Name": "GroupNew",
+                    "Pos.x": -100,
+                    "Pos.y": 0,
+                    "Parent": -1,
+                    "#": 4,
+                    "Owner": 62,
+                    "Group.Type": 126,
+                    "CntShipMin": 1,
+                    "CntShipMax": 1,
+                    "SpeedMin": 100,
+                    "SpeedMax": 10000,
+                    "Weapon": 0,
+                    "CargoHook": 0,
+                    "EmptySpace": 0,
+                    "AddPlayer": true,
+                    "StatusTraderMin": 0,
+                    "StatusTraderMax": 100,
+                    "StatusWarriorMin": 0,
+                    "StatusWarriorMax": 100,
+                    "StatusPirateMin": 0,
+                    "StatusPirateMax": 100,
+                    "DistSearch": 10000,
+                    "Dialog": -1,
+                    "StrengthMin": "0",
+                    "StrengthMax": "0",
+                    "Ruins": ""
+                }
+            ],
+            "Operations": 
+            [
+                {
+                    "Type": "Top",
+                    "Name": "",
+                    "Pos.x": -50,
+                    "Pos.y": -90,
+                    "Parent": -1,
+                    "#": 5,
+                    "Code.Type": "Global",
+                    "Code": 
+                    [
+                        "GRun();",
+                        "",
+                        "//InvestsFlag - флажок прогресса прохождения скрипта",
+                        "//InvestsFlag==0 - стартовое значение",
+                        "//InvestsFlag==1 - игрок взял квест",
+                        "//InvestsFlag==2 - игрок проходит чёрные дыры",
+                        "//InvestsFlag==3 - игрок закончил страдать",
+                        "//InvestsFlag==4 - игрок провалил всё"
+                    ]
+                },
+                {
+                    "Type": "Top",
+                    "Name": "",
+                    "Pos.x": -10,
+                    "Pos.y": -90,
+                    "Parent": -1,
+                    "#": 6,
+                    "Code.Type": "DialogBegin",
+                    "Code": 
+                    [
+                        "if(InvestsFlag != 4) {",
+                        "    if(GetShipRuins(Player())) {",
+                        "        if((GalaxyDiffLevels(2) * 5 + 300 + 2000) <= CurTurn()) {",
+                        "            if(GalaxyTechLevel() > 2) {",
+                        "                if(ShipType(GetShipRuins(Player())) == 'SB') {",
+                        "                    if(PlayerScienceRank['CurrentRank'] > 4) {",
+                        "                        if(!InvestsFlag) {",
+                        "                            AddDialogInject('TakeQuest',\"Наши исследования в области чёрных дыр подходят к некоторому логическому концу. Но нам очень нужна помощь добровольца...\",\"Добровольца? О чём речь?\",99);",
+                        "                        }",
+                        "                        if(InvestsFlag == 2 && !Holes) {",
+                        "                            AddDialogOverride('WinQuest',99);",
+                        "                        }",
+                        "                        if(InvestsFlag == 3) {",
+                        "                            //Улучшаются надетые Субпорталы (их и перечисляет диалог); ответ - один, сколько бы их ни было",
+                        "                            tries = 0;",
+                        "                            for(i=0;ShipArts(Player())>i;i=i+1) {",
+                        "                                if(ItemType(ShipArts(Player(),i)) == t_ArtBlackHole) tries = 1;",
+                        "                            }",
+                        "                            if(tries) AddDialogInject('Upgrade','',\"Хочу улучшить Субпортал\",20);",
+                        "                        }",
+                        "                    }",
+                        "                }",
+                        "            }",
+                        "        }",
+                        "    }",
+                        "}"
+                    ]
+                },
+                {
+                    "Type": "Top",
+                    "Name": "",
+                    "Pos.x": -50,
+                    "Pos.y": -130,
+                    "Parent": -1,
+                    "#": 7,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "//Квест взят в старом сейве, где Init дал 0 дыр",
+                        "if(InvestsFlag == 1 && !Holes) {",
+                        "    Holes = min(14, max(5, 4 + round(GalaxyDiffLevels(6)/50)));",
+                        "    TotalH = Holes;",
+                        "}",
+                        "if(Holes && InvestsFlag != 4 && InvestsFlag) {",
+                        "    if(ShipOrder(Player()) == 4) {",
+                        "        if(Id(ShipOrderObj(Player())) == hole_id && ShipInHole(Player())) {",
+                        "            InvestsFlag=2;",
+                        "            //Сразу заспавним следующую дыру",
+                        "            if(Holes > 2) {",
+                        "                //Если ещё времени много",
+                        "                //Не звезда, откуда пришли, и не та, где дыра начнётся (была возможна дыра из системы в неё же); раньше while(1) без выхода",
+                        "                star = 0;",
+                        "                for(tries=0;tries<300;tries=tries+1) {",
+                        "                    i = Rnd(0,GalaxyStars()-1);",
+                        "                    if(!SectorVisible(StarToCon(GalaxyStar(i)))) continue;",
+                        "                    if(GalaxyStar(i) == HoleStar1(ShipOrderObj(Player()))) continue;",
+                        "                    if(GalaxyStar(i) == HoleStar2(ShipOrderObj(Player()))) continue;",
+                        "                    star = GalaxyStar(i);",
+                        "                    break;",
+                        "                }",
+                        "                if(!star) star = HoleStar1(ShipOrderObj(Player()));",
+                        "                cur_hole = HoleCreate2(HoleStar2(ShipOrderObj(Player())),star);",
+                        "                hole_id = Id(cur_hole);",
+                        "                tstr = HoleMap(cur_hole);",
+                        "",
+                        "                if(Rnd(1,2) == 1) HoleX1(cur_hole,HoleX2(ShipOrderObj(Player()))+Rnd(100,200));",
+                        "                else HoleX1(cur_hole,HoleX2(ShipOrderObj(Player()))-Rnd(100,200));",
+                        "                if(Rnd(1,2) == 1) HoleY1(cur_hole,HoleY2(ShipOrderObj(Player()))+Rnd(100,200));",
+                        "                else HoleY1(cur_hole,HoleY2(ShipOrderObj(Player()))-Rnd(100,200));",
+                        "",
+                        "                Holes = Holes - 1;",
+                        "                //Закидываем переменную потихоньку тут",
+                        "                star2 = Id(HoleStar1(ShipOrderObj(Player())));",
+                        "                HoleTurnCreate(cur_hole,CurTurn()-195+(Holes*2));",
+                        "            }",
+                        "            else {",
+                        "                //Пора создавать игроку эффект того, что его перекидывает из системы в систему по воле Провидения",
+                        "                cur_hole = HoleCreate2(HoleStar2(ShipOrderObj(Player())),GalaxyStar(star2-1));",
+                        "                hole_id = Id(cur_hole);",
+                        "                tstr = HoleMap(cur_hole);",
+                        "",
+                        "                if(Rnd(1,2) == 1) HoleX1(cur_hole,HoleX2(ShipOrderObj(Player()))+Rnd(100,200));",
+                        "                else HoleX1(cur_hole,HoleX2(ShipOrderObj(Player()))-Rnd(100,200));",
+                        "                if(Rnd(1,2) == 1) HoleY1(cur_hole,HoleY2(ShipOrderObj(Player()))+Rnd(100,200));",
+                        "                else HoleY1(cur_hole,HoleY2(ShipOrderObj(Player()))-Rnd(100,200));",
+                        "",
+                        "                Holes = Holes - 1;",
+                        "                star2 = Id(HoleStar1(ShipOrderObj(Player())));",
+                        "                HoleTurnCreate(cur_hole,CurTurn()-175);",
+                        "                sound = 0;",
+                        "            }",
+                        "",
+                        "            int enem;",
+                        "            int rand;",
+                        "            dword ship;",
+                        "            dword item;",
+                        "",
+                        "            enem = TotalH - Holes;",
+                        "            enem = enem + 2;",
+                        "            enem = enem + PortionInDiapason(GalaxyDiffLevels(6)/50,1,10,1,5);",
+                        "",
+                        "            for(i = 0; i < enem; i = i + 1)",
+                        "            {",
+                        "                if(Rnd(0,100) < 70) {",
+                        "                    item = CreateEquipment(Rnd(t_FuelTanks,t_Weapon12),Rnd(20,35),GalaxyTechLevel(),None);",
+                        "                }",
+                        "                else {",
+                        "                    item = CreateArt(Rnd(t_ArtefactHull,t_ArtFastRacks),None);",
+                        "                }",
+                        "",
+                        "                rand = Rnd(1,3);",
+                        "                if(rand == 1) ship = CreateABShip('Ship.X.0', AdvancedAdjustmentSet(26,-1) * Rnd(2,9), 100, 30, '', item);",
+                        "                else if(rand == 2) ship = CreateABShip('Ship.X.1', AdvancedAdjustmentSet(26,-1) * Rnd(2,9), 100, 50, '', item);",
+                        "                else if(rand == 3) ship = CreateABShip('Ship.X.2', AdvancedAdjustmentSet(26,-1) * Rnd(2,9), 100, 75, '', item);",
+                        "            }",
+                        "",
+                        "            i = 14;",
+                        "            if(ResourceExist('ABMap.Tachanka')) { //Карты из RevAB",
+                        "                i = 20;",
+                        "            }",
+                        "            if(ResourceExist('ABMap.02_1_V02')) { //Карты из SR1ABMaps",
+                        "                i = 23;",
+                        "            }",
+                        "            if(ResourceExist('ABMap.endless')) { //Карты из AdvancedABMaps",
+                        "                i = 27;",
+                        "            }",
+                        "",
+                        "            rand = Rnd(1,i);",
+                        "",
+                        "            if(rand<=14) tstr = 'ABMap.map_'+rand;",
+                        "            else {",
+                        "                if(rand == 15) tstr = 'ABMap.Nonsense';",
+                        "                else if(rand == 16) tstr = 'ABMap.Pulsar';",
+                        "                else if(rand == 17) tstr = 'ABMap.Strolocobs';",
+                        "                else if(rand == 18) tstr = 'ABMap.Tachanka';",
+                        "                else if(rand == 19) tstr = 'ABMap.Fifth_Dimension';",
+                        "                else if(rand == 20) tstr = 'ABMap.Spider\\\\\\'s_Lair';",
+                        "                else if(rand == 21) tstr = 'ABMap.02_1_V02';",
+                        "                else if(rand == 22) tstr = 'ABMap.04_2_V01';",
+                        "                else if(rand == 23) tstr = 'ABMap.04_3_V03';",
+                        "                else if(rand == 24) tstr = 'ABMap.curvature';",
+                        "                else if(rand == 25) tstr = 'ABMap.trap';",
+                        "                else if(rand == 26) tstr = 'ABMap.endless';",
+                        "                else if(rand == 27) tstr = 'ABMap.polygons';",
+                        "            }",
+                        "",
+                        "            //Выбранной карты может не быть (номера 15..23 при AdvancedABMaps без RevAB/SR1ABMaps)",
+                        "            if(!ResourceExist(tstr)) tstr = 'ABMap.map_'+Rnd(1,14);",
+                        "            StartAB(tstr, Rnd(1,3));",
+                        "        }",
+                        "    }",
+                        "}",
+                        "",
+                        "if(InvestsFlag) {",
+                        "    //Чтобы игрок не чувствовал себя растерянно",
+                        "    if(InvestsFlag == 2 && Holes && ShipInNormalSpace(Player())) {",
+                        "        if(Holes > 1) {",
+                        "            Ether(3,'RefSubportalInvests',\"Ещё одна кротовая дыра посещена... Похоже, нужно двигаться к следующей. Датчики говорят о\"+' '+(TotalH-Holes)+' '+\"посещённых. Летим дальше.\");",
+                        "            if(!sound) {",
+                        "                Sound('Sound.NewMsg');",
+                        "                sound = 1;",
+                        "            }",
+                        "        }",
+                        "        else {",
+                        "            Ether(3,'RefSubportalInvests',\"Кажется, эта звезда уже недавно возникала на ваших сенсорах. Что-то странное...\");",
+                        "            if(!sound) {",
+                        "                Sound('Sound.NewMsg');",
+                        "                sound = 1;",
+                        "            }",
+                        "        }",
+                        "    }",
+                        "",
+                        "    if(Holes && InvestsFlag != 4 && IdToHole(hole_id) == -1) {",
+                        "        InvestsFlag = 4;",
+                        "        Ether(5,'RefSubportalInvests','');",
+                        "        Sound('Sound.QuestCancel');",
+                        "    }",
+                        "}",
+                        "",
+                        "if(~EtherState('RefSubportalInvests') && InvestsFlag > 2) {",
+                        "    if(EtherState('RefSubportalInvests') != 4 && EtherState('RefSubportalInvests') != 5) EtherDelete('RefSubportalInvests');",
+                        "}",
+                        "",
+                        "if(InvestsFlag==3) {",
+                        "    //Раздел работы артефакта - Субпортал держит ЧД открытой после посещения",
+                        "    /*if(!ObjectType(ShipCustomShipInfoData(Player(),'RefHoleInfo',1))) {",
+                        "        if(ShipOrder(Player()) == 4) {",
+                        "            if(Id(ShipOrderObj(Player())) == ShipCustomShipInfoData(Player(),'RefHoleInfo',1) && ShipInHole(Player())) {",
+                        "                HFlag = 1;",
+                        "                Turns = CurTurn() + 200 - HoleTurnCreate(IdToHole(ShipCustomShipInfoData(Player(),'RefHoleInfo',1)));",
+                        "            }",
+                        "        }",
+                        "    }",
+                        "    else ShipDeleteCustomShipInfo(Player(),'RefHoleInfo');*/",
+                        "",
+                        "    if(HFlag) {",
+                        "        HFlag = 0;",
+                        "        HoleStatus(IdToHole(ShipCustomShipInfoData(Player(),'RefHoleInfo',1)),1);",
+                        "        HoleTurnCreate(IdToHole(ShipCustomShipInfoData(Player(),'RefHoleInfo',1)),CurTurn()-Turns);",
+                        "        HoleMap(IdToHole(ShipCustomShipInfoData(Player(),'RefHoleInfo',1)),'SkipAB');",
+                        "    }",
+                        "}"
+                    ]
+                },
+                {
+                    "Type": "Top",
+                    "Name": "",
+                    "Pos.x": -10,
+                    "Pos.y": -130,
+                    "Parent": -1,
+                    "#": 8,
+                    "Code.Type": "Init",
+                    "Code": 
+                    [
+                        "//Сложность ЧД 50..500: 50 -> 5 дыр, каждые +50 -> +1 (раньше - только точные значения, иначе 0 дыр)",
+                        "Holes = min(14, max(5, 4 + round(GalaxyDiffLevels(6)/50)));",
+                        "",
+                        "TotalH = Holes;",
+                        "",
+                        "//ShipAddCustomShipInfo(Player(),'RefHoleInfo','NoShow');"
+                    ]
+                },
+                {
+                    "Type": "Top",
+                    "Name": "",
+                    "Pos.x": 220,
+                    "Pos.y": -30,
+                    "Parent": -1,
+                    "#": 21,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "//Отказ навсегда (AllShipOut() завершал скрипт, а GRun() тут же запускал его заново - квест предлагался снова)",
+                        "InvestsFlag = 4;"
+                    ]
+                },
+                {
+                    "Type": "Top",
+                    "Name": "",
+                    "Pos.x": 140,
+                    "Pos.y": 90,
+                    "Parent": -1,
+                    "#": 23,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "//Погнали спавнить ЧДшку",
+                        "//Число дыр (старые сейвы, где Init дал 0)",
+                        "if(!Holes) {",
+                        "    Holes = min(14, max(5, 4 + round(GalaxyDiffLevels(6)/50)));",
+                        "    TotalH = Holes;",
+                        "}",
+                        "//Случайная звезда в открытом секторе, кроме текущей (раньше while(1) без выхода)",
+                        "star = 0;",
+                        "for(tries=0;tries<300;tries=tries+1) {",
+                        "    i = Rnd(0,GalaxyStars()-1);",
+                        "    if(!SectorVisible(StarToCon(GalaxyStar(i)))) continue;",
+                        "    if(GalaxyStar(i) == ShipStar(Player())) continue;",
+                        "    star = GalaxyStar(i);",
+                        "    break;",
+                        "}",
+                        "if(!star) {",
+                        "    for(i=0;GalaxyStars()>i;i=i+1) {",
+                        "        if(GalaxyStar(i) == ShipStar(Player())) continue;",
+                        "        star = GalaxyStar(i);",
+                        "        break;",
+                        "    }",
+                        "}",
+                        "",
+                        "cur_hole = HoleCreate2(ShipStar(Player()),star);",
+                        "hole_id = Id(cur_hole);",
+                        "tstr = HoleMap(cur_hole);",
+                        "",
+                        "InvestsFlag=1;",
+                        "",
+                        "if(Rnd(1,2) == 1) HoleX1(cur_hole,CoordX(GetShipRuins(Player()))+Rnd(200,350));",
+                        "else HoleX1(cur_hole,CoordX(GetShipRuins(Player()))-Rnd(200,350));",
+                        "if(Rnd(1,2) == 1) HoleY1(cur_hole,CoordY(GetShipRuins(Player()))+Rnd(200,350));",
+                        "else HoleY1(cur_hole,CoordY(GetShipRuins(Player()))-Rnd(200,350));",
+                        "",
+                        "HoleTurnCreate(cur_hole,CurTurn()-170);",
+                        "",
+                        "Ether(3,'RefSubportalInvests',\"Отправляйтесь в созданную Научной Базой кротовую дыру.\");"
+                    ]
+                },
+                {
+                    "Type": "Top",
+                    "Name": "",
+                    "Pos.x": 360,
+                    "Pos.y": -70,
+                    "Parent": -1,
+                    "#": 26,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "Money = GalaxyMoney(4) * 2;"
+                    ]
+                },
+                {
+                    "Type": "Top",
+                    "Name": "",
+                    "Pos.x": 360,
+                    "Pos.y": 10,
+                    "Parent": -1,
+                    "#": 39,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "for(i=0;ShipArts(Player())>i;i=i+1) {",
+                        "    if(ItemType(ShipArts(Player(),i)) == t_ArtBlackHole) InjectAnswer('Buy',Format(\"Субпортал (wei т.)\",'wei',ItemSize(ShipArts(Player(),i))),ShipArts(Player(),i));",
+                        "}"
+                    ]
+                },
+                {
+                    "Type": "Top",
+                    "Name": "",
+                    "Pos.x": 200,
+                    "Pos.y": -330,
+                    "Parent": -1,
+                    "#": 40,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "Sound('Sound.QuestOk');",
+                        "InvestsFlag=3;"
+                    ]
+                },
+                {
+                    "Type": "Top",
+                    "Name": "",
+                    "Pos.x": 460,
+                    "Pos.y": -70,
+                    "Parent": -1,
+                    "#": 50,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "Sound('Sound.Buy');",
+                        "ShipMoney(Player(),ShipMoney(Player())-Money);",
+                        "//Ну чего, пропадать, что ли, переменной? Зачем новую плодить?",
+                        "star2 = GAnswerData;",
+                        "",
+                        "AddItemToShip(Player(),CreateCustomArt('SubportalUpgraded',ItemSize(star2),ItemCost(star2)*5,ItemOwner(star2)));",
+                        "FreeItem(GetArtFromShip(Player(),star2));"
+                    ]
+                }
+            ],
+            "Planets": 
+            [
+                {
+                    "Type": "TPlanet",
+                    "Name": "PlanetNew",
+                    "Pos.x": -100,
+                    "Pos.y": -30,
+                    "Parent": -1,
+                    "#": 1,
+                    "Race": 62,
+                    "Owner": 62,
+                    "Economy": 14,
+                    "Goverment": 62,
+                    "RangeMin": 0,
+                    "RangeMax": 100,
+                    "Dialog": -1
+                }
+            ],
+            "Ships": 
+            [
+                {
+                    "Type": "TStarShip",
+                    "Name": "",
+                    "Pos.x": -100,
+                    "Pos.y": -90,
+                    "Parent": -1,
+                    "#": 2,
+                    "Count": 1,
+                    "Owner": 62,
+                    "Ship.Type": 126,
+                    "Player": true,
+                    "SpeedMin": 0,
+                    "SpeedMax": 10000,
+                    "Weapon": 0,
+                    "CargoHook": 0,
+                    "EmptySpace": 0,
+                    "StatusTraderMin": 0,
+                    "StatusTraderMax": 100,
+                    "StatusWarriorMin": 0,
+                    "StatusWarriorMax": 100,
+                    "StatusPirateMin": 0,
+                    "StatusPirateMax": 100,
+                    "StrengthMin": "0",
+                    "StrengthMax": "0",
+                    "Ruins": ""
+                }
+            ],
+            "Stars": 
+            [
+                {
+                    "Type": "TStar",
+                    "Name": "StarNew",
+                    "Pos.x": -100,
+                    "Pos.y": -60,
+                    "Parent": -1,
+                    "#": 0,
+                    "Constellation": 0,
+                    "Priority": 0,
+                    "NoKling": false,
+                    "NoComeKling": false
+                }
+            ],
+            "Statements": 
+            [
+                {
+                    "Type": "Tif",
+                    "Name": "",
+                    "Pos.x": 500,
+                    "Pos.y": -70,
+                    "Parent": -1,
+                    "#": 42,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "ShipMoney(Player()) >= Money"
+                    ]
+                },
+                {
+                    "Type": "Tif",
+                    "Name": "",
+                    "Pos.x": 540,
+                    "Pos.y": -70,
+                    "Parent": -1,
+                    "#": 43,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "ShipMoney(Player()) < Money"
+                    ]
+                }
+            ],
+            "States": 
+            [
+                {
+                    "Type": "TState",
+                    "Name": "StateNew",
+                    "Pos.x": -100,
+                    "Pos.y": 30,
+                    "Parent": -1,
+                    "#": 3,
+                    "Move": 0,
+                    "MoveObj": -1,
+                    "Attack.Count": 0,
+                    "TakeItem": -1,
+                    "TakeAllItem": false,
+                    "OnTalk": "",
+                    "OnActCode": "",
+                    "EType": 1,
+                    "EUnique": "",
+                    "EMsg": ""
+                }
+            ],
+            "Variables": 
+            [
+                {
+                    "Type": "TVar",
+                    "Name": "i",
+                    "Pos.x": -80,
+                    "Pos.y": -180,
+                    "Parent": -1,
+                    "#": 11,
+                    "Var.Type": "Int",
+                    "Init": "",
+                    "Global": false
+                },
+                {
+                    "Type": "TVar",
+                    "Name": "InvestsFlag",
+                    "Pos.x": -80,
+                    "Pos.y": -210,
+                    "Parent": -1,
+                    "#": 16,
+                    "Var.Type": "Int",
+                    "Init": "0",
+                    "Global": false
+                },
+                {
+                    "Type": "TVar",
+                    "Name": "Holes",
+                    "Pos.x": -80,
+                    "Pos.y": -240,
+                    "Parent": -1,
+                    "#": 17,
+                    "Var.Type": "Int",
+                    "Init": "0",
+                    "Global": false
+                },
+                {
+                    "Type": "TVar",
+                    "Name": "cur_hole",
+                    "Pos.x": -80,
+                    "Pos.y": -270,
+                    "Parent": -1,
+                    "#": 27,
+                    "Var.Type": "Dword",
+                    "Init": "",
+                    "Global": false
+                },
+                {
+                    "Type": "TVar",
+                    "Name": "hole_id",
+                    "Pos.x": -80,
+                    "Pos.y": -300,
+                    "Parent": -1,
+                    "#": 28,
+                    "Var.Type": "Dword",
+                    "Init": "",
+                    "Global": false
+                },
+                {
+                    "Type": "TVar",
+                    "Name": "star",
+                    "Pos.x": -80,
+                    "Pos.y": -330,
+                    "Parent": -1,
+                    "#": 29,
+                    "Var.Type": "Dword",
+                    "Init": "",
+                    "Global": false
+                },
+                {
+                    "Type": "TVar",
+                    "Name": "tstr",
+                    "Pos.x": 30,
+                    "Pos.y": -330,
+                    "Parent": -1,
+                    "#": 30,
+                    "Var.Type": "Str",
+                    "Init": "",
+                    "Global": false
+                },
+                {
+                    "Type": "TVar",
+                    "Name": "star2",
+                    "Pos.x": 30,
+                    "Pos.y": -300,
+                    "Parent": -1,
+                    "#": 31,
+                    "Var.Type": "Dword",
+                    "Init": "",
+                    "Global": false
+                },
+                {
+                    "Type": "TVar",
+                    "Name": "TotalH",
+                    "Pos.x": 30,
+                    "Pos.y": -240,
+                    "Parent": -1,
+                    "#": 32,
+                    "Var.Type": "Int",
+                    "Init": "",
+                    "Global": false
+                },
+                {
+                    "Type": "TVar",
+                    "Name": "Money",
+                    "Pos.x": 30,
+                    "Pos.y": -270,
+                    "Parent": -1,
+                    "#": 44,
+                    "Var.Type": "Int",
+                    "Init": "",
+                    "Global": false
+                },
+                {
+                    "Type": "TVar",
+                    "Name": "HFlag",
+                    "Pos.x": 30,
+                    "Pos.y": -210,
+                    "Parent": -1,
+                    "#": 51,
+                    "Var.Type": "Int",
+                    "Init": "0",
+                    "Global": false
+                },
+                {
+                    "Type": "TVar",
+                    "Name": "Turns",
+                    "Pos.x": 30,
+                    "Pos.y": -180,
+                    "Parent": -1,
+                    "#": 52,
+                    "Var.Type": "Int",
+                    "Init": "",
+                    "Global": false
+                },
+                {
+                    "Type": "TVar",
+                    "Name": "sound",
+                    "Pos.x": -80,
+                    "Pos.y": -360,
+                    "Parent": -1,
+                    "#": 54,
+                    "Var.Type": "Int",
+                    "Init": "0",
+                    "Global": false
+                },
+                {
+                    "Type": "TVar",
+                    "Name": "tries",
+                    "Pos.x": -80,
+                    "Pos.y": -420,
+                    "Parent": -1,
+                    "#": 55,
+                    "Var.Type": "Int",
+                    "Init": "0",
+                    "Global": false
+                }
+            ]
+        }
+    ],
+    "Visual.Links": 
+    [
+        {
+            "Type": "TGraphLink",
+            "Begin": 2,
+            "End": 0,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 1,
+            "End": 0,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 4,
+            "End": 1,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 4,
+            "End": 3,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 9,
+            "End": 12,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 12,
+            "End": 14,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 12,
+            "End": 13,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 14,
+            "End": 15,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 15,
+            "End": 19,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 19,
+            "End": 21,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 21,
+            "End": 20,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 15,
+            "End": 18,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 18,
+            "End": 22,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 22,
+            "End": 23,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 23,
+            "End": 24,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 15,
+            "End": 13,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 10,
+            "End": 26,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 26,
+            "End": 25,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 34,
+            "End": 35,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 35,
+            "End": 36,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 36,
+            "End": 37,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 25,
+            "End": 38,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 25,
+            "End": 39,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 33,
+            "End": 40,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 40,
+            "End": 34,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 41,
+            "End": 43,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 41,
+            "End": 42,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 43,
+            "End": 45,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 45,
+            "End": 46,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 47,
+            "End": 49,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 49,
+            "End": 25,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 47,
+            "End": 48,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 42,
+            "End": 50,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 50,
+            "End": 47,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 20,
+            "End": 53,
+            "Nom": 0,
+            "Arrow": true
+        }
+    ],
+    "BlockPar.EC.Total.Strings": 28,
+    "BlockPar.EC": 
+    [
+        {
+            "#": "0",
+            "String": "Кажется, эта звезда уже недавно возникала на ваших сенсорах. Что-то странное..."
+        },
+        {
+            "#": "1",
+            "String": "посещённых. Летим дальше."
+        },
+        {
+            "#": "10",
+            "String": "Ну, что же?<br><br>В течение <clr>месяца<clrEnd> мы будем поддерживать созданный нами прокол около нашей базы.<br><br>Как только вы залететите в прокол, мы создадим мощный импульс, который начнёт явление репроецирования.<br><br>Удачи, рейнджер! Она вам пригодится!"
+        },
+        {
+            "#": "11",
+            "String": "Субпортал (wei т.)"
+        },
+        {
+            "#": "12",
+            "String": "Отлично!<br><br>Текущая цена - <0> cr. Весь список наличных у вас Субпорталов мы уже привели."
+        },
+        {
+            "#": "13",
+            "String": "Отлично, рейнджер!<br><br>Ваши изыскания очень помогли нам.<br>Вы, наверное, заметили, что в конце ваших перемещений вы стали попадать <clr>в одно и то же место<clrEnd>?<br><br>Импульс, приданый нами, достаточно ослаб, и дал интересный эффект - зациклился между двумя случайными системами.<br><br>Мы смогли вычислить мощность импульса, который сможет повторить такое с точностью 99.997864%, и смогли таким образом завершить наше передовое исследование - <clr>Субпортал 2.0<clrEnd>, как мы его называем."
+        },
+        {
+            "#": "14",
+            "String": "Во-первых, Субпортал, улучшенный нами, может выстраивать кротовые дыры по заданному вами маршруту.<br><br>Во-вторых, его заряд настроен так, что такая дыра не схлопнется сразу после очистки \"схваченного\" ею гиперпространственного пузыря, а продолжит существовать.<br><br>К слову, мы готовы улучшить за небольшую плату <clr>любой ваш Субпортал<clrEnd>. Увы, создавать такие устройства с нуля слишком трудозатратно."
+        },
+        {
+            "#": "15",
+            "String": "К сожалению, у вас недостаточно средств на счету. Мы вынуждены отказать вам."
+        },
+        {
+            "#": "16",
+            "String": "Отлично! Новый Субпортал v 2.0 уже перемещён в ваш трюм!"
+        },
+        {
+            "#": "17",
+            "String": "Сейчас мне это неинтересно"
+        },
+        {
+            "#": "18",
+            "String": "Каскада? О чём идёт речь?"
+        },
+        {
+            "#": "19",
+            "String": "Да, всегда готов! Начинаем прямо сейчас!"
+        },
+        {
+            "#": "2",
+            "String": "Ещё одна кротовая дыра посещена... Похоже, нужно двигаться к следующей. Датчики говорят о"
+        },
+        {
+            "#": "20",
+            "String": "Нет, мне это неинтересно и я никогда не захочу участвовать в подобном!"
+        },
+        {
+            "#": "21",
+            "String": "Уже вылетаю!"
+        },
+        {
+            "#": "22",
+            "String": "Ого, это, получается, он что с таким-то эффектом делает?"
+        },
+        {
+            "#": "23",
+            "String": "Ого... Ясно. Спасибо, может, загляну."
+        },
+        {
+            "#": "24",
+            "String": "Нет, пожалуй, не сейчас"
+        },
+        {
+            "#": "25",
+            "String": "Ладно, вернусь попозже"
+        },
+        {
+            "#": "26",
+            "String": "Пожалуй, на сегодня всё!"
+        },
+        {
+            "#": "27",
+            "String": "Хочу улучшить ещё один Субпортал"
+        },
+        {
+            "#": "3",
+            "String": "Добровольца? О чём речь?"
+        },
+        {
+            "#": "4",
+            "String": "Наши исследования в области чёрных дыр подходят к некоторому логическому концу. Но нам очень нужна помощь добровольца..."
+        },
+        {
+            "#": "5",
+            "String": "Хочу улучшить Субпортал"
+        },
+        {
+            "#": "6",
+            "String": "Да, добровольца.<br><br>Вы, рейнджер, провели немало времени, изучая чёрные дыры и помогая в исследованиях нашему отделу - за что вам наша безмерная благодарность.<br><br>Теперь же нас интересует интереснейшее явление - Каскад, и если вы снова поможете вам, то, конечно, мы найдём, чем вас отблагодарить."
+        },
+        {
+            "#": "7",
+            "String": "Итак, с чего бы начать...<br><br>Как вы понимаете, природа \"проколов\" пространства довольно удивительна, и имеет ряд своих особенностей.<br>Так вот, мы обнаружили, что при некоторых, довольно редких обстоятельствах, проколы начинают \"репроецировать\" себя дальше, создавая всё новые проколы.<br><br>Так вот, в ходе ряда экспериментов нам удалось подобрать такие условия. Мы можем заставить прокол \"спроецировать\" себя, но что будет дальше - мы не знаем. Возможно, благодаря нашему импульсу он начнёт <clr>проецировать себя дальше<clrEnd> - это нам неизвестно.<br><br>Именно поэтому нам нужна ваша помощь. Если вы проделаете весь этот путь, то мы щедро наградим вас. Как в денежном эквиваленте, так и... Пожалуй, поделимся с вами <clr>результатами наших экспериментов<clrEnd>..."
+        },
+        {
+            "#": "8",
+            "String": "Жаль, очень жаль. Ну, что же - дело ваше, а мы найдём на ваше место другого кандидата."
+        },
+        {
+            "#": "9",
+            "String": "Отправляйтесь в созданную Научной Базой кротовую дыру."
+        }
+    ]
+}

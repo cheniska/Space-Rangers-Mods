@@ -1,0 +1,1040 @@
+{
+  "LangDatIn": "CFG\\Rus\\Lang.txt",
+  "LangDatOut": "CFG\\Rus\\Lang.dat",
+  "MainDatIn": "CFG\\Main.txt",
+  "MainDatOut": "CFG\\Main.dat",
+  "CacheDatIn": "CFG\\CacheData.txt",
+  "CacheDatOut": "CFG\\CacheData.dat",
+  "ExportLangTxt": true,
+  "ExportLangDat": true,
+  "FileID":  573785173,
+  "FileVersion":  8,
+  "ViewPos.x":  -521,
+  "ViewPos.y":  -714,
+  "ScriptName":  "Mod_RefNativePort",
+  "ScriptFileOut": "DATA\\Script\\Mod_RefNativePort.scr",
+  "ScriptTextOut": "DATA\\Script\\Mod_RefNativePort.txt",
+  "GraphPoint.Count":  51,
+  "GraphLink.Count":  43,
+  "GraphRectText.Count":  0,
+  "Variables.Count":  4,
+  "Stars.Count":  1,
+  "Planets.Count":  1,
+  "Ships.Count":  1,
+  "States.Count":  1,
+  "Groups.Count":  1,
+  "Places.Count":  0,
+  "Items.Count":  0,
+  "Ethers.Count":  0,
+  "Dialogs.Count":  12,
+  "DialogMessages.Count":  13,
+  "DialogAnswers.Count":  14,
+  "Operations.Count":  2,
+  "Statements.Count":  1,
+  "Loops.Count":  0,
+  "Visual.Objects":  
+  [
+    {
+      "DialogAnswers":      
+      [
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "exit",
+          "Pos.x":  220,
+          "Pos.y":  -200,
+          "Parent":  -1,
+          "#":  9,
+          "Msg":  "Да, собственно, ничего, из любопытства спросил...",
+          "AMsg.Num":  "0"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "exit",
+          "Pos.x":  220,
+          "Pos.y":  -300,
+          "Parent":  -1,
+          "#":  17,
+          "Msg":  "Да так, из любопытства",
+          "AMsg.Num":  "1"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "exit",
+          "Pos.x":  160,
+          "Pos.y":  -300,
+          "Parent":  -1,
+          "#":  18,
+          "Msg":  "Конец связи",
+          "AMsg.Num":  "2"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "exit",
+          "Pos.x":  220,
+          "Pos.y":  0,
+          "Parent":  -1,
+          "#":  19,
+          "Msg":  "Спасибо. Конец связи",
+          "AMsg.Num":  "3"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "exit",
+          "Pos.x":  160,
+          "Pos.y":  0,
+          "Parent":  -1,
+          "#":  20,
+          "Msg":  "Конец связи",
+          "AMsg.Num":  "4"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "exit",
+          "Pos.x":  100,
+          "Pos.y":  -300,
+          "Parent":  -1,
+          "#":  21,
+          "Msg":  "Конец связи",
+          "AMsg.Num":  "5"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "exit",
+          "Pos.x":  100,
+          "Pos.y":  -200,
+          "Parent":  -1,
+          "#":  29,
+          "Msg":  "Конец связи",
+          "AMsg.Num":  "6"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "exit",
+          "Pos.x":  100,
+          "Pos.y":  0,
+          "Parent":  -1,
+          "#":  33,
+          "Msg":  "Конец связи",
+          "AMsg.Num":  "7"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "exit",
+          "Pos.x":  160,
+          "Pos.y":  -200,
+          "Parent":  -1,
+          "#":  36,
+          "Msg":  "Спасибо. Конец связи",
+          "AMsg.Num":  "8"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "exit",
+          "Pos.x":  100,
+          "Pos.y":  -100,
+          "Parent":  -1,
+          "#":  43,
+          "Msg":  "Понял, понял, не лезу",
+          "AMsg.Num":  "9"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "exit",
+          "Pos.x":  160,
+          "Pos.y":  -100,
+          "Parent":  -1,
+          "#":  44,
+          "Msg":  "Да мне делать нечего просто",
+          "AMsg.Num":  "10"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "exit",
+          "Pos.x":  220,
+          "Pos.y":  -100,
+          "Parent":  -1,
+          "#":  45,
+          "Msg":  "Спасибо, браток",
+          "AMsg.Num":  "11"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "",
+          "Pos.x":  310,
+          "Pos.y":  -130,
+          "Parent":  -1,
+          "#":  47,
+          "Msg":  "О! Земляк!",
+          "AMsg.Num":  "12"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "exit",
+          "Pos.x":  310,
+          "Pos.y":  -50,
+          "Parent":  -1,
+          "#":  50,
+          "Msg":  "Ну, бывай",
+          "AMsg.Num":  "13"        
+        }      
+      ],
+      "DialogMessages":      
+      [
+        {
+          "Type":  "TDialogMsg",
+          "Name":  "",
+          "Pos.x":  220,
+          "Pos.y":  -230,
+          "Parent":  -1,
+          "#":  8,
+          "Msg":  "Ну, ты мне плохого ничего не сделал, так что скажу. Моя родная планета - <Native>.",
+          "DMsg.Num":  "0"        
+        },
+        {
+          "Type":  "TDialogMsg",
+          "Name":  "",
+          "Pos.x":  220,
+          "Pos.y":  -330,
+          "Parent":  -1,
+          "#":  22,
+          "Msg":  "Ну, почему б и не сказать. Родом я с планеты <Native>. А ты с какой целью интересуешься?",
+          "DMsg.Num":  "1"        
+        },
+        {
+          "Type":  "TDialogMsg",
+          "Name":  "",
+          "Pos.x":  160,
+          "Pos.y":  -330,
+          "Parent":  -1,
+          "#":  23,
+          "Msg":  "Не тревожь занятых людей, малявка.",
+          "DMsg.Num":  "2"        
+        },
+        {
+          "Type":  "TDialogMsg",
+          "Name":  "",
+          "Pos.x":  220,
+          "Pos.y":  -30,
+          "Parent":  -1,
+          "#":  24,
+          "Msg":  "Эта информация, конечно, ограничена к распространению, но ты - доверенное лицо Коалиции, да и воин хороший, поэтому сообщаю: планета приписки этого корабля - <Native>.",
+          "DMsg.Num":  "3"        
+        },
+        {
+          "Type":  "TDialogMsg",
+          "Name":  "",
+          "Pos.x":  160,
+          "Pos.y":  -30,
+          "Parent":  -1,
+          "#":  25,
+          "Msg":  "Такая информация для вас не предназначена, рейнджер.",
+          "DMsg.Num":  "4"        
+        },
+        {
+          "Type":  "TDialogMsg",
+          "Name":  "",
+          "Pos.x":  100,
+          "Pos.y":  -330,
+          "Parent":  -1,
+          "#":  26,
+          "Msg":  "Ты имеешь наглость задавать такие вопросы? Лети-ка ты отсюда подобру-поздорову, пока я не разозлился!",
+          "DMsg.Num":  "5"        
+        },
+        {
+          "Type":  "TDialogMsg",
+          "Name":  "",
+          "Pos.x":  100,
+          "Pos.y":  -230,
+          "Parent":  -1,
+          "#":  28,
+          "Msg":  "С чего это я должен сообщать эту информацию такому как ты?",
+          "DMsg.Num":  "6"        
+        },
+        {
+          "Type":  "TDialogMsg",
+          "Name":  "",
+          "Pos.x":  100,
+          "Pos.y":  -30,
+          "Parent":  -1,
+          "#":  32,
+          "Msg":  "Настоятельно рекомендую закончить сеанс связи, иные действия будут расценены как неподчинение с соответствующими последствиями.",
+          "DMsg.Num":  "7"        
+        },
+        {
+          "Type":  "TDialogMsg",
+          "Name":  "",
+          "Pos.x":  160,
+          "Pos.y":  -230,
+          "Parent":  -1,
+          "#":  35,
+          "Msg":  "Не знаю, зачем тебе это, но скажу так. Планета приписки этого корабля - <Native>.",
+          "DMsg.Num":  "8"        
+        },
+        {
+          "Type":  "TDialogMsg",
+          "Name":  "",
+          "Pos.x":  100,
+          "Pos.y":  -130,
+          "Parent":  -1,
+          "#":  40,
+          "Msg":  "Ты, пенчекряк тебя раздери, зачем мне эфир засоряешь?",
+          "DMsg.Num":  "9"        
+        },
+        {
+          "Type":  "TDialogMsg",
+          "Name":  "",
+          "Pos.x":  160,
+          "Pos.y":  -130,
+          "Parent":  -1,
+          "#":  41,
+          "Msg":  "Я тебе, конечно, скажу - я с <Native>, но в чем твой интерес?",
+          "DMsg.Num":  "10"        
+        },
+        {
+          "Type":  "TDialogMsg",
+          "Name":  "",
+          "Pos.x":  220,
+          "Pos.y":  -130,
+          "Parent":  -1,
+          "#":  42,
+          "Msg":  "Ну, ты вроде пацан ровный, отчего бы и не сказать. <Native>.",
+          "DMsg.Num":  "11"        
+        },
+        {
+          "Type":  "TDialogMsg",
+          "Name":  "",
+          "Pos.x":  310,
+          "Pos.y":  -90,
+          "Parent":  -1,
+          "#":  49,
+          "Msg":  "Рад видеть соотечественника в этом холодном и бескрайнем космосе! Наконец лицо родом из моего дома...",
+          "DMsg.Num":  "12"        
+        }      
+      ],
+      "Dialogs":      
+      [
+        {
+          "Type":  "TDialog",
+          "Name":  "D_23",
+          "Pos.x":  220,
+          "Pos.y":  -260,
+          "Parent":  -1,
+          "#":  7        
+        },
+        {
+          "Type":  "TDialog",
+          "Name":  "D_13",
+          "Pos.x":  220,
+          "Pos.y":  -360,
+          "Parent":  -1,
+          "#":  12        
+        },
+        {
+          "Type":  "TDialog",
+          "Name":  "D_12",
+          "Pos.x":  160,
+          "Pos.y":  -360,
+          "Parent":  -1,
+          "#":  13        
+        },
+        {
+          "Type":  "TDialog",
+          "Name":  "D_43",
+          "Pos.x":  220,
+          "Pos.y":  -60,
+          "Parent":  -1,
+          "#":  14        
+        },
+        {
+          "Type":  "TDialog",
+          "Name":  "D_42",
+          "Pos.x":  160,
+          "Pos.y":  -60,
+          "Parent":  -1,
+          "#":  15        
+        },
+        {
+          "Type":  "TDialog",
+          "Name":  "D_11",
+          "Pos.x":  100,
+          "Pos.y":  -360,
+          "Parent":  -1,
+          "#":  16        
+        },
+        {
+          "Type":  "TDialog",
+          "Name":  "D_21",
+          "Pos.x":  100,
+          "Pos.y":  -260,
+          "Parent":  -1,
+          "#":  27        
+        },
+        {
+          "Type":  "TDialog",
+          "Name":  "D_41",
+          "Pos.x":  100,
+          "Pos.y":  -60,
+          "Parent":  -1,
+          "#":  31        
+        },
+        {
+          "Type":  "TDialog",
+          "Name":  "D_22",
+          "Pos.x":  160,
+          "Pos.y":  -260,
+          "Parent":  -1,
+          "#":  34        
+        },
+        {
+          "Type":  "TDialog",
+          "Name":  "D_31",
+          "Pos.x":  100,
+          "Pos.y":  -160,
+          "Parent":  -1,
+          "#":  37        
+        },
+        {
+          "Type":  "TDialog",
+          "Name":  "D_32",
+          "Pos.x":  160,
+          "Pos.y":  -160,
+          "Parent":  -1,
+          "#":  38        
+        },
+        {
+          "Type":  "TDialog",
+          "Name":  "D_33",
+          "Pos.x":  220,
+          "Pos.y":  -160,
+          "Parent":  -1,
+          "#":  39        
+        }      
+      ],
+      "Groups":      
+      [
+        {
+          "Type":  "TGroup",
+          "Name":  "GroupNew",
+          "Pos.x":  20,
+          "Pos.y":  -130,
+          "Parent":  -1,
+          "#":  4,
+          "Owner":  62,
+          "Group.Type":  126,
+          "CntShipMin":  1,
+          "CntShipMax":  1,
+          "SpeedMin":  100,
+          "SpeedMax":  10000,
+          "Weapon":  0,
+          "CargoHook":  0,
+          "EmptySpace":  0,
+          "AddPlayer":  true,
+          "StatusTraderMin":  0,
+          "StatusTraderMax":  100,
+          "StatusWarriorMin":  0,
+          "StatusWarriorMax":  100,
+          "StatusPirateMin":  0,
+          "StatusPirateMax":  100,
+          "DistSearch":  10000,
+          "Dialog":  -1,
+          "StrengthMin":  "0",
+          "StrengthMax":  "0",
+          "Ruins":  ""        
+        }      
+      ],
+      "Operations":      
+      [
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  20,
+          "Pos.y":  -360,
+          "Parent":  -1,
+          "#":  5,
+          "Total.Lines":  1,
+          "Code.Type":  "Global",
+          "Code":          
+          [
+              "if(!GCntRun(GScriptName)) GRun();"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  20,
+          "Pos.y":  -340,
+          "Parent":  -1,
+          "#":  6,
+          "Total.Lines":  14,
+          "Code.Type":  "DialogBegin",
+          "Code":          
+          [
+              "if(GetTalkShip() != 0) {",
+              "    if(TalkByAI() == 0) {",
+              "        Ship = GetTalkShip();",
+              "        if (RelationToShip(Ship,Player())<10) Relation = 0;//враг",
+              "        else if (RelationToShip(Ship,Player())<30) Relation = 1;//плохое",
+              "        else if (RelationToShip(Ship,Player())<60) Relation = 2;//нормальное",
+              "        else Relation = 3;//хорошее/отличное",
+              "        if(ShipTypeN(Ship) > 0 && (ShipTypeN(Ship) <= 4) && (Relation != 0))//тут начинается ветвление",
+              "        {",
+              "            if(ShipStatistic(Ship,10)) { //у кораблей, созданных скриптами, родной планеты может не быть (PlanetName(0) - вылет)",
+              "                Native = PlanetName(ShipStatistic(Ship,10));",
+              "                AddDialogInject('D_'+ShipTypeN(Ship)+Relation,'',\"А можно узнать, откуда ты?\",1);",
+              "            }",
+              "        }",
+              "    }",
+              "}"
+          ]        
+        }      
+      ],
+      "Planets":      
+      [
+        {
+          "Type":  "TPlanet",
+          "Name":  "PlanetNew",
+          "Pos.x":  20,
+          "Pos.y":  -160,
+          "Parent":  -1,
+          "#":  1,
+          "Race":  62,
+          "Owner":  62,
+          "Economy":  14,
+          "Goverment":  62,
+          "RangeMin":  0,
+          "RangeMax":  100,
+          "Dialog":  -1        
+        }      
+      ],
+      "Ships":      
+      [
+        {
+          "Type":  "TStarShip",
+          "Name":  "",
+          "Pos.x":  20,
+          "Pos.y":  -220,
+          "Parent":  -1,
+          "#":  2,
+          "Count":  1,
+          "Owner":  62,
+          "Ship.Type":  126,
+          "Player":  true,
+          "SpeedMin":  0,
+          "SpeedMax":  10000,
+          "Weapon":  0,
+          "CargoHook":  0,
+          "EmptySpace":  0,
+          "StatusTraderMin":  0,
+          "StatusTraderMax":  100,
+          "StatusWarriorMin":  0,
+          "StatusWarriorMax":  100,
+          "StatusPirateMin":  0,
+          "StatusPirateMax":  100,
+          "StrengthMin":  "0",
+          "StrengthMax":  "0",
+          "Ruins":  ""        
+        }      
+      ],
+      "Stars":      
+      [
+        {
+          "Type":  "TStar",
+          "Name":  "StarNew",
+          "Pos.x":  20,
+          "Pos.y":  -190,
+          "Parent":  -1,
+          "#":  0,
+          "Constellation":  0,
+          "Priority":  0,
+          "NoKling":  false,
+          "NoComeKling":  false        
+        }      
+      ],
+      "Statements":      
+      [
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  310,
+          "Pos.y":  -170,
+          "Parent":  -1,
+          "#":  48,
+          "Total.Lines":  1,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "ShipStatistic(Ship,10) == ShipStatistic(Player(),10)"          
+          ]        
+        }      
+      ],
+      "States":      
+      [
+        {
+          "Type":  "TState",
+          "Name":  "StateNew",
+          "Pos.x":  20,
+          "Pos.y":  -100,
+          "Parent":  -1,
+          "#":  3,
+          "Move":  0,
+          "MoveObj":  -1,
+          "Attack.Count":  0,
+          "TakeItem":  -1,
+          "TakeAllItem":  false,
+          "OnTalk":  "",
+          "OnActCode":  "",
+          "EType":  1,
+          "EUnique":  "",
+          "EMsg":  ""        
+        }      
+      ],
+      "Variables":      
+      [
+        {
+          "Type":  "TVar",
+          "Name":  "Ship",
+          "Pos.x":  20,
+          "Pos.y":  -310,
+          "Parent":  -1,
+          "#":  10,
+          "Var.Type":  "Dword",
+          "Init":  "",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "Native",
+          "Pos.x":  20,
+          "Pos.y":  -290,
+          "Parent":  -1,
+          "#":  11,
+          "Var.Type":  "Str",
+          "Init":  "",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "Relation",
+          "Pos.x":  20,
+          "Pos.y":  -270,
+          "Parent":  -1,
+          "#":  30,
+          "Var.Type":  "Int",
+          "Init":  "",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "excellence",
+          "Pos.x":  20,
+          "Pos.y":  -250,
+          "Parent":  -1,
+          "#":  46,
+          "Var.Type":  "Int",
+          "Init":  "",
+          "Global":  false        
+        }      
+      ]    
+    }  
+  ],
+  "Visual.Links":  
+  [
+    {
+      "Type":  "TGraphLink",
+      "Begin":  2,
+      "End":  0,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  1,
+      "End":  0,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  4,
+      "End":  1,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  4,
+      "End":  3,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  7,
+      "End":  8,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  8,
+      "End":  9,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  12,
+      "End":  22,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  22,
+      "End":  17,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  13,
+      "End":  23,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  23,
+      "End":  18,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  14,
+      "End":  24,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  24,
+      "End":  19,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  15,
+      "End":  25,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  25,
+      "End":  20,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  16,
+      "End":  26,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  26,
+      "End":  21,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  27,
+      "End":  28,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  28,
+      "End":  29,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  32,
+      "End":  33,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  31,
+      "End":  32,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  34,
+      "End":  35,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  35,
+      "End":  36,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  37,
+      "End":  40,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  40,
+      "End":  43,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  38,
+      "End":  41,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  41,
+      "End":  44,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  39,
+      "End":  42,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  42,
+      "End":  45,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  24,
+      "End":  48,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  42,
+      "End":  48,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  8,
+      "End":  48,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  22,
+      "End":  48,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  23,
+      "End":  48,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  35,
+      "End":  48,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  41,
+      "End":  48,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  25,
+      "End":  48,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  32,
+      "End":  48,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  40,
+      "End":  48,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  28,
+      "End":  48,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  26,
+      "End":  48,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  48,
+      "End":  47,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  47,
+      "End":  49,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  49,
+      "End":  50,
+      "Nom":  0,
+      "Arrow":  true    
+    }  
+  ],
+  "BlockPar.EC.Total.Strings":  23,
+  "BlockPar.EC":  
+  [
+    {
+      "#":  "10",
+      "String":  "Да так, из любопытства"    
+    },
+    {
+      "#":  "11",
+      "String":  "Конец связи"    
+    },
+    {
+      "#":  "12",
+      "String":  "Спасибо. Конец связи"    
+    },
+    {
+      "#":  "14",
+      "String":  "Настоятельно рекомендую закончить сеанс связи, иные действия будут расценены как неподчинение с соответствующими последствиями."    
+    },
+    {
+      "#":  "15",
+      "String":  "Не знаю, зачем тебе это, но скажу так. Планета приписки этого корабля - <0>."    
+    },
+    {
+      "#":  "16",
+      "String":  "Ты, пенчекряк тебя раздери, зачем мне эфир засоряешь?"    
+    },
+    {
+      "#":  "17",
+      "String":  "Я тебе, конечно, скажу - я с <0>, но в чем твой интерес?"    
+    },
+    {
+      "#":  "18",
+      "String":  "Ну, ты вроде пацан ровный, отчего бы и не сказать. <0>."    
+    },
+    {
+      "#":  "19",
+      "String":  "Понял, понял, не лезу"    
+    },
+    {
+      "#":  "2",
+      "String":  "Ну, ты мне плохого ничего не сделал, так что скажу. Моя родная планета - <0>."    
+    },
+    {
+      "#":  "20",
+      "String":  "Да мне делать нечего просто"    
+    },
+    {
+      "#":  "21",
+      "String":  "Спасибо, браток"    
+    },
+    {
+      "#":  "22",
+      "String":  "А можно узнать, откуда ты?"    
+    },
+    {
+      "#":  "23",
+      "String":  "Рад видеть соотечественника в этом холодном и бескрайнем космосе! Наконец лицо родом из моего дома..."    
+    },
+    {
+      "#":  "24",
+      "String":  "О! Земляк!"    
+    },
+    {
+      "#":  "25",
+      "String":  "Ну, бывай"    
+    },
+    {
+      "#":  "3",
+      "String":  "Да, собственно, ничего, из любопытства спросил..."    
+    },
+    {
+      "#":  "4",
+      "String":  "Ну, почему б и не сказать. Родом я с планеты <0>. А ты с какой целью интересуешься?"    
+    },
+    {
+      "#":  "5",
+      "String":  "Не тревожь занятых людей, малявка."    
+    },
+    {
+      "#":  "6",
+      "String":  "Эта информация, конечно, ограничена к распространению, но ты - доверенное лицо Коалиции, да и воин хороший, поэтому сообщаю: планета приписки этого корабля - <0>."    
+    },
+    {
+      "#":  "7",
+      "String":  "Такая информация для вас не предназначена, рейнджер."    
+    },
+    {
+      "#":  "8",
+      "String":  "Ты имеешь наглость задавать такие вопросы? Лети-ка ты отсюда подобру-поздорову, пока я не разозлился!"    
+    },
+    {
+      "#":  "9",
+      "String":  "С чего это я должен сообщать эту информацию такому как ты?"    
+    }  
+  ]
+}

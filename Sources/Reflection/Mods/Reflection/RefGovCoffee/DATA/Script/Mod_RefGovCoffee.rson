@@ -1,0 +1,1329 @@
+{
+    "FileID": 573785173,
+    "FileVersion": 8,
+    "ViewPos.x": -517,
+    "ViewPos.y": -485,
+    "ScriptName": "Mod_RefGovCoffee",
+    "ScriptFileOut": "DATA\\Script\\Mod_RefGovCoffee.scr",
+    "ScriptTextOut": "DATA\\Script\\Mod_RefGovCoffee.txt",
+    "LangDatIn": "CFG\\Rus\\Lang.txt",
+    "LangDatOut": "CFG\\Rus\\Lang.dat",
+    "MainDatIn": "CFG\\Main.txt",
+    "MainDatOut": "CFG\\Main.dat",
+    "CacheDatIn": "CFG\\CacheData.txt",
+    "CacheDatOut": "CFG\\CacheData.dat",
+    "ExportLangTxt": true,
+    "ExportLangDat": true,
+    "Visual.Objects": 
+    [
+        {
+            "DialogAnswers": 
+            [
+                {
+                    "Type": "TDialogAnswer",
+                    "Name": "",
+                    "Pos.x": 80,
+                    "Pos.y": 110,
+                    "Parent": -1,
+                    "#": 9,
+                    "Msg": "Ну, давайте",
+                    "AMsg.Num": "0"
+                },
+                {
+                    "Type": "TDialogAnswer",
+                    "Name": "planet",
+                    "Pos.x": 160,
+                    "Pos.y": -50,
+                    "Parent": -1,
+                    "#": 10,
+                    "Msg": "Нет, пожалуй, я пойду",
+                    "AMsg.Num": "1"
+                },
+                {
+                    "Type": "TDialogAnswer",
+                    "Name": "",
+                    "Pos.x": 120,
+                    "Pos.y": -10,
+                    "Parent": -1,
+                    "#": 11,
+                    "Msg": "А расскажите про воздействие кофе на расы Коалиции",
+                    "AMsg.Num": "2"
+                },
+                {
+                    "Type": "TDialogAnswer",
+                    "Name": "hangar",
+                    "Pos.x": 200,
+                    "Pos.y": 110,
+                    "Parent": -1,
+                    "#": 17,
+                    "Msg": "Ладно, пойду сбивать",
+                    "AMsg.Num": "3"
+                },
+                {
+                    "Type": "TDialogAnswer",
+                    "Name": "hangar",
+                    "Pos.x": 270,
+                    "Pos.y": -10,
+                    "Parent": -1,
+                    "#": 21,
+                    "Msg": "Л-л-ладно",
+                    "AMsg.Num": "4"
+                },
+                {
+                    "Type": "TDialogAnswer",
+                    "Name": "",
+                    "Pos.x": 120,
+                    "Pos.y": 70,
+                    "Parent": -1,
+                    "#": 24,
+                    "Msg": "Ну, тогда давайте, попробую",
+                    "AMsg.Num": "5"
+                },
+                {
+                    "Type": "TDialogAnswer",
+                    "Name": "",
+                    "Pos.x": 200,
+                    "Pos.y": 150,
+                    "Parent": -1,
+                    "#": 26,
+                    "Msg": "Будем честны, кому ещё не хотелось провести пару минут в хорошей компании? А работа... Работа подождёт!",
+                    "AMsg.Num": "6"
+                },
+                {
+                    "Type": "TDialogAnswer",
+                    "Name": "exit",
+                    "Pos.x": 320,
+                    "Pos.y": 190,
+                    "Parent": -1,
+                    "#": 30,
+                    "Msg": "Ну и ладно",
+                    "AMsg.Num": "7"
+                },
+                {
+                    "Type": "TDialogAnswer",
+                    "Name": "exit",
+                    "Pos.x": 360,
+                    "Pos.y": 150,
+                    "Parent": -1,
+                    "#": 34,
+                    "Msg": "Жаль. Было приятно поболтать.",
+                    "AMsg.Num": "8"
+                },
+                {
+                    "Type": "TDialogAnswer",
+                    "Name": "exit",
+                    "Pos.x": 420,
+                    "Pos.y": -10,
+                    "Parent": -1,
+                    "#": 39,
+                    "Msg": "Благодарю!",
+                    "AMsg.Num": "9"
+                }
+            ],
+            "DialogMessages": 
+            [
+                {
+                    "Type": "TDialogMsg",
+                    "Name": "",
+                    "Pos.x": 80,
+                    "Pos.y": -50,
+                    "Parent": -1,
+                    "#": 8,
+                    "Msg": "Да, рейнджер, кофе!\r\nЧудесный напиток с планеты <clr>Земля<clrEnd>!\r\nИ что самое удивительное, он по-разному действует на каждую из рас, но не вреден любому гуманоиду нашего Рукава.\r\n\r\nЕсли хотите, можем налить вам кружечку на пробу. Всего 125 cr.!",
+                    "DMsg.Num": "0"
+                },
+                {
+                    "Type": "TDialogMsg",
+                    "Name": "",
+                    "Pos.x": 120,
+                    "Pos.y": 30,
+                    "Parent": -1,
+                    "#": 12,
+                    "Msg": "Итак... Расскажу по порядку.\r\nВ целом, основной эффект кофе - бодрость духа и разума - сохранился для всех рас. Только, так скажем, организмы каждой расы по-своему интерпретировали этот эффект.\r\nУ <clr>малоков<clrEnd>, например, наиболее сильна бодрость разума, поэтому они начинают лучше обходиться с техникой, например. У <clr>пеленгов<clrEnd> их обычная клептомания начинает сопровождаться отказом от чрезмерного риска.\r\n<clr>Люди<clrEnd> чувствуют в себе прилив сил, чтобы вести за собой других. <clr>Фэяне<clrEnd> становятся немного более воинственными, а <clr>гаальцы<clrEnd>... Для них это что-то навроде слабенького наркотика, и происходит что-то совсем непонятное нашей науке.",
+                    "DMsg.Num": "1"
+                },
+                {
+                    "Type": "TDialogMsg",
+                    "Name": "",
+                    "Pos.x": 160,
+                    "Pos.y": 110,
+                    "Parent": -1,
+                    "#": 16,
+                    "Msg": "Сделайте глоток, вдохните аромат...\r\n\r\nНу, чувствуете, как бодрость духа и всераспирающая энергия наполняют вас? Нет?\r\n\r\nНу, не беда. Сбейте пару пиратов на орбите, авось, поможет. Ну а мне пора работать.",
+                    "DMsg.Num": "2"
+                },
+                {
+                    "Type": "TDialogMsg",
+                    "Name": "",
+                    "Pos.x": 270,
+                    "Pos.y": -50,
+                    "Parent": -1,
+                    "#": 20,
+                    "Msg": "Какое вам кофе, рейнджер?! У вас даже глаз дёргается! А ну-ка отправляйтесь, посбивайте пиратов, может быть, пройдёт.",
+                    "DMsg.Num": "3"
+                },
+                {
+                    "Type": "TDialogMsg",
+                    "Name": "",
+                    "Pos.x": 280,
+                    "Pos.y": 190,
+                    "Parent": -1,
+                    "#": 29,
+                    "Msg": "Нет-нет-нет, рейнджер! Мне пора работать. И вы тоже отправляйтесь работать.",
+                    "DMsg.Num": "4"
+                },
+                {
+                    "Type": "TDialogMsg",
+                    "Name": "",
+                    "Pos.x": 320,
+                    "Pos.y": 150,
+                    "Parent": -1,
+                    "#": 33,
+                    "Msg": "Эх, рейнджер, знаете, как ценны вот такие моменты? Когда можешь наконец расслабиться, забыть про дела и посидеть с чашечкой хорошего кофе.\r\n\r\n<tstr>\r\n\r\nЭх... Ой, рейнджер! Что-то я засиделся с вами. Пора мне работать, увы. И вам, думаю, тоже. Галактика сама себя не спасёт.",
+                    "DMsg.Num": "5"
+                },
+                {
+                    "Type": "TDialogMsg",
+                    "Name": "",
+                    "Pos.x": 420,
+                    "Pos.y": -90,
+                    "Parent": -1,
+                    "#": 37,
+                    "Msg": "Безусловно, рейнджер! Пейте, сколько вашей душе угодно. И просмотрите прейскурант, обязательно! Таких цен за такие услуги вы не найдёте больше нигде в Галактике!",
+                    "DMsg.Num": "6"
+                }
+            ],
+            "Dialogs": 
+            [
+                {
+                    "Type": "TDialog",
+                    "Name": "DialogCoffee",
+                    "Pos.x": 170,
+                    "Pos.y": -130,
+                    "Parent": -1,
+                    "#": 7
+                },
+                {
+                    "Type": "TDialog",
+                    "Name": "DialogTCCoffee",
+                    "Pos.x": 420,
+                    "Pos.y": -130,
+                    "Parent": -1,
+                    "#": 36
+                }
+            ],
+            "Groups": 
+            [
+                {
+                    "Type": "TGroup",
+                    "Name": "GroupNew",
+                    "Pos.x": -100,
+                    "Pos.y": 0,
+                    "Parent": -1,
+                    "#": 4,
+                    "Owner": 62,
+                    "Group.Type": 126,
+                    "CntShipMin": 1,
+                    "CntShipMax": 1,
+                    "SpeedMin": 100,
+                    "SpeedMax": 10000,
+                    "Weapon": 0,
+                    "CargoHook": 0,
+                    "EmptySpace": 0,
+                    "AddPlayer": true,
+                    "StatusTraderMin": 0,
+                    "StatusTraderMax": 100,
+                    "StatusWarriorMin": 0,
+                    "StatusWarriorMax": 100,
+                    "StatusPirateMin": 0,
+                    "StatusPirateMax": 100,
+                    "DistSearch": 10000,
+                    "Dialog": -1,
+                    "StrengthMin": "0",
+                    "StrengthMax": "0",
+                    "Ruins": ""
+                }
+            ],
+            "Operations": 
+            [
+                {
+                    "Type": "Top",
+                    "Name": "",
+                    "Pos.x": -40,
+                    "Pos.y": -90,
+                    "Parent": -1,
+                    "#": 5,
+                    "Code.Type": "Global",
+                    "Code": 
+                    [
+                        "if(!GCntRun(GScriptName)) GRun();"
+                    ]
+                },
+                {
+                    "Type": "Top",
+                    "Name": "",
+                    "Pos.x": 0,
+                    "Pos.y": -90,
+                    "Parent": -1,
+                    "#": 6,
+                    "Code.Type": "DialogBegin",
+                    "Code": 
+                    [
+                        "if(GetTalkShip() == 0) {",
+                        "    if(GetShipRuins(Player()) == 0) {",
+                        "        if(PlanetOwner(GetShipPlanet(Player())) < 5 || PlanetOwner(GetShipPlanet(Player())) == 7) {",
+                        "            if(GetRelationPlanet(GetShipPlanet(Player()),Player()) > 50) {",
+                        "                if(ShipMoney(Player()) >= 125) {",
+                        "                    AddDialogInject('DialogCoffee',\"Кстати, кофе у нас есть, если он вам нужен. А то многие спрашивают.\",\"Кофе?\",10);",
+                        "                }",
+                        "            }",
+                        "        }",
+                        "    }",
+                        "    else if(ShipType(GetShipRuins(Player())) == 'TC') {",
+                        "        AddDialogInject('DialogTCCoffee','',\"Может, всё-таки чашечку кофе?\",10);",
+                        "    }",
+                        "}"
+                    ]
+                },
+                {
+                    "Type": "Top",
+                    "Name": "",
+                    "Pos.x": 120,
+                    "Pos.y": 110,
+                    "Parent": -1,
+                    "#": 13,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "ShipAddCustomShipInfo(Player(),'RefCoffeeFlag');",
+                        "ShipCustomShipInfoData(Player(),'RefCoffeeFlag',1,30);",
+                        "ShipCustomShipInfoData(Player(),'RefCoffeeFlag',2,0);",
+                        "ShipCustomShipInfoData(Player(),'RefCoffeeFlag',3,1);",
+                        "",
+                        "//Дать ли игроку доп бафф?",
+                        "ForRace = ShipPilotRace(Player());",
+                        "ForPlanet = -1; //TVar: без сброса оставалось значение с прошлой планеты (и 0 = малоки)",
+                        "if(Name(GetShipPlanet(Player())) == CT('PlanetName.Solar 2')) ForPlanet = 2;",
+                        "if(Name(GetShipPlanet(Player())) == CT('PlanetName.Maloc 02')) ForPlanet = 0;",
+                        "if(Name(GetShipPlanet(Player())) == CT('PlanetName.Gaal 02')) ForPlanet = 4;",
+                        "if(Name(GetShipPlanet(Player())) == CT('PlanetName.Fei 02')) ForPlanet = 3;",
+                        "if(Name(GetShipPlanet(Player())) == CT('PlanetName.Peleng 02')) ForPlanet = 1;",
+                        "if(ForPlanet == ForRace) {",
+                        "    ShipCustomShipInfoData(Player(),'RefCoffeeFlag',2,1);",
+                        "}",
+                        "else {",
+                        "    if(GetShipPlanet(Player()) == GetShipHomePlanet(Player())) ShipCustomShipInfoData(Player(),'RefCoffeeFlag',2,1);",
+                        "}",
+                        "if(ShipFindCustomShipInfoByType(Player(),'RefMainCoffeeInfo') == -1) ShipAddCustomShipInfo(Player(),'RefMainCoffeeInfo');",
+                        "ShipMoney(Player(), ShipMoney(Player()) - 125);",
+                        "ManiaCount = ManiaCount + Rnd(25,40);",
+                        "",
+                        "if(ShipFindCustomShipInfoByType(Player(),'RefCoffeeIllness') != -1) ManiaCount = ManiaCount + Rnd(30,60);",
+                        "CoffeeForMania = CoffeeForMania + 1;",
+                        "if(ShipFindCustomShipInfoByType(Player(),'RefCoffeeIllness') != -1) {",
+                        "    if(CoffeeForMania == 2*ShipCustomShipInfoData(Player(),'RefCoffeeIllness',2) + 1) {",
+                        "        if(ShipCustomShipInfoData(Player(),'RefCoffeeIllness',2) >= 1) {",
+                        "            ShipSpecialBonuses(Player(),bonSkill1,ShipSpecialBonuses(Player(),bonSkill1) + 1);",
+                        "            ShipSpecialBonuses(Player(),bonSkill2,ShipSpecialBonuses(Player(),bonSkill2) + 1);",
+                        "            ShipSpecialBonuses(Player(),bonSkill6,ShipSpecialBonuses(Player(),bonSkill6) + 1);",
+                        "            ShipSpecialBonuses(Player(),bonWRadius,ShipSpecialBonuses(Player(),bonWRadius) + 15);",
+                        "            ShipSpecialBonuses(Player(),bonHookRadius,ShipSpecialBonuses(Player(),bonHookRadius) + 30);",
+                        "        }",
+                        "        if(ShipCustomShipInfoData(Player(),'RefCoffeeIllness',2) >= 2) {",
+                        "            ShipSpecialBonuses(Player(),bonSkill1,ShipSpecialBonuses(Player(),bonSkill1) + 1);",
+                        "            ShipSpecialBonuses(Player(),bonSkill2,ShipSpecialBonuses(Player(),bonSkill2) + 1);",
+                        "            ShipSpecialBonuses(Player(),bonSkill3,ShipSpecialBonuses(Player(),bonSkill3) + 1);",
+                        "            ShipSpecialBonuses(Player(),bonSkill5,ShipSpecialBonuses(Player(),bonSkill5) + 1);",
+                        "            ShipSpecialBonuses(Player(),bonSkill6,ShipSpecialBonuses(Player(),bonSkill6) + 1);",
+                        "            ShipSpecialBonuses(Player(),bonWRadius,ShipSpecialBonuses(Player(),bonWRadius) + 15);",
+                        "            ShipSpecialBonuses(Player(),bonHookRadius,ShipSpecialBonuses(Player(),bonHookRadius) + 20);",
+                        "            ShipSpecialBonuses(Player(),bonSpeed,ShipSpecialBonuses(Player(),bonSpeed) + 75);",
+                        "            ShipSpecialBonuses(Player(),bonZonds,ShipSpecialBonuses(Player(),bonZonds) + 1);",
+                        "        }",
+                        "        if(ShipCustomShipInfoData(Player(),'RefCoffeeIllness',2) >= 3) {",
+                        "            ShipSpecialBonuses(Player(),bonSkill1,ShipSpecialBonuses(Player(),bonSkill1) + 1);",
+                        "            ShipSpecialBonuses(Player(),bonSkill3,ShipSpecialBonuses(Player(),bonSkill3) + 1);",
+                        "            ShipSpecialBonuses(Player(),bonSkill4,ShipSpecialBonuses(Player(),bonSkill4) + 1);",
+                        "            ShipSpecialBonuses(Player(),bonSkill5,ShipSpecialBonuses(Player(),bonSkill5) + 1);",
+                        "            ShipSpecialBonuses(Player(),bonSkill6,ShipSpecialBonuses(Player(),bonSkill6) + 1);",
+                        "            ShipSpecialBonuses(Player(),bonWRadius,ShipSpecialBonuses(Player(),bonWRadius) + 15);",
+                        "            ShipSpecialBonuses(Player(),bonHookRadius,ShipSpecialBonuses(Player(),bonHookRadius) + 20);",
+                        "            ShipSpecialBonuses(Player(),bonSpeed,ShipSpecialBonuses(Player(),bonSpeed) + 75);",
+                        "            ShipSpecialBonuses(Player(),bonZonds,ShipSpecialBonuses(Player(),bonZonds) + 1);",
+                        "            ShipSpecialBonuses(Player(),bonWEnergy,ShipSpecialBonuses(Player(),bonWEnergy) + 5);",
+                        "            ShipSpecialBonuses(Player(),bonWSplinter,ShipSpecialBonuses(Player(),bonWSplinter) + 5);",
+                        "        }",
+                        "        if(ShipCustomShipInfoData(Player(),'RefCoffeeIllness',2) >= 4) {",
+                        "            ShipSpecialBonuses(Player(),bonSkill1,ShipSpecialBonuses(Player(),bonSkill1) + 1);",
+                        "            ShipSpecialBonuses(Player(),bonSkill3,ShipSpecialBonuses(Player(),bonSkill3) + 1);",
+                        "            ShipSpecialBonuses(Player(),bonSkill4,ShipSpecialBonuses(Player(),bonSkill4) + 1);",
+                        "            ShipSpecialBonuses(Player(),bonSkill5,ShipSpecialBonuses(Player(),bonSkill5) + 1);",
+                        "            ShipSpecialBonuses(Player(),bonSkill6,ShipSpecialBonuses(Player(),bonSkill6) + 1);",
+                        "            ShipSpecialBonuses(Player(),bonWRadius,ShipSpecialBonuses(Player(),bonWRadius) + 15);",
+                        "            ShipSpecialBonuses(Player(),bonHookRadius,ShipSpecialBonuses(Player(),bonHookRadius) + 20);",
+                        "            ShipSpecialBonuses(Player(),bonSpeed,ShipSpecialBonuses(Player(),bonSpeed) + 75);",
+                        "            ShipSpecialBonuses(Player(),bonZonds,ShipSpecialBonuses(Player(),bonZonds) + 1);",
+                        "            ShipSpecialBonuses(Player(),bonWEnergy,ShipSpecialBonuses(Player(),bonWEnergy) + 5);",
+                        "            ShipSpecialBonuses(Player(),bonWSplinter,ShipSpecialBonuses(Player(),bonWSplinter) + 5);",
+                        "            ShipSpecialBonuses(Player(),bonHook,ShipSpecialBonuses(Player(),bonHook) + 25);",
+                        "            ShipSpecialBonuses(Player(),bonSkill2,ShipSpecialBonuses(Player(),bonSkill2) + 1);",
+                        "        }",
+                        "        if(ShipCustomShipInfoData(Player(),'RefCoffeeIllness',2) >= 5) {",
+                        "            ShipSpecialBonuses(Player(),bonSkill1,ShipSpecialBonuses(Player(),bonSkill1) + 1);",
+                        "            ShipSpecialBonuses(Player(),bonSkill3,ShipSpecialBonuses(Player(),bonSkill3) + 1);",
+                        "            ShipSpecialBonuses(Player(),bonSkill4,ShipSpecialBonuses(Player(),bonSkill4) + 1);",
+                        "            ShipSpecialBonuses(Player(),bonSkill5,ShipSpecialBonuses(Player(),bonSkill5) + 1);",
+                        "            ShipSpecialBonuses(Player(),bonSkill6,ShipSpecialBonuses(Player(),bonSkill6) + 1);",
+                        "            ShipSpecialBonuses(Player(),bonWRadius,ShipSpecialBonuses(Player(),bonWRadius) + 15);",
+                        "            ShipSpecialBonuses(Player(),bonHookRadius,ShipSpecialBonuses(Player(),bonHookRadius) + 20);",
+                        "            ShipSpecialBonuses(Player(),bonSpeed,ShipSpecialBonuses(Player(),bonSpeed) + 75);",
+                        "            ShipSpecialBonuses(Player(),bonZonds,ShipSpecialBonuses(Player(),bonZonds) + 1);",
+                        "            ShipSpecialBonuses(Player(),bonWEnergy,ShipSpecialBonuses(Player(),bonWEnergy) + 5);",
+                        "            ShipSpecialBonuses(Player(),bonWSplinter,ShipSpecialBonuses(Player(),bonWSplinter) + 5);",
+                        "            ShipSpecialBonuses(Player(),bonHook,ShipSpecialBonuses(Player(),bonHook) + 25);",
+                        "            ShipSpecialBonuses(Player(),bonSkill2,ShipSpecialBonuses(Player(),bonSkill2) + 1);",
+                        "        }",
+                        "        if(ShipCustomShipInfoData(Player(),'RefCoffeeIllness',2)) {",
+                        "            ShipDeleteCustomShipInfo(Player(),'RefCoffeeIllness');",
+                        "            CustomEther('BioCured',0,'',\"Вы почувствовали облегчение. Кажется, эта доза кофеина была достаточной. Вопрос - на сколько её хватит?\");",
+                        "        }",
+                        "    }",
+                        "}"
+                    ]
+                },
+                {
+                    "Type": "Top",
+                    "Name": "",
+                    "Pos.x": 0,
+                    "Pos.y": -130,
+                    "Parent": -1,
+                    "#": 22,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "if(~ShipFindCustomShipInfoByType(Player(),'RefCoffeeFlag')) {",
+                        "    //Что именно дал кофе, запоминается в инфошке 'Бодрость' (Data1 = раса+1, Data2 = доп. бонус родной планеты):",
+                        "    //при окончании снимается ровно это, даже если флаг перезаписан другим источником кофе или сменилась раса",
+                        "    if(ShipFindCustomShipInfoByType(Player(),'RefMainCoffeeInfo') == -1) ShipAddCustomShipInfo(Player(),'RefMainCoffeeInfo');",
+                        "    if(ShipCustomShipInfoData(Player(),'RefCoffeeFlag',3)) {",
+                        "        if(!ShipCustomShipInfoData(Player(),'RefMainCoffeeInfo',1)) {",
+                        "            race = ShipPilotRace(Player());",
+                        "            ShipCustomShipInfoData(Player(),'RefMainCoffeeInfo',1,race + 1);",
+                        "            ShipCustomShipInfoData(Player(),'RefMainCoffeeInfo',2,ShipCustomShipInfoData(Player(),'RefCoffeeFlag',2));",
+                        "            if(!race) {",
+                        "                //малоки",
+                        "                ShipSpecialBonuses(Player(),bonSkill3,ShipSpecialBonuses(Player(),bonSkill3) + 1);",
+                        "                ShipSpecialBonuses(Player(),bonScan,ShipSpecialBonuses(Player(),bonScan) + 2);",
+                        "                if(ShipCustomShipInfoData(Player(),'RefMainCoffeeInfo',2)) {",
+                        "                    ShipSpecialBonuses(Player(),bonScan,ShipSpecialBonuses(Player(),bonScan) + 2);",
+                        "                }",
+                        "            }",
+                        "            if(race == 1) {",
+                        "                //пеленги",
+                        "                ShipSpecialBonuses(Player(),bonSkill5,ShipSpecialBonuses(Player(),bonSkill5) + 1);",
+                        "                ShipSpecialBonuses(Player(),bonDef,ShipSpecialBonuses(Player(),bonDef) + 2);",
+                        "                ShipSpecialBonuses(Player(),bonDroid,ShipSpecialBonuses(Player(),bonDroid) + 3);",
+                        "                ShipSpecialBonuses(Player(),bonSpeed,ShipSpecialBonuses(Player(),bonSpeed) - 25);",
+                        "                if(ShipCustomShipInfoData(Player(),'RefMainCoffeeInfo',2)) {",
+                        "                    ShipSpecialBonuses(Player(),bonDef,ShipSpecialBonuses(Player(),bonDef) + 1);",
+                        "                    ShipSpecialBonuses(Player(),bonDroid,ShipSpecialBonuses(Player(),bonDroid) + 2);",
+                        "                }",
+                        "            }",
+                        "            if(race == 2) {",
+                        "                //люди",
+                        "                ShipSpecialBonuses(Player(),bonSkill6,ShipSpecialBonuses(Player(),bonSkill6) + 2);",
+                        "                ShipSpecialBonuses(Player(),bonWEnergy,ShipSpecialBonuses(Player(),bonWEnergy) + 5);",
+                        "                if(ShipCustomShipInfoData(Player(),'RefMainCoffeeInfo',2)) {",
+                        "                    ShipSpecialBonuses(Player(),bonWEnergy,ShipSpecialBonuses(Player(),bonWEnergy) + 3);",
+                        "                }",
+                        "            }",
+                        "            if(race == 3) {",
+                        "                //фьяни",
+                        "                ShipSpecialBonuses(Player(),bonSkill1,ShipSpecialBonuses(Player(),bonSkill1) + 1);",
+                        "                ShipSpecialBonuses(Player(),bonWRadius,ShipSpecialBonuses(Player(),bonWRadius) + 25);",
+                        "                if(ShipCustomShipInfoData(Player(),'RefMainCoffeeInfo',2)) {",
+                        "                    ShipSpecialBonuses(Player(),bonWRadius,ShipSpecialBonuses(Player(),bonWRadius) + 10);",
+                        "                }",
+                        "            }",
+                        "            if(race == 4) {",
+                        "                //гаальцы",
+                        "                ShipSpecialBonuses(Player(),bonSkill4,ShipSpecialBonuses(Player(),bonSkill4) + 1);",
+                        "                ShipSpecialBonuses(Player(),bonJump,ShipSpecialBonuses(Player(),bonJump) + 3);",
+                        "                if(ShipCustomShipInfoData(Player(),'RefMainCoffeeInfo',2)) {",
+                        "                    ShipSpecialBonuses(Player(),bonJump,ShipSpecialBonuses(Player(),bonJump) + 2);",
+                        "                }",
+                        "            }",
+                        "        }",
+                        "        ShipCustomShipInfoData(Player(),'RefCoffeeFlag',3,0);",
+                        "    }",
+                        "",
+                        "    if(ShipCustomShipInfoData(Player(),'RefCoffeeFlag',1)) ShipCustomShipInfoData(Player(),'RefCoffeeFlag',1,ShipCustomShipInfoData(Player(),'RefCoffeeFlag',1)-1);",
+                        "    else {",
+                        "        //Кофе выпит до этой правки: что дано, не записано - считаем по текущей расе и флагу",
+                        "        if(!ShipCustomShipInfoData(Player(),'RefMainCoffeeInfo',1)) {",
+                        "            ShipCustomShipInfoData(Player(),'RefMainCoffeeInfo',1,ShipPilotRace(Player()) + 1);",
+                        "            ShipCustomShipInfoData(Player(),'RefMainCoffeeInfo',2,ShipCustomShipInfoData(Player(),'RefCoffeeFlag',2));",
+                        "        }",
+                        "        race = ShipCustomShipInfoData(Player(),'RefMainCoffeeInfo',1) - 1;",
+                        "        if(!race) {",
+                        "            //малоки",
+                        "            ShipSpecialBonuses(Player(),bonSkill3,ShipSpecialBonuses(Player(),bonSkill3) - 1);",
+                        "            ShipSpecialBonuses(Player(),bonScan,ShipSpecialBonuses(Player(),bonScan) - 2);",
+                        "            if(ShipCustomShipInfoData(Player(),'RefMainCoffeeInfo',2)) {",
+                        "                ShipSpecialBonuses(Player(),bonScan,ShipSpecialBonuses(Player(),bonScan) - 2);",
+                        "            }",
+                        "        }",
+                        "        if(race == 1) {",
+                        "            //пеленги",
+                        "            ShipSpecialBonuses(Player(),bonSkill5,ShipSpecialBonuses(Player(),bonSkill5) - 1);",
+                        "            ShipSpecialBonuses(Player(),bonDef,ShipSpecialBonuses(Player(),bonDef) - 2);",
+                        "            ShipSpecialBonuses(Player(),bonDroid,ShipSpecialBonuses(Player(),bonDroid) - 3);",
+                        "            ShipSpecialBonuses(Player(),bonSpeed,ShipSpecialBonuses(Player(),bonSpeed) + 25);",
+                        "            if(ShipCustomShipInfoData(Player(),'RefMainCoffeeInfo',2)) {",
+                        "                ShipSpecialBonuses(Player(),bonDef,ShipSpecialBonuses(Player(),bonDef) - 1);",
+                        "                ShipSpecialBonuses(Player(),bonDroid,ShipSpecialBonuses(Player(),bonDroid) - 2);",
+                        "            }",
+                        "        }",
+                        "        if(race == 2) {",
+                        "            //люди",
+                        "            ShipSpecialBonuses(Player(),bonSkill6,ShipSpecialBonuses(Player(),bonSkill6) - 2);",
+                        "            ShipSpecialBonuses(Player(),bonWEnergy,ShipSpecialBonuses(Player(),bonWEnergy) - 5);",
+                        "            if(ShipCustomShipInfoData(Player(),'RefMainCoffeeInfo',2)) {",
+                        "                ShipSpecialBonuses(Player(),bonWEnergy,ShipSpecialBonuses(Player(),bonWEnergy) - 3);",
+                        "            }",
+                        "        }",
+                        "        if(race == 3) {",
+                        "            //фьяни",
+                        "            ShipSpecialBonuses(Player(),bonSkill1,ShipSpecialBonuses(Player(),bonSkill1) - 1);",
+                        "            ShipSpecialBonuses(Player(),bonWRadius,ShipSpecialBonuses(Player(),bonWRadius) - 25);",
+                        "            if(ShipCustomShipInfoData(Player(),'RefMainCoffeeInfo',2)) {",
+                        "                ShipSpecialBonuses(Player(),bonWRadius,ShipSpecialBonuses(Player(),bonWRadius) - 10);",
+                        "            }",
+                        "        }",
+                        "        if(race == 4) {",
+                        "            //гаальцы",
+                        "            ShipSpecialBonuses(Player(),bonSkill4,ShipSpecialBonuses(Player(),bonSkill4) - 1);",
+                        "            ShipSpecialBonuses(Player(),bonJump,ShipSpecialBonuses(Player(),bonJump) - 3);",
+                        "            if(ShipCustomShipInfoData(Player(),'RefMainCoffeeInfo',2)) {",
+                        "                ShipSpecialBonuses(Player(),bonJump,ShipSpecialBonuses(Player(),bonJump) - 2);",
+                        "            }",
+                        "        }",
+                        "        ShipDeleteCustomShipInfo(Player(),'RefCoffeeFlag');",
+                        "        ShipDeleteCustomShipInfo(Player(),'RefMainCoffeeInfo');",
+                        "        NewsAdd(\"Вы проснулись, но что-то было не так... Нет прежней энергии в ваших действиях. Похоже, действие кофе закончилось.\");",
+                        "    }",
+                        "}",
+                        "//Обнуляем напитые кружки",
+                        "if(ShipIsTakeoff(Player())) {",
+                        "    CoffeeForMania = 0;",
+                        "}",
+                        "//Стадия кофезависимости (Data1 инфошки, 1..5; штрафы вешает её OnActCode) растёт с ManiaCount: >400 - 1, далее каждые 100 - +1",
+                        "if(ShipFindCustomShipInfoByType(Player(),'RefCoffeeIllness') != -1) {",
+                        "    if(ShipCustomShipInfoData(Player(),'RefCoffeeIllness',1) < 1) ShipCustomShipInfoData(Player(),'RefCoffeeIllness',1,1);",
+                        "    if(ManiaCount > 500 && ShipCustomShipInfoData(Player(),'RefCoffeeIllness',1) < 2) ShipCustomShipInfoData(Player(),'RefCoffeeIllness',1,2);",
+                        "    if(ManiaCount > 600 && ShipCustomShipInfoData(Player(),'RefCoffeeIllness',1) < 3) ShipCustomShipInfoData(Player(),'RefCoffeeIllness',1,3);",
+                        "    if(ManiaCount > 700 && ShipCustomShipInfoData(Player(),'RefCoffeeIllness',1) < 4) ShipCustomShipInfoData(Player(),'RefCoffeeIllness',1,4);",
+                        "    if(ManiaCount > 800 && ShipCustomShipInfoData(Player(),'RefCoffeeIllness',1) < 5) ShipCustomShipInfoData(Player(),'RefCoffeeIllness',1,5);",
+                        "}",
+                        "//Кофезависимость момент",
+                        "if(ShipFindCustomShipInfoByType(Player(),'RefMainCoffeeInfo') == -1) {",
+                        "    if(ManiaCount > 400 && ShipFindCustomShipInfoByType(Player(),'RefCoffeeIllness') == -1) {",
+                        "        ShipAddCustomShipInfo(Player(),'RefCoffeeIllness');",
+                        "    }",
+                        "    if(ShipFindCustomShipInfoByType(Player(),'RefCoffeeIllness') != -1 && ManiaCount == 0) {",
+                        "        if(ShipCustomShipInfoData(Player(),'RefCoffeeIllness',2) >= 1) {",
+                        "            ShipSpecialBonuses(Player(),bonSkill1,ShipSpecialBonuses(Player(),bonSkill1) + 1);",
+                        "            ShipSpecialBonuses(Player(),bonSkill2,ShipSpecialBonuses(Player(),bonSkill2) + 1);",
+                        "            ShipSpecialBonuses(Player(),bonSkill6,ShipSpecialBonuses(Player(),bonSkill6) + 1);",
+                        "            ShipSpecialBonuses(Player(),bonWRadius,ShipSpecialBonuses(Player(),bonWRadius) + 15);",
+                        "            ShipSpecialBonuses(Player(),bonHookRadius,ShipSpecialBonuses(Player(),bonHookRadius) + 30);",
+                        "        }",
+                        "        if(ShipCustomShipInfoData(Player(),'RefCoffeeIllness',2) >= 2) {",
+                        "            ShipSpecialBonuses(Player(),bonSkill1,ShipSpecialBonuses(Player(),bonSkill1) + 1);",
+                        "            ShipSpecialBonuses(Player(),bonSkill2,ShipSpecialBonuses(Player(),bonSkill2) + 1);",
+                        "            ShipSpecialBonuses(Player(),bonSkill3,ShipSpecialBonuses(Player(),bonSkill3) + 1);",
+                        "            ShipSpecialBonuses(Player(),bonSkill5,ShipSpecialBonuses(Player(),bonSkill5) + 1);",
+                        "            ShipSpecialBonuses(Player(),bonSkill6,ShipSpecialBonuses(Player(),bonSkill6) + 1);",
+                        "            ShipSpecialBonuses(Player(),bonWRadius,ShipSpecialBonuses(Player(),bonWRadius) + 15);",
+                        "            ShipSpecialBonuses(Player(),bonHookRadius,ShipSpecialBonuses(Player(),bonHookRadius) + 20);",
+                        "            ShipSpecialBonuses(Player(),bonSpeed,ShipSpecialBonuses(Player(),bonSpeed) + 75);",
+                        "            ShipSpecialBonuses(Player(),bonZonds,ShipSpecialBonuses(Player(),bonZonds) + 1);",
+                        "        }",
+                        "        if(ShipCustomShipInfoData(Player(),'RefCoffeeIllness',2) >= 3) {",
+                        "            ShipSpecialBonuses(Player(),bonSkill1,ShipSpecialBonuses(Player(),bonSkill1) + 1);",
+                        "            ShipSpecialBonuses(Player(),bonSkill3,ShipSpecialBonuses(Player(),bonSkill3) + 1);",
+                        "            ShipSpecialBonuses(Player(),bonSkill4,ShipSpecialBonuses(Player(),bonSkill4) + 1);",
+                        "            ShipSpecialBonuses(Player(),bonSkill5,ShipSpecialBonuses(Player(),bonSkill5) + 1);",
+                        "            ShipSpecialBonuses(Player(),bonSkill6,ShipSpecialBonuses(Player(),bonSkill6) + 1);",
+                        "            ShipSpecialBonuses(Player(),bonWRadius,ShipSpecialBonuses(Player(),bonWRadius) + 15);",
+                        "            ShipSpecialBonuses(Player(),bonHookRadius,ShipSpecialBonuses(Player(),bonHookRadius) + 20);",
+                        "            ShipSpecialBonuses(Player(),bonSpeed,ShipSpecialBonuses(Player(),bonSpeed) + 75);",
+                        "            ShipSpecialBonuses(Player(),bonZonds,ShipSpecialBonuses(Player(),bonZonds) + 1);",
+                        "            ShipSpecialBonuses(Player(),bonWEnergy,ShipSpecialBonuses(Player(),bonWEnergy) + 5);",
+                        "            ShipSpecialBonuses(Player(),bonWSplinter,ShipSpecialBonuses(Player(),bonWSplinter) + 5);",
+                        "        }",
+                        "        if(ShipCustomShipInfoData(Player(),'RefCoffeeIllness',2) >= 4) {",
+                        "            ShipSpecialBonuses(Player(),bonSkill1,ShipSpecialBonuses(Player(),bonSkill1) + 1);",
+                        "            ShipSpecialBonuses(Player(),bonSkill3,ShipSpecialBonuses(Player(),bonSkill3) + 1);",
+                        "            ShipSpecialBonuses(Player(),bonSkill4,ShipSpecialBonuses(Player(),bonSkill4) + 1);",
+                        "            ShipSpecialBonuses(Player(),bonSkill5,ShipSpecialBonuses(Player(),bonSkill5) + 1);",
+                        "            ShipSpecialBonuses(Player(),bonSkill6,ShipSpecialBonuses(Player(),bonSkill6) + 1);",
+                        "            ShipSpecialBonuses(Player(),bonWRadius,ShipSpecialBonuses(Player(),bonWRadius) + 15);",
+                        "            ShipSpecialBonuses(Player(),bonHookRadius,ShipSpecialBonuses(Player(),bonHookRadius) + 20);",
+                        "            ShipSpecialBonuses(Player(),bonSpeed,ShipSpecialBonuses(Player(),bonSpeed) + 75);",
+                        "            ShipSpecialBonuses(Player(),bonZonds,ShipSpecialBonuses(Player(),bonZonds) + 1);",
+                        "            ShipSpecialBonuses(Player(),bonWEnergy,ShipSpecialBonuses(Player(),bonWEnergy) + 5);",
+                        "            ShipSpecialBonuses(Player(),bonWSplinter,ShipSpecialBonuses(Player(),bonWSplinter) + 5);",
+                        "            ShipSpecialBonuses(Player(),bonHook,ShipSpecialBonuses(Player(),bonHook) + 25);",
+                        "            ShipSpecialBonuses(Player(),bonSkill2,ShipSpecialBonuses(Player(),bonSkill2) + 1);",
+                        "        }",
+                        "        if(ShipCustomShipInfoData(Player(),'RefCoffeeIllness',2) >= 5) {",
+                        "            ShipSpecialBonuses(Player(),bonSkill1,ShipSpecialBonuses(Player(),bonSkill1) + 1);",
+                        "            ShipSpecialBonuses(Player(),bonSkill3,ShipSpecialBonuses(Player(),bonSkill3) + 1);",
+                        "            ShipSpecialBonuses(Player(),bonSkill4,ShipSpecialBonuses(Player(),bonSkill4) + 1);",
+                        "            ShipSpecialBonuses(Player(),bonSkill5,ShipSpecialBonuses(Player(),bonSkill5) + 1);",
+                        "            ShipSpecialBonuses(Player(),bonSkill6,ShipSpecialBonuses(Player(),bonSkill6) + 1);",
+                        "            ShipSpecialBonuses(Player(),bonWRadius,ShipSpecialBonuses(Player(),bonWRadius) + 15);",
+                        "            ShipSpecialBonuses(Player(),bonHookRadius,ShipSpecialBonuses(Player(),bonHookRadius) + 20);",
+                        "            ShipSpecialBonuses(Player(),bonSpeed,ShipSpecialBonuses(Player(),bonSpeed) + 75);",
+                        "            ShipSpecialBonuses(Player(),bonZonds,ShipSpecialBonuses(Player(),bonZonds) + 1);",
+                        "            ShipSpecialBonuses(Player(),bonWEnergy,ShipSpecialBonuses(Player(),bonWEnergy) + 5);",
+                        "            ShipSpecialBonuses(Player(),bonWSplinter,ShipSpecialBonuses(Player(),bonWSplinter) + 5);",
+                        "            ShipSpecialBonuses(Player(),bonHook,ShipSpecialBonuses(Player(),bonHook) + 25);",
+                        "            ShipSpecialBonuses(Player(),bonSkill2,ShipSpecialBonuses(Player(),bonSkill2) + 1);",
+                        "        }",
+                        "        ShipDeleteCustomShipInfo(Player(),'RefCoffeeIllness');",
+                        "        CustomEther('BioCured',0,'',\"Вы почувствовали облегчение. Кажется, ваше воздержание от кофеина дало свои плоды, и вы теперь можете дальше бородзить космические просторы!\");",
+                        "    }",
+                        "    if(ManiaCount != 0) ManiaCount = ManiaCount - 1;",
+                        "}"
+                    ]
+                },
+                {
+                    "Type": "Top",
+                    "Name": "",
+                    "Pos.x": 280,
+                    "Pos.y": 150,
+                    "Parent": -1,
+                    "#": 31,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "rand = Rnd(1,4);",
+                        "tstr = '';",
+                        "if(rand == 1) {",
+                        "    if(PlanetEco(GetShipPlanet(Player())) == 0) tstr = \"Мы - поставщики продовольствия для половины сектора! Это ведь немыслимо - одна планета производит ресурсов, достаточных, чтобы прокормить десяток! Миллиарды гуманоидов! Это достойно восхищения, на мой взгляд.\";",
+                        "    if(PlanetEco(GetShipPlanet(Player())) == 1) tstr = \"Наша планета сейчас проходит стадию переориентирования экономики. Расширение сферы услуг дало о себе знать, и сейчас правительство принимает меры по созданию промышленного ядра, которое бы дало нам возможность спокойно маневрировать при взаимоотношениях с производственными гигантами... Постоянное подписание и переподписание контрактов, обращения к народу, формирование новых программ.. Очень утомительно.\";",
+                        "    if(PlanetEco(GetShipPlanet(Player())) == 2) tstr = \"Мы - одна из передовых экономик сектора. Этим нельзя не гордиться, но приходится и вести себя соответствующе. К тому же, к нам обращаются и представители других секторов, и даже представительства правительства Коалиции!\";",
+                        "}",
+                        "else if(rand == 2) {",
+                        "    if(!CoalitionDefeated() && PlanetOwner(GetShipPlanet(Player())) == 7 && !ShipOnSidePirateClan(Player())) tstr = \"Если вам интересно, рейнджер, очень немногие на нашей планете всерьёз поддерживают власть пиратского Клана. Маргиналам, конечно, хорошо, но законопослушные граждане хотели бы вернуться к более-менее стабильному строю Коалиции.\";",
+                        "    if(!CoalitionDefeated() && PlanetOwner(GetShipPlanet(Player())) == 7 && ShipOnSidePirateClan(Player())) tstr = \"Новые порядки нам весьма непривычны. Вся эта разгульность и нестабильность, постоянные грабежи и беззаконие... Социологи, впрочем, утверждают, что вскоре пиратский Клан переродится, став заменой Коалиции - возможно, сильно более криминальной, но всё же заменой в значении аналога.\";",
+                        "    if(CoalitionDefeated()) tstr = \"Коалиция, конечно, принесла нам много хорошего. Но и при Клане нам неплохо. Никаких ограничений, полная свобода... Правда, все очень держатся за свои должности. Не знаете, почему?\";",
+                        "}",
+                        "else if(rand == 3) {",
+                        "    if(PlanetGov(GetShipPlanet(Player())) == 0) tstr = \"Анархия - самый естественный вариант устройства общества, рейнджер. Никакого угнетения и эксплуатации гражданина гражданином. Все самоорганизуются, все блага распределяются между всему, кому потребно. Настоящий рай!\";",
+                        "    if(PlanetGov(GetShipPlanet(Player())) == 1) tstr = \"Наш Верховный Наикомандующий - мудрейший лидер! При его правлении на планете стало безопаснее жить, из космического пространства были изгнаны все пираты, а качество жизни граждан стало в разы выше! Как мы можем слушать клевету инопланетчиков, говорящих о том, что наш лидер - негодяй и тиран?!\";",
+                        "    if(PlanetGov(GetShipPlanet(Player())) == 2) tstr = \"Культура формирования лидеров с самого рождения, специально предназначенных для служения своему Отечеству, есть наилучшая модель общества. В благодарность за великие труды владыки получают в своё пользование дворцы и сады, и... Что в этом такого?\";",
+                        "    if(PlanetGov(GetShipPlanet(Player())) == 3) tstr = \"Парламент, демократия - светила развития нашего общества. Только так граждане могут изъявлять себя, своё видение на устройство и функционирование органов нашей планеты. Мы не можем себе представить, как можно жить без этого!\";",
+                        "    if(PlanetGov(GetShipPlanet(Player())) == 4) tstr = \"Достижения социализма - равенство всех граждан перед законом, равенство всех граждан в правах, равенство возможностей всех граждан. Мы рады, что многие планеты галактики подхватили этот порыв.\";",
+                        "}",
+                        "//Общий текст - и когда для планеты своего нет (раньше оставался текст прошлого разговора)",
+                        "if(tstr == '') tstr = \"Вот вам, рейнджерам, хорошо. Летаете себе по космосу. Военные защищают вас, худо-бедно, от доминаторов. Выполняете задания от чиновников, торгуете, деньги получаете. А сколько на обеспечение вас представителей всех рас трудится! Ужасно представить даже...\";"
+                    ]
+                },
+                {
+                    "Type": "Top",
+                    "Name": "",
+                    "Pos.x": 420,
+                    "Pos.y": -50,
+                    "Parent": -1,
+                    "#": 38,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "//Новый флаг - бонус ещё не дан. Уже действующий кофе только продлевается: раньше доп. бонус (Data2) обнулялся",
+                        "//и при снятии оставался навсегда, а повторный кофе в последний день давал бонус расы второй раз",
+                        "if(ShipFindCustomShipInfoByType(Player(),'RefCoffeeFlag') == -1) {",
+                        "    ShipAddCustomShipInfo(Player(),'RefCoffeeFlag');",
+                        "    ShipCustomShipInfoData(Player(),'RefCoffeeFlag',2,0);",
+                        "    ShipCustomShipInfoData(Player(),'RefCoffeeFlag',3,1);",
+                        "}",
+                        "ShipCustomShipInfoData(Player(),'RefCoffeeFlag',1,30);",
+                        "if(ShipFindCustomShipInfoByType(Player(),'RefMainCoffeeInfo') == -1) ShipAddCustomShipInfo(Player(),'RefMainCoffeeInfo');",
+                        "",
+                        "ManiaCount = ManiaCount + Rnd(25,40);",
+                        "if(ShipFindCustomShipInfoByType(Player(),'RefCoffeeIllness') != -1) ManiaCount = ManiaCount + Rnd(30,60);",
+                        "CoffeeForMania = CoffeeForMania + 1;",
+                        "if(ShipFindCustomShipInfoByType(Player(),'RefCoffeeIllness') != -1) {",
+                        "    if((2*ShipCustomShipInfoData(Player(),'RefCoffeeIllness',2) + 1) == CoffeeForMania) {",
+                        "        if(ShipCustomShipInfoData(Player(),'RefCoffeeIllness',2) >= 1) {",
+                        "            ShipSpecialBonuses(Player(),bonSkill1,ShipSpecialBonuses(Player(),bonSkill1) + 1);",
+                        "            ShipSpecialBonuses(Player(),bonSkill2,ShipSpecialBonuses(Player(),bonSkill2) + 1);",
+                        "            ShipSpecialBonuses(Player(),bonSkill6,ShipSpecialBonuses(Player(),bonSkill6) + 1);",
+                        "            ShipSpecialBonuses(Player(),bonWRadius,ShipSpecialBonuses(Player(),bonWRadius) + 15);",
+                        "            ShipSpecialBonuses(Player(),bonHookRadius,ShipSpecialBonuses(Player(),bonHookRadius) + 30);",
+                        "        }",
+                        "        if(ShipCustomShipInfoData(Player(),'RefCoffeeIllness',2) >= 2) {",
+                        "            ShipSpecialBonuses(Player(),bonSkill1,ShipSpecialBonuses(Player(),bonSkill1) + 1);",
+                        "            ShipSpecialBonuses(Player(),bonSkill2,ShipSpecialBonuses(Player(),bonSkill2) + 1);",
+                        "            ShipSpecialBonuses(Player(),bonSkill3,ShipSpecialBonuses(Player(),bonSkill3) + 1);",
+                        "            ShipSpecialBonuses(Player(),bonSkill5,ShipSpecialBonuses(Player(),bonSkill5) + 1);",
+                        "            ShipSpecialBonuses(Player(),bonSkill6,ShipSpecialBonuses(Player(),bonSkill6) + 1);",
+                        "            ShipSpecialBonuses(Player(),bonWRadius,ShipSpecialBonuses(Player(),bonWRadius) + 15);",
+                        "            ShipSpecialBonuses(Player(),bonHookRadius,ShipSpecialBonuses(Player(),bonHookRadius) + 20);",
+                        "            ShipSpecialBonuses(Player(),bonSpeed,ShipSpecialBonuses(Player(),bonSpeed) + 75);",
+                        "            ShipSpecialBonuses(Player(),bonZonds,ShipSpecialBonuses(Player(),bonZonds) + 1);",
+                        "        }",
+                        "        if(ShipCustomShipInfoData(Player(),'RefCoffeeIllness',2) >= 3) {",
+                        "            ShipSpecialBonuses(Player(),bonSkill1,ShipSpecialBonuses(Player(),bonSkill1) + 1);",
+                        "            ShipSpecialBonuses(Player(),bonSkill3,ShipSpecialBonuses(Player(),bonSkill3) + 1);",
+                        "            ShipSpecialBonuses(Player(),bonSkill4,ShipSpecialBonuses(Player(),bonSkill4) + 1);",
+                        "            ShipSpecialBonuses(Player(),bonSkill5,ShipSpecialBonuses(Player(),bonSkill5) + 1);",
+                        "            ShipSpecialBonuses(Player(),bonSkill6,ShipSpecialBonuses(Player(),bonSkill6) + 1);",
+                        "            ShipSpecialBonuses(Player(),bonWRadius,ShipSpecialBonuses(Player(),bonWRadius) + 15);",
+                        "            ShipSpecialBonuses(Player(),bonHookRadius,ShipSpecialBonuses(Player(),bonHookRadius) + 20);",
+                        "            ShipSpecialBonuses(Player(),bonSpeed,ShipSpecialBonuses(Player(),bonSpeed) + 75);",
+                        "            ShipSpecialBonuses(Player(),bonZonds,ShipSpecialBonuses(Player(),bonZonds) + 1);",
+                        "            ShipSpecialBonuses(Player(),bonWEnergy,ShipSpecialBonuses(Player(),bonWEnergy) + 5);",
+                        "            ShipSpecialBonuses(Player(),bonWSplinter,ShipSpecialBonuses(Player(),bonWSplinter) + 5);",
+                        "        }",
+                        "        if(ShipCustomShipInfoData(Player(),'RefCoffeeIllness',2) >= 4) {",
+                        "            ShipSpecialBonuses(Player(),bonSkill1,ShipSpecialBonuses(Player(),bonSkill1) + 1);",
+                        "            ShipSpecialBonuses(Player(),bonSkill3,ShipSpecialBonuses(Player(),bonSkill3) + 1);",
+                        "            ShipSpecialBonuses(Player(),bonSkill4,ShipSpecialBonuses(Player(),bonSkill4) + 1);",
+                        "            ShipSpecialBonuses(Player(),bonSkill5,ShipSpecialBonuses(Player(),bonSkill5) + 1);",
+                        "            ShipSpecialBonuses(Player(),bonSkill6,ShipSpecialBonuses(Player(),bonSkill6) + 1);",
+                        "            ShipSpecialBonuses(Player(),bonWRadius,ShipSpecialBonuses(Player(),bonWRadius) + 15);",
+                        "            ShipSpecialBonuses(Player(),bonHookRadius,ShipSpecialBonuses(Player(),bonHookRadius) + 20);",
+                        "            ShipSpecialBonuses(Player(),bonSpeed,ShipSpecialBonuses(Player(),bonSpeed) + 75);",
+                        "            ShipSpecialBonuses(Player(),bonZonds,ShipSpecialBonuses(Player(),bonZonds) + 1);",
+                        "            ShipSpecialBonuses(Player(),bonWEnergy,ShipSpecialBonuses(Player(),bonWEnergy) + 5);",
+                        "            ShipSpecialBonuses(Player(),bonWSplinter,ShipSpecialBonuses(Player(),bonWSplinter) + 5);",
+                        "            ShipSpecialBonuses(Player(),bonHook,ShipSpecialBonuses(Player(),bonHook) + 25);",
+                        "            ShipSpecialBonuses(Player(),bonSkill2,ShipSpecialBonuses(Player(),bonSkill2) + 1);",
+                        "        }",
+                        "        if(ShipCustomShipInfoData(Player(),'RefCoffeeIllness',2) >= 5) {",
+                        "            ShipSpecialBonuses(Player(),bonSkill1,ShipSpecialBonuses(Player(),bonSkill1) + 1);",
+                        "            ShipSpecialBonuses(Player(),bonSkill3,ShipSpecialBonuses(Player(),bonSkill3) + 1);",
+                        "            ShipSpecialBonuses(Player(),bonSkill4,ShipSpecialBonuses(Player(),bonSkill4) + 1);",
+                        "            ShipSpecialBonuses(Player(),bonSkill5,ShipSpecialBonuses(Player(),bonSkill5) + 1);",
+                        "            ShipSpecialBonuses(Player(),bonSkill6,ShipSpecialBonuses(Player(),bonSkill6) + 1);",
+                        "            ShipSpecialBonuses(Player(),bonWRadius,ShipSpecialBonuses(Player(),bonWRadius) + 15);",
+                        "            ShipSpecialBonuses(Player(),bonHookRadius,ShipSpecialBonuses(Player(),bonHookRadius) + 20);",
+                        "            ShipSpecialBonuses(Player(),bonSpeed,ShipSpecialBonuses(Player(),bonSpeed) + 75);",
+                        "            ShipSpecialBonuses(Player(),bonZonds,ShipSpecialBonuses(Player(),bonZonds) + 1);",
+                        "            ShipSpecialBonuses(Player(),bonWEnergy,ShipSpecialBonuses(Player(),bonWEnergy) + 5);",
+                        "            ShipSpecialBonuses(Player(),bonWSplinter,ShipSpecialBonuses(Player(),bonWSplinter) + 5);",
+                        "            ShipSpecialBonuses(Player(),bonHook,ShipSpecialBonuses(Player(),bonHook) + 25);",
+                        "            ShipSpecialBonuses(Player(),bonSkill2,ShipSpecialBonuses(Player(),bonSkill2) + 1);",
+                        "        }",
+                        "        if(ShipCustomShipInfoData(Player(),'RefCoffeeIllness',2)) {",
+                        "            ShipDeleteCustomShipInfo(Player(),'RefCoffeeIllness');",
+                        "            CustomEther('BioCured',0,'',\"Вы почувствовали облегчение. Кажется, эта доза кофеина была достаточной. Вопрос - на сколько её хватит?\");",
+                        "        }",
+                        "    }",
+                        "}"
+                    ]
+                }
+            ],
+            "Planets": 
+            [
+                {
+                    "Type": "TPlanet",
+                    "Name": "PlanetNew",
+                    "Pos.x": -100,
+                    "Pos.y": -30,
+                    "Parent": -1,
+                    "#": 1,
+                    "Race": 62,
+                    "Owner": 62,
+                    "Economy": 14,
+                    "Goverment": 62,
+                    "RangeMin": 0,
+                    "RangeMax": 100,
+                    "Dialog": -1
+                }
+            ],
+            "Ships": 
+            [
+                {
+                    "Type": "TStarShip",
+                    "Name": "",
+                    "Pos.x": -100,
+                    "Pos.y": -90,
+                    "Parent": -1,
+                    "#": 2,
+                    "Count": 1,
+                    "Owner": 62,
+                    "Ship.Type": 126,
+                    "Player": true,
+                    "SpeedMin": 0,
+                    "SpeedMax": 10000,
+                    "Weapon": 0,
+                    "CargoHook": 0,
+                    "EmptySpace": 0,
+                    "StatusTraderMin": 0,
+                    "StatusTraderMax": 100,
+                    "StatusWarriorMin": 0,
+                    "StatusWarriorMax": 100,
+                    "StatusPirateMin": 0,
+                    "StatusPirateMax": 100,
+                    "StrengthMin": "0",
+                    "StrengthMax": "0",
+                    "Ruins": ""
+                }
+            ],
+            "Stars": 
+            [
+                {
+                    "Type": "TStar",
+                    "Name": "StarNew",
+                    "Pos.x": -100,
+                    "Pos.y": -60,
+                    "Parent": -1,
+                    "#": 0,
+                    "Constellation": 0,
+                    "Priority": 0,
+                    "NoKling": false,
+                    "NoComeKling": false
+                }
+            ],
+            "Statements": 
+            [
+                {
+                    "Type": "Tif",
+                    "Name": "",
+                    "Pos.x": 80,
+                    "Pos.y": -90,
+                    "Parent": -1,
+                    "#": 18,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "ShipFindCustomShipInfoByType(Player(),'RefCoffeeFlag') == -1"
+                    ]
+                },
+                {
+                    "Type": "Tif",
+                    "Name": "",
+                    "Pos.x": 270,
+                    "Pos.y": -90,
+                    "Parent": -1,
+                    "#": 19,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "~ShipFindCustomShipInfoByType(Player(),'RefCoffeeFlag')"
+                    ]
+                },
+                {
+                    "Type": "Tif",
+                    "Name": "",
+                    "Pos.x": 240,
+                    "Pos.y": 150,
+                    "Parent": -1,
+                    "#": 27,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "GetRelationPlanet(GetShipPlanet(Player()),Player()) > 80"
+                    ]
+                },
+                {
+                    "Type": "Tif",
+                    "Name": "",
+                    "Pos.x": 240,
+                    "Pos.y": 190,
+                    "Parent": -1,
+                    "#": 28,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "GetRelationPlanet(GetShipPlanet(Player()),Player()) <= 80"
+                    ]
+                }
+            ],
+            "States": 
+            [
+                {
+                    "Type": "TState",
+                    "Name": "StateNew",
+                    "Pos.x": -100,
+                    "Pos.y": 30,
+                    "Parent": -1,
+                    "#": 3,
+                    "Move": 0,
+                    "MoveObj": -1,
+                    "Attack.Count": 0,
+                    "TakeItem": -1,
+                    "TakeAllItem": false,
+                    "OnTalk": "",
+                    "OnActCode": "",
+                    "EType": 1,
+                    "EUnique": "",
+                    "EMsg": ""
+                }
+            ],
+            "Variables": 
+            [
+                {
+                    "Type": "TVar",
+                    "Name": "ForRace",
+                    "Pos.x": -100,
+                    "Pos.y": -140,
+                    "Parent": -1,
+                    "#": 14,
+                    "Var.Type": "Int",
+                    "Init": "0",
+                    "Global": false
+                },
+                {
+                    "Type": "TVar",
+                    "Name": "ForPlanet",
+                    "Pos.x": -100,
+                    "Pos.y": -170,
+                    "Parent": -1,
+                    "#": 15,
+                    "Var.Type": "Int",
+                    "Init": "0",
+                    "Global": false
+                },
+                {
+                    "Type": "TVar",
+                    "Name": "timer5",
+                    "Pos.x": -100,
+                    "Pos.y": -200,
+                    "Parent": -1,
+                    "#": 23,
+                    "Var.Type": "Int",
+                    "Init": "0",
+                    "Global": false
+                },
+                {
+                    "Type": "TVar",
+                    "Name": "Kostyl",
+                    "Pos.x": -100,
+                    "Pos.y": -230,
+                    "Parent": -1,
+                    "#": 25,
+                    "Var.Type": "Int",
+                    "Init": "0",
+                    "Global": false
+                },
+                {
+                    "Type": "TVar",
+                    "Name": "tstr",
+                    "Pos.x": 0,
+                    "Pos.y": -230,
+                    "Parent": -1,
+                    "#": 32,
+                    "Var.Type": "Str",
+                    "Init": "",
+                    "Global": false
+                },
+                {
+                    "Type": "TVar",
+                    "Name": "rand",
+                    "Pos.x": 0,
+                    "Pos.y": -200,
+                    "Parent": -1,
+                    "#": 35,
+                    "Var.Type": "Int",
+                    "Init": "",
+                    "Global": false
+                },
+                {
+                    "Type": "TVar",
+                    "Name": "CoffeeForMania",
+                    "Pos.x": 80,
+                    "Pos.y": -230,
+                    "Parent": -1,
+                    "#": 40,
+                    "Var.Type": "Int",
+                    "Init": "0",
+                    "Global": false
+                },
+                {
+                    "Type": "TVar",
+                    "Name": "ManiaCount",
+                    "Pos.x": 80,
+                    "Pos.y": -200,
+                    "Parent": -1,
+                    "#": 41,
+                    "Var.Type": "Int",
+                    "Init": "0",
+                    "Global": false
+                },
+                {
+                    "Type": "TVar",
+                    "Name": "race",
+                    "Pos.x": -100,
+                    "Pos.y": -260,
+                    "Parent": -1,
+                    "#": 42,
+                    "Var.Type": "Int",
+                    "Init": "",
+                    "Global": false
+                }
+            ]
+        }
+    ],
+    "Visual.Links": 
+    [
+        {
+            "Type": "TGraphLink",
+            "Begin": 2,
+            "End": 0,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 1,
+            "End": 0,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 4,
+            "End": 1,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 4,
+            "End": 3,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 8,
+            "End": 10,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 8,
+            "End": 9,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 8,
+            "End": 11,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 11,
+            "End": 12,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 12,
+            "End": 10,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 13,
+            "End": 16,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 16,
+            "End": 17,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 7,
+            "End": 18,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 7,
+            "End": 19,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 20,
+            "End": 21,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 12,
+            "End": 24,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 9,
+            "End": 13,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 24,
+            "End": 13,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 16,
+            "End": 26,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 26,
+            "End": 27,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 26,
+            "End": 28,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 28,
+            "End": 29,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 29,
+            "End": 30,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 27,
+            "End": 31,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 31,
+            "End": 33,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 33,
+            "End": 34,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 36,
+            "End": 37,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 37,
+            "End": 38,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 38,
+            "End": 39,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 18,
+            "End": 8,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 19,
+            "End": 20,
+            "Nom": 0,
+            "Arrow": true
+        }
+    ],
+    "BlockPar.EC.Total.Strings": 35,
+    "BlockPar.EC": 
+    [
+        {
+            "#": "10",
+            "String": "Л-л-ладно"
+        },
+        {
+            "#": "11",
+            "String": "Ну, тогда давайте, попробую"
+        },
+        {
+            "#": "12",
+            "String": "Нет-нет-нет, рейнджер! Мне пора работать. И вы тоже отправляйтесь работать."
+        },
+        {
+            "#": "13",
+            "String": "Эх, рейнджер, знаете, как ценны вот такие моменты? Когда можешь наконец расслабиться, забыть про дела и посидеть с чашечкой хорошего кофе.<br><br><0><br><br>Эх... Ой, рейнджер! Что-то я засиделся с вами. Пора мне работать, увы. И вам, думаю, тоже. Галактика сама себя не спасёт."
+        },
+        {
+            "#": "14",
+            "String": "Будем честны, кому ещё не хотелось провести пару минут в хорошей компании? А работа... Работа подождёт!"
+        },
+        {
+            "#": "15",
+            "String": "Ну и ладно"
+        },
+        {
+            "#": "16",
+            "String": "Жаль. Было приятно поболтать."
+        },
+        {
+            "#": "17",
+            "String": "Безусловно, рейнджер! Пейте, сколько вашей душе угодно. И просмотрите прейскурант, обязательно! Таких цен за такие услуги вы не найдёте больше нигде в Галактике!"
+        },
+        {
+            "#": "18",
+            "String": "Благодарю!"
+        },
+        {
+            "#": "19",
+            "String": "Может, всё-таки чашечку кофе?"
+        },
+        {
+            "#": "2",
+            "String": "Да, рейнджер, кофе!<br>Чудесный напиток с планеты <clr>Земля<clrEnd>!<br>И что самое удивительное, он по-разному действует на каждую из рас, но не вреден любому гуманоиду нашего Рукава.<br><br>Если хотите, можем налить вам кружечку на пробу. Всего 125 cr.!"
+        },
+        {
+            "#": "20",
+            "String": "Кофе?"
+        },
+        {
+            "#": "21",
+            "String": "Кстати, кофе у нас есть, если он вам нужен. А то многие спрашивают."
+        },
+        {
+            "#": "23",
+            "String": "Коалиция, конечно, принесла нам много хорошего. Но и при Клане нам неплохо. Никаких ограничений, полная свобода... Правда, все очень держатся за свои должности. Не знаете, почему?"
+        },
+        {
+            "#": "24",
+            "String": "Новые порядки нам весьма непривычны. Вся эта разгульность и нестабильность, постоянные грабежи и беззаконие... Социологи, впрочем, утверждают, что вскоре пиратский Клан переродится, став заменой Коалиции - возможно, сильно более криминальной, но всё же заменой в значении аналога."
+        },
+        {
+            "#": "25",
+            "String": "Если вам интересно, рейнджер, очень немногие на нашей планете всерьёз поддерживают власть пиратского Клана. Маргиналам, конечно, хорошо, но законопослушные граждане хотели бы вернуться к более-менее стабильному строю Коалиции."
+        },
+        {
+            "#": "26",
+            "String": "Мы - одна из передовых экономик сектора. Этим нельзя не гордиться, но приходится и вести себя соответствующе. К тому же, к нам обращаются и представители других секторов, и даже представительства правительства Коалиции!"
+        },
+        {
+            "#": "27",
+            "String": "Наша планета сейчас проходит стадию переориентирования экономики. Расширение сферы услуг дало о себе знать, и сейчас правительство принимает меры по созданию промышленного ядра, которое бы дало нам возможность спокойно маневрировать при взаимоотношениях с производственными гигантами... Постоянное подписание и переподписание контрактов, обращения к народу, формирование новых программ.. Очень утомительно."
+        },
+        {
+            "#": "28",
+            "String": "Мы - поставщики продовольствия для половины сектора! Это ведь немыслимо - одна планета производит ресурсов, достаточных, чтобы прокормить десяток! Миллиарды гуманоидов! Это достойно восхищения, на мой взгляд."
+        },
+        {
+            "#": "29",
+            "String": "Вы почувствовали облегчение. Кажется, ваше воздержание от кофеина дало свои плоды, и вы теперь можете дальше бородзить космические просторы!"
+        },
+        {
+            "#": "3",
+            "String": "Итак... Расскажу по порядку.<br>В целом, основной эффект кофе - бодрость духа и разума - сохранился для всех рас. Только, так скажем, организмы каждой расы по-своему интерпретировали этот эффект.<br>У <clr>малоков<clrEnd>, например, наиболее сильна бодрость разума, поэтому они начинают лучше обходиться с техникой, например. У <clr>пеленгов<clrEnd> их обычная клептомания начинает сопровождаться отказом от чрезмерного риска.<br><clr>Люди<clrEnd> чувствуют в себе прилив сил, чтобы вести за собой других. <clr>Фэяне<clrEnd> становятся немного более воинственными, а <clr>гаальцы<clrEnd>... Для них это что-то навроде слабенького наркотика, и происходит что-то совсем непонятное нашей науке."
+        },
+        {
+            "#": "30",
+            "String": "Вы проснулись, но что-то было не так... Нет прежней энергии в ваших действиях. Похоже, действие кофе закончилось."
+        },
+        {
+            "#": "31",
+            "String": "Вы почувствовали облегчение. Кажется, эта доза кофеина была достаточной. Вопрос - на сколько её хватит?"
+        },
+        {
+            "#": "32",
+            "String": "Вот вам, рейнджерам, хорошо. Летаете себе по космосу. Военные защищают вас, худо-бедно, от доминаторов. Выполняете задания от чиновников, торгуете, деньги получаете. А сколько на обеспечение вас представителей всех рас трудится! Ужасно представить даже..."
+        },
+        {
+            "#": "33",
+            "String": "Достижения социализма - равенство всех граждан перед законом, равенство всех граждан в правах, равенство возможностей всех граждан. Мы рады, что многие планеты галактики подхватили этот порыв."
+        },
+        {
+            "#": "34",
+            "String": "Парламент, демократия - светила развития нашего общества. Только так граждане могут изъявлять себя, своё видение на устройство и функционирование органов нашей планеты. Мы не можем себе представить, как можно жить без этого!"
+        },
+        {
+            "#": "35",
+            "String": "Культура формирования лидеров с самого рождения, специально предназначенных для служения своему Отечеству, есть наилучшая модель общества. В благодарность за великие труды владыки получают в своё пользование дворцы и сады, и... Что в этом такого?"
+        },
+        {
+            "#": "36",
+            "String": "Наш Верховный Наикомандующий - мудрейший лидер! При его правлении на планете стало безопаснее жить, из космического пространства были изгнаны все пираты, а качество жизни граждан стало в разы выше! Как мы можем слушать клевету инопланетчиков, говорящих о том, что наш лидер - негодяй и тиран?!"
+        },
+        {
+            "#": "37",
+            "String": "Анархия - самый естественный вариант устройства общества, рейнджер. Никакого угнетения и эксплуатации гражданина гражданином. Все самоорганизуются, все блага распределяются между всему, кому потребно. Настоящий рай!"
+        },
+        {
+            "#": "4",
+            "String": "Сделайте глоток, вдохните аромат...<br><br>Ну, чувствуете, как бодрость духа и всераспирающая энергия наполняют вас? Нет?<br><br>Ну, не беда. Сбейте пару пиратов на орбите, авось, поможет. Ну а мне пора работать."
+        },
+        {
+            "#": "5",
+            "String": "Какое вам кофе, рейнджер?! У вас даже глаз дёргается! А ну-ка отправляйтесь, посбивайте пиратов, может быть, пройдёт."
+        },
+        {
+            "#": "6",
+            "String": "Ну, давайте"
+        },
+        {
+            "#": "7",
+            "String": "Нет, пожалуй, я пойду"
+        },
+        {
+            "#": "8",
+            "String": "А расскажите про воздействие кофе на расы Коалиции"
+        },
+        {
+            "#": "9",
+            "String": "Ладно, пойду сбивать"
+        }
+    ]
+}

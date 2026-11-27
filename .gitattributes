@@ -1,0 +1,5 @@
+*.md text eol=lf
+*.cmd text eol=crlf
+Sources/** -text
+Sources/**/*.md text eol=lf
+

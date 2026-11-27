@@ -1,0 +1,510 @@
+{
+    "FileID": 573785173,
+    "FileVersion": 8,
+    "ViewPos.x": -676,
+    "ViewPos.y": -501,
+    "ScriptName": "Mod_RefFightOnUninhabits",
+    "ScriptFileOut": "DATA\\Script\\Mod_RefFightOnUninhabits.scr",
+    "ScriptTextOut": "DATA\\Script\\Mod_RefFightOnUninhabits.txt",
+    "LangDatIn": "CFG\\Rus\\Lang.txt",
+    "LangDatOut": "CFG\\Rus\\Lang.dat",
+    "MainDatIn": "CFG\\Main.txt",
+    "MainDatOut": "CFG\\Main.dat",
+    "CacheDatIn": "CFG\\CacheData.txt",
+    "CacheDatOut": "CFG\\CacheData.dat",
+    "ExportLangTxt": true,
+    "ExportLangDat": true,
+    "Visual.Objects": 
+    [
+        {
+            "DialogAnswers": 
+            [
+                {
+                    "Type": "TDialogAnswer",
+                    "Name": "",
+                    "Pos.x": 50,
+                    "Pos.y": 10,
+                    "Parent": -1,
+                    "#": 14,
+                    "Msg": "Компьютер, запустить боевой режим!",
+                    "AMsg.Num": "0"
+                },
+                {
+                    "Type": "TDialogAnswer",
+                    "Name": "restart",
+                    "Pos.x": 90,
+                    "Pos.y": -30,
+                    "Parent": -1,
+                    "#": 15,
+                    "Msg": "Сейчас не время для разведок и битв",
+                    "AMsg.Num": "1"
+                },
+                {
+                    "Type": "TDialogAnswer",
+                    "Name": "restart",
+                    "Pos.x": 50,
+                    "Pos.y": 130,
+                    "Parent": -1,
+                    "#": 18,
+                    "Msg": "",
+                    "AMsg.Num": "2"
+                }
+            ],
+            "DialogMessages": 
+            [
+                {
+                    "Type": "TDialogMsg",
+                    "Name": "",
+                    "Pos.x": 50,
+                    "Pos.y": -30,
+                    "Parent": -1,
+                    "#": 13,
+                    "Msg": "Итак, корабельные сенсоры, несмотря на нахождение на поверхности планеты, продолжали и продолжают своё боевое дежурство.\r\n\r\nИ вот, в ходе полного цикла сканирования поверхности им удалось обнаружить скопление доминаторских модулей.\r\nСкорее всего, захватчики решили начать освоение этой планеты, в том числе и для разработки её ресурсов. Кстати, это запрещено Галактическим Советом...",
+                    "DMsg.Num": "0"
+                },
+                {
+                    "Type": "TDialogMsg",
+                    "Name": "",
+                    "Pos.x": 50,
+                    "Pos.y": 90,
+                    "Parent": -1,
+                    "#": 17,
+                    "Msg": "",
+                    "DMsg.Num": "1"
+                }
+            ],
+            "Dialogs": 
+            [
+                {
+                    "Type": "TDialog",
+                    "Name": "DomiksFound",
+                    "Pos.x": 50,
+                    "Pos.y": -70,
+                    "Parent": -1,
+                    "#": 12
+                }
+            ],
+            "Groups": 
+            [
+                {
+                    "Type": "TGroup",
+                    "Name": "GroupNew",
+                    "Pos.x": -100,
+                    "Pos.y": 0,
+                    "Parent": -1,
+                    "#": 4,
+                    "Owner": 62,
+                    "Group.Type": 126,
+                    "CntShipMin": 1,
+                    "CntShipMax": 1,
+                    "SpeedMin": 100,
+                    "SpeedMax": 10000,
+                    "Weapon": 0,
+                    "CargoHook": 0,
+                    "EmptySpace": 0,
+                    "AddPlayer": true,
+                    "StatusTraderMin": 0,
+                    "StatusTraderMax": 100,
+                    "StatusWarriorMin": 0,
+                    "StatusWarriorMax": 100,
+                    "StatusPirateMin": 0,
+                    "StatusPirateMax": 100,
+                    "DistSearch": 10000,
+                    "Dialog": -1,
+                    "StrengthMin": "0",
+                    "StrengthMax": "0",
+                    "Ruins": ""
+                }
+            ],
+            "Operations": 
+            [
+                {
+                    "Type": "Top",
+                    "Name": "",
+                    "Pos.x": -50,
+                    "Pos.y": -90,
+                    "Parent": -1,
+                    "#": 5,
+                    "Code.Type": "Global",
+                    "Code": 
+                    [
+                        "if(!GCntRun(GScriptName)) GRun();"
+                    ]
+                },
+                {
+                    "Type": "Top",
+                    "Name": "",
+                    "Pos.x": -10,
+                    "Pos.y": -90,
+                    "Parent": -1,
+                    "#": 6,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "if(!ShipIsTakeoff(Player())) {",
+                        "    if(StarOwner(ShipStar(Player())) == 1) {",
+                        "        dword plan = GetShipPlanet(Player());",
+                        "        if(plan) {",
+                        "            if(PlanetOwner(plan) == None) {",
+                        "                OnPlan = OnPlan + 1;",
+                        "                if(OnPlan > 1) {",
+                        "                    if(!ShipIsTakeoff(Player())) {",
+                        "                        if(GRobotStatus == 0) {",
+                        "                            if(ShipEqInSlot(Player(),t_Scaner) && ShipEqInSlot(Player(),t_Radar)) {",
+                        "                                if(!AskFlag) {",
+                        "                                    //NewsAdd('Научные изыскания Маршала detected. Сообщите ему о том, что вывело это сообщение. Вывод: '+ArrayFind(UsedPlan,Id(plan)));",
+                        "                                    //Шанс: 30%, на уже обысканной планете 45%. Раньше 70 - 15*ArrayFind(): -1 для новой планеты давало 15%,",
+                        "                                    //а для обысканной шанс зависел от её места в списке (с 5-й - 100%)",
+                        "                                    rand = 70;",
+                        "                                    if(ArrayFind(UsedPlan,Id(plan)) != -1) rand = 55;",
+                        "                                    if(RndObject(1,100,plan) > rand) {",
+                        "                                        NewsAdd(\"Корабельные сенсоры обнаружили что-то на поверхности планеты. Вам стоит взглянуть. Отчёт будет ждать вас на корабельном мостике.\");",
+                        "                                        AskFlag = 1;",
+                        "                                    }",
+                        "                                }",
+                        "                            }",
+                        "                        }",
+                        "                        else if(GRobotStatus == 2) {",
+                        "                            GRobotStatus = 0; //награда - один раз (раньше статус боя не сбрасывался: трофеи каждый ход на любой такой планете, новых боёв не было)",
+                        "                            if(ArrayFind(UsedPlan,Id(plan)) == -1) ArrayAdd(UsedPlan,Id(plan)); //ArrayFind = -1 при отсутствии (раньше !ArrayFind - не добавлялось никогда)",
+                        "                            AddItemToShip(Player(),CreateNodes(RndObject(10,40,GetShipPlanet(Player())),StarSeries(PlanetToStar(GetShipPlanet(Player())))));",
+                        "                            if(RndObject(1,3,GetShipPlanet(Player())) == 3) {",
+                        "                                dword item = CreateEquipment(RndObject(t_FuelTanks,t_DefGenerator,GetShipPlanet(Player())),RndObject(15+round(GalaxyDiffLevels(4)/25),25+round(GalaxyDiffLevels(4)/10),GetShipPlanet(Player())),GalaxyTechLevel(),Kling);",
+                        "                                ItemSubrace(item,StarSeries(PlanetToStar(GetShipPlanet(Player()))));",
+                        "                                AddItemToShip(Player(),item);",
+                        "                            }",
+                        "                            if(RndObject(1,10,GetShipPlanet(Player())) == 10) {",
+                        "                                item = CreateEquipment(RndObject(t_FuelTanks,t_Weapon8,GetShipPlanet(Player())),RndObject(15+round(GalaxyDiffLevels(4)/25),25+round(GalaxyDiffLevels(4)/10),GetShipPlanet(Player())),GalaxyTechLevel(),Kling);",
+                        "                                ItemSubrace(item,StarSeries(PlanetToStar(GetShipPlanet(Player()))));",
+                        "                                AddItemToShip(Player(),item);",
+                        "                            }",
+                        "                            if(RndObject(1,20,GetShipPlanet(Player())) == 20) {",
+                        "                                item = CreateEquipment(RndObject(t_FuelTanks,t_Weapon15,GetShipPlanet(Player())),RndObject(15+round(GalaxyDiffLevels(4)/25),25+round(GalaxyDiffLevels(4)/10),GetShipPlanet(Player())),GalaxyTechLevel(),Kling);",
+                        "                                ItemSubrace(item,StarSeries(PlanetToStar(GetShipPlanet(Player()))));",
+                        "                                AddItemToShip(Player(),item);",
+                        "                            }",
+                        "",
+                        "                            if(CurrentMods('Expansion\\ExpTC')) {",
+                        "                                if(RndObject(1,10,GetShipPlanet(Player())) < 4) {",
+                        "                                    item = CreateQuestItem('ShuBounty_Crystals', None);",
+                        "                                    ItemSize(item, 1);",
+                        "                                    ItemCost(item, RndObject(5000, 12500, GetShipPlanet(Player())));",
+                        "                                    AddItemToShip(Player(),item);",
+                        "                                }",
+                        "                            }",
+                        "",
+                        "                            NewsAdd(\"Остатки поля боя всегда богаты на трофеи. Вы собрали всё, что осталось от доминаторов, и погрузили на свой корабль\");",
+                        "                            Sound('Sound.NewMsg');",
+                        "                        }",
+                        "                        else if(GRobotStatus == 1) GRobotStatus = 0; //проигрыш - можно искать снова",
+                        "                    }",
+                        "                }",
+                        "            }",
+                        "        }",
+                        "    }",
+                        "}",
+                        "else {",
+                        "    AskFlag = 0;",
+                        "    OnPlan = 0;",
+                        "}"
+                    ]
+                },
+                {
+                    "Type": "Top",
+                    "Name": "",
+                    "Pos.x": -10,
+                    "Pos.y": -50,
+                    "Parent": -1,
+                    "#": 11,
+                    "Code.Type": "DialogBegin",
+                    "Code": 
+                    [
+                        "if(AskFlag == 1) { //2 - бой на этой планете уже был в этот визит",
+                        "    if(PlayerBridge() == 3 || PlayerBridge() == 1) {",
+                        "        AddDialogInject('DomiksFound',\"На одном из информационных экранов мигает несколько лампочек, уведомляя вас о пришедших отчётах со сканеров\",\"Проверить отчёты сканеров\",99);",
+                        "        pl = GetShipPlanet(Player());",
+                        "    }",
+                        "}"
+                    ]
+                },
+                {
+                    "Type": "Top",
+                    "Name": "",
+                    "Pos.x": 50,
+                    "Pos.y": 50,
+                    "Parent": -1,
+                    "#": 16,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "//Одна находка - один бой за визит",
+                        "AskFlag = 2;",
+                        "//Карта той же серии, что система: Red - Блазер, Blue - Келлер, Green - Террон.",
+                        "//Раньше ~findsubstr() было истинно при НАЙДЕННОЙ стороне (пропускались карты своей серии), для Террона искалось \"Terron\"",
+                        "for(OnPlan=0;OnPlan<300;OnPlan=OnPlan+1) {",
+                        "    rand = RndObject(501,500+int(CT('RobotsMap.RefDomCount')),Player());",
+                        "    if(StarSeries(ShipStar(Player())) == 0 && findsubstr(CT('RobotsMap.'+rand+'.Side'),'Red') == -1) continue;",
+                        "    if(StarSeries(ShipStar(Player())) == 1 && findsubstr(CT('RobotsMap.'+rand+'.Side'),'Blue') == -1) continue;",
+                        "    if(StarSeries(ShipStar(Player())) == 2 && findsubstr(CT('RobotsMap.'+rand+'.Side'),'Green') == -1) continue;",
+                        "    break;",
+                        "}",
+                        "OnPlan = 2;",
+                        "StartRobots(CT('RobotsMap.'+rand+'.Map'),CT('RobotsMap.'+rand+'.RobotsStart'),CT('RobotsMap.'+rand+'.RobotsWin'),CT('RobotsMap.'+rand+'.RobotsLoss'),Name(pl),'621');",
+                        "PlayerBridge(0);",
+                        "FormChange('PlanetNO');"
+                    ]
+                }
+            ],
+            "Planets": 
+            [
+                {
+                    "Type": "TPlanet",
+                    "Name": "PlanetNew",
+                    "Pos.x": -100,
+                    "Pos.y": -30,
+                    "Parent": -1,
+                    "#": 1,
+                    "Race": 62,
+                    "Owner": 62,
+                    "Economy": 14,
+                    "Goverment": 62,
+                    "RangeMin": 0,
+                    "RangeMax": 100,
+                    "Dialog": -1
+                }
+            ],
+            "Ships": 
+            [
+                {
+                    "Type": "TStarShip",
+                    "Name": "",
+                    "Pos.x": -100,
+                    "Pos.y": -90,
+                    "Parent": -1,
+                    "#": 2,
+                    "Count": 1,
+                    "Owner": 62,
+                    "Ship.Type": 126,
+                    "Player": true,
+                    "SpeedMin": 0,
+                    "SpeedMax": 10000,
+                    "Weapon": 0,
+                    "CargoHook": 0,
+                    "EmptySpace": 0,
+                    "StatusTraderMin": 0,
+                    "StatusTraderMax": 100,
+                    "StatusWarriorMin": 0,
+                    "StatusWarriorMax": 100,
+                    "StatusPirateMin": 0,
+                    "StatusPirateMax": 100,
+                    "StrengthMin": "0",
+                    "StrengthMax": "0",
+                    "Ruins": ""
+                }
+            ],
+            "Stars": 
+            [
+                {
+                    "Type": "TStar",
+                    "Name": "StarNew",
+                    "Pos.x": -100,
+                    "Pos.y": -60,
+                    "Parent": -1,
+                    "#": 0,
+                    "Constellation": 0,
+                    "Priority": 0,
+                    "NoKling": false,
+                    "NoComeKling": false
+                }
+            ],
+            "States": 
+            [
+                {
+                    "Type": "TState",
+                    "Name": "StateNew",
+                    "Pos.x": -100,
+                    "Pos.y": 30,
+                    "Parent": -1,
+                    "#": 3,
+                    "Move": 0,
+                    "MoveObj": -1,
+                    "Attack.Count": 0,
+                    "TakeItem": -1,
+                    "TakeAllItem": false,
+                    "OnTalk": "",
+                    "OnActCode": "",
+                    "EType": 1,
+                    "EUnique": "",
+                    "EMsg": ""
+                }
+            ],
+            "Variables": 
+            [
+                {
+                    "Type": "TVar",
+                    "Name": "UsedPlan",
+                    "Pos.x": -70,
+                    "Pos.y": -130,
+                    "Parent": -1,
+                    "#": 7,
+                    "Var.Type": "Array",
+                    "Init": "",
+                    "Global": false
+                },
+                {
+                    "Type": "TVar",
+                    "Name": "AskFlag",
+                    "Pos.x": -70,
+                    "Pos.y": -160,
+                    "Parent": -1,
+                    "#": 8,
+                    "Var.Type": "Int",
+                    "Init": "0",
+                    "Global": false
+                },
+                {
+                    "Type": "TVar",
+                    "Name": "rand",
+                    "Pos.x": -70,
+                    "Pos.y": -190,
+                    "Parent": -1,
+                    "#": 9,
+                    "Var.Type": "Int",
+                    "Init": "",
+                    "Global": false
+                },
+                {
+                    "Type": "TVar",
+                    "Name": "OnPlan",
+                    "Pos.x": 30,
+                    "Pos.y": -190,
+                    "Parent": -1,
+                    "#": 10,
+                    "Var.Type": "Int",
+                    "Init": "0",
+                    "Global": false
+                },
+                {
+                    "Type": "TVar",
+                    "Name": "pl",
+                    "Pos.x": 30,
+                    "Pos.y": -160,
+                    "Parent": -1,
+                    "#": 19,
+                    "Var.Type": "Dword",
+                    "Init": "",
+                    "Global": false
+                }
+            ]
+        }
+    ],
+    "Visual.Links": 
+    [
+        {
+            "Type": "TGraphLink",
+            "Begin": 2,
+            "End": 0,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 1,
+            "End": 0,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 4,
+            "End": 1,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 4,
+            "End": 3,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 12,
+            "End": 13,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 13,
+            "End": 15,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 13,
+            "End": 14,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 14,
+            "End": 16,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 16,
+            "End": 17,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 17,
+            "End": 18,
+            "Nom": 0,
+            "Arrow": true
+        }
+    ],
+    "BlockPar.EC.Total.Strings": 8,
+    "BlockPar.EC": 
+    [
+        {
+            "#": "0",
+            "String": "Остатки поля боя всегда богаты на трофеи. Вы собрали всё, что осталось от доминаторов, и погрузили на свой корабль"
+        },
+        {
+            "#": "3",
+            "String": "Проверить отчёты сканеров"
+        },
+        {
+            "#": "4",
+            "String": "На одном из информационных экранов мигает несколько лампочек, уведомляя вас о пришедших отчётах со сканеров"
+        },
+        {
+            "#": "5",
+            "String": "Итак, корабельные сенсоры, несмотря на нахождение на поверхности планеты, продолжали и продолжают своё боевое дежурство.<br><br>И вот, в ходе полного цикла сканирования поверхности им удалось обнаружить скопление доминаторских модулей.<br>Скорее всего, захватчики решили начать освоение этой планеты, в том числе и для разработки её ресурсов. Кстати, это запрещено Галактическим Советом..."
+        },
+        {
+            "#": "6",
+            "String": ""
+        },
+        {
+            "#": "7",
+            "String": "Компьютер, запустить боевой режим!"
+        },
+        {
+            "#": "8",
+            "String": "Сейчас не время для разведок и битв"
+        },
+        {
+            "#": "9",
+            "String": "Корабельные сенсоры обнаружили что-то на поверхности планеты. Вам стоит взглянуть. Отчёт будет ждать вас на корабельном мостике."
+        }
+    ]
+}

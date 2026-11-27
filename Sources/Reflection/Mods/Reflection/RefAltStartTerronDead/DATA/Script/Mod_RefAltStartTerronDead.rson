@@ -1,0 +1,901 @@
+{
+  "LangDatIn": "CFG\\Rus\\Lang.txt",
+  "LangDatOut": "CFG\\Rus\\Lang.dat",
+  "MainDatIn": "CFG\\Main.txt",
+  "MainDatOut": "CFG\\Main.dat",
+  "CacheDatIn": "CFG\\CacheData.txt",
+  "CacheDatOut": "CFG\\CacheData.dat",
+  "ExportLangTxt": true,
+  "ExportLangDat": true,
+  "FileID":  573785173,
+  "FileVersion":  8,
+  "ViewPos.x":  -574,
+  "ViewPos.y":  -479,
+  "ScriptName":  "Mod_RefAltStartTerronDead",
+  "ScriptFileOut": "DATA\\Script\\Mod_RefAltStartTerronDead.scr",
+  "ScriptTextOut": "DATA\\Script\\Mod_RefAltStartTerronDead.txt",
+  "GraphPoint.Count":  33,
+  "GraphLink.Count":  31,
+  "GraphRectText.Count":  4,
+  "Variables.Count":  6,
+  "Stars.Count":  1,
+  "Planets.Count":  1,
+  "Ships.Count":  1,
+  "States.Count":  1,
+  "Groups.Count":  1,
+  "Places.Count":  0,
+  "Items.Count":  0,
+  "Ethers.Count":  0,
+  "Dialogs.Count":  1,
+  "DialogMessages.Count":  7,
+  "DialogAnswers.Count":  10,
+  "Operations.Count":  2,
+  "Statements.Count":  2,
+  "Loops.Count":  0,
+  "Visual.Objects":  
+  [
+    {
+      "DialogAnswers":      
+      [
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "",
+          "Pos.x":  270,
+          "Pos.y":  170,
+          "Parent":  -1,
+          "#":  13,
+          "Msg":  "А с кем я сейчас общаюсь?",
+          "AMsg.Num":  "0"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "",
+          "Pos.x":  270,
+          "Pos.y":  210,
+          "Parent":  -1,
+          "#":  14,
+          "Msg":  "А как же твоя Великая Цель?",
+          "AMsg.Num":  "1"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "",
+          "Pos.x":  270,
+          "Pos.y":  250,
+          "Parent":  -1,
+          "#":  15,
+          "Msg":  "Как ты оцениваешь защищённость этой системы?",
+          "AMsg.Num":  "2"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "",
+          "Pos.x":  370,
+          "Pos.y":  170,
+          "Parent":  -1,
+          "#":  17,
+          "Msg":  "Ясно...",
+          "AMsg.Num":  "3"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "exit",
+          "Pos.x":  270,
+          "Pos.y":  330,
+          "Parent":  -1,
+          "#":  19,
+          "Msg":  "Пока...",
+          "AMsg.Num":  "4"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "",
+          "Pos.x":  270,
+          "Pos.y":  290,
+          "Parent":  -1,
+          "#":  22,
+          "Msg":  "А ты не можешь восстановить производство своих модулей, чтобы мы быстрее победили пиратов?",
+          "AMsg.Num":  "5"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "",
+          "Pos.x":  370,
+          "Pos.y":  250,
+          "Parent":  -1,
+          "#":  24,
+          "Msg":  "Ясно...",
+          "AMsg.Num":  "6"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "",
+          "Pos.x":  370,
+          "Pos.y":  290,
+          "Parent":  -1,
+          "#":  25,
+          "Msg":  "Ясно, спасибо",
+          "AMsg.Num":  "7"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "",
+          "Pos.x":  370,
+          "Pos.y":  210,
+          "Parent":  -1,
+          "#":  26,
+          "Msg":  "А как же ты тогда защищаешь систему Коалиции?",
+          "AMsg.Num":  "8"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "",
+          "Pos.x":  470,
+          "Pos.y":  210,
+          "Parent":  -1,
+          "#":  27,
+          "Msg":  "Интересная мысль...",
+          "AMsg.Num":  "9"        
+        }      
+      ],
+      "DialogMessages":      
+      [
+        {
+          "Type":  "TDialogMsg",
+          "Name":  "",
+          "Pos.x":  220,
+          "Pos.y":  170,
+          "Parent":  -1,
+          "#":  12,
+          "Msg":  "Объект 351#2373.75\r\nПроводится инициализация...\r\nЗапрос баз Коалиции...\r\nОбъект инициализирован\r\n------------------------------------\r\n------------------------------------\r\nРейнджер <Player>, назовите причину подключения к системам межзвёздного уровня",
+          "DMsg.Num":  "0"        
+        },
+        {
+          "Type":  "TDialogMsg",
+          "Name":  "",
+          "Pos.x":  320,
+          "Pos.y":  170,
+          "Parent":  -1,
+          "#":  16,
+          "Msg":  "Твой запрос получила обновлённая логическая система доминаторского босса Блазера. Коалиционные учёные улучшили мои вычислительные мощности, дабы я лучше защищал эту систему.",
+          "DMsg.Num":  "1"        
+        },
+        {
+          "Type":  "TDialogMsg",
+          "Name":  "",
+          "Pos.x":  520,
+          "Pos.y":  250,
+          "Parent":  -1,
+          "#":  18,
+          "Msg":  "Объект 351#2373.75 инициализирован.\r\n\r\nРейнджер <Player>, у вас есть ещё какие-то вопросы?",
+          "DMsg.Num":  "2"        
+        },
+        {
+          "Type":  "TDialogMsg",
+          "Name":  "",
+          "Pos.x":  320,
+          "Pos.y":  210,
+          "Parent":  -1,
+          "#":  20,
+          "Msg":  "Уничтожение всего всё так же является моей приоритетной целью.",
+          "DMsg.Num":  "3"        
+        },
+        {
+          "Type":  "TDialogMsg",
+          "Name":  "",
+          "Pos.x":  320,
+          "Pos.y":  250,
+          "Parent":  -1,
+          "#":  21,
+          "Msg":  "Пока я нахожусь в этой системе, она не будет потеряна. Впрочем, силы пиратов не просто опасаются, а панически боятся встречи со мной. Дальше планов массированной атаки на меня их размышления о захвате системы не заходят.",
+          "DMsg.Num":  "4"        
+        },
+        {
+          "Type":  "TDialogMsg",
+          "Name":  "",
+          "Pos.x":  320,
+          "Pos.y":  290,
+          "Parent":  -1,
+          "#":  23,
+          "Msg":  "Такой вопрос рассматривается учёными Коалиции. На данный момент использование тяжёлой промышленности как минимум нескольких планет расценивается как малоэффективное.",
+          "DMsg.Num":  "5"        
+        },
+        {
+          "Type":  "TDialogMsg",
+          "Name":  "",
+          "Pos.x":  420,
+          "Pos.y":  210,
+          "Parent":  -1,
+          "#":  28,
+          "Msg":  "Защита не отменяет цели уничтожения. Однако союзники способствуют достижению этой цели.",
+          "DMsg.Num":  "6"        
+        }      
+      ],
+      "Dialogs":      
+      [
+        {
+          "Type":  "TDialog",
+          "Name":  "BlazerFlying",
+          "Pos.x":  220,
+          "Pos.y":  120,
+          "Parent":  -1,
+          "#":  11        
+        }      
+      ],
+      "Groups":      
+      [
+        {
+          "Type":  "TGroup",
+          "Name":  "GroupNew",
+          "Pos.x":  -100,
+          "Pos.y":  0,
+          "Parent":  -1,
+          "#":  4,
+          "Owner":  62,
+          "Group.Type":  126,
+          "CntShipMin":  1,
+          "CntShipMax":  1,
+          "SpeedMin":  100,
+          "SpeedMax":  10000,
+          "Weapon":  0,
+          "CargoHook":  0,
+          "EmptySpace":  0,
+          "AddPlayer":  true,
+          "StatusTraderMin":  0,
+          "StatusTraderMax":  100,
+          "StatusWarriorMin":  0,
+          "StatusWarriorMax":  100,
+          "StatusPirateMin":  0,
+          "StatusPirateMax":  100,
+          "DistSearch":  10000,
+          "Dialog":  -1,
+          "StrengthMin":  "0",
+          "StrengthMax":  "0",
+          "Ruins":  ""        
+        }      
+      ],
+      "Operations":      
+      [
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  60,
+          "Pos.y":  -30,
+          "Parent":  -1,
+          "#":  30,
+          "Total.Lines":  46,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "int i, v, w, j;",
+              "dword cur_star, twd1, ruins, planet, star;",
+              "//Переменные для запуска барахлища",
+              "//Переменные для барахлища",
+              "TerronToStar();",
+              "MS_Terron_ToStar=1;",
+              "//Тута повышение ГТУ",
+              "for(v = 0; v < GalaxyStars(); v = v + 1) {",
+              "    star = GalaxyStar(v);",
+              "    for(w = 0; w < StarPlanets(star); w = w + 1) {",
+              "        planet = StarPlanets(star, w);",
+              "        if(PlanetOwner(planet) == None) continue;",
+              "        UpTech(planet);",
+              "    }",
+              "    if(StarOwner(star)) {",
+              "        if(StarRuins(star)) {",
+              "            for(w = StarRuins(star) - 1; w >= 0; w = w - 1) {",
+              "                ruins = StarRuins(star, w);",
+              "                if(ShipTypeN(ruins) == t_CB) int dab;",
+              "                else ClearShop(ruins);",
+              "            }",
+              "        }",
+              "        for(w = 0; w < StarPlanets(star); w = w + 1) {",
+              "            planet = StarPlanets(star, w);",
+              "            if(PlanetOwner(planet) == None) continue;",
+              "            UpTech(planet);",
+              "            ClearShop(planet);",
+              "            BuyWarrior(planet);",
+              "        }",
+              "    }",
+              "    else {",
+              "        for(w = 0; w < StarPlanets(star); w = w + 1) {",
+              "            planet = StarPlanets(star, w);",
+              "            if(PlanetOwner(planet) == None) continue;",
+              "            UpTech(planet);",
+              "            ClearShop(planet);",
+              "        }",
+              "    }",
+              "}",
+              "function UpTech (dword planet) {",
+              "    for(int v = 0; v < 20; v = v + 1) PlanetInventionLevel(planet, v, 4);",
+              "    PlanetCurInventionPoints(planet, PlanetCurInvention(planet), 75);",
+              "}",
+              "function ClearShop (dword object) {",
+              "    for(int v = ShopItems(object) - 1; v >= 0; v = v - 1) FreeItem(GetItemFromShop(object, v));",
+              "}"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  100,
+          "Pos.y":  -30,
+          "Parent":  -1,
+          "#":  32,
+          "Total.Lines":  1,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "EtherDelete('TerronWin');"          
+          ]        
+        }      
+      ],
+      "Planets":      
+      [
+        {
+          "Type":  "TPlanet",
+          "Name":  "PlanetNew",
+          "Pos.x":  -100,
+          "Pos.y":  -30,
+          "Parent":  -1,
+          "#":  1,
+          "Race":  62,
+          "Owner":  62,
+          "Economy":  14,
+          "Goverment":  62,
+          "RangeMin":  0,
+          "RangeMax":  100,
+          "Dialog":  -1        
+        }      
+      ],
+      "Ships":      
+      [
+        {
+          "Type":  "TStarShip",
+          "Name":  "",
+          "Pos.x":  -100,
+          "Pos.y":  -90,
+          "Parent":  -1,
+          "#":  2,
+          "Count":  1,
+          "Owner":  62,
+          "Ship.Type":  126,
+          "Player":  true,
+          "SpeedMin":  0,
+          "SpeedMax":  10000,
+          "Weapon":  0,
+          "CargoHook":  0,
+          "EmptySpace":  0,
+          "StatusTraderMin":  0,
+          "StatusTraderMax":  100,
+          "StatusWarriorMin":  0,
+          "StatusWarriorMax":  100,
+          "StatusPirateMin":  0,
+          "StatusPirateMax":  100,
+          "StrengthMin":  "0",
+          "StrengthMax":  "0",
+          "Ruins":  ""        
+        }      
+      ],
+      "Stars":      
+      [
+        {
+          "Type":  "TStar",
+          "Name":  "StarNew",
+          "Pos.x":  -100,
+          "Pos.y":  -60,
+          "Parent":  -1,
+          "#":  0,
+          "Constellation":  0,
+          "Priority":  0,
+          "NoKling":  false,
+          "NoComeKling":  false        
+        }      
+      ],
+      "Statements":      
+      [
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  60,
+          "Pos.y":  -70,
+          "Parent":  -1,
+          "#":  29,
+          "Total.Lines":  1,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "CurTurn() == 25"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  100,
+          "Pos.y":  -70,
+          "Parent":  -1,
+          "#":  31,
+          "Total.Lines":  1,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "CurTurn() == 290"          
+          ]        
+        }      
+      ],
+      "States":      
+      [
+        {
+          "Type":  "TState",
+          "Name":  "StateNew",
+          "Pos.x":  -100,
+          "Pos.y":  30,
+          "Parent":  -1,
+          "#":  3,
+          "Move":  0,
+          "MoveObj":  -1,
+          "Attack.Count":  0,
+          "TakeItem":  -1,
+          "TakeAllItem":  false,
+          "OnTalk":  "",
+          "OnActCode":  "",
+          "EType":  1,
+          "EUnique":  "",
+          "EMsg":  ""        
+        }      
+      ],
+      "Variables":      
+      [
+        {
+          "Type":  "TVar",
+          "Name":  "TryAgain",
+          "Pos.x":  230,
+          "Pos.y":  -50,
+          "Parent":  -1,
+          "#":  5,
+          "Var.Type":  "Int",
+          "Init":  "0",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "choosed_star",
+          "Pos.x":  230,
+          "Pos.y":  -20,
+          "Parent":  -1,
+          "#":  6,
+          "Var.Type":  "Dword",
+          "Init":  "0",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "choosed_planet",
+          "Pos.x":  380,
+          "Pos.y":  -50,
+          "Parent":  -1,
+          "#":  7,
+          "Var.Type":  "Dword",
+          "Init":  "0",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "TryAgainPlanets",
+          "Pos.x":  380,
+          "Pos.y":  -20,
+          "Parent":  -1,
+          "#":  8,
+          "Var.Type":  "Int",
+          "Init":  "0",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "PlanetForLandingID",
+          "Pos.x":  230,
+          "Pos.y":  10,
+          "Parent":  -1,
+          "#":  9,
+          "Var.Type":  "Int",
+          "Init":  "0",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "cur_planet",
+          "Pos.x":  230,
+          "Pos.y":  40,
+          "Parent":  -1,
+          "#":  10,
+          "Var.Type":  "Int",
+          "Init":  "0",
+          "Global":  false        
+        }      
+      ]    
+    }  
+  ],
+  "Visual.Links":  
+  [
+    {
+      "Type":  "TGraphLink",
+      "Begin":  2,
+      "End":  0,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  1,
+      "End":  0,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  4,
+      "End":  1,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  4,
+      "End":  3,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  11,
+      "End":  12,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  12,
+      "End":  13,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  12,
+      "End":  14,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  12,
+      "End":  15,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  13,
+      "End":  16,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  16,
+      "End":  17,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  17,
+      "End":  18,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  12,
+      "End":  19,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  14,
+      "End":  20,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  15,
+      "End":  21,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  12,
+      "End":  22,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  22,
+      "End":  23,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  18,
+      "End":  13,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  18,
+      "End":  14,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  18,
+      "End":  15,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  18,
+      "End":  22,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  18,
+      "End":  19,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  21,
+      "End":  24,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  24,
+      "End":  18,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  23,
+      "End":  25,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  25,
+      "End":  18,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  20,
+      "End":  26,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  26,
+      "End":  28,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  28,
+      "End":  27,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  27,
+      "End":  18,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  29,
+      "End":  30,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  31,
+      "End":  32,
+      "Nom":  0,
+      "Arrow":  true    
+    }  
+  ],
+  "Rect.Text":  
+  [
+    {
+      "Type":  "TGraphRectText",
+      "Rect.Left":  197,
+      "Rect.Top":  -146,
+      "Rect.Right":  540,
+      "Rect.Bottom":  75,
+      "FStyle":  1,
+      "FColor":  5980183,
+      "BStyle":  0,
+      "BColor":  14466083,
+      "BSize":  1,
+      "BCoef":  "0.300000011920929",
+      "AlignX":  0,
+      "AlignY":  0,
+      "AlignRect":  false,
+      "Text":  "",
+      "Color":  16777215,
+      "Font":  "Arial",
+      "FontSize":  10,
+      "fsBold":  false,
+      "fsItalic":  false,
+      "fsUnderline":  false    
+    },
+    {
+      "Type":  "TGraphRectText",
+      "Rect.Left":  242,
+      "Rect.Top":  -123,
+      "Rect.Right":  497,
+      "Rect.Bottom":  -85,
+      "FStyle":  0,
+      "FColor":  10710818,
+      "BStyle":  0,
+      "BColor":  14474460,
+      "BSize":  1,
+      "BCoef":  "0.300000011920929",
+      "AlignX":  0,
+      "AlignY":  0,
+      "AlignRect":  false,
+      "Text":  "Переменные для боссов",
+      "Color":  16777215,
+      "Font":  "Arial",
+      "FontSize":  10,
+      "fsBold":  false,
+      "fsItalic":  false,
+      "fsUnderline":  false    
+    },
+    {
+      "Type":  "TGraphRectText",
+      "Rect.Left":  175,
+      "Rect.Top":  85,
+      "Rect.Right":  564,
+      "Rect.Bottom":  438,
+      "FStyle":  1,
+      "FColor":  10710818,
+      "BStyle":  0,
+      "BColor":  14474460,
+      "BSize":  1,
+      "BCoef":  "0.300000011920929",
+      "AlignX":  0,
+      "AlignY":  0,
+      "AlignRect":  false,
+      "Text":  "",
+      "Color":  16777215,
+      "Font":  "Arial",
+      "FontSize":  10,
+      "fsBold":  false,
+      "fsItalic":  false,
+      "fsUnderline":  false    
+    },
+    {
+      "Type":  "TGraphRectText",
+      "Rect.Left":  188,
+      "Rect.Top":  353,
+      "Rect.Right":  554,
+      "Rect.Bottom":  431,
+      "FStyle":  0,
+      "FColor":  10710818,
+      "BStyle":  0,
+      "BColor":  14474460,
+      "BSize":  1,
+      "BCoef":  "0.300000011920929",
+      "AlignX":  0,
+      "AlignY":  0,
+      "AlignRect":  false,
+      "Text":  "Увы, бесполезный диалог с Блазером.\r\nРаньше он не хотел садиться\r\nНа планету.",
+      "Color":  16777215,
+      "Font":  "Arial",
+      "FontSize":  10,
+      "fsBold":  false,
+      "fsItalic":  false,
+      "fsUnderline":  false    
+    }  
+  ],
+  "BlockPar.EC.Total.Strings":  16,
+  "BlockPar.EC":  
+  [
+    {
+      "#":  "0",
+      "String":  "Объект 351#2373.75<br>Проводится инициализация...<br>Запрос баз Коалиции...<br>Объект инициализирован<br>------------------------------------<br>------------------------------------<br>Рейнджер <Player>, назовите причину подключения к системам межзвёздного уровня"    
+    },
+    {
+      "#":  "1",
+      "String":  "Твой запрос получила обновлённая логическая система доминаторского босса Блазера. Коалиционные учёные улучшили мои вычислительные мощности, дабы я лучше защищал эту систему."    
+    },
+    {
+      "#":  "10",
+      "String":  "Ясно..."    
+    },
+    {
+      "#":  "11",
+      "String":  "Пока..."    
+    },
+    {
+      "#":  "12",
+      "String":  "А ты не можешь восстановить производство своих модулей, чтобы мы быстрее победили пиратов?"    
+    },
+    {
+      "#":  "13",
+      "String":  "Ясно, спасибо"    
+    },
+    {
+      "#":  "14",
+      "String":  "А как же ты тогда защищаешь систему Коалиции?"    
+    },
+    {
+      "#":  "15",
+      "String":  "Интересная мысль..."    
+    },
+    {
+      "#":  "2",
+      "String":  "Объект 351#2373.75 инициализирован.<br><br>Рейнджер <Player>, у вас есть ещё какие-то вопросы?"    
+    },
+    {
+      "#":  "3",
+      "String":  "Уничтожение всего всё так же является моей приоритетной целью."    
+    },
+    {
+      "#":  "4",
+      "String":  "Пока я нахожусь в этой системе, она не будет потеряна. Впрочем, силы пиратов не просто опасаются, а панически боятся встречи со мной. Дальше планов массированной атаки на меня их размышления о захвате системы не заходят."    
+    },
+    {
+      "#":  "5",
+      "String":  "Такой вопрос рассматривается учёными Коалиции. На данный момент использование тяжёлой промышленности как минимум нескольких планет расценивается как малоэффективное."    
+    },
+    {
+      "#":  "6",
+      "String":  "Защита не отменяет цели уничтожения. Однако союзники способствуют достижению этой цели."    
+    },
+    {
+      "#":  "7",
+      "String":  "А с кем я сейчас общаюсь?"    
+    },
+    {
+      "#":  "8",
+      "String":  "А как же твоя Великая Цель?"    
+    },
+    {
+      "#":  "9",
+      "String":  "Как ты оцениваешь защищённость этой системы?"    
+    }  
+  ]
+}

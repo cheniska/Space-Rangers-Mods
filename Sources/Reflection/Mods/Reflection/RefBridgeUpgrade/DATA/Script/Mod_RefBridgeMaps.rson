@@ -1,0 +1,902 @@
+{
+  "MainDatIn": "CFG\\Main.txt",
+  "MainDatOut": "CFG\\Main.dat",
+  "CacheDatIn": "CFG\\CacheData.txt",
+  "CacheDatOut": "CFG\\CacheData.dat",
+  "FileID":  573785173,
+  "FileVersion":  8,
+  "ViewPos.x":  -729,
+  "ViewPos.y":  -571,
+  "ScriptName":  "Mod_RefBridgeMaps",
+  "ScriptFileOut": "DATA\\Script\\Mod_RefBridgeMaps.scr",
+  "ScriptTextOut": "DATA\\Script\\Mod_RefBridgeMaps.txt",
+    "ExportLangDat": true,
+    "ExportLangTxt": true,
+    "LangDatOut": "CFG\\Rus\\Lang.dat",
+    "LangDatIn": "CFG\\Rus\\Lang.txt",
+  "Visual.Objects":  
+  [
+    {
+      "DialogAnswers":      
+      [
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "",
+          "Pos.x":  50,
+          "Pos.y":  -40,
+          "Parent":  -1,
+          "#":  10,
+          "Msg":  "Хочу приобрести карту сектора!",
+          "AMsg.Num":  "0"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "restart",
+          "Pos.x":  100,
+          "Pos.y":  -90,
+          "Parent":  -1,
+          "#":  11,
+          "Msg":  "Нет, мне тут ничего не надо",
+          "AMsg.Num":  "1"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "restart",
+          "Pos.x":  150,
+          "Pos.y":  -40,
+          "Parent":  -1,
+          "#":  12,
+          "Msg":  "Нет, ну эти карты...",
+          "AMsg.Num":  "2"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "",
+          "Pos.x":  200,
+          "Pos.y":  10,
+          "Parent":  -1,
+          "#":  15,
+          "Msg":  "Да, пересылайте!",
+          "AMsg.Num":  "3"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "restart",
+          "Pos.x":  250,
+          "Pos.y":  -90,
+          "Parent":  -1,
+          "#":  18,
+          "Msg":  "Нет, больше мне тут ничего не надо",
+          "AMsg.Num":  "4"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "",
+          "Pos.x":  100,
+          "Pos.y":  -40,
+          "Parent":  -1,
+          "#":  19,
+          "Msg":  "Пожалуй, я ещё осмотрюсь",
+          "AMsg.Num":  "5"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "",
+          "Pos.x":  100,
+          "Pos.y":  -140,
+          "Parent":  -1,
+          "#":  20,
+          "Msg":  "Информация о Комиссии",
+          "AMsg.Num":  "6"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "",
+          "Pos.x":  200,
+          "Pos.y":  -90,
+          "Parent":  -1,
+          "#":  21,
+          "Msg":  "Вернуться на главную",
+          "AMsg.Num":  "7"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "",
+          "Pos.x":  10,
+          "Pos.y":  -40,
+          "Parent":  -1,
+          "#":  39,
+          "Msg":  "Вернуться на главную",
+          "AMsg.Num":  "8"        
+        }      
+      ],
+      "DialogMessages":      
+      [
+        {
+          "Type":  "TDialogMsg",
+          "Name":  "",
+          "Pos.x":  50,
+          "Pos.y":  -90,
+          "Parent":  -1,
+          "#":  9,
+          "Msg":  "<temp_str> <clr>Посередине появился значок в виде Млечного пути с пергаментом и циркулем поверх. Он так же плавно исчез, показав сайт КК ВСК - Картографической Комиссии Вооружённых сил Коалиции.<clrEnd>",
+          "DMsg.Num":  "0"        
+        },
+        {
+          "Type":  "TDialogMsg",
+          "Name":  "",
+          "Pos.x":  150,
+          "Pos.y":  10,
+          "Parent":  -1,
+          "#":  14,
+          "Msg":  "Карта сектора <strSector> обойдётся вам в <money> cr.. Будете брать?",
+          "DMsg.Num":  "1"        
+        },
+        {
+          "Type":  "TDialogMsg",
+          "Name":  "",
+          "Pos.x":  250,
+          "Pos.y":  -40,
+          "Parent":  -1,
+          "#":  17,
+          "Msg":  "Благодарим за использование услуг КК ВСК!\r\nЖелаете чего-то ещё? Все наши услуги представлены на главной странице!",
+          "DMsg.Num":  "2"        
+        },
+        {
+          "Type":  "TDialogMsg",
+          "Name":  "",
+          "Pos.x":  150,
+          "Pos.y":  -140,
+          "Parent":  -1,
+          "#":  22,
+          "Msg":  "Картографическая Комиссия - вынужденная мера КВСМК. В условиях обрушения фронтов дело дошло до смешного - на каких-то уровнях были потеряны базы данных систем, входящих в Коалицию. Для того, чтобы облегчить поиски карт звёздных систем, была создана данная комиссия. Она собрала всю доступную информацию и обобщила её в специальные пакеты.\r\nХотя КВСМК хотело немедленно предоставить информацию рейнджерскому корпусу, Галактический Совет напомнил командованию о затратах. Ввиду этого на покупку карт в этой базе данных установлен повышенный тариф.",
+          "DMsg.Num":  "3"        
+        },
+        {
+          "Type":  "TDialogMsg",
+          "Name":  "",
+          "Pos.x":  10,
+          "Pos.y":  10,
+          "Parent":  -1,
+          "#":  38,
+          "Msg":  "У вас уже есть карта этого сектора!",
+          "DMsg.Num":  "4"        
+        },
+        {
+          "Type":  "TDialogMsg",
+          "Name":  "",
+          "Pos.x":  -30,
+          "Pos.y":  60,
+          "Parent":  -1,
+          "#":  40,
+          "Msg":  "Вы увидели плавную анимацию исчезнования списка секторов, проиллюстрированного их положением на карте и условным отображением звёзд.",
+          "DMsg.Num":  "5"        
+        }      
+      ],
+      "Dialogs":      
+      [
+        {
+          "Type":  "TDialog",
+          "Name":  "Dialog_Maps",
+          "Pos.x":  50,
+          "Pos.y":  -190,
+          "Parent":  -1,
+          "#":  8        
+        }      
+      ],
+      "Groups":      
+      [
+        {
+          "Type":  "TGroup",
+          "Name":  "GroupNew",
+          "Pos.x":  -140,
+          "Pos.y":  0,
+          "Parent":  -1,
+          "#":  4,
+          "Owner":  62,
+          "Group.Type":  126,
+          "CntShipMin":  1,
+          "CntShipMax":  1,
+          "SpeedMin":  100,
+          "SpeedMax":  10000,
+          "Weapon":  0,
+          "CargoHook":  0,
+          "EmptySpace":  0,
+          "AddPlayer":  true,
+          "StatusTraderMin":  0,
+          "StatusTraderMax":  100,
+          "StatusWarriorMin":  0,
+          "StatusWarriorMax":  100,
+          "StatusPirateMin":  0,
+          "StatusPirateMax":  100,
+          "DistSearch":  10000,
+          "Dialog":  -1,
+          "StrengthMin":  "0",
+          "StrengthMax":  "0",
+          "Ruins":  ""        
+        }      
+      ],
+      "Operations":      
+      [
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  -140,
+          "Pos.y":  -130,
+          "Parent":  -1,
+          "#":  5,
+          "Code.Type":  "Global",
+          "Code":          
+          [
+              "if(!GCntRun(GScriptName)) GRun();"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  -100,
+          "Pos.y":  -90,
+          "Parent":  -1,
+          "#":  6,
+          "Code.Type":  "DialogBegin",
+          "Code":          
+          [
+              "AddDialogInject('', \"Пёстрые страницы Гайднета манили вас разными интересностями, но вы сосредоточили внимание на следующих:\", 'BlockThisAnswer', 1, 1);",
+              "AddDialogBlock('BlockThisAnswer',2);",
+              "AddDialogBlock(CT('FormRuins.Bridge.BridgeExit'),2);",
+              "AddDialogInject('Dialog_Maps', '', \"Картографическая комиссия КВСМК\", 1);"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  50,
+          "Pos.y":  10,
+          "Parent":  -1,
+          "#":  13,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "NoFlagy = 0;",
+              "tempik = ListBox(\"Выберите систему из списка\",NamesArray);",
+              "if(tempik == -1) NoFlagy = 2;",
+              "else if(tempik == 0 || tempik > GalaxySectors()) NoFlagy = 2; //[0] - пустой служебный пункт, последний - «Вернуться» (было tempik == 20)",
+              "else {",
+              "    tempik = tempik - 1;",
+              "    if(SectorVisible(GalaxySectors(tempik))) NoFlagy = 1;",
+              "    else if(!SectorVisible(GalaxySectors(tempik))) {",
+              "        strSector = NamesArray[tempik+1];",
+              "        if(ShipMoney(Player()) > 5000000) ein = ShipMoney(Player()) / 50000;",
+              "        if(ShipMoney(Player()) < 5000000) ein = ShipMoney(Player()) / 30000;",
+              "        if(ShipMoney(Player()) < 1000000) ein = ShipMoney(Player()) / 15000;",
+              "        if(ShipMoney(Player()) < 300000) ein = ShipMoney(Player()) / 7500;",
+              "        if(ShipMoney(Player()) < 100000) ein = ShipMoney(Player()) / 5000;",
+              "        zwei = GalaxyTechLevel() * GalaxyDiffLevels(5) / 50;",
+              "        money = 30 * ein * zwei * Rnd(80,120) / 100 + 5000;",
+              "        if(ConNear(StarToCon(ShipStar(Player())),GalaxySectors(tempik))) int dab;",
+              "        else money = money * 2;",
+              "        if(ShipMoney(Player()) < money) AddDialogBlock(\"Да, пересылайте!\",1);",
+              "        else AddDialogBlock(\"Да, пересылайте!\",0);",
+              "    }",
+              "}",
+              "//SFT(NoFlagy);",
+              "StartFlag = 1;"
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  250,
+          "Pos.y":  10,
+          "Parent":  -1,
+          "#":  16,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "ShipMoney(Player(),ShipMoney(Player()) - money);",
+              "SectorVisible(GalaxySectors(tempik),1);",
+              "Sound('Sound.Sell');",
+              "StartFlag = 1;"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  50,
+          "Pos.y":  -140,
+          "Parent":  -1,
+          "#":  31,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "if(StartFlag == 1) temp_str = \"Вы вновь зашли на сайт Картографической Комиссии. Снова вас встретила приятная анимация перехода к чёрно-звёздному фону, и вы подумали, что не зря они ставят такие цены на звёздные карты - хотя бы смогли нанять хороших программистов и художников.\";",
+              "else temp_str = \"Этот сайт отличался от других. Несмотря на, походу, уходящие далеко в века рассказы о том, какие анахронизмы, ляпы, глюки и баги встречаются на сайтах государственных учреждений, этот сайт встретил приятной анимацией постепенного перехода к чёрно-звёздному фону.\";"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  -60,
+          "Pos.y":  -90,
+          "Parent":  -1,
+          "#":  41,
+          "Code.Type":  "Init",
+          "Code":          
+          [
+              "int i;",
+              "sectorsArr = newarray(1);",
+              "for(i = 0; i < GalaxySectors(); i = i + 1) { //было 19 жёстко",
+              "    ArrayAdd(sectorsArr,GalaxySectors(i));",
+              "}",
+              "NamesArray = newarray(1);",
+              "for(i = 0; i < GalaxySectors(); i = i + 1) { //было 19 жёстко",
+              "    ArrayAdd(NamesArray,Name(GalaxySectors(i)));",
+              "}",
+              "ArrayAdd(NamesArray,\"Вернуться к выбору\",'Eexit');"
+          ]        
+        }      
+      ],
+      "Planets":      
+      [
+        {
+          "Type":  "TPlanet",
+          "Name":  "PlanetNew",
+          "Pos.x":  -140,
+          "Pos.y":  -30,
+          "Parent":  -1,
+          "#":  1,
+          "Race":  62,
+          "Owner":  62,
+          "Economy":  14,
+          "Goverment":  62,
+          "RangeMin":  0,
+          "RangeMax":  100,
+          "Dialog":  -1        
+        }      
+      ],
+      "Ships":      
+      [
+        {
+          "Type":  "TStarShip",
+          "Name":  "",
+          "Pos.x":  -140,
+          "Pos.y":  -90,
+          "Parent":  -1,
+          "#":  2,
+          "Count":  1,
+          "Owner":  62,
+          "Ship.Type":  126,
+          "Player":  true,
+          "SpeedMin":  0,
+          "SpeedMax":  10000,
+          "Weapon":  0,
+          "CargoHook":  0,
+          "EmptySpace":  0,
+          "StatusTraderMin":  0,
+          "StatusTraderMax":  100,
+          "StatusWarriorMin":  0,
+          "StatusWarriorMax":  100,
+          "StatusPirateMin":  0,
+          "StatusPirateMax":  100,
+          "StrengthMin":  "0",
+          "StrengthMax":  "0",
+          "Ruins":  ""        
+        }      
+      ],
+      "Stars":      
+      [
+        {
+          "Type":  "TStar",
+          "Name":  "StarNew",
+          "Pos.x":  -140,
+          "Pos.y":  -60,
+          "Parent":  -1,
+          "#":  0,
+          "Constellation":  0,
+          "Priority":  0,
+          "NoKling":  false,
+          "NoComeKling":  false        
+        }      
+      ],
+      "Statements":      
+      [
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  -100,
+          "Pos.y":  -130,
+          "Parent":  -1,
+          "#":  7,
+          "Code.Type":  "DialogBegin",
+          "Code":          
+          [
+              "PlayerBridge() == 11"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  100,
+          "Pos.y":  10,
+          "Parent":  -1,
+          "#":  35,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "NoFlagy == 0"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  50,
+          "Pos.y":  110,
+          "Parent":  -1,
+          "#":  36,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "NoFlagy == 1"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  100,
+          "Pos.y":  60,
+          "Parent":  -1,
+          "#":  37,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "NoFlagy == 2"          
+          ]        
+        }      
+      ],
+      "States":      
+      [
+        {
+          "Type":  "TState",
+          "Name":  "StateNew",
+          "Pos.x":  -140,
+          "Pos.y":  30,
+          "Parent":  -1,
+          "#":  3,
+          "Move":  0,
+          "MoveObj":  -1,
+          "Attack.Count":  0,
+          "TakeItem":  -1,
+          "TakeAllItem":  false,
+          "OnTalk":  "",
+          "OnActCode":  "",
+          "EType":  1,
+          "EUnique":  "",
+          "EMsg":  ""        
+        }      
+      ],
+      "Variables":      
+      [
+        {
+          "Type":  "TVar",
+          "Name":  "strSector",
+          "Pos.x":  170,
+          "Pos.y":  180,
+          "Parent":  -1,
+          "#":  23,
+          "Var.Type":  "Str",
+          "Init":  "",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "money",
+          "Pos.x":  170,
+          "Pos.y":  210,
+          "Parent":  -1,
+          "#":  24,
+          "Var.Type":  "Int",
+          "Init":  "",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "sectorsArr",
+          "Pos.x":  280,
+          "Pos.y":  180,
+          "Parent":  -1,
+          "#":  25,
+          "Var.Type":  "Unknown",
+          "Init":  "1",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "NamesArray",
+          "Pos.x":  300,
+          "Pos.y":  210,
+          "Parent":  -1,
+          "#":  26,
+          "Var.Type":  "Unknown",
+          "Init":  "",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "tempik",
+          "Pos.x":  170,
+          "Pos.y":  90,
+          "Parent":  -1,
+          "#":  27,
+          "Var.Type":  "Int",
+          "Init":  "",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "ein",
+          "Pos.x":  170,
+          "Pos.y":  120,
+          "Parent":  -1,
+          "#":  28,
+          "Var.Type":  "Int",
+          "Init":  "",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "zwei",
+          "Pos.x":  230,
+          "Pos.y":  120,
+          "Parent":  -1,
+          "#":  29,
+          "Var.Type":  "Int",
+          "Init":  "",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "drei",
+          "Pos.x":  170,
+          "Pos.y":  150,
+          "Parent":  -1,
+          "#":  30,
+          "Var.Type":  "Int",
+          "Init":  "",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "StartFlag",
+          "Pos.x":  270,
+          "Pos.y":  90,
+          "Parent":  -1,
+          "#":  32,
+          "Var.Type":  "Int",
+          "Init":  "0",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "temp_str",
+          "Pos.x":  260,
+          "Pos.y":  150,
+          "Parent":  -1,
+          "#":  33,
+          "Var.Type":  "Str",
+          "Init":  "",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "NoFlagy",
+          "Pos.x":  290,
+          "Pos.y":  60,
+          "Parent":  -1,
+          "#":  34,
+          "Var.Type":  "Int",
+          "Init":  "0",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "deleteArray",
+          "Pos.x":  170,
+          "Pos.y":  60,
+          "Parent":  -1,
+          "#":  42,
+          "Var.Type":  "Unknown",
+          "Init":  "",
+          "Global":  false        
+        }      
+      ]    
+    }  
+  ],
+  "Visual.Links":  
+  [
+    {
+      "Type":  "TGraphLink",
+      "Begin":  2,
+      "End":  0,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  1,
+      "End":  0,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  4,
+      "End":  1,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  4,
+      "End":  3,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  7,
+      "End":  6,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  9,
+      "End":  11,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  9,
+      "End":  10,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  10,
+      "End":  13,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  14,
+      "End":  12,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  14,
+      "End":  15,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  15,
+      "End":  16,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  16,
+      "End":  17,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  17,
+      "End":  18,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  14,
+      "End":  19,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  19,
+      "End":  9,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  9,
+      "End":  20,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  22,
+      "End":  21,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  21,
+      "End":  9,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  17,
+      "End":  21,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  8,
+      "End":  31,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  31,
+      "End":  9,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  13,
+      "End":  35,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  35,
+      "End":  14,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  13,
+      "End":  36,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  13,
+      "End":  37,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  36,
+      "End":  38,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  38,
+      "End":  39,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  39,
+      "End":  9,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  37,
+      "End":  40,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  40,
+      "End":  39,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  20,
+      "End":  22,
+      "Nom":  0,
+      "Arrow":  true    
+    }  
+  ],
+  "BlockPar.EC.Total.Strings":  16,
+  "BlockPar.EC":  
+  [
+    {
+      "#":  "10",
+      "String":  "Нет, ну эти карты..."    
+    },
+    {
+      "#":  "11",
+      "String":  "Да, пересылайте!"    
+    },
+    {
+      "#":  "12",
+      "String":  "Нет, больше мне тут ничего не надо"    
+    },
+    {
+      "#":  "13",
+      "String":  "Пожалуй, я ещё осмотрюсь"    
+    },
+    {
+      "#":  "14",
+      "String":  "Информация о Комиссии"    
+    },
+    {
+      "#":  "16",
+      "String":  "Пёстрые страницы Гайднета манили вас разными интересностями, но вы сосредоточили внимание на следующих:"    
+    },
+    {
+      "#":  "17",
+      "String":  "У вас уже есть карта этого сектора!"    
+    },
+    {
+      "#":  "18",
+      "String":  "Вы увидели плавную анимацию исчезнования списка секторов, проиллюстрированного их положением на карте и условным отображением звёзд."    
+    },
+    {
+      "#":  "2",
+      "String":  "Картографическая комиссия КВСМК"    
+    },
+    {
+      "#":  "3",
+      "String":  "<0> <clr>Посередине появился значок в виде Млечного пути с пергаментом и циркулем поверх. Он так же плавно исчез, показав сайт КК ВСК - Картографической Комиссии Вооружённых сил Коалиции.<clrEnd>"    
+    },
+    {
+      "#":  "4",
+      "String":  "Карта сектора <0> обойдётся вам в <1> cr.. Будете брать?"    
+    },
+    {
+      "#":  "5",
+      "String":  "Благодарим за использование услуг КК ВСК!<br>Желаете чего-то ещё? Все наши услуги представлены на главной странице!"    
+    },
+    {
+      "#":  "6",
+      "String":  "Картографическая Комиссия - вынужденная мера КВСМК. В условиях обрушения фронтов дело дошло до смешного - на каких-то уровнях были потеряны базы данных систем, входящих в Коалицию. Для того, чтобы облегчить поиски карт звёздных систем, была создана данная комиссия. Она собрала всю доступную информацию и обобщила её в специальные пакеты.<br>Хотя КВСМК хотело немедленно предоставить информацию рейнджерскому корпусу, Галактический Совет напомнил командованию о затратах. Ввиду этого на покупку карт в этой базе данных установлен повышенный тариф."    
+    },
+    {
+      "#":  "7",
+      "String":  "Хочу приобрести карту сектора!"    
+    },
+    {
+      "#":  "8",
+      "String":  "Вернуться на главную"    
+    },
+    {
+      "#":  "9",
+      "String":  "Нет, мне тут ничего не надо"    
+    }  
+  ]
+}

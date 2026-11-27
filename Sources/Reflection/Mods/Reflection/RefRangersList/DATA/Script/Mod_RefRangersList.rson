@@ -1,0 +1,2087 @@
+{
+    "FileID": 573785173,
+    "FileVersion": 8,
+    "ViewPos.x": -521,
+    "ViewPos.y": -508,
+    "ScriptName": "Mod_RefRangersList",
+    "ScriptFileOut": "DATA\\Script\\Mod_RefRangersList.scr",
+    "ScriptTextOut": "DATA\\Script\\Mod_RefRangersList.txt",
+    "LangDatIn": "CFG\\Rus\\Lang.txt",
+    "LangDatOut": "CFG\\Rus\\Lang.dat",
+    "MainDatIn": "CFG\\Main.txt",
+    "MainDatOut": "CFG\\Main.dat",
+    "CacheDatIn": "CFG\\CacheData.txt",
+    "CacheDatOut": "CFG\\CacheData.dat",
+    "ExportLangTxt": true,
+    "ExportLangDat": true,
+    "Visual.Objects": 
+    [
+        {
+            "DialogAnswers": 
+            [
+                {
+                    "Type": "TDialogAnswer",
+                    "Name": "",
+                    "Pos.x": 60,
+                    "Pos.y": -40,
+                    "Parent": -1,
+                    "#": 10,
+                    "Msg": "Произвести выборку",
+                    "AMsg.Num": "0"
+                },
+                {
+                    "Type": "TDialogAnswer",
+                    "Name": "restart",
+                    "Pos.x": 110,
+                    "Pos.y": -90,
+                    "Parent": -1,
+                    "#": 11,
+                    "Msg": "Назад",
+                    "AMsg.Num": "1"
+                },
+                {
+                    "Type": "TDialogAnswer",
+                    "Name": "restart",
+                    "Pos.x": 60,
+                    "Pos.y": 110,
+                    "Parent": -1,
+                    "#": 13,
+                    "Msg": "На главную",
+                    "AMsg.Num": "2"
+                },
+                {
+                    "Type": "TDialogAnswer",
+                    "Name": "restart",
+                    "Pos.x": 1070,
+                    "Pos.y": -190,
+                    "Parent": -1,
+                    "#": 26,
+                    "Msg": "Ну, ладно...",
+                    "AMsg.Num": "3"
+                },
+                {
+                    "Type": "TDialogAnswer",
+                    "Name": "restart",
+                    "Pos.x": 1070,
+                    "Pos.y": -120,
+                    "Parent": -1,
+                    "#": 28,
+                    "Msg": "Ладно",
+                    "AMsg.Num": "4"
+                },
+                {
+                    "Type": "TDialogAnswer",
+                    "Name": "restart",
+                    "Pos.x": 1070,
+                    "Pos.y": -60,
+                    "Parent": -1,
+                    "#": 30,
+                    "Msg": "Однако...",
+                    "AMsg.Num": "5"
+                },
+                {
+                    "Type": "TDialogAnswer",
+                    "Name": "restart",
+                    "Pos.x": 1070,
+                    "Pos.y": 0,
+                    "Parent": -1,
+                    "#": 32,
+                    "Msg": "Жаль...",
+                    "AMsg.Num": "6"
+                },
+                {
+                    "Type": "TDialogAnswer",
+                    "Name": "restart",
+                    "Pos.x": 1070,
+                    "Pos.y": 60,
+                    "Parent": -1,
+                    "#": 49,
+                    "Msg": "Вот как...",
+                    "AMsg.Num": "7"
+                },
+                {
+                    "Type": "TDialogAnswer",
+                    "Name": "restart",
+                    "Pos.x": 1070,
+                    "Pos.y": 130,
+                    "Parent": -1,
+                    "#": 51,
+                    "Msg": "Ладно...",
+                    "AMsg.Num": "8"
+                },
+                {
+                    "Type": "TDialogAnswer",
+                    "Name": "restart",
+                    "Pos.x": 1070,
+                    "Pos.y": 190,
+                    "Parent": -1,
+                    "#": 56,
+                    "Msg": "Ну и шут с тобой!",
+                    "AMsg.Num": "9"
+                },
+                {
+                    "Type": "TDialogAnswer",
+                    "Name": "restart",
+                    "Pos.x": 700,
+                    "Pos.y": 0,
+                    "Parent": -1,
+                    "#": 59,
+                    "Msg": "Отлично",
+                    "AMsg.Num": "10"
+                },
+                {
+                    "Type": "TDialogAnswer",
+                    "Name": "",
+                    "Pos.x": 700,
+                    "Pos.y": -130,
+                    "Parent": -1,
+                    "#": 64,
+                    "Msg": "Подходящие условия. Я согласен на заключение договора!",
+                    "AMsg.Num": "11"
+                },
+                {
+                    "Type": "TDialogAnswer",
+                    "Name": "block",
+                    "Pos.x": 750,
+                    "Pos.y": -130,
+                    "Parent": -1,
+                    "#": 71,
+                    "Msg": "Подходящие условия. Я согласен на заключение договора!",
+                    "AMsg.Num": "12"
+                },
+                {
+                    "Type": "TDialogAnswer",
+                    "Name": "fastexit",
+                    "Pos.x": 270,
+                    "Pos.y": 280,
+                    "Parent": -1,
+                    "#": 81,
+                    "Msg": "",
+                    "AMsg.Num": "13"
+                },
+                {
+                    "Type": "TDialogAnswer",
+                    "Name": "restart",
+                    "Pos.x": 1070,
+                    "Pos.y": 250,
+                    "Parent": -1,
+                    "#": 86,
+                    "Msg": "Жаль...",
+                    "AMsg.Num": "14"
+                },
+                {
+                    "Type": "TDialogAnswer",
+                    "Name": "",
+                    "Pos.x": 1070,
+                    "Pos.y": 290,
+                    "Parent": -1,
+                    "#": 88,
+                    "Msg": "Знаешь, конечно, контракт есть контракт, но если я оплачу неустойку?",
+                    "AMsg.Num": "15"
+                },
+                {
+                    "Type": "TDialogAnswer",
+                    "Name": "restart",
+                    "Pos.x": 1190,
+                    "Pos.y": 290,
+                    "Parent": -1,
+                    "#": 91,
+                    "Msg": "Нет, пожалуй, не сейчас",
+                    "AMsg.Num": "16"
+                }
+            ],
+            "DialogMessages": 
+            [
+                {
+                    "Type": "TDialogMsg",
+                    "Name": "",
+                    "Pos.x": 60,
+                    "Pos.y": -90,
+                    "Parent": -1,
+                    "#": 9,
+                    "Msg": "Здесь вы можете поискать среди рейнджеров тех, кто, возможно, станет за деньги работать на вас.",
+                    "DMsg.Num": "0"
+                },
+                {
+                    "Type": "TDialogMsg",
+                    "Name": "",
+                    "Pos.x": 60,
+                    "Pos.y": 60,
+                    "Parent": -1,
+                    "#": 12,
+                    "Msg": "Немного подождав, вы увидели созданный программой список доступных для найма рейнджеров:\r\n<RangersList>",
+                    "DMsg.Num": "1"
+                },
+                {
+                    "Type": "TDialogMsg",
+                    "Name": "",
+                    "Pos.x": 1030,
+                    "Pos.y": -190,
+                    "Parent": -1,
+                    "#": 25,
+                    "Msg": "Прости, <Player>, но, что-то мне подсказывает, что ты будешь сковывать мои движения и мешать мне познавать Галактику. Поэтому я вынужден отказаться от твоего контракта",
+                    "DMsg.Num": "2"
+                },
+                {
+                    "Type": "TDialogMsg",
+                    "Name": "",
+                    "Pos.x": 1030,
+                    "Pos.y": -120,
+                    "Parent": -1,
+                    "#": 27,
+                    "Msg": "Многоуважаемый коллега!\r\nВыходная мощность вашего наступательного снаряжения сильно уступает таковой характеристике моего. Ввиду этого сообщаю - поднабери-ка силёнок, а потом уже приходи ко мне и предлагай контракт.",
+                    "DMsg.Num": "3"
+                },
+                {
+                    "Type": "TDialogMsg",
+                    "Name": "",
+                    "Pos.x": 1030,
+                    "Pos.y": -60,
+                    "Parent": -1,
+                    "#": 29,
+                    "Msg": "Что? Контракт?\r\nДа я тебя в рейтинге рейнджеров даже найти не могу! О каком контракте может идти речь?!",
+                    "DMsg.Num": "4"
+                },
+                {
+                    "Type": "TDialogMsg",
+                    "Name": "",
+                    "Pos.x": 1030,
+                    "Pos.y": 0,
+                    "Parent": -1,
+                    "#": 31,
+                    "Msg": "Увы, <Player>, наши взгляды на мир слишком сильно разнятся. Я не могу принять этот контракт.",
+                    "DMsg.Num": "5"
+                },
+                {
+                    "Type": "TDialogMsg",
+                    "Name": "",
+                    "Pos.x": 1030,
+                    "Pos.y": 60,
+                    "Parent": -1,
+                    "#": 48,
+                    "Msg": "Извини, <Ranger>, но мое звание повыше твоего будет. Поэтому я не стану служить под твоим началом. Ты давно получал новые лычки на военной базе?",
+                    "DMsg.Num": "6"
+                },
+                {
+                    "Type": "TDialogMsg",
+                    "Name": "",
+                    "Pos.x": 1030,
+                    "Pos.y": 130,
+                    "Parent": -1,
+                    "#": 50,
+                    "Msg": "Советую развить в себе навык лидерства, а то пока тебе просто бессмысленно заниматься поиском партнеров.",
+                    "DMsg.Num": "7"
+                },
+                {
+                    "Type": "TDialogMsg",
+                    "Name": "",
+                    "Pos.x": 1030,
+                    "Pos.y": 190,
+                    "Parent": -1,
+                    "#": 55,
+                    "Msg": "И ты, грязная, нахальная пиратская морда, ещё смеешь обращаться ко мне с подобными предложениями? А ну-ка прочь! Вольный рейнджер никогда не запятнает себя подобным договором!",
+                    "DMsg.Num": "8"
+                },
+                {
+                    "Type": "TDialogMsg",
+                    "Name": "",
+                    "Pos.x": 810,
+                    "Pos.y": -190,
+                    "Parent": -1,
+                    "#": 57,
+                    "Msg": "Ну, если так хочешь, можем попробовать с тобой договориться.\r\n\r\nНачальная ставка - <money> cr.\r\nДополнительные выплаты - <extramoney> cr.\r\nВремя найма - <Month> мес.\r\n\r\nЧто думаешь?",
+                    "DMsg.Num": "9"
+                },
+                {
+                    "Type": "TDialogMsg",
+                    "Name": "",
+                    "Pos.x": 700,
+                    "Pos.y": -40,
+                    "Parent": -1,
+                    "#": 58,
+                    "Msg": "О'кей, я буду служить тебе <Month> мес. Обязуюсь всегда быть рядом и приходить на помощь в минуты опасности.",
+                    "DMsg.Num": "10"
+                },
+                {
+                    "Type": "TDialogMsg",
+                    "Name": "",
+                    "Pos.x": 270,
+                    "Pos.y": 200,
+                    "Parent": -1,
+                    "#": 79,
+                    "Msg": "Ты оказался недостаточно активным для моей жизни исследователя космических просторов. Прощай.",
+                    "DMsg.Num": "11"
+                },
+                {
+                    "Type": "TDialogMsg",
+                    "Name": "",
+                    "Pos.x": 1030,
+                    "Pos.y": 250,
+                    "Parent": -1,
+                    "#": 85,
+                    "Msg": "Увы, я уже нанят рейнджером <Name(ShipIsPartner(tship))>",
+                    "DMsg.Num": "12"
+                },
+                {
+                    "Type": "TDialogMsg",
+                    "Name": "",
+                    "Pos.x": 1150,
+                    "Pos.y": 290,
+                    "Parent": -1,
+                    "#": 90,
+                    "Msg": "Ну... Если ты готов уплатить <extramoney> cr., то мы можем обсудить наш контракт.",
+                    "DMsg.Num": "13"
+                }
+            ],
+            "Dialogs": 
+            [
+                {
+                    "Type": "TDialog",
+                    "Name": "RefRangers",
+                    "Pos.x": 60,
+                    "Pos.y": -140,
+                    "Parent": -1,
+                    "#": 8
+                },
+                {
+                    "Type": "TDialog",
+                    "Name": "StatusNo",
+                    "Pos.x": 1000,
+                    "Pos.y": -30,
+                    "Parent": -1,
+                    "#": 21
+                },
+                {
+                    "Type": "TDialog",
+                    "Name": "RatingNo",
+                    "Pos.x": 1000,
+                    "Pos.y": -90,
+                    "Parent": -1,
+                    "#": 22
+                },
+                {
+                    "Type": "TDialog",
+                    "Name": "WeaponNo",
+                    "Pos.x": 1000,
+                    "Pos.y": -150,
+                    "Parent": -1,
+                    "#": 23
+                },
+                {
+                    "Type": "TDialog",
+                    "Name": "SpeedNo",
+                    "Pos.x": 1000,
+                    "Pos.y": -220,
+                    "Parent": -1,
+                    "#": 24
+                },
+                {
+                    "Type": "TDialog",
+                    "Name": "DialNaim",
+                    "Pos.x": 950,
+                    "Pos.y": 300,
+                    "Parent": -1,
+                    "#": 41
+                },
+                {
+                    "Type": "TDialog",
+                    "Name": "LidershipNo",
+                    "Pos.x": 1000,
+                    "Pos.y": 100,
+                    "Parent": -1,
+                    "#": 46
+                },
+                {
+                    "Type": "TDialog",
+                    "Name": "RankNo",
+                    "Pos.x": 1000,
+                    "Pos.y": 30,
+                    "Parent": -1,
+                    "#": 47
+                },
+                {
+                    "Type": "TDialog",
+                    "Name": "InClan",
+                    "Pos.x": 1000,
+                    "Pos.y": 160,
+                    "Parent": -1,
+                    "#": 54
+                },
+                {
+                    "Type": "TDialog",
+                    "Name": "SRC",
+                    "Pos.x": 810,
+                    "Pos.y": -60,
+                    "Parent": -1,
+                    "#": 66
+                },
+                {
+                    "Type": "TDialog",
+                    "Name": "BrokeSpeed",
+                    "Pos.x": 270,
+                    "Pos.y": 160,
+                    "Parent": -1,
+                    "#": 78
+                },
+                {
+                    "Type": "TDialog",
+                    "Name": "AlreadyMarried",
+                    "Pos.x": 1010,
+                    "Pos.y": 220,
+                    "Parent": -1,
+                    "#": 87
+                },
+                {
+                    "Type": "TDialog",
+                    "Name": "SRC2",
+                    "Pos.x": 840,
+                    "Pos.y": 240,
+                    "Parent": -1,
+                    "#": 93
+                }
+            ],
+            "Groups": 
+            [
+                {
+                    "Type": "TGroup",
+                    "Name": "GroupNew",
+                    "Pos.x": -100,
+                    "Pos.y": 0,
+                    "Parent": -1,
+                    "#": 4,
+                    "Owner": 62,
+                    "Group.Type": 126,
+                    "CntShipMin": 1,
+                    "CntShipMax": 1,
+                    "SpeedMin": 100,
+                    "SpeedMax": 10000,
+                    "Weapon": 0,
+                    "CargoHook": 0,
+                    "EmptySpace": 0,
+                    "AddPlayer": true,
+                    "StatusTraderMin": 0,
+                    "StatusTraderMax": 100,
+                    "StatusWarriorMin": 0,
+                    "StatusWarriorMax": 100,
+                    "StatusPirateMin": 0,
+                    "StatusPirateMax": 100,
+                    "DistSearch": 10000,
+                    "Dialog": -1,
+                    "StrengthMin": "0",
+                    "StrengthMax": "0",
+                    "Ruins": ""
+                }
+            ],
+            "Operations": 
+            [
+                {
+                    "Type": "Top",
+                    "Name": "",
+                    "Pos.x": -50,
+                    "Pos.y": -90,
+                    "Parent": -1,
+                    "#": 5,
+                    "Code.Type": "Global",
+                    "Code": 
+                    [
+                        "if(!GCntRun(GScriptName)) GRun();"
+                    ]
+                },
+                {
+                    "Type": "Top",
+                    "Name": "",
+                    "Pos.x": -10,
+                    "Pos.y": -90,
+                    "Parent": -1,
+                    "#": 6,
+                    "Code.Type": "DialogBegin",
+                    "Code": 
+                    [
+                        "AddDialogInject('RefRangers','',\"Поиск рейнджеров\",30);"
+                    ]
+                },
+                {
+                    "Type": "Top",
+                    "Name": "",
+                    "Pos.x": 60,
+                    "Pos.y": 10,
+                    "Parent": -1,
+                    "#": 14,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "RangersList = \"Пилоты, которых вы можете нанять в данный момент времени:\";",
+                        "if(!GetGameOptions('FontDialog')) temp_str='--------------------------------';",
+                        "else if(GetGameOptions('FontDialog')==1) temp_str='---------------------------';",
+                        "else if(GetGameOptions('FontDialog')==2) temp_str='-----------------------------';",
+                        "else temp_str='---------------------------';",
+                        "RangersList = RangersList + CT('FormInfo.br') + temp_str + CT('FormInfo.br');",
+                        "//Ищем подходящие кандидатуры",
+                        "dword tsect = StarToCon(ShipStar(Player()));",
+                        "int cnt1=0;",
+                        "for(j=0;j<ConStars(tsect);j=j+1) {",
+                        "    for(i=0;i<StarShips(ConStar(tsect,j));i=i+1) {",
+                        "        dword cur_ship = StarShips(ConStar(tsect,j),i);",
+                        "        if(ShipType(Player()) != 'RangerPiratePlayer') {",
+                        "            if(ShipType(cur_ship) == 'Ranger' || ShipType(cur_ship) == 'FemRanger' || ShipType(cur_ship) == 'RangerExplorer' || ShipType(cur_ship) == 'Freelancer') {",
+                        "                if(ShipRank(Player()) >= ShipRank(cur_ship)) {",
+                        "                    if(cur_ship == Player()) continue;",
+                        "                    RangersList = RangersList + \"Имя пилота: \" + ShortName(cur_ship) + CT('FormInfo.br');",
+                        "                    RangersList = RangersList + \"Тип: \";",
+                        "                    if(ShipType(cur_ship) == 'Ranger') RangersList = RangersList + \"Рейнджер\" + CT('FormInfo.br');",
+                        "                    if(ShipType(cur_ship) == 'FemRanger') RangersList = RangersList + \"Спецагентка\" + CT('FormInfo.br');",
+                        "                    if(ShipType(cur_ship) == 'RangerExplorer') RangersList = RangersList + \"Рейнджер\" + CT('FormInfo.br');",
+                        "                    if(ShipType(cur_ship) == 'Freelancer') RangersList = RangersList + \"Фрилансер\" + CT('FormInfo.br');",
+                        "                    cnt1 = 1;",
+                        "                    guns = 0;",
+                        "                    for(k=1;k<=ShipSlots(cur_ship,1);k=k+1) { //оружейные слоты с 1",
+                        "                        if(ShipEqInSlot(cur_ship,t_Weapon1,k)) guns = guns + 1;",
+                        "                    }",
+                        "                    if(ShipInHyperSpace(cur_ship)) RangersList = RangersList + \"Местоположение: в гиперпространстве\" + CT('FormInfo.br');",
+                        "                    else RangersList = RangersList + \"Местоположение: \" + Name(ShipStar(cur_ship)) + CT('FormInfo.br');",
+                        "                    RangersList = RangersList + \"Количество орудий: \" + guns + CT('FormInfo.br');",
+                        "                    RangersList = RangersList + \"Средний урон корабля за ход: \" + ShipAverageDamage(cur_ship) + CT('FormInfo.br');",
+                        "                    RangersList = RangersList + \"Сила защитного поля: \" + ShipProtectability(cur_ship) + CT('FormInfo.br');",
+                        "                    RangersList = RangersList + \"Восстановление дроидом: \" + ShipDroidRepair(cur_ship) + CT('FormInfo.br');",
+                        "                    RangersList = RangersList + temp_str + CT('FormInfo.br');",
+                        "                    CostIncrease = 1;",
+                        "                    AddDialogInject('DialNaim','',\"Связаться с \"+Name(cur_ship),30,0,cur_ship); //GAnswerData - 6-й аргумент (было: i как приоритет, корабль не передавался)",
+                        "                }",
+                        "            }",
+                        "        }",
+                        "        else {",
+                        "            if(ShipType(cur_ship) == 'Pirate' || ShipType(cur_ship) == 'RangerPirate' || ShipType(cur_ship) == 'RangerPirateExplorer' || ShipType(cur_ship) == 'Freelancer') {",
+                        "                RangersList = RangersList + \"Имя пилота: \" + ShortName(cur_ship) + CT('FormInfo.br');",
+                        "                RangersList = RangersList + \"Тип: \";",
+                        "                if(ShipType(cur_ship) == 'Pirate') RangersList = RangersList + \"Пират\" + CT('FormInfo.br');",
+                        "                if(ShipType(cur_ship) == 'RangerPirate') RangersList = RangersList + \"Рейнджер-изменник\" + CT('FormInfo.br');",
+                        "                if(ShipType(cur_ship) == 'RangerPirateExplorer') RangersList = RangersList + \"Рейнджер-изменник\" + CT('FormInfo.br');",
+                        "                if(ShipType(cur_ship) == 'Freelancer') RangersList = RangersList + \"Фрилансер\" + CT('FormInfo.br');",
+                        "                cnt1 = 1;",
+                        "                guns = 0;",
+                        "                for(k=1;k<=ShipSlots(cur_ship,1);k=k+1) { //оружейные слоты с 1",
+                        "                    if(ShipEqInSlot(cur_ship,t_Weapon1,k)) guns = guns + 1;",
+                        "                }",
+                        "                if(ShipInHyperSpace(cur_ship)) RangersList = RangersList + \"Местоположение: в гиперпространстве\" + CT('FormInfo.br');",
+                        "                else RangersList = RangersList + \"Местоположение: \" + Name(ShipStar(cur_ship)) + CT('FormInfo.br');",
+                        "                RangersList = RangersList + \"Количество орудий: \" + guns + CT('FormInfo.br');",
+                        "                RangersList = RangersList + \"Средний урон корабля за ход: \" + ShipAverageDamage(cur_ship) + CT('FormInfo.br');",
+                        "                RangersList = RangersList + \"Сила защитного поля: \" + ShipProtectability(cur_ship) + CT('FormInfo.br');",
+                        "                RangersList = RangersList + \"Восстановление дроидом: \" + ShipDroidRepair(cur_ship) + CT('FormInfo.br');",
+                        "                RangersList = RangersList + temp_str + CT('FormInfo.br');",
+                        "            }",
+                        "        }",
+                        "    }",
+                        "}",
+                        "//Если никого не нашли :(",
+                        "if(cnt1 != 1) RangersList = RangersList + \"Подходящих кандидатур в текущем секторе не обнаружено\";"
+                    ]
+                },
+                {
+                    "Type": "Top",
+                    "Name": "",
+                    "Pos.x": -50,
+                    "Pos.y": -130,
+                    "Parent": -1,
+                    "#": 20,
+                    "Code.Type": "DialogBegin",
+                    "Code": 
+                    [
+                        "if(ShipInNormalSpace(Player())) {",
+                        "    if(GetTalkShip()) {",
+                        "        if(!TalkByAI()) {",
+                        "            if(!ShipInScript(GetTalkShip())) { //без скобок под условием было только присваивание, остальное шло с прошлым tship",
+                        "                tship = GetTalkShip();",
+                        "                if(ShipType(tship) == 'Ranger' || ShipType(tship) == 'FemRanger' || ShipType(tship) == 'RangerExplorer') {",
+                        "                    //Ванильные реплики найма содержат <Ranger>, а движок подставляет имя ДО сверки с блоком (поиск подстроки),",
+                        "                    //поэтому блокируем готовый показанный текст: CT с подстановкой имени (последний аргумент '' = без цветовых тегов).",
+                        "                    //Пустую строку в блок не передаём: подстрока '' совпала бы с любой репликой.",
+                        "                    temp_str = Format(CT('Talk.Partner.PlayerSend'),'<Ranger'+'>',ShortName(tship),'');",
+                        "                    if(temp_str != '') AddDialogBlock(temp_str,2);",
+                        "                    temp_str = Format(CT('Talk.Female.Partner.PlayerSend'),'<Ranger'+'>',ShortName(tship),'');",
+                        "                    if(temp_str != '') AddDialogBlock(temp_str,2);",
+                        "                    temp_str = Format(CT('Talk.Female.Partner.PlayerSend1'),'<Ranger'+'>',ShortName(tship),'');",
+                        "                    if(temp_str != '') AddDialogBlock(temp_str,2);",
+                        "                    temp_str = Format(CT('Talk.Female.Partner.PlayerSend2'),'<Ranger'+'>',ShortName(tship),'');",
+                        "                    if(temp_str != '') AddDialogBlock(temp_str,2);",
+                        "                    temp_str = Format(CT('Talk.PirateClan.Partner.PlayerSend'),'<Ranger'+'>',ShortName(tship),'');",
+                        "                    if(temp_str != '') AddDialogBlock(temp_str,2);",
+                        "                    //Своего же партнёра повторно не нанимаем (раньше предлагало, а потом отвечало \"я уже нанят\" его же именем)",
+                        "                    if(ShipIsPartner(tship) != Player()) {",
+                        "                        //Один бросок (раньше три разных Rnd: примерно в трети случаев ответа не было, а ванильные ответы найма уже заблокированы)",
+                        "                        //Тексты НЕ должны содержать ванильных реплик найма дословно (иначе блок выше заглушит и их): отсюда \"моё\" и \"величайшего\"",
+                        "                        k = Rnd(1,3);",
+                        "                        if(k == 1) AddDialogInject('DialNaim','',Format(\"Иди под моё командование, ranger\",'ranger',ShortName(tship)),0);",
+                        "                        else if(ShipType(tship) == 'FemRanger') AddDialogInject('DialNaim','',Format(\"Выходи за меня... ой, в смысле, иди под моё командование, ranger!\",'ranger',ShortName(tship)),0);",
+                        "                        else if(k == 2) AddDialogInject('DialNaim','',Format(\"ranger, не желаешь поработать под началом величайшего рейнджера, меня?\",'ranger',ShortName(tship)),0);",
+                        "                        else AddDialogInject('DialNaim','',Format(\"ranger, сколько можно в одиночку скитаться по космическим просторам? Давай будем летать вместе!\",'ranger',ShortName(tship)),0);",
+                        "                    }",
+                        "                }",
+                        "            }",
+                        "            }",
+                        "        }",
+                        "    }",
+                        "}"
+                    ]
+                },
+                {
+                    "Type": "Top",
+                    "Name": "",
+                    "Pos.x": 880,
+                    "Pos.y": -190,
+                    "Parent": -1,
+                    "#": 61,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "Month = 16;",
+                        "money = GalaxyMoney(4,4) + (CostIncrease * GalaxyMoney(3,4));"
+                    ]
+                },
+                {
+                    "Type": "Top",
+                    "Name": "",
+                    "Pos.x": 700,
+                    "Pos.y": -190,
+                    "Parent": -1,
+                    "#": 65,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "//GAnswerData - 6-й аргумент AddDialogInject (было 5-м = \"заменить реплику\": срок не менялся)",
+                        "if(Month > 1) AddDialogInject('SRC','',\"Уменьшить срок вдвое\",2,0,10);",
+                        "else AddDialogBlock(\"Уменьшить срок вдвое\",1);",
+                        "if(Month < 108) AddDialogInject('SRC','',\"Увеличить срок вдвое\",2,0,100);",
+                        "else AddDialogBlock(\"Увеличить срок вдвое\",1);"
+                    ]
+                },
+                {
+                    "Type": "Top",
+                    "Name": "",
+                    "Pos.x": 810,
+                    "Pos.y": -130,
+                    "Parent": -1,
+                    "#": 67,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "if(GAnswerData == 10) {",
+                        "    Month = Month / 2;",
+                        "    money = money / 2;",
+                        "}",
+                        "if(GAnswerData == 100) {",
+                        "    Month = Month * 2;",
+                        "    money = money * 2;",
+                        "    if(Month > 60) money = money + money * 0.25;",
+                        "}"
+                    ]
+                },
+                {
+                    "Type": "Top",
+                    "Name": "",
+                    "Pos.x": 700,
+                    "Pos.y": -80,
+                    "Parent": -1,
+                    "#": 70,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "//прежний наниматель (если выкупаем): ему уходит неустойка; читать до ShipSetPartner, потом связь будет уже нашей",
+                        "dword oldboss = ShipIsPartner(tship);",
+                        "ShipSetPartner(tship,Player(),Month*30); //срок в днях, а Month - месяцы (как у ванили: 30 * месяцы)",
+                        "ShipMoney(Player(),ShipMoney(Player()) - money - extramoney);",
+                        "//как у ванили (TRanger.AcceptPartnershipOffer): плата за контракт зачисляется нанятому рейнджеру, неустойка - прежнему нанимателю",
+                        "ShipMoney(tship,ShipMoney(tship) + money);",
+                        "if(extramoney > 0 && oldboss != 0 && oldboss != Player()) ShipMoney(oldboss,ShipMoney(oldboss) + extramoney);",
+                        "Sound('Sound.Buy');"
+                    ]
+                },
+                {
+                    "Type": "Top",
+                    "Name": "",
+                    "Pos.x": 60,
+                    "Pos.y": 150,
+                    "Parent": -1,
+                    "#": 77,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "CostIncrease = 0;"
+                    ]
+                },
+                {
+                    "Type": "Top",
+                    "Name": "",
+                    "Pos.x": 950,
+                    "Pos.y": 360,
+                    "Parent": -1,
+                    "#": 95,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "//Вход в переговоры: из списка на мостике GAnswerData = корабль (надбавка за поиск), из разговора в космосе - 0 (tship уже задан)",
+                        "CostIncrease = 0;",
+                        "extramoney = 0;",
+                        "if(GAnswerData > 10000) {",
+                        "    tship = GAnswerData;",
+                        "    CostIncrease = 1;",
+                        "}"
+                    ]
+                },
+                {
+                    "Type": "Top",
+                    "Name": "",
+                    "Pos.x": 270,
+                    "Pos.y": 240,
+                    "Parent": -1,
+                    "#": 80,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "ShipSetPartner(GAnswerData,0,0);"
+                    ]
+                },
+                {
+                    "Type": "Top",
+                    "Name": "",
+                    "Pos.x": -50,
+                    "Pos.y": -170,
+                    "Parent": -1,
+                    "#": 82,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "if(ShipPartners(Player()) > 0) {",
+                        "    for(i=0;i<ShipPartners(Player());i=i+1) {",
+                        "        if(ShipType(ShipPartners(Player(),i)) == 'RangerExplorer') {",
+                        "            if(ShipSpeed(Player()) + 275 < ShipSpeed(ShipPartners(Player(),i))) {",
+                        "                if(ShipInStar(ShipPartners(Player(),i),ShipStar(Player()))) {",
+                        "                    if(ShipInNormalSpace(Player()) && ShipInNormalSpace(ShipPartners(Player(),i))) {",
+                        "                        if(Dist(Player(),ShipPartners(Player(),i)) <= GetEquipmentStats(ShipEqInSlot(ShipPartners(Player(),i),t_Radar),0)) {",
+                        "                            Dialog(ShipPartners(Player(),i));",
+                        "                            AddDialogOverride('BrokeSpeed',10,ShipPartners(Player(),i));",
+                        "                        }",
+                        "                    }",
+                        "                }",
+                        "            }",
+                        "        }",
+                        "    }",
+                        "}"
+                    ]
+                },
+                {
+                    "Type": "Top",
+                    "Name": "",
+                    "Pos.x": 1150,
+                    "Pos.y": 330,
+                    "Parent": -1,
+                    "#": 92,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "if(ShipMoney(Player()) >= extramoney) AddDialogInject('SRC2','',\"Согласен. Начнём заключать контракт\",2,0,100);",
+                        "else AddDialogBlock(\"Согласен. Начнём заключать контракт\",1);"
+                    ]
+                },
+                {
+                    "Type": "Top",
+                    "Name": "",
+                    "Pos.x": 1110,
+                    "Pos.y": 290,
+                    "Parent": -1,
+                    "#": 94,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "extramoney = GalaxyMoney(4,4) * 2;"
+                    ]
+                },
+                {
+                    "Type": "Top",
+                    "Name": "",
+                    "Pos.x": 1030,
+                    "Pos.y": 100,
+                    "Parent": -1,
+                    "#": 97,
+                    "Code.Type": "Turn",
+                    "Code":
+                    [
+                        "Ranger = Name(Player());"
+                    ]
+                }
+            ],
+            "Planets": 
+            [
+                {
+                    "Type": "TPlanet",
+                    "Name": "PlanetNew",
+                    "Pos.x": -100,
+                    "Pos.y": -30,
+                    "Parent": -1,
+                    "#": 1,
+                    "Race": 62,
+                    "Owner": 62,
+                    "Economy": 14,
+                    "Goverment": 62,
+                    "RangeMin": 0,
+                    "RangeMax": 100,
+                    "Dialog": -1
+                }
+            ],
+            "Ships": 
+            [
+                {
+                    "Type": "TStarShip",
+                    "Name": "",
+                    "Pos.x": -100,
+                    "Pos.y": -90,
+                    "Parent": -1,
+                    "#": 2,
+                    "Count": 1,
+                    "Owner": 62,
+                    "Ship.Type": 126,
+                    "Player": true,
+                    "SpeedMin": 0,
+                    "SpeedMax": 10000,
+                    "Weapon": 0,
+                    "CargoHook": 0,
+                    "EmptySpace": 0,
+                    "StatusTraderMin": 0,
+                    "StatusTraderMax": 100,
+                    "StatusWarriorMin": 0,
+                    "StatusWarriorMax": 100,
+                    "StatusPirateMin": 0,
+                    "StatusPirateMax": 100,
+                    "StrengthMin": "0",
+                    "StrengthMax": "0",
+                    "Ruins": ""
+                }
+            ],
+            "Stars": 
+            [
+                {
+                    "Type": "TStar",
+                    "Name": "StarNew",
+                    "Pos.x": -100,
+                    "Pos.y": -60,
+                    "Parent": -1,
+                    "#": 0,
+                    "Constellation": 0,
+                    "Priority": 0,
+                    "NoKling": false,
+                    "NoComeKling": false
+                }
+            ],
+            "Statements": 
+            [
+                {
+                    "Type": "Tif",
+                    "Name": "",
+                    "Pos.x": -10,
+                    "Pos.y": -130,
+                    "Parent": -1,
+                    "#": 7,
+                    "Code.Type": "DialogBegin",
+                    "Code": 
+                    [
+                        "PlayerBridge()==11"
+                    ]
+                },
+                {
+                    "Type": "Tif",
+                    "Name": "",
+                    "Pos.x": 950,
+                    "Pos.y": 0,
+                    "Parent": -1,
+                    "#": 33,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "1"
+                    ]
+                },
+                {
+                    "Type": "Tif",
+                    "Name": "",
+                    "Pos.x": 990,
+                    "Pos.y": 0,
+                    "Parent": -1,
+                    "#": 34,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "ShipStatus(Player(),1) && ShipStatus(tship,2)"
+                    ]
+                },
+                {
+                    "Type": "Tif",
+                    "Name": "",
+                    "Pos.x": 990,
+                    "Pos.y": -60,
+                    "Parent": -1,
+                    "#": 35,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "RangerPlaceInRating(Player()) > RangerPlaceInRating(tship) + 10"
+                    ]
+                },
+                {
+                    "Type": "Tif",
+                    "Name": "",
+                    "Pos.x": 950,
+                    "Pos.y": -60,
+                    "Parent": -1,
+                    "#": 36,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "RangerPlaceInRating(Player()) <= RangerPlaceInRating(tship) + 10"
+                    ]
+                },
+                {
+                    "Type": "Tif",
+                    "Name": "",
+                    "Pos.x": 990,
+                    "Pos.y": -120,
+                    "Parent": -1,
+                    "#": 37,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "ShipStrengthInAverageRanger(Player()) < ShipStrengthInAverageRanger(tship)"
+                    ]
+                },
+                {
+                    "Type": "Tif",
+                    "Name": "",
+                    "Pos.x": 950,
+                    "Pos.y": -120,
+                    "Parent": -1,
+                    "#": 38,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "ShipStrengthInAverageRanger(Player()) >= ShipStrengthInAverageRanger(tship)"
+                    ]
+                },
+                {
+                    "Type": "Tif",
+                    "Name": "",
+                    "Pos.x": 990,
+                    "Pos.y": -190,
+                    "Parent": -1,
+                    "#": 39,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "ShipSpeed(Player()) + 150 < ShipSpeed(tship) && ShipType(tship) == 'RangerExplorer'"
+                    ]
+                },
+                {
+                    "Type": "Tif",
+                    "Name": "",
+                    "Pos.x": 950,
+                    "Pos.y": -190,
+                    "Parent": -1,
+                    "#": 40,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "ShipSpeed(Player()) + 150 >= ShipSpeed(tship) && ShipType(tship) == 'RangerExplorer'"
+                    ]
+                },
+                {
+                    "Type": "Tif",
+                    "Name": "",
+                    "Pos.x": 950,
+                    "Pos.y": 60,
+                    "Parent": -1,
+                    "#": 42,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "ShipRank(Player()) >= ShipRank(tship)"
+                    ]
+                },
+                {
+                    "Type": "Tif",
+                    "Name": "",
+                    "Pos.x": 990,
+                    "Pos.y": 60,
+                    "Parent": -1,
+                    "#": 43,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "ShipRank(Player()) < ShipRank(tship)"
+                    ]
+                },
+                {
+                    "Type": "Tif",
+                    "Name": "",
+                    "Pos.x": 950,
+                    "Pos.y": 130,
+                    "Parent": -1,
+                    "#": 44,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "ShipSkill(Player(),'LeadershipCur') > ShipPartners(Player())"
+                    ]
+                },
+                {
+                    "Type": "Tif",
+                    "Name": "",
+                    "Pos.x": 990,
+                    "Pos.y": 130,
+                    "Parent": -1,
+                    "#": 45,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "ShipSkill(Player(),'LeadershipCur') <= ShipPartners(Player())"
+                    ]
+                },
+                {
+                    "Type": "Tif",
+                    "Name": "",
+                    "Pos.x": 950,
+                    "Pos.y": 190,
+                    "Parent": -1,
+                    "#": 52,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "!ShipOnSidePirateClan(Player())"
+                    ]
+                },
+                {
+                    "Type": "Tif",
+                    "Name": "",
+                    "Pos.x": 990,
+                    "Pos.y": 190,
+                    "Parent": -1,
+                    "#": 53,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "ShipOnSidePirateClan(Player())"
+                    ]
+                },
+                {
+                    "Type": "Tif",
+                    "Name": "",
+                    "Pos.x": 970,
+                    "Pos.y": 0,
+                    "Parent": -1,
+                    "#": 68,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "ShipStatus(Player(),2) && ShipStatus(tship,1)"
+                    ]
+                },
+                {
+                    "Type": "Tif",
+                    "Name": "",
+                    "Pos.x": 880,
+                    "Pos.y": -120,
+                    "Parent": -1,
+                    "#": 69,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "ShipType(tship) != 'RangerExplorer'"
+                    ]
+                },
+                {
+                    "Type": "Tif",
+                    "Name": "",
+                    "Pos.x": 730,
+                    "Pos.y": -160,
+                    "Parent": -1,
+                    "#": 72,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "(money+extramoney) <= ShipMoney(Player())"
+                    ]
+                },
+                {
+                    "Type": "Tif",
+                    "Name": "",
+                    "Pos.x": 770,
+                    "Pos.y": -160,
+                    "Parent": -1,
+                    "#": 73,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "(money+extramoney) > ShipMoney(Player())"
+                    ]
+                },
+                {
+                    "Type": "Tif",
+                    "Name": "",
+                    "Pos.x": 950,
+                    "Pos.y": 250,
+                    "Parent": -1,
+                    "#": 83,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "!ShipIsPartner(tship)"
+                    ]
+                },
+                {
+                    "Type": "Tif",
+                    "Name": "",
+                    "Pos.x": 990,
+                    "Pos.y": 250,
+                    "Parent": -1,
+                    "#": 84,
+                    "Code.Type": "Turn",
+                    "Code": 
+                    [
+                        "ShipIsPartner(tship)"
+                    ]
+                }
+            ],
+            "States": 
+            [
+                {
+                    "Type": "TState",
+                    "Name": "StateNew",
+                    "Pos.x": -100,
+                    "Pos.y": 30,
+                    "Parent": -1,
+                    "#": 3,
+                    "Move": 0,
+                    "MoveObj": -1,
+                    "Attack.Count": 0,
+                    "TakeItem": -1,
+                    "TakeAllItem": false,
+                    "OnTalk": "",
+                    "OnActCode": "",
+                    "EType": 1,
+                    "EUnique": "",
+                    "EMsg": ""
+                }
+            ],
+            "Variables": 
+            [
+                {
+                    "Type": "TVar",
+                    "Name": "RangersList",
+                    "Pos.x": 150,
+                    "Pos.y": -10,
+                    "Parent": -1,
+                    "#": 15,
+                    "Var.Type": "Str",
+                    "Init": "0",
+                    "Global": false
+                },
+                {
+                    "Type": "TVar",
+                    "Name": "i",
+                    "Pos.x": 200,
+                    "Pos.y": 80,
+                    "Parent": -1,
+                    "#": 16,
+                    "Var.Type": "Dword",
+                    "Init": "",
+                    "Global": false
+                },
+                {
+                    "Type": "TVar",
+                    "Name": "j",
+                    "Pos.x": 150,
+                    "Pos.y": 80,
+                    "Parent": -1,
+                    "#": 17,
+                    "Var.Type": "Dword",
+                    "Init": "",
+                    "Global": false
+                },
+                {
+                    "Type": "TVar",
+                    "Name": "temp_str",
+                    "Pos.x": 290,
+                    "Pos.y": 20,
+                    "Parent": -1,
+                    "#": 18,
+                    "Var.Type": "Str",
+                    "Init": "",
+                    "Global": false
+                },
+                {
+                    "Type": "TVar",
+                    "Name": "Splt",
+                    "Pos.x": 150,
+                    "Pos.y": 20,
+                    "Parent": -1,
+                    "#": 19,
+                    "Var.Type": "Str",
+                    "Init": "",
+                    "Global": false
+                },
+                {
+                    "Type": "TVar",
+                    "Name": "Month",
+                    "Pos.x": 430,
+                    "Pos.y": 30,
+                    "Parent": -1,
+                    "#": 60,
+                    "Var.Type": "Int",
+                    "Init": "",
+                    "Global": false
+                },
+                {
+                    "Type": "TVar",
+                    "Name": "tship",
+                    "Pos.x": 290,
+                    "Pos.y": -10,
+                    "Parent": -1,
+                    "#": 62,
+                    "Var.Type": "Dword",
+                    "Init": "",
+                    "Global": false
+                },
+                {
+                    "Type": "TVar",
+                    "Name": "money",
+                    "Pos.x": 430,
+                    "Pos.y": 60,
+                    "Parent": -1,
+                    "#": 63,
+                    "Var.Type": "Dword",
+                    "Init": "",
+                    "Global": false
+                },
+                {
+                    "Type": "TVar",
+                    "Name": "k",
+                    "Pos.x": 180,
+                    "Pos.y": 60,
+                    "Parent": -1,
+                    "#": 74,
+                    "Var.Type": "Int",
+                    "Init": "",
+                    "Global": false
+                },
+                {
+                    "Type": "TVar",
+                    "Name": "guns",
+                    "Pos.x": 250,
+                    "Pos.y": 70,
+                    "Parent": -1,
+                    "#": 75,
+                    "Var.Type": "Int",
+                    "Init": "",
+                    "Global": false
+                },
+                {
+                    "Type": "TVar",
+                    "Name": "CostIncrease",
+                    "Pos.x": 150,
+                    "Pos.y": -40,
+                    "Parent": -1,
+                    "#": 76,
+                    "Var.Type": "Int",
+                    "Init": "",
+                    "Global": false
+                },
+                {
+                    "Type": "TVar",
+                    "Name": "extramoney",
+                    "Pos.x": 430,
+                    "Pos.y": 90,
+                    "Parent": -1,
+                    "#": 89,
+                    "Var.Type": "Int",
+                    "Init": "",
+                    "Global": false
+                },
+                {
+                    "Type": "TVar",
+                    "Name": "Ranger",
+                    "Pos.x": 430,
+                    "Pos.y": 130,
+                    "Parent": -1,
+                    "#": 96,
+                    "Var.Type": "Str",
+                    "Init": "",
+                    "Global": false
+                }
+            ]
+        }
+    ],
+    "Visual.Links": 
+    [
+        {
+            "Type": "TGraphLink",
+            "Begin": 2,
+            "End": 0,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 1,
+            "End": 0,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 4,
+            "End": 1,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 4,
+            "End": 3,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 7,
+            "End": 6,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 8,
+            "End": 9,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 9,
+            "End": 11,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 9,
+            "End": 10,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 12,
+            "End": 13,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 10,
+            "End": 14,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 14,
+            "End": 12,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 24,
+            "End": 25,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 25,
+            "End": 26,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 23,
+            "End": 27,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 27,
+            "End": 28,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 22,
+            "End": 29,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 29,
+            "End": 30,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 21,
+            "End": 31,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 31,
+            "End": 32,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 33,
+            "End": 36,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 33,
+            "End": 35,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 36,
+            "End": 38,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 36,
+            "End": 37,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 35,
+            "End": 29,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 34,
+            "End": 31,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 37,
+            "End": 27,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 39,
+            "End": 25,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 38,
+            "End": 40,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 38,
+            "End": 39,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 46,
+            "End": 50,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 50,
+            "End": 51,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 45,
+            "End": 50,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 43,
+            "End": 97,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 47,
+            "End": 97,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 48,
+            "End": 49,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 44,
+            "End": 42,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 44,
+            "End": 43,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 42,
+            "End": 33,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 42,
+            "End": 34,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 54,
+            "End": 55,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 55,
+            "End": 56,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 52,
+            "End": 44,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 52,
+            "End": 45,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 53,
+            "End": 55,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 58,
+            "End": 59,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 40,
+            "End": 61,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 61,
+            "End": 57,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 57,
+            "End": 65,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 66,
+            "End": 67,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 67,
+            "End": 57,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 42,
+            "End": 68,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 68,
+            "End": 31,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 38,
+            "End": 69,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 69,
+            "End": 61,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 64,
+            "End": 70,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 70,
+            "End": 58,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 57,
+            "End": 72,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 57,
+            "End": 73,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 73,
+            "End": 71,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 72,
+            "End": 64,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 13,
+            "End": 77,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 78,
+            "End": 79,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 79,
+            "End": 80,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 80,
+            "End": 81,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 95,
+            "End": 83,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 95,
+            "End": 84,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 83,
+            "End": 53,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 83,
+            "End": 52,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 84,
+            "End": 85,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 85,
+            "End": 86,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 87,
+            "End": 85,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 85,
+            "End": 88,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 90,
+            "End": 92,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 90,
+            "End": 91,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 93,
+            "End": 53,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 93,
+            "End": 52,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 88,
+            "End": 94,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 94,
+            "End": 90,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 41,
+            "End": 95,
+            "Nom": 0,
+            "Arrow": true
+        },
+        {
+            "Type": "TGraphLink",
+            "Begin": 97,
+            "End": 48,
+            "Nom": 0,
+            "Arrow": true
+        }
+    ],
+    "BlockPar.EC.Total.Strings": 50,
+    "BlockPar.EC": 
+    [
+        {
+            "#": "0",
+            "String": "Здесь вы можете поискать среди рейнджеров тех, кто, возможно, станет за деньги работать на вас."
+        },
+        {
+            "#": "1",
+            "String": "Немного подождав, вы увидели созданный программой список доступных для найма рейнджеров:<br><0>"
+        },
+        {
+            "#": "10",
+            "String": "О'кей, я буду служить тебе <0> мес. Обязуюсь всегда быть рядом и приходить на помощь в минуты опасности."
+        },
+        {
+            "#": "11",
+            "String": "Произвести выборку"
+        },
+        {
+            "#": "13",
+            "String": "Назад"
+        },
+        {
+            "#": "14",
+            "String": "На главную"
+        },
+        {
+            "#": "15",
+            "String": "Ну, ладно..."
+        },
+        {
+            "#": "16",
+            "String": "Ладно"
+        },
+        {
+            "#": "17",
+            "String": "Однако..."
+        },
+        {
+            "#": "18",
+            "String": "Жаль..."
+        },
+        {
+            "#": "19",
+            "String": "Вот как..."
+        },
+        {
+            "#": "2",
+            "String": "Прости, <Player>, но, что-то мне подсказывает, что ты будешь сковывать мои движения и мешать мне познавать Галактику. Поэтому я вынужден отказаться от твоего контракта"
+        },
+        {
+            "#": "20",
+            "String": "Ладно..."
+        },
+        {
+            "#": "21",
+            "String": "Ну и шут с тобой!"
+        },
+        {
+            "#": "22",
+            "String": "Отлично"
+        },
+        {
+            "#": "23",
+            "String": "Подходящие условия. Я согласен на заключение договора!"
+        },
+        {
+            "#": "24",
+            "String": "Ты оказался недостаточно активным для моей жизни исследователя космических просторов. Прощай."
+        },
+        {
+            "#": "25",
+            "String": "Поиск рейнджеров"
+        },
+        {
+            "#": "26",
+            "String": "ranger, сколько можно в одиночку скитаться по космическим просторам? Давай будем летать вместе!"
+        },
+        {
+            "#": "51",
+            "String": "ranger, не желаешь поработать под началом величайшего рейнджера, меня?"
+        },
+        {
+            "#": "52",
+            "String": "Выходи за меня... ой, в смысле, иди под моё командование, ranger!"
+        },
+        {
+            "#": "53",
+            "String": "Иди под моё командование, ranger"
+        },
+        {
+            "#": "3",
+            "String": "Многоуважаемый коллега!<br>Выходная мощность вашего наступательного снаряжения сильно уступает таковой характеристике моего. Ввиду этого сообщаю - поднабери-ка силёнок, а потом уже приходи ко мне и предлагай контракт."
+        },
+        {
+            "#": "30",
+            "String": "Увеличить срок вдвое"
+        },
+        {
+            "#": "31",
+            "String": "Уменьшить срок вдвое"
+        },
+        {
+            "#": "32",
+            "String": "Увы, я уже нанят рейнджером <0>"
+        },
+        {
+            "#": "33",
+            "String": "Восстановление дроидом: "
+        },
+        {
+            "#": "34",
+            "String": "Сила защитного поля: "
+        },
+        {
+            "#": "35",
+            "String": "Средний урон корабля за ход: "
+        },
+        {
+            "#": "36",
+            "String": "Количество орудий: "
+        },
+        {
+            "#": "37",
+            "String": "Местоположение: "
+        },
+        {
+            "#": "38",
+            "String": "Местоположение: в гиперпространстве"
+        },
+        {
+            "#": "39",
+            "String": "Фрилансер"
+        },
+        {
+            "#": "4",
+            "String": "Что? Контракт?<br>Да я тебя в рейтинге рейнджеров даже найти не могу! О каком контракте может идти речь?!"
+        },
+        {
+            "#": "40",
+            "String": "Рейнджер-изменник"
+        },
+        {
+            "#": "41",
+            "String": "Пират"
+        },
+        {
+            "#": "42",
+            "String": "Тип: "
+        },
+        {
+            "#": "43",
+            "String": "Имя пилота: "
+        },
+        {
+            "#": "44",
+            "String": "Рейнджер"
+        },
+        {
+            "#": "45",
+            "String": "Спецагентка"
+        },
+        {
+            "#": "46",
+            "String": "Пилоты, которых вы можете нанять в данный момент времени:"
+        },
+        {
+            "#": "47",
+            "String": "Согласен. Начнём заключать контракт"
+        },
+        {
+            "#": "48",
+            "String": "Ну... Если ты готов уплатить <0> cr., то мы можем обсудить наш контракт."
+        },
+        {
+            "#": "49",
+            "String": "Знаешь, конечно, контракт есть контракт, но если я оплачу неустойку?"
+        },
+        {
+            "#": "5",
+            "String": "Увы, <Player>, наши взгляды на мир слишком сильно разнятся. Я не могу принять этот контракт."
+        },
+        {
+            "#": "50",
+            "String": "Нет, пожалуй, не сейчас"
+        },
+        {
+            "#": "6",
+            "String": "Извини, <0>, но мое звание повыше твоего будет. Поэтому я не стану служить под твоим началом. Ты давно получал новые лычки на военной базе?"
+        },
+        {
+            "#": "7",
+            "String": "Советую развить в себе навык лидерства, а то пока тебе просто бессмысленно заниматься поиском партнеров."
+        },
+        {
+            "#": "8",
+            "String": "И ты, грязная, нахальная пиратская морда, ещё смеешь обращаться ко мне с подобными предложениями? А ну-ка прочь! Вольный рейнджер никогда не запятнает себя подобным договором!"
+        },
+        {
+            "#": "9",
+            "String": "Ну, если так хочешь, можем попробовать с тобой договориться.<br><br>Начальная ставка - <0> cr.<br>Дополнительные выплаты - <1> cr.<br>Время найма - <2> мес.<br><br>Что думаешь?"
+        }
+    ]
+}

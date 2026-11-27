@@ -5,5 +5,5 @@
 - [Community Mods](Community/) — сборник модов
 - [Исходники модов](Sources/)
 
-Файлы для установки публикуются в [GitHub Releases](../../releases).
+Файлы для установки публикуются в [GitHub Releases](https://github.com/cheniska/Space-Rangers-Mods/releases).
 

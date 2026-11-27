@@ -1,0 +1,1321 @@
+{
+  "LangDatIn": "CFG\\Rus\\Lang.txt",
+  "LangDatOut": "CFG\\Rus\\Lang.dat",
+  "MainDatIn": "CFG\\Main.txt",
+  "MainDatOut": "CFG\\Main.dat",
+  "CacheDatIn": "CFG\\CacheData.txt",
+  "CacheDatOut": "CFG\\CacheData.dat",
+  "ExportLangTxt": true,
+  "ExportLangDat": true,
+  "FileID":  573785173,
+  "FileVersion":  8,
+  "ViewPos.x":  -709,
+  "ViewPos.y":  -515,
+  "ScriptName":  "Mod_RefDroidRegimes",
+  "ScriptFileOut": "DATA\\Script\\Mod_RefDroidRegimes.scr",
+  "ScriptTextOut": "DATA\\Script\\Mod_RefDroidRegimes.txt",
+  "Visual.Objects":  
+  [
+    {
+      "DialogAnswers":      
+      [
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "",
+          "Pos.x":  70,
+          "Pos.y":  -100,
+          "Parent":  -1,
+          "#":  11,
+          "Msg":  "Стандартный",
+          "AMsg.Num":  "0"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "",
+          "Pos.x":  110,
+          "Pos.y":  -100,
+          "Parent":  -1,
+          "#":  12,
+          "Msg":  "Консервация",
+          "AMsg.Num":  "1"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "",
+          "Pos.x":  150,
+          "Pos.y":  -100,
+          "Parent":  -1,
+          "#":  13,
+          "Msg":  "Работа на износ",
+          "AMsg.Num":  "2"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "",
+          "Pos.x":  190,
+          "Pos.y":  -100,
+          "Parent":  -1,
+          "#":  17,
+          "Msg":  "Аварийное восстановление",
+          "AMsg.Num":  "3"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "",
+          "Pos.x":  230,
+          "Pos.y":  -100,
+          "Parent":  -1,
+          "#":  19,
+          "Msg":  "Самозащита",
+          "AMsg.Num":  "4"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "restart",
+          "Pos.x":  70,
+          "Pos.y":  20,
+          "Parent":  -1,
+          "#":  28,
+          "Msg":  "Вернуться к настройкам",
+          "AMsg.Num":  "5"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "restart",
+          "Pos.x":  110,
+          "Pos.y":  20,
+          "Parent":  -1,
+          "#":  30,
+          "Msg":  "Вернуться к настройкам",
+          "AMsg.Num":  "6"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "restart",
+          "Pos.x":  150,
+          "Pos.y":  20,
+          "Parent":  -1,
+          "#":  32,
+          "Msg":  "Вернуться к настройкам",
+          "AMsg.Num":  "7"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "restart",
+          "Pos.x":  190,
+          "Pos.y":  20,
+          "Parent":  -1,
+          "#":  34,
+          "Msg":  "Вернуться к настройкам",
+          "AMsg.Num":  "8"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "restart",
+          "Pos.x":  230,
+          "Pos.y":  20,
+          "Parent":  -1,
+          "#":  36,
+          "Msg":  "Вернуться к настройкам",
+          "AMsg.Num":  "9"        
+        },
+        {
+          "Type":  "TDialogAnswer",
+          "Name":  "restart",
+          "Pos.x":  180,
+          "Pos.y":  -180,
+          "Parent":  -1,
+          "#":  42,
+          "Msg":  "Вернуться к настройкам",
+          "AMsg.Num":  "10"        
+        }      
+      ],
+      "DialogMessages":      
+      [
+        {
+          "Type":  "TDialogMsg",
+          "Name":  "",
+          "Pos.x":  70,
+          "Pos.y":  -180,
+          "Parent":  -1,
+          "#":  10,
+          "Msg":  "Выберите режим работы дроида:",
+          "DMsg.Num":  "0"        
+        },
+        {
+          "Type":  "TDialogMsg",
+          "Name":  "",
+          "Pos.x":  70,
+          "Pos.y":  -20,
+          "Parent":  -1,
+          "#":  27,
+          "Msg":  "Режим работы дроида изменён на <temp_str>.",
+          "DMsg.Num":  "1"        
+        },
+        {
+          "Type":  "TDialogMsg",
+          "Name":  "",
+          "Pos.x":  110,
+          "Pos.y":  -20,
+          "Parent":  -1,
+          "#":  29,
+          "Msg":  "Режим работы дроида изменён на <temp_str>.",
+          "DMsg.Num":  "2"        
+        },
+        {
+          "Type":  "TDialogMsg",
+          "Name":  "",
+          "Pos.x":  150,
+          "Pos.y":  -20,
+          "Parent":  -1,
+          "#":  31,
+          "Msg":  "Режим работы дроида изменён на <temp_str>.",
+          "DMsg.Num":  "3"        
+        },
+        {
+          "Type":  "TDialogMsg",
+          "Name":  "",
+          "Pos.x":  190,
+          "Pos.y":  -20,
+          "Parent":  -1,
+          "#":  33,
+          "Msg":  "Режим работы дроида изменён на <temp_str>.",
+          "DMsg.Num":  "4"        
+        },
+        {
+          "Type":  "TDialogMsg",
+          "Name":  "",
+          "Pos.x":  230,
+          "Pos.y":  -20,
+          "Parent":  -1,
+          "#":  35,
+          "Msg":  "Режим работы дроида изменён на <temp_str>.",
+          "DMsg.Num":  "5"        
+        }      
+      ],
+      "Dialogs":      
+      [
+        {
+          "Type":  "TDialog",
+          "Name":  "RefDroidd",
+          "Pos.x":  70,
+          "Pos.y":  -220,
+          "Parent":  -1,
+          "#":  9        
+        }      
+      ],
+      "Groups":      
+      [
+        {
+          "Type":  "TGroup",
+          "Name":  "GroupNew",
+          "Pos.x":  -100,
+          "Pos.y":  0,
+          "Parent":  -1,
+          "#":  4,
+          "Owner":  62,
+          "Group.Type":  126,
+          "CntShipMin":  1,
+          "CntShipMax":  1,
+          "SpeedMin":  100,
+          "SpeedMax":  10000,
+          "Weapon":  0,
+          "CargoHook":  0,
+          "EmptySpace":  0,
+          "AddPlayer":  true,
+          "StatusTraderMin":  0,
+          "StatusTraderMax":  100,
+          "StatusWarriorMin":  0,
+          "StatusWarriorMax":  100,
+          "StatusPirateMin":  0,
+          "StatusPirateMax":  100,
+          "DistSearch":  10000,
+          "Dialog":  -1,
+          "StrengthMin":  "0",
+          "StrengthMax":  "0",
+          "Ruins":  ""        
+        }      
+      ],
+      "Operations":      
+      [
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  -40,
+          "Pos.y":  -90,
+          "Parent":  -1,
+          "#":  5,
+          "Code.Type":  "Global",
+          "Code":          
+          [
+              "if(!GCntRun(GScriptName)) GRun();"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  10,
+          "Pos.y":  -90,
+          "Parent":  -1,
+          "#":  7,
+          "Code.Type":  "DialogBegin",
+          "Code":          
+          [
+              "if(ShipEqInSlot(Player(),t_RepairRobot) != 0) {",
+              "    if(DRFlag == 0)",
+              "    {",
+              "        temp_str=\"Стандартный\";",
+              "    }",
+              "    else if(DRFlag == 1)",
+              "    {",
+              "        temp_str=\"Законсервирован\";",
+              "    }",
+              "    else if(DRFlag == 2)",
+              "    {",
+              "        temp_str=\"Работа на износ\";",
+              "    }",
+              "    else if(DRFlag == 3)",
+              "    {",
+              "        temp_str=\"Аварийное восстановление\";",
+              "    }",
+              "    else if(DRFlag == 4)",
+              "    {",
+              "        temp_str=\"Самозащита\";",
+              "    }",
+              "    AddDialogInject('RefDroidd',\"Режим дроида: <temp_str>\",\"Переключить режим работы дроида\",14);",
+              "}"          
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  70,
+          "Pos.y":  -60,
+          "Parent":  -1,
+          "#":  14,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "if(ShipEqInSlot(Player(),t_RepairRobot) != 0) {",
+              "    tdroid=ShipEqInSlot(Player(),t_RepairRobot);",
+              "    if(DRFlag != 0) {",
+              "        if(ItemDurability(tdroid) > 0) {",
+              "            if(DRFlag == 1) {",
+              "                if(ItemDurability(tdroid) == 0) Ether(2,'',\"Благодаря работе режима консервации ремонтный дроид пережил критические повреждения\");",
+              "                ItemDurability(tdroid,SavedDur);",
+              "                ShipSpecialBonuses(Player(),bonDroid,ShipSpecialBonuses(Player(),bonDroid) + SavedDebuff);",
+              "                DRFlag = 0;",
+              "            }",
+              "            if(DRFlag == 2) {",
+              "                ShipSpecialBonuses(Player(),bonDroid,ShipSpecialBonuses(Player(),bonDroid) - GetEquipmentStats(tdroid,0));",
+              "                DRFlag = 0;",
+              "            }",
+              "            if(DRFlag == 3) {",
+              "                ShipSpecialBonuses(Player(),bonDroid,ShipSpecialBonuses(Player(),bonDroid) - GetEquipmentStats(tdroid,0) - 80);",
+              "                DRFlag = 0;",
+              "            }",
+              "            if(DRFlag == 4) {",
+              "                if(temp_inta < 0) ShipSpecialBonuses(Player(),bonDroid,ShipSpecialBonuses(Player(),bonDroid) - temp_inta);",
+              "                else if(temp_inta < 15) ShipSpecialBonuses(Player(),bonDroid,ShipSpecialBonuses(Player(),bonDroid) + 3);",
+              "                else if(temp_inta > 15) ShipSpecialBonuses(Player(),bonDroid,ShipSpecialBonuses(Player(),bonDroid) + 5);",
+              "                DRFlag = 0;",
+              "            }",
+              "            KostylOtAbuzov = GetEquipmentStats(tdroid,0);",
+              "            temp_str = \"Стандартный\";",
+              "        }",
+              "        else MessageBox(\"Дроид слишком сильно повреждён для взаимодействий с ним!\");",
+              "    }",
+              "    else MessageBox(\"Этот режим уже активирован!\");",
+              "}",
+              "else MessageBox(\"Отсутствует индикация подключения дроида. Переключение режима работы в данный момент невозможно. Проверьте правильность подключения дроида и повторите попытку\");",
+              "Sound('Sound.ButtonInfoEnter');"
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  110,
+          "Pos.y":  -60,
+          "Parent":  -1,
+          "#":  15,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "if(ShipEqInSlot(Player(),t_RepairRobot) != 0) {",
+              "    tdroid=ShipEqInSlot(Player(),t_RepairRobot);",
+              "    if(DRFlag != 1) {",
+              "        if(GetEquipmentStats(tdroid,0) > 0) {",
+              "            if(ItemDurability(tdroid) > 0) {",
+              "                if(DRFlag == 0) {",
+              "                    SavedDur = ItemDurability(tdroid);",
+              "                    SavedDebuff = ShipDroidRepair(Player());",
+              "                    ShipSpecialBonuses(Player(),bonDroid,ShipSpecialBonuses(Player(),bonDroid) - ShipDroidRepair(Player()));",
+              "                    DRFlag = 1;",
+              "                }",
+              "                if(DRFlag == 2) {",
+              "                    SavedDur = ItemDurability(tdroid);",
+              "                    SavedDebuff = ShipDroidRepair(Player());",
+              "                    ShipSpecialBonuses(Player(),bonDroid,ShipSpecialBonuses(Player(),bonDroid) - ShipDroidRepair(Player()));",
+              "                    ShipSpecialBonuses(Player(),bonDroid,ShipSpecialBonuses(Player(),bonDroid) - GetEquipmentStats(tdroid,0));",
+              "                    DRFlag = 1;",
+              "                }",
+              "                if(DRFlag == 3) {",
+              "                    SavedDur = ItemDurability(tdroid);",
+              "                    SavedDebuff = ShipDroidRepair(Player());",
+              "                    ShipSpecialBonuses(Player(),bonDroid,ShipSpecialBonuses(Player(),bonDroid) - ShipDroidRepair(Player()));",
+              "                    ShipSpecialBonuses(Player(),bonDroid,ShipSpecialBonuses(Player(),bonDroid) - GetEquipmentStats(tdroid,0) - 80);",
+              "                    DRFlag = 1;",
+              "                }",
+              "                if(DRFlag == 4) {",
+              "                    if(temp_inta < 0) ShipSpecialBonuses(Player(),bonDroid,ShipSpecialBonuses(Player(),bonDroid) - temp_inta);",
+              "                    else if(temp_inta < 15) ShipSpecialBonuses(Player(),bonDroid,ShipSpecialBonuses(Player(),bonDroid) + 3);",
+              "                    else if(temp_inta > 15) ShipSpecialBonuses(Player(),bonDroid,ShipSpecialBonuses(Player(),bonDroid) + 5);",
+              "                    SavedDebuff = ShipDroidRepair(Player());",
+              "                    SavedDur = ItemDurability(tdroid);",
+              "                    ShipSpecialBonuses(Player(),bonDroid,ShipSpecialBonuses(Player(),bonDroid) - ShipDroidRepair(Player()));",
+              "                    DRFlag = 1;",
+              "                }",
+              "                KostylOtAbuzov = GetEquipmentStats(tdroid,0);",
+              "                temp_str = \"Законсервирован\";",
+              "            }",
+              "            else MessageBox(\"Дроид слишком сильно повреждён для взаимодействий с ним!\");",
+              "        }",
+              "        else MessageBox(\"Для режима «консервация» дроид обязан обладать способностью к ремонту.\");",
+              "    }",
+              "    else MessageBox(\"Этот режим уже активирован!\");",
+              "}",
+              "else MessageBox(\"Отсутствует индикация подключения дроида. Переключение режима работы в данный момент невозможно. Проверьте правильность подключения дроида и повторите попытку\");",
+              "Sound('Sound.ButtonInfoEnter');"
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  150,
+          "Pos.y":  -60,
+          "Parent":  -1,
+          "#":  16,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "if(ShipEqInSlot(Player(),t_RepairRobot) != 0) {",
+              "    tdroid=ShipEqInSlot(Player(),t_RepairRobot);",
+              "    if(DRFlag != 2) {",
+              "        if(GetEquipmentStats(tdroid,0) > 0) {",
+              "            if(ItemDurability(tdroid) > 0) {",
+              "                if(DRFlag == 1) {",
+              "                    if(ItemDurability(tdroid) == 0) Ether(2,'',\"Благодаря работе режима консервации ремонтный дроид пережил критические повреждения\");",
+              "                    ItemDurability(tdroid,SavedDur);",
+              "                    ShipSpecialBonuses(Player(),bonDroid,ShipSpecialBonuses(Player(),bonDroid) + SavedDebuff);",
+              "                    ShipSpecialBonuses(Player(),bonDroid,ShipSpecialBonuses(Player(),bonDroid) + GetEquipmentStats(tdroid,0));",
+              "                    DRFlag = 2;",
+              "                }",
+              "                if(DRFlag == 0) {",
+              "                    ShipSpecialBonuses(Player(),bonDroid,ShipSpecialBonuses(Player(),bonDroid) + GetEquipmentStats(tdroid,0));",
+              "                    DRFlag = 2;",
+              "                }",
+              "                if(DRFlag == 3) {",
+              "                    ShipSpecialBonuses(Player(),bonDroid,ShipSpecialBonuses(Player(),bonDroid) - 80);",
+              "                    DRFlag = 2;",
+              "                }",
+              "                if(DRFlag == 4) {",
+              "                    if(temp_inta < 0) ShipSpecialBonuses(Player(),bonDroid,ShipSpecialBonuses(Player(),bonDroid) - temp_inta);",
+              "                    else if(temp_inta < 15) ShipSpecialBonuses(Player(),bonDroid,ShipSpecialBonuses(Player(),bonDroid) + 3);",
+              "                    else if(temp_inta > 15) ShipSpecialBonuses(Player(),bonDroid,ShipSpecialBonuses(Player(),bonDroid) + 5);",
+              "                    ShipSpecialBonuses(Player(),bonDroid,ShipSpecialBonuses(Player(),bonDroid) + GetEquipmentStats(tdroid,0));",
+              "                    DRFlag = 2;",
+              "                }",
+              "                KostylOtAbuzov = GetEquipmentStats(tdroid,0);",
+              "                temp_str = \"Работа на износ\";",
+              "            }",
+              "            else MessageBox(\"Дроид слишком сильно повреждён для взаимодействий с ним!\");",
+              "        }",
+              "        else MessageBox(\"Для режима «работа на износ» дроид обязан обладать способностью к ремонту.\");",
+              "    }",
+              "    else MessageBox(\"Этот режим уже активирован!\");",
+              "}",
+              "else MessageBox(\"Отсутствует индикация подключения дроида. Переключение режима работы в данный момент невозможно. Проверьте правильность подключения дроида и повторите попытку\");",
+              "Sound('Sound.ButtonInfoEnter');"
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  190,
+          "Pos.y":  -60,
+          "Parent":  -1,
+          "#":  18,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "if(ShipEqInSlot(Player(),t_RepairRobot) != 0) {",
+              "    tdroid=ShipEqInSlot(Player(),t_RepairRobot);",
+              "    if(DRFlag != 3) {",
+              "        if(GetEquipmentStats(tdroid,0) > 0) {",
+              "            if(ItemDurability(tdroid) > 30) {",
+              "                if(DRFlag == 1) {",
+              "                    if(ItemDurability(tdroid) == 0) Ether(2,'',\"Благодаря работе режима консервации ремонтный дроид пережил критические повреждения\");",
+              "                    ItemDurability(tdroid,SavedDur);",
+              "                    ShipSpecialBonuses(Player(),bonDroid,ShipSpecialBonuses(Player(),bonDroid) + SavedDebuff);",
+              "                    ShipSpecialBonuses(Player(),bonDroid,ShipSpecialBonuses(Player(),bonDroid) + GetEquipmentStats(tdroid,0) + 80);",
+              "                    if(HullDamage(Player()) > 70) HullHP(Player(),'Plus25');",
+              "                    DRFlag = 3;",
+              "                    ItemDurability(tdroid,ItemDurability(tdroid)-15);",
+              "                }",
+              "                if(DRFlag == 2) {",
+              "                    ShipSpecialBonuses(Player(),bonDroid,ShipSpecialBonuses(Player(),bonDroid) + 80);",
+              "                    if(HullDamage(Player()) > 70) HullHP(Player(),'Plus25');",
+              "                    DRFlag = 3;",
+              "                    ItemDurability(tdroid,ItemDurability(tdroid)-15);",
+              "                }",
+              "                if(DRFlag == 0) {",
+              "                    ShipSpecialBonuses(Player(),bonDroid,ShipSpecialBonuses(Player(),bonDroid) + GetEquipmentStats(tdroid,0) + 80);",
+              "                    if(HullDamage(Player()) > 70) HullHP(Player(),'Plus25');",
+              "                    DRFlag = 3;",
+              "                    ItemDurability(tdroid,ItemDurability(tdroid)-15);",
+              "                }",
+              "                if(DRFlag == 4) {",
+              "                    ShipSpecialBonuses(Player(),bonDroid,ShipSpecialBonuses(Player(),bonDroid) + GetEquipmentStats(tdroid,0) + 80);",
+              "                    if(HullDamage(Player()) > 70) HullHP(Player(),'Plus25');",
+              "                    if(temp_inta < 0) ShipSpecialBonuses(Player(),bonDroid,ShipSpecialBonuses(Player(),bonDroid) - temp_inta);",
+              "                    else if(temp_inta < 15) ShipSpecialBonuses(Player(),bonDroid,ShipSpecialBonuses(Player(),bonDroid) + 3);",
+              "                    else if(temp_inta > 15) ShipSpecialBonuses(Player(),bonDroid,ShipSpecialBonuses(Player(),bonDroid) + 5);",
+              "                    DRFlag = 3;",
+              "                    ItemDurability(tdroid,ItemDurability(tdroid)-15);",
+              "                }",
+              "                KostylOtAbuzov = GetEquipmentStats(tdroid,0);",
+              "                temp_str = \"Аварийное восстановление\";",
+              "            }",
+              "            else MessageBox(\"Дроид слишком сильно повреждён для запуска этого режима!\");",
+              "        }",
+              "        else MessageBox(\"Для режима «аварийное восстановление» дроид обязан обладать способностью к ремонту.\");",
+              "    }",
+              "    else MessageBox(\"Этот режим уже активирован!\");",
+              "}",
+              "else MessageBox(\"Отсутствует индикация подключения дроида. Переключение режима работы в данный момент невозможно. Проверьте правильность подключения дроида и повторите попытку\");",
+              "Sound('Sound.ButtonInfoEnter');"
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  230,
+          "Pos.y":  -60,
+          "Parent":  -1,
+          "#":  20,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "if(ShipEqInSlot(Player(),t_RepairRobot) != 0) {",
+              "    tdroid=ShipEqInSlot(Player(),t_RepairRobot);",
+              "    if(DRFlag != 4) {",
+              "        if(GetEquipmentStats(tdroid,0) > 0) {",
+              "            if(ItemDurability(tdroid) > 0) {",
+              "                if(DRFlag == 1) {",
+              "                    if(ItemDurability(tdroid) == 0) Ether(2,'',\"Благодаря работе режима консервации ремонтный дроид пережил критические повреждения\");",
+              "                    ItemDurability(tdroid,SavedDur);",
+              "                    ShipSpecialBonuses(Player(),bonDroid,ShipSpecialBonuses(Player(),bonDroid) + SavedDebuff);",
+              "                    temp_inta = GetEquipmentStats(tdroid,0);",
+              "                    if(temp_inta > 100) temp_inta = 40;",
+              "                    else if(temp_inta > 90) temp_inta = 28;",
+              "                    else if(temp_inta > 70) temp_inta = 24;",
+              "                    else if(temp_inta > 60) temp_inta = 19;",
+              "                    else if(temp_inta > 50) temp_inta = 15;",
+              "                    else if(temp_inta > 40) temp_inta = 12;",
+              "                    else if(temp_inta > 30) temp_inta = 10;",
+              "                    else if(temp_inta > 25) temp_inta = 7;",
+              "                    else if(temp_inta >= 15) temp_inta = 5;",
+              "                    else temp_inta = 3;",
+              "                    temp_inta = 0 - temp_inta; //применённый штраф храним со знаком минус",
+              "                    ShipSpecialBonuses(Player(),bonDroid,ShipSpecialBonuses(Player(),bonDroid) + temp_inta);",
+              "                    DRFlag = 4;",
+              "                }",
+              "                if(DRFlag == 2) {",
+              "                    ShipSpecialBonuses(Player(),bonDroid,ShipSpecialBonuses(Player(),bonDroid) - GetEquipmentStats(tdroid,0));",
+              "                    temp_inta = GetEquipmentStats(tdroid,0);",
+              "                    if(temp_inta > 100) temp_inta = 40;",
+              "                    else if(temp_inta > 90) temp_inta = 28;",
+              "                    else if(temp_inta > 70) temp_inta = 24;",
+              "                    else if(temp_inta > 60) temp_inta = 19;",
+              "                    else if(temp_inta > 50) temp_inta = 15;",
+              "                    else if(temp_inta > 40) temp_inta = 12;",
+              "                    else if(temp_inta > 30) temp_inta = 10;",
+              "                    else if(temp_inta > 25) temp_inta = 7;",
+              "                    else if(temp_inta >= 15) temp_inta = 5;",
+              "                    else temp_inta = 3;",
+              "                    temp_inta = 0 - temp_inta; //применённый штраф храним со знаком минус",
+              "                    ShipSpecialBonuses(Player(),bonDroid,ShipSpecialBonuses(Player(),bonDroid) + temp_inta);",
+              "                    DRFlag = 4;",
+              "                }",
+              "                if(DRFlag == 3) {",
+              "                    ShipSpecialBonuses(Player(),bonDroid,ShipSpecialBonuses(Player(),bonDroid) - GetEquipmentStats(tdroid,0) - 80);",
+              "                    temp_inta = GetEquipmentStats(tdroid,0);",
+              "                    if(temp_inta > 100) temp_inta = 40;",
+              "                    else if(temp_inta > 90) temp_inta = 28;",
+              "                    else if(temp_inta > 70) temp_inta = 24;",
+              "                    else if(temp_inta > 60) temp_inta = 19;",
+              "                    else if(temp_inta > 50) temp_inta = 15;",
+              "                    else if(temp_inta > 40) temp_inta = 12;",
+              "                    else if(temp_inta > 30) temp_inta = 10;",
+              "                    else if(temp_inta > 25) temp_inta = 7;",
+              "                    else if(temp_inta >= 15) temp_inta = 5;",
+              "                    else temp_inta = 3;",
+              "                    temp_inta = 0 - temp_inta; //применённый штраф храним со знаком минус",
+              "                    ShipSpecialBonuses(Player(),bonDroid,ShipSpecialBonuses(Player(),bonDroid) + temp_inta);",
+              "                    DRFlag = 4;",
+              "                }",
+              "                if(DRFlag == 0) {",
+              "                    temp_inta = GetEquipmentStats(tdroid,0);",
+              "                    if(temp_inta > 100) temp_inta = 40;",
+              "                    else if(temp_inta > 90) temp_inta = 28;",
+              "                    else if(temp_inta > 70) temp_inta = 24;",
+              "                    else if(temp_inta > 60) temp_inta = 19;",
+              "                    else if(temp_inta > 50) temp_inta = 15;",
+              "                    else if(temp_inta > 40) temp_inta = 12;",
+              "                    else if(temp_inta > 30) temp_inta = 10;",
+              "                    else if(temp_inta > 25) temp_inta = 7;",
+              "                    else if(temp_inta >= 15) temp_inta = 5;",
+              "                    else temp_inta = 3;",
+              "                    temp_inta = 0 - temp_inta; //применённый штраф храним со знаком минус",
+              "                    ShipSpecialBonuses(Player(),bonDroid,ShipSpecialBonuses(Player(),bonDroid) + temp_inta);",
+              "                    DRFlag = 4;",
+              "                }",
+              "                KostylOtAbuzov = GetEquipmentStats(tdroid,0);",
+              "                temp_str = \"Самозащита\";",
+              "            }",
+              "            else MessageBox(\"Дроид слишком сильно повреждён для взаимодействий с ним!\");",
+              "        }",
+              "        else MessageBox(\"Для режима «самозащита» дроид обязан обладать способностью к ремонту.\");",
+              "    }",
+              "    else MessageBox(\"Этот режим уже активирован!\");",
+              "}",
+              "else MessageBox(\"Отсутствует индикация подключения дроида. Переключение режима работы в данный момент невозможно. Проверьте правильность подключения дроида и повторите попытку\");",
+              "Sound('Sound.ButtonInfoEnter');"
+          ]        
+        },
+        {
+          "Type":  "Top",
+          "Name":  "",
+          "Pos.x":  -40,
+          "Pos.y":  -140,
+          "Parent":  -1,
+          "#":  22,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "if(DRFlag != 0) {",
+              "    if(ShipEqInSlot(Player(),t_RepairRobot) != 0) {",
+              "        tdroid=ShipEqInSlot(Player(),t_RepairRobot);",
+              "        if(ItemDurability(tdroid) <= 0) {",
+              "            if(DRFlag == 2) {",
+              "                ShipSpecialBonuses(Player(),bonDroid,ShipSpecialBonuses(Player(),bonDroid) - GetEquipmentStats(tdroid,0));",
+              "                DRFlag = 0;",
+              "            }",
+              "            if(DRFlag == 3) {",
+              "                ShipSpecialBonuses(Player(),bonDroid,ShipSpecialBonuses(Player(),bonDroid) - GetEquipmentStats(tdroid,0) - 80);",
+              "                DRFlag = 0;",
+              "            }",
+              "            if(DRFlag == 4) {",
+              "                if(temp_inta < 0) ShipSpecialBonuses(Player(),bonDroid,ShipSpecialBonuses(Player(),bonDroid) - temp_inta);",
+              "                else if(temp_inta < 15) ShipSpecialBonuses(Player(),bonDroid,ShipSpecialBonuses(Player(),bonDroid) + 3);",
+              "                else if(temp_inta > 15) ShipSpecialBonuses(Player(),bonDroid,ShipSpecialBonuses(Player(),bonDroid) + 5);",
+              "                DRFlag = 0;",
+              "            }",
+              "        }",
+              "        else if(GetEquipmentStats(tdroid,0) != KostylOtAbuzov) {",
+              "            if(DRFlag == 1) {",
+              "                ItemDurability(tdroid,SavedDur);",
+              "                ShipSpecialBonuses(Player(),bonDroid,ShipSpecialBonuses(Player(),bonDroid) + SavedDebuff);",
+              "                DRFlag = 0;",
+              "                NewsAdd(\"Оповещение от центрального компьютера: Ваш дроид работает в нестандартном режиме и глубоко подключен к системам управления кораблём. Его замена в данный момент невозможна. Переключите дроида в стандартный режим и повторите операцию.\");",
+              "                //SFT('DR-8');",
+              "                //SFT(DRFlag);",
+              "            }",
+              "            if(DRFlag == 2) {",
+              "                ShipSpecialBonuses(Player(),bonDroid,ShipSpecialBonuses(Player(),bonDroid) - KostylOtAbuzov);",
+              "                DRFlag = 0;",
+              "                NewsAdd(\"Оповещение от центрального компьютера: Ваш дроид работает в нестандартном режиме и глубоко подключен к системам управления кораблём. Его замена в данный момент невозможна. Переключите дроида в стандартный режим и повторите операцию.\");",
+              "                //SFT('DR-7');",
+              "                //SFT(DRFlag);",
+              "            }",
+              "            if(DRFlag == 3) {",
+              "                ShipSpecialBonuses(Player(),bonDroid,ShipSpecialBonuses(Player(),bonDroid) - KostylOtAbuzov - 80);",
+              "                DRFlag = 0;",
+              "                NewsAdd(\"Оповещение от центрального компьютера: Ваш дроид работает в нестандартном режиме и глубоко подключен к системам управления кораблём. Его замена в данный момент невозможна. Переключите дроида в стандартный режим и повторите операцию.\");",
+              "                //SFT('DR-6');",
+              "                //SFT(DRFlag);",
+              "            }",
+              "            if(DRFlag == 4) {",
+              "                if(temp_inta < 0) ShipSpecialBonuses(Player(),bonDroid,ShipSpecialBonuses(Player(),bonDroid) - temp_inta);",
+              "                else if(temp_inta < 15) ShipSpecialBonuses(Player(),bonDroid,ShipSpecialBonuses(Player(),bonDroid) + 3);",
+              "                else if(temp_inta > 15) ShipSpecialBonuses(Player(),bonDroid,ShipSpecialBonuses(Player(),bonDroid) + 5);",
+              "                DRFlag = 0;",
+              "                NewsAdd(\"Оповещение от центрального компьютера: Ваш дроид работает в нестандартном режиме и глубоко подключен к системам управления кораблём. Его замена в данный момент невозможна. Переключите дроида в стандартный режим и повторите операцию.\");",
+              "                //SFT('DR-5');",
+              "                //SFT(DRFlag);",
+              "            }",
+              "        }",
+              "        else {",
+              "            if(DRFlag == 1) {",
+              "                if(ShipDroidRepair(Player()) != 0) {",
+              "                    ShipSpecialBonuses(Player(),bonDroid,ShipSpecialBonuses(Player(),bonDroid) + SavedDebuff);",
+              "                    ShipSpecialBonuses(Player(),bonDroid,ShipSpecialBonuses(Player(),bonDroid) - ShipDroidRepair(Player()));",
+              "                    SavedDebuff = ShipDroidRepair(Player());",
+              "                }",
+              "            }",
+              "            if(DRFlag == 2) {",
+              "                ItemDurability(tdroid,ItemDurability(tdroid) - 2);",
+              "                if(ItemDurability(ShipEqInSlot(Player(),t_RepairRobot)) == 0) Ether(8,'',\"Дроид работал сверх нормы и получил критические повреждения. Требуется ремонт\");",
+              "            }",
+              "            if(DRFlag == 3) {",
+              "                ItemDurability(tdroid,ItemDurability(tdroid) - 15);",
+              "                if(ItemDurability(ShipEqInSlot(Player(),t_RepairRobot)) == 0) Ether(8,'',\"Дроид работал сверх нормы и получил критические повреждения. Требуется ремонт\");",
+              "            }",
+              "            if(DRFlag == 4) {",
+              "                if(ItemDurability(tdroid) < 80) {",
+              "                    if(CurTurn() % 3 == 2) ItemDurability(tdroid,ItemDurability(tdroid) + 1);",
+              "                }",
+              "            }",
+              "        }",
+              "    }",
+              "    else {",
+              "        if(DRFlag == 1) {",
+              "            ShipSpecialBonuses(Player(),bonDroid,ShipSpecialBonuses(Player(),bonDroid) + SavedDebuff);",
+              "            DRFlag = 0;",
+              "            NewsAdd(\"Оповещение от центрального компьютера: Ваш дроид работает в нестандартном режиме и глубоко подключен к системам управления кораблём. Его демонтаж в данный момент невозможен. Переключите дроида в стандартный режим и повторите операцию демонтажа.\");",
+              "            //SFT('DR-4');",
+              "            //SFT(DRFlag);",
+              "        }",
+              "        if(DRFlag == 2) {",
+              "            ShipSpecialBonuses(Player(),bonDroid,ShipSpecialBonuses(Player(),bonDroid) - KostylOtAbuzov);",
+              "            DRFlag = 0;",
+              "            NewsAdd(\"Оповещение от центрального компьютера: Ваш дроид работает в нестандартном режиме и глубоко подключен к системам управления кораблём. Его демонтаж в данный момент невозможен. Переключите дроида в стандартный режим и повторите операцию демонтажа.\");",
+              "            //SFT('DR-3');",
+              "            //SFT(DRFlag);",
+              "        }",
+              "        if(DRFlag == 3) {",
+              "            ShipSpecialBonuses(Player(),bonDroid,ShipSpecialBonuses(Player(),bonDroid) - KostylOtAbuzov - 80);",
+              "            DRFlag = 0;",
+              "            NewsAdd(\"Оповещение от центрального компьютера: Ваш дроид работает в нестандартном режиме и глубоко подключен к системам управления кораблём. Его демонтаж в данный момент невозможен. Переключите дроида в стандартный режим и повторите операцию демонтажа.\");",
+              "            //SFT('DR-2');",
+              "            //SFT(DRFlag);",
+              "        }",
+              "        if(DRFlag == 4) {",
+              "            if(temp_inta < 0) ShipSpecialBonuses(Player(),bonDroid,ShipSpecialBonuses(Player(),bonDroid) - temp_inta);",
+              "            else if(temp_inta < 15) ShipSpecialBonuses(Player(),bonDroid,ShipSpecialBonuses(Player(),bonDroid) + 3);",
+              "            else if(temp_inta > 15) ShipSpecialBonuses(Player(),bonDroid,ShipSpecialBonuses(Player(),bonDroid) + 5);",
+              "            DRFlag = 0;",
+              "            NewsAdd(\"Оповещение от центрального компьютера: Ваш дроид работает в нестандартном режиме и глубоко подключен к системам управления кораблём. Его демонтаж в данный момент невозможен. Переключите дроида в стандартный режим и повторите операцию демонтажа.\");",
+              "            //SFT('DR-1');",
+              "            //SFT(DRFlag);",
+              "        }",
+              "    }",
+              "    if(!ShipInNormalSpace(Player())) {",
+              "        if(DRFlag == 2) {",
+              "            ShipSpecialBonuses(Player(),bonDroid,ShipSpecialBonuses(Player(),bonDroid) - KostylOtAbuzov);",
+              "            DRFlag = 0;",
+              "            Ether(2,'',\"Режим работы дроида на износ был отключён ввиду покидания космического пространства\");",
+              "        }",
+              "        if(DRFlag == 3) {",
+              "            ShipSpecialBonuses(Player(),bonDroid,ShipSpecialBonuses(Player(),bonDroid) - KostylOtAbuzov - 80);",
+              "            DRFlag = 0;",
+              "            Ether(2,'',\"Режим работы дроида на аварийной основе был отключён ввиду покидания космического пространства\");",
+              "        }",
+              "        if(DRFlag == 4) {",
+              "            if(temp_inta < 0) ShipSpecialBonuses(Player(),bonDroid,ShipSpecialBonuses(Player(),bonDroid) - temp_inta);",
+              "            else if(temp_inta < 15) ShipSpecialBonuses(Player(),bonDroid,ShipSpecialBonuses(Player(),bonDroid) + 3);",
+              "            else if(temp_inta > 15) ShipSpecialBonuses(Player(),bonDroid,ShipSpecialBonuses(Player(),bonDroid) + 5);",
+              "            DRFlag = 0;",
+              "            Ether(2,'',\"Режим работы дроида на самозащиту был отключён ввиду покидания космического пространства\");",
+              "        }",
+              "    }",
+              "}"
+          ]        
+        }      
+      ],
+      "Planets":      
+      [
+        {
+          "Type":  "TPlanet",
+          "Name":  "PlanetNew",
+          "Pos.x":  -100,
+          "Pos.y":  -30,
+          "Parent":  -1,
+          "#":  1,
+          "Race":  62,
+          "Owner":  62,
+          "Economy":  14,
+          "Goverment":  62,
+          "RangeMin":  0,
+          "RangeMax":  100,
+          "Dialog":  -1        
+        }      
+      ],
+      "Ships":      
+      [
+        {
+          "Type":  "TStarShip",
+          "Name":  "",
+          "Pos.x":  -100,
+          "Pos.y":  -90,
+          "Parent":  -1,
+          "#":  2,
+          "Count":  1,
+          "Owner":  62,
+          "Ship.Type":  126,
+          "Player":  true,
+          "SpeedMin":  0,
+          "SpeedMax":  10000,
+          "Weapon":  0,
+          "CargoHook":  0,
+          "EmptySpace":  0,
+          "StatusTraderMin":  0,
+          "StatusTraderMax":  100,
+          "StatusWarriorMin":  0,
+          "StatusWarriorMax":  100,
+          "StatusPirateMin":  0,
+          "StatusPirateMax":  100,
+          "StrengthMin":  "0",
+          "StrengthMax":  "0",
+          "Ruins":  ""        
+        }      
+      ],
+      "Stars":      
+      [
+        {
+          "Type":  "TStar",
+          "Name":  "StarNew",
+          "Pos.x":  -100,
+          "Pos.y":  -60,
+          "Parent":  -1,
+          "#":  0,
+          "Constellation":  0,
+          "Priority":  0,
+          "NoKling":  false,
+          "NoComeKling":  false        
+        }      
+      ],
+      "Statements":      
+      [
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  10,
+          "Pos.y":  -140,
+          "Parent":  -1,
+          "#":  6,
+          "Code.Type":  "DialogBegin",
+          "Code":          
+          [
+              "PlayerBridge()==12"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  70,
+          "Pos.y":  -140,
+          "Parent":  -1,
+          "#":  37,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "DRFlag != 0"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  110,
+          "Pos.y":  -140,
+          "Parent":  -1,
+          "#":  38,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "DRFlag != 1"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  150,
+          "Pos.y":  -140,
+          "Parent":  -1,
+          "#":  39,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "DRFlag != 2"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  190,
+          "Pos.y":  -140,
+          "Parent":  -1,
+          "#":  40,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "DRFlag != 3"          
+          ]        
+        },
+        {
+          "Type":  "Tif",
+          "Name":  "",
+          "Pos.x":  230,
+          "Pos.y":  -140,
+          "Parent":  -1,
+          "#":  41,
+          "Code.Type":  "Turn",
+          "Code":          
+          [
+              "DRFlag != 4"          
+          ]        
+        }      
+      ],
+      "States":      
+      [
+        {
+          "Type":  "TState",
+          "Name":  "StateNew",
+          "Pos.x":  -100,
+          "Pos.y":  30,
+          "Parent":  -1,
+          "#":  3,
+          "Move":  0,
+          "MoveObj":  -1,
+          "Attack.Count":  0,
+          "TakeItem":  -1,
+          "TakeAllItem":  false,
+          "OnTalk":  "",
+          "OnActCode":  "",
+          "EType":  1,
+          "EUnique":  "",
+          "EMsg":  ""        
+        }      
+      ],
+      "Variables":      
+      [
+        {
+          "Type":  "TVar",
+          "Name":  "DRFlag",
+          "Pos.x":  -90,
+          "Pos.y":  70,
+          "Parent":  -1,
+          "#":  8,
+          "Var.Type":  "Int",
+          "Init":  "0",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "SavedDur",
+          "Pos.x":  -90,
+          "Pos.y":  100,
+          "Parent":  -1,
+          "#":  21,
+          "Var.Type":  "Int",
+          "Init":  "0",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "SavedDebuff",
+          "Pos.x":  -90,
+          "Pos.y":  130,
+          "Parent":  -1,
+          "#":  23,
+          "Var.Type":  "Int",
+          "Init":  "0",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "temp_inta",
+          "Pos.x":  50,
+          "Pos.y":  70,
+          "Parent":  -1,
+          "#":  24,
+          "Var.Type":  "Int",
+          "Init":  "0",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "KostylOtAbuzov",
+          "Pos.x":  50,
+          "Pos.y":  100,
+          "Parent":  -1,
+          "#":  25,
+          "Var.Type":  "Int",
+          "Init":  "0",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "temp_str",
+          "Pos.x":  50,
+          "Pos.y":  130,
+          "Parent":  -1,
+          "#":  26,
+          "Var.Type":  "Str",
+          "Init":  "0",
+          "Global":  false        
+        },
+        {
+          "Type":  "TVar",
+          "Name":  "tdroid",
+          "Pos.x":  -90,
+          "Pos.y":  160,
+          "Parent":  -1,
+          "#":  43,
+          "Var.Type":  "Dword",
+          "Init":  "",
+          "Global":  false        
+        }      
+      ]    
+    }  
+  ],
+  "Visual.Links":  
+  [
+    {
+      "Type":  "TGraphLink",
+      "Begin":  2,
+      "End":  0,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  1,
+      "End":  0,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  4,
+      "End":  1,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  4,
+      "End":  3,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  6,
+      "End":  7,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  9,
+      "End":  10,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  13,
+      "End":  16,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  12,
+      "End":  15,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  11,
+      "End":  14,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  17,
+      "End":  18,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  19,
+      "End":  20,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  14,
+      "End":  27,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  27,
+      "End":  28,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  15,
+      "End":  29,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  29,
+      "End":  30,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  16,
+      "End":  31,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  31,
+      "End":  32,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  18,
+      "End":  33,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  33,
+      "End":  34,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  20,
+      "End":  35,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  35,
+      "End":  36,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  10,
+      "End":  37,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  37,
+      "End":  11,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  10,
+      "End":  38,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  38,
+      "End":  12,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  10,
+      "End":  39,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  39,
+      "End":  13,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  10,
+      "End":  40,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  40,
+      "End":  17,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  10,
+      "End":  41,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  41,
+      "End":  19,
+      "Nom":  0,
+      "Arrow":  true    
+    },
+    {
+      "Type":  "TGraphLink",
+      "Begin":  10,
+      "End":  42,
+      "Nom":  0,
+      "Arrow":  true    
+    }  
+  ],
+  "BlockPar.EC.Total.Strings":  27,
+  "BlockPar.EC":  
+  [
+    {
+      "#":  "10",
+      "String":  "Консервация"    
+    },
+    {
+      "#":  "11",
+      "String":  "Режим работы дроида изменён на <0>."    
+    },
+    {
+      "#":  "12",
+      "String":  "Вернуться к настройкам"    
+    },
+    {
+      "#":  "13",
+      "String":  "Режим работы дроида на самозащиту был отключён ввиду покидания космического пространства"    
+    },
+    {
+      "#":  "14",
+      "String":  "Режим работы дроида на аварийной основе был отключён ввиду покидания космического пространства"    
+    },
+    {
+      "#":  "15",
+      "String":  "Оповещение от центрального компьютера: Ваш дроид работает в нестандартном режиме и глубоко подключен к системам управления кораблём. Его демонтаж в данный момент невозможен. Переключите дроида в стандартный режим и повторите операцию демонтажа."    
+    },
+    {
+      "#":  "16",
+      "String":  "Дроид работал сверх нормы и получил критические повреждения. Требуется ремонт"    
+    },
+    {
+      "#":  "17",
+      "String":  "Оповещение от центрального компьютера: Ваш дроид работает в нестандартном режиме и глубоко подключен к системам управления кораблём. Его замена в данный момент невозможна. Переключите дроида в стандартный режим и повторите операцию."    
+    },
+    {
+      "#":  "18",
+      "String":  "Отсутствует индикация подключения дроида. Переключение режима работы в данный момент невозможно. Проверьте правильность подключения дроида и повторите попытку"    
+    },
+    {
+      "#":  "19",
+      "String":  "Этот режим уже активирован!"    
+    },
+    {
+      "#":  "2",
+      "String":  "Переключить режим работы дроида"    
+    },
+    {
+      "#":  "20",
+      "String":  "Дроид слишком сильно повреждён для взаимодействий с ним!"    
+    },
+    {
+      "#":  "21",
+      "String":  "Для режима «консервация» дроид обязан обладать способностью к ремонту."    
+    },
+    {
+      "#":  "22",
+      "String":  "Дроид слишком сильно повреждён для запуска этого режима!"    
+    },
+    {
+      "#":  "23",
+      "String":  "Режим работы дроида на износ был отключён ввиду покидания космического пространства"    
+    },
+    {
+      "#":  "24",
+      "String":  "Благодаря работе режима консервации ремонтный дроид пережил критические повреждения"    
+    },
+    {
+      "#":  "25",
+      "String":  "Отсутствует индикация подключения дроида. Переключение режима работы в данный момент невозможно. Проверьте правильность подключения дроида и повторите попытку"    
+    },
+    {
+      "#":  "26",
+      "String":  "Для режима «работа на износ» дроид обязан обладать способностью к ремонту."    
+    },
+    {
+      "#":  "27",
+      "String":  "Для режима «аварийное восстановление» дроид обязан обладать способностью к ремонту."    
+    },
+    {
+      "#":  "28",
+      "String":  "Для режима «самозащита» дроид обязан обладать способностью к ремонту."    
+    },
+    {
+      "#":  "3",
+      "String":  "Режим дроида: <0>"    
+    },
+    {
+      "#":  "4",
+      "String":  "Самозащита"    
+    },
+    {
+      "#":  "5",
+      "String":  "Аварийное восстановление"    
+    },
+    {
+      "#":  "6",
+      "String":  "Работа на износ"    
+    },
+    {
+      "#":  "7",
+      "String":  "Законсервирован"    
+    },
+    {
+      "#":  "8",
+      "String":  "Стандартный"    
+    },
+    {
+      "#":  "9",
+      "String":  "Выберите режим работы дроида:"    
+    }  
+  ]
+}
