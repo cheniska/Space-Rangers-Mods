@@ -1,9 +1,16 @@
 # Моды для «Космических рейнджеров HD»
 
-- [Universe Redux](Redux/) — установщик и фиксы
-- [Reflection](Reflection/) — установщик и фиксы
-- [Community Mods](Community/) — сборник модов
-- [Исходники модов](Sources/)
+## Игрокам
 
-Файлы для установки публикуются в [GitHub Releases](https://github.com/cheniska/Space-Rangers-Mods/releases).
+На страницах сборников указаны актуальные файлы. Адреса этих страниц сохраняются при выходе новых версий.
+
+| Сборник | Файлы для установки | Фиксы |
+| --- | --- | --- |
+| Universe Redux | [Актуальный установщик](Redux/) | [Актуальные фиксы](Redux/Fixes/) |
+| Reflection | [Актуальный установщик](Reflection/) | [Актуальные фиксы](Reflection/Fixes/) |
+| Community Mods | [Актуальный ZIP](Community/) | |
+
+## Разработчикам
+
+[Исходники модов по сборникам](Sources/). Ссылки **Source code** в GitHub Releases ведут к автоматически созданным архивам репозитория для разработчиков.
 

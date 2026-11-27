@@ -4,5 +4,5 @@
 
 Распакуйте архив в папку игры и включите нужные моды. В архиве есть инструкция и список изменений.
 
-[Страница выпуска](https://github.com/cheniska/Space-Rangers-Mods/releases/tag/community-2026-11-27) · [Исходники Community Mods](../Sources/Community/Mods/)
+[Страница выпуска](https://github.com/cheniska/Space-Rangers-Mods/releases/tag/community-2026-11-27)
 
