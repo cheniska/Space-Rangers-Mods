@@ -6,8 +6,8 @@
 
 | Сборник | Файлы для установки | Фиксы |
 | --- | --- | --- |
-| Universe Redux | [Актуальный установщик](Redux/) | [Актуальные фиксы](Redux/Fixes/) |
-| Reflection | [Актуальный установщик](Reflection/) | [Актуальные фиксы](Reflection/Fixes/) |
+| Universe Redux | [Актуальный установщик](Redux/) | [Фиксы Redux](Redux/Fixes/) |
+| Reflection | [Актуальный установщик](Reflection/) | [Фиксы Reflection](Reflection/Fixes/) |
 | Community Mods | [Актуальный ZIP](Community/) | |
 
 ## Разработчикам
