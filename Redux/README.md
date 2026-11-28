@@ -15,5 +15,3 @@
 - [Часть 7 — `Universe_Redux_1.7.0-7.bin`](https://github.com/cheniska/Space-Rangers-Mods/releases/download/redux-v1.7.0/Universe_Redux_1.7.0-7.bin)
 - [Часть 8 — `Universe_Redux_1.7.0-8.bin`](https://github.com/cheniska/Space-Rangers-Mods/releases/download/redux-v1.7.0/Universe_Redux_1.7.0-8.bin)
 
-[Страница выпуска](https://github.com/cheniska/Space-Rangers-Mods/releases/tag/redux-v1.7.0) · [Фиксы Redux](Fixes/)
-
