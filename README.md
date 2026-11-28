@@ -9,6 +9,7 @@
 | Universe Redux | [Актуальный установщик](Redux/) | [Фиксы Redux](Redux/Fixes/) |
 | Reflection | [Актуальный установщик](Reflection/) | [Фиксы Reflection](Reflection/Fixes/) |
 | Community Mods | [Актуальный ZIP](Community/) | |
+| Solar | [Актуальный ZIP](Solar/) | [Фиксы Solar](Solar/Fixes/) |
 
 ## Разработчикам
 
