@@ -11,6 +11,8 @@
 - [Solyanka](Solyanka/Mods/) — частично поддерживаемый сборник, включая AnotherMods.
 - [Huk’sShit](HuksShit/Mods/) — частично поддерживаемый сборник.
 
+[Ванильные скрипты и Lang](Vanilla/)
+
 Доступные нативные исходники Redux лежат рядом с конфигами и RSON соответствующего мода.
 
 - [UtilityFunctionsPack](Redux/Mods/Tweaks/UtilityFunctionsPack/dll/)

@@ -1,0 +1,1965 @@
+{
+  "FileID": 573785173,
+  "FileVersion": 8,
+  "ViewPos.x": -75,
+  "ViewPos.y": -186,
+  "ScriptName": "PC_destroyer",
+  "ScriptFileOut": "DATA\\Script\\PC_destroyer.scr",
+  "ScriptTextOut": "CFG\\Rus\\PC_destroyer.txt",
+  "LangDatIn": "",
+  "LangDatOut": "Lang.dat",
+  "MainDatIn": "",
+  "MainDatOut": "",
+  "CacheDatIn": "",
+  "CacheDatOut": "",
+  "ExportLangTxt": false,
+  "ExportLangDat": true,
+  "Visual.Objects": [
+    {
+      "ConstellationCount": 0,
+      "DialogAnswers": [
+        {
+          "Type": "TDialogAnswer",
+          "Name": "",
+          "Pos.x": 68,
+          "Pos.y": 325,
+          "Parent": -1,
+          "#": 43,
+          "Msg": "Что мне с ним делать?",
+          "AMsg.Num": "0"
+        },
+        {
+          "Type": "TDialogAnswer",
+          "Name": "",
+          "Pos.x": 25,
+          "Pos.y": 415,
+          "Parent": -1,
+          "#": 44,
+          "Msg": "Да, у меня есть достаточное количество нодов",
+          "AMsg.Num": "1"
+        },
+        {
+          "Type": "TDialogAnswer",
+          "Name": "",
+          "Pos.x": 111,
+          "Pos.y": 385,
+          "Parent": -1,
+          "#": 45,
+          "Msg": "Нет, сейчас у меня нет такого количества нодов",
+          "AMsg.Num": "2"
+        },
+        {
+          "Type": "TDialogAnswer",
+          "Name": "restart",
+          "Pos.x": 111,
+          "Pos.y": 445,
+          "Parent": -1,
+          "#": 46,
+          "Msg": "Хорошо, я подумаю.",
+          "AMsg.Num": "3"
+        },
+        {
+          "Type": "TDialogAnswer",
+          "Name": "restart",
+          "Pos.x": 50,
+          "Pos.y": 475,
+          "Parent": -1,
+          "#": 47,
+          "Msg": "Жду не дождусь!",
+          "AMsg.Num": "4"
+        },
+        {
+          "Type": "TDialogAnswer",
+          "Name": "",
+          "Pos.x": 764,
+          "Pos.y": 385,
+          "Parent": -1,
+          "#": 48,
+          "Msg": "Да, покажите результаты!",
+          "AMsg.Num": "5"
+        },
+        {
+          "Type": "TDialogAnswer",
+          "Name": "",
+          "Pos.x": 844,
+          "Pos.y": 385,
+          "Parent": -1,
+          "#": 49,
+          "Msg": "Нет, я не заинтересован в покупке",
+          "AMsg.Num": "6"
+        },
+        {
+          "Type": "TDialogAnswer",
+          "Name": "restart",
+          "Pos.x": 1115,
+          "Pos.y": 535,
+          "Parent": -1,
+          "#": 50,
+          "Msg": "Хорошо, запомню",
+          "AMsg.Num": "7"
+        },
+        {
+          "Type": "TDialogAnswer",
+          "Name": "restart",
+          "Pos.x": 1014,
+          "Pos.y": 625,
+          "Parent": -1,
+          "#": 51,
+          "Msg": "Спасибо",
+          "AMsg.Num": "8"
+        },
+        {
+          "Type": "TDialogAnswer",
+          "Name": "",
+          "Pos.x": 1065,
+          "Pos.y": 475,
+          "Parent": -1,
+          "#": 52,
+          "Msg": "Нет, спасибо, обойдусь",
+          "AMsg.Num": "9"
+        },
+        {
+          "Type": "TDialogAnswer",
+          "Name": "",
+          "Pos.x": 884,
+          "Pos.y": 535,
+          "Parent": -1,
+          "#": 53,
+          "Msg": "Купить корпус \"Тень империи\" вместимостью <hull_sizes[hull_variants[3]]> единиц за <base_cost*hull_costs[hull_variants[3]]> cr.",
+          "AMsg.Num": "10"
+        },
+        {
+          "Type": "TDialogAnswer",
+          "Name": "",
+          "Pos.x": 924,
+          "Pos.y": 535,
+          "Parent": -1,
+          "#": 54,
+          "Msg": "Купить корпус \"Тень империи\" вместимостью <hull_sizes[hull_variants[2]]> единиц за <base_cost*hull_costs[hull_variants[2]]> cr.",
+          "AMsg.Num": "11"
+        },
+        {
+          "Type": "TDialogAnswer",
+          "Name": "",
+          "Pos.x": 964,
+          "Pos.y": 535,
+          "Parent": -1,
+          "#": 55,
+          "Msg": "Купить корпус \"Тень империи\" вместимостью <hull_sizes[hull_variants[1]]> единиц за <base_cost*hull_costs[hull_variants[1]]> cr.",
+          "AMsg.Num": "12"
+        },
+        {
+          "Type": "TDialogAnswer",
+          "Name": "restart",
+          "Pos.x": 273,
+          "Pos.y": 385,
+          "Parent": -1,
+          "#": 56,
+          "Msg": "Спасибо за информацию, запомню.",
+          "AMsg.Num": "13"
+        },
+        {
+          "Type": "TDialogAnswer",
+          "Name": "restart",
+          "Pos.x": 212,
+          "Pos.y": 415,
+          "Parent": -1,
+          "#": 57,
+          "Msg": "Спасибо, очень жаль...",
+          "AMsg.Num": "14"
+        }
+      ],
+      "DialogMessages": [
+        {
+          "Type": "TDialogMsg",
+          "Name": "",
+          "Pos.x": 68,
+          "Pos.y": 295,
+          "Parent": -1,
+          "#": 29,
+          "Msg": "Так, <PlayerFull>, что у вас там? Говорите, нашли кристалл на незаселенной планете? Действительно, лет ему столько, что мы даже не можем назвать точное число, все методы анализа дают какие-то зашкаливающие значения.",
+          "DMsg.Num": "0"
+        },
+        {
+          "Type": "TDialogMsg",
+          "Name": "",
+          "Pos.x": 68,
+          "Pos.y": 355,
+          "Parent": -1,
+          "#": 30,
+          "Msg": "Мы примерно представляем себе структуру криптоконтейнера, однако, других способов подбора ключа, кроме как методом прямого перебора, реализовать не получится. Лучше всего для реализации подобного метода подходят вычислители, создаваемые на базе доминаторских <clr>нодов<clrEnd>. Поэтому, для расшифровки нам необходимо <nodes_needed> единиц нодов. Вы готовы их предоставить?",
+          "DMsg.Num": "1"
+        },
+        {
+          "Type": "TDialogMsg",
+          "Name": "",
+          "Pos.x": 111,
+          "Pos.y": 415,
+          "Parent": -1,
+          "#": 31,
+          "Msg": "В таком случае, мы ждем, пока вы не пополните свой нод-счет на нужную сумму.",
+          "DMsg.Num": "2"
+        },
+        {
+          "Type": "TDialogMsg",
+          "Name": "",
+          "Pos.x": 25,
+          "Pos.y": 445,
+          "Parent": -1,
+          "#": 32,
+          "Msg": "Отлично, <PlayerFull>, сейчас мы уже формируем вычислительный кластер. Мы оповестим вас о результатах работы в ближайшее время.",
+          "DMsg.Num": "3"
+        },
+        {
+          "Type": "TDialogMsg",
+          "Name": "",
+          "Pos.x": 804,
+          "Pos.y": 355,
+          "Parent": -1,
+          "#": 33,
+          "Msg": "Похвальное желание, <ShipName(Player())>. Можем сказать, что вам удалось сделать одно из самых сенсационных научных открытий всех времен. Как оказалось, задолго до существования любой из известных нам форм жизни, в космосе уже вовсю летали корабли! А ваш кристалл содержал подробные чертежи и инструкции по изготовлению одной из этих древностей. Оригинальное его название не имеет точного аналога в современном языке, поэтому мы окрестили его \"Тень империи\". Судя по подписям к чертежам, его конструктора причисляли себя к какому-то сообществу, называвшему себя Галактической Империей. По проекту это огромный корабль, рассчитанный на ведение боя с аналогичными гигантами противника. Один только экипаж по нормативу составляет более 2 000 человек! Однако, наши последние разработки в области автоматизации и миниатюризации позволили нам переработать проект для использования всего-навсего одним рейнджером. Разумеется, в изготовлении подобный эксклюзив будет недешев, но зато он в состоянии предложить вам несколько по-настоящему уникальных возможностей. Хотите посмотреть?",
+          "DMsg.Num": "4"
+        },
+        {
+          "Type": "TDialogMsg",
+          "Name": "",
+          "Pos.x": 844,
+          "Pos.y": 415,
+          "Parent": -1,
+          "#": 34,
+          "Msg": "Ну что же, <ShipName(Player())>, дело ваше. Мы сохраним наработки, поэтому, если возникнет необходимость, вы всегда сможете обратиться к нам позже.",
+          "DMsg.Num": "5"
+        },
+        {
+          "Type": "TDialogMsg",
+          "Name": "",
+          "Pos.x": 764,
+          "Pos.y": 445,
+          "Parent": -1,
+          "#": 35,
+          "Msg": "Перед вами \"Тень империи\" - настоящая гроза бескрайних просторов космоса, пришедшая к нам с незапамятных времен. Его уникальное оборудование, построенное на использовании особой энергии, вырабатываемой бортовой системой, позволяет открывать черные дыры для прыжка в любую систему по выбору, а также атаковать врагов с помощью беспилотных истребителей. Обладание подобным монстром, конечно, поднимет ваши навыки - <clr>маневренность<clrEnd>, <clr>точность<clrEnd> и <clr>лидерство<clrEnd> вырастут на <clr>2<clrEnd> единицы за счет эффективности прицельного компьютера и просто психологического эффекта от внешнего вида. Кроме того, <clr>броня корпуса<clrEnd> дополнительно укреплена на <clr>4<clrEnd> единицы сверх базового значения. Естественно, бесплатных радостей не бывает, поэтому, использование корабля снизит ваше <clr>обаяние<clrEnd> - на <clr>2<clrEnd> пункта. Правители не любят, когда на орбитах их планет появляется рейнджер, способный, при большом желании, выжечь несколько крупных городов дотла. Корабль доступен в трех вариантах вместимости - выбирайте, какой вам больше подойдет.\r\n-----------------------------------------------\r\nВариант 1.\r\nВместимость <hull_sizes[hull_variants[1]]> единиц за <base_cost*hull_costs[hull_variants[1]]> cr.\r\n-----------------------------------------------\r\nВариант 2.\r\nВместимость <hull_sizes[hull_variants[2]]> единиц за <base_cost*hull_costs[hull_variants[2]]> cr.\r\n-----------------------------------------------\r\nВариант 3.\r\nВместимость <hull_sizes[hull_variants[3]]> единиц за <base_cost*hull_costs[hull_variants[3]]> cr.",
+          "DMsg.Num": "6"
+        },
+        {
+          "Type": "TDialogMsg",
+          "Name": "",
+          "Pos.x": 404,
+          "Pos.y": 355,
+          "Parent": -1,
+          "#": 36,
+          "Msg": "Перед вами \"Тень империи\" - настоящая гроза бескрайних просторов космоса, пришедшая к нам с незапамятных времен. Его уникальное оборудование, построенное на использовании особой энергии, вырабатываемой бортовой системой, позволяет открывать черные дыры для прыжка в любую систему по выбору, а также атаковать врагов с помощью беспилотных истребителей. Обладание подобным монстром, конечно, поднимет ваши навыки - <clr>маневренность<clrEnd>, <clr>точность<clrEnd> и <clr>лидерство<clrEnd> вырастут на <clr>2<clrEnd> единицы за счет эффективности прицельного компьютера и просто психологического эффекта от внешнего вида. Кроме того, <clr>броня корпуса<clrEnd> дополнительно укреплена на <clr>4<clrEnd> единицы сверх базового значения. Естественно, бесплатных радостей не бывает, поэтому, использование корабля снизит ваше <clr>обаяние<clrEnd> - на <clr>2<clrEnd> пункта. Правители не любят, когда на орбитах их планет появляется рейнджер, способный, при большом желании, выжечь несколько крупных городов дотла. Корабль доступен в трех вариантах вместимости - выбирайте, какой вам больше подойдет.\r\n-----------------------------------------------\r\nВариант 1.\r\nВместимость <hull_sizes[hull_variants[1]]> единиц за <base_cost*hull_costs[hull_variants[1]]> cr.\r\n-----------------------------------------------\r\nВариант 2.\r\nВместимость <hull_sizes[hull_variants[2]]> единиц за <base_cost*hull_costs[hull_variants[2]]> cr.\r\n-----------------------------------------------\r\nВариант 3.\r\nВместимость <hull_sizes[hull_variants[3]]> единиц за <base_cost*hull_costs[hull_variants[3]]> cr.",
+          "DMsg.Num": "7"
+        },
+        {
+          "Type": "TDialogMsg",
+          "Name": "",
+          "Pos.x": 524,
+          "Pos.y": 355,
+          "Parent": -1,
+          "#": 37,
+          "Msg": "Перед вами \"Тень империи\" - настоящая гроза бескрайних просторов космоса, пришедшая к нам с незапамятных времен. Его уникальное оборудование, построенное на использовании особой энергии, вырабатываемой бортовой системой, позволяет открывать черные дыры для прыжка в любую систему по выбору, а также атаковать врагов с помощью беспилотных истребителей. Обладание подобным монстром, конечно, поднимет ваши навыки - <clr>маневренность<clrEnd>, <clr>точность<clrEnd> и <clr>лидерство<clrEnd> вырастут на <clr>2<clrEnd> единицы за счет эффективности прицельного компьютера и просто психологического эффекта от внешнего вида. Кроме того, <clr>броня корпуса<clrEnd> дополнительно укреплена на <clr>4<clrEnd> единицы сверх базового значения. Естественно, бесплатных радостей не бывает, поэтому, использование корабля снизит ваше <clr>обаяние<clrEnd> - на <clr>2<clrEnd> пункта. Правители не любят, когда на орбитах их планет появляется рейнджер, способный, при большом желании, выжечь несколько крупных городов дотла. Корабль доступен в трех вариантах вместимости - выбирайте, какой вам больше подойдет.\r\n-----------------------------------------------\r\nВариант 1.\r\nВместимость <hull_sizes[hull_variants[1]]> единиц за <base_cost*hull_costs[hull_variants[1]]> cr.\r\n-----------------------------------------------\r\nВариант 2.\r\nВместимость <hull_sizes[hull_variants[2]]> единиц за <base_cost*hull_costs[hull_variants[2]]> cr.",
+          "DMsg.Num": "8"
+        },
+        {
+          "Type": "TDialogMsg",
+          "Name": "",
+          "Pos.x": 644,
+          "Pos.y": 355,
+          "Parent": -1,
+          "#": 38,
+          "Msg": "Перед вами \"Тень империи\" - настоящая гроза бескрайних просторов космоса, пришедшая к нам с незапамятных времен. Его уникальное оборудование, построенное на использовании особой энергии, вырабатываемой бортовой системой, позволяет открывать черные дыры для прыжка в любую систему по выбору, а также атаковать врагов с помощью беспилотных истребителей. Обладание подобным монстром, конечно, поднимет ваши навыки - <clr>маневренность<clrEnd>, <clr>точность<clrEnd> и <clr>лидерство<clrEnd> вырастут на <clr>2<clrEnd> единицы за счет эффективности прицельного компьютера и просто психологического эффекта от внешнего вида. Кроме того, <clr>броня корпуса<clrEnd> дополнительно укреплена на <clr>4<clrEnd> единицы сверх базового значения. Естественно, бесплатных радостей не бывает, поэтому, использование корабля снизит ваше <clr>обаяние<clrEnd> - на <clr>2<clrEnd> пункта. Правители не любят, когда на орбитах их планет появляется рейнджер, способный, при большом желании, выжечь несколько крупных городов дотла. Корабль доступен в трех вариантах вместимости - выбирайте, какой вам больше подойдет.\r\n-----------------------------------------------\r\nВместимость <hull_sizes[hull_variants[1]]> единиц за <base_cost*hull_costs[hull_variants[1]]> cr.",
+          "DMsg.Num": "9"
+        },
+        {
+          "Type": "TDialogMsg",
+          "Name": "",
+          "Pos.x": 1014,
+          "Pos.y": 595,
+          "Parent": -1,
+          "#": 39,
+          "Msg": "Купленный вами корпус уже доставлен на склад. Приятных полетов!",
+          "DMsg.Num": "10"
+        },
+        {
+          "Type": "TDialogMsg",
+          "Name": "",
+          "Pos.x": 273,
+          "Pos.y": 355,
+          "Parent": -1,
+          "#": 40,
+          "Msg": "Что, <ShipName(Player())>, говорите? Чья тень? Ах, вот оно что, вы про старинный корпус... Знаете, мы этим не занимались, ничем помочь не можем. Судя по нашей базе данных, всю работу проводили наши коллеги с научной базы <base_name> в системе <Name(ShipStar(IdToShip(base_id)))>. Вам следует обратиться к ним.\r\n",
+          "DMsg.Num": "11"
+        },
+        {
+          "Type": "TDialogMsg",
+          "Name": "",
+          "Pos.x": 212,
+          "Pos.y": 385,
+          "Parent": -1,
+          "#": 41,
+          "Msg": "Что, <ShipName(Player())>, говорите? Чья тень? Ах, вот оно что, вы про старинный корпус... Знаете, боюсь, у меня для вас плохие новости. Судя по нашей базе данных, всю работу проводили наши коллеги с научной базы <base_name>, а эта станция была уничтожена. К сожалению, они не успели выгрузить разработки в сеть, поэтому данная технология снова утеряна.",
+          "DMsg.Num": "12"
+        },
+        {
+          "Type": "TDialogMsg",
+          "Name": "",
+          "Pos.x": 1065,
+          "Pos.y": 505,
+          "Parent": -1,
+          "#": 42,
+          "Msg": "Ну что же, <ShipName(Player())>, дело ваше. Мы сохраним наработки, поэтому, если возникнет необходимость, вы всегда сможете обратиться к нам позже.",
+          "DMsg.Num": "13"
+        }
+      ],
+      "Dialogs": [
+        {
+          "Type": "TDialog",
+          "Name": "DialogSB1",
+          "Pos.x": 68,
+          "Pos.y": 265,
+          "Parent": -1,
+          "#": 27
+        },
+        {
+          "Type": "TDialog",
+          "Name": "DialogSB2",
+          "Pos.x": 480,
+          "Pos.y": 265,
+          "Parent": -1,
+          "#": 28
+        }
+      ],
+      "Groups": [
+        {
+          "Type": "TGroup",
+          "Name": "GroupNew",
+          "Pos.x": 54,
+          "Pos.y": 145,
+          "Parent": -1,
+          "#": 21,
+          "Owner": 62,
+          "Group.Type": 126,
+          "CntShipMin": 1,
+          "CntShipMax": 1,
+          "SpeedMin": 100,
+          "SpeedMax": 10000,
+          "Weapon": 0,
+          "CargoHook": 0,
+          "EmptySpace": 0,
+          "AddPlayer": true,
+          "StatusTraderMin": 0,
+          "StatusTraderMax": 100,
+          "StatusWarriorMin": 0,
+          "StatusWarriorMax": 100,
+          "StatusPirateMin": 0,
+          "StatusPirateMax": 100,
+          "DistSearch": 10000,
+          "Dialog": -1,
+          "StrengthMin": "0",
+          "StrengthMax": "0",
+          "Ruins": "",
+          "+Planet": "PlanetNew",
+          "+State": 0
+        }
+      ],
+      "Items": [
+        {
+          "Type": "TItem",
+          "Name": "AncientCrystal",
+          "Pos.x": 190,
+          "Pos.y": 85,
+          "Parent": -1,
+          "#": 20,
+          "Class": 5,
+          "Item.Type": 0,
+          "Size": 10,
+          "Level": 1,
+          "Radius": 150,
+          "Owner": 6,
+          "Useless": "",
+          "+Place": ""
+        }
+      ],
+      "Operations": [
+        {
+          "Type": "Top",
+          "Name": "",
+          "Pos.x": 305,
+          "Pos.y": 85,
+          "Parent": -1,
+          "#": 22,
+          "Code.Type": "Global",
+          "Code": [
+            "GRun();"
+          ]
+        },
+        {
+          "Type": "Top",
+          "Name": "",
+          "Pos.x": 385,
+          "Pos.y": 85,
+          "Parent": -1,
+          "#": 23,
+          "Code.Type": "Init",
+          "Code": [
+            "list_visited=newarray(1);",
+            "list_visited[0]=0;",
+            "hull_variants=newarray(4);",
+            "hull_variants[1]=1;",
+            "hull_variants[2]=2;",
+            "hull_variants[3]=3;",
+            "hull_sizes=newarray(4);",
+            "hull_costs=newarray(4);"
+          ]
+        },
+        {
+          "Type": "Top",
+          "Name": "",
+          "Pos.x": 465,
+          "Pos.y": 85,
+          "Parent": -1,
+          "#": 24,
+          "Code.Type": "Turn",
+          "Code": [
+            "if(GetShipPlanet(Player())) {",
+            "  if(!crystal_created) {",
+            "    if(PlanetOwner(GetShipPlanet(Player()))==6) {",
+            "      if(ArrayFind(list_visited,Id(GetShipPlanet(Player())))<0) {",
+            "        ArrayAdd(list_visited,Id(GetShipPlanet(Player())));",
+            "        if(ArrayDim(list_visited)>num_planets_needed) {",
+            "          if((Rnd(1,1000)+(1000/num_planets_needed)*ArrayDim(list_visited))>2000) {",
+            "            quest_item=CreateQuestItem('Usl_AncientCrystal');",
+            "            AddItemToPlanet(GetShipPlanet(Player()),quest_item);",
+            "            LinkItemToScript(quest_item,AncientCrystal);",
+            "            crystal_created=1;",
+            "          }",
+            "        }",
+            "      }",
+            "    }",
+            "  }",
+            "}",
+            "if(research_start_date) {",
+            "  if(CurTurn()>(research_start_date+20)) {",
+            "    if(!message_research_complete) {",
+            "      message_research_complete=1;",
+            "      Ether(0,'FBB50D18-D027-42BB-985B-8D7F1B97E294',\"<PlayerFull>, ученые с научной базы <base_name> закончили расшифровку голографического кристалла и готовы рассказать вам о своем открытии! Ждем вас на базе <base_name> в ближайшее время!\");",
+            "    }",
+            "  }",
+            "  if(IdToShip(base_id)==0) {",
+            "    research_start_date=0;",
+            "    RangerBaseNodes(Player(),RangerBaseNodes(Player())+nodes_needed/2);",
+            "    Ether(0,'31A425D1-C896-441E-943E-FE0228799D17',\"<PlayerFull>, к сожалению, научная база <base_name> была уничтожена в ходе исследований голографического кристалла. Теперь никто не сможет узнать, какие загадки он таил в себе. В качестве компенсации ассоциация рейнджеров начисляет вам <nodes_needed/2> нодов для частичного возмещения затрат на исследования.\");",
+            "  }",
+            "}"
+          ]
+        },
+        {
+          "Type": "Top",
+          "Name": "",
+          "Pos.x": 545,
+          "Pos.y": 85,
+          "Parent": -1,
+          "#": 25,
+          "Code.Type": "DialogBegin",
+          "Code": [
+            "if(GetShipRuins(Player())>0) {",
+            "  if(ShipType(GetShipRuins(Player()))=='SB') {",
+            "    if(ItemIn(AncientCrystal,Player())) {",
+            "      AddDialogInject('DialogSB1','',\"Исследовать старинный голокристалл\",1);",
+            "    }",
+            "    if(message_research_complete && (Id(GetShipRuins(Player()))==base_id)) {",
+            "      AddDialogInject('DialogSB2','',\"Так что же там было в кристалле? Не терпится узнать!\",1);",
+            "    }",
+            "    if(hull_available) {",
+            "      AddDialogInject('DialogSB2','',\"Я хочу приобрести \\\"Тень империи\\\"\",1);",
+            "    }",
+            "  }",
+            "}"
+          ]
+        },
+        {
+          "Type": "Top",
+          "Name": "",
+          "Pos.x": 212,
+          "Pos.y": 355,
+          "Parent": -1,
+          "Code.Type": "Turn",
+          "Code": [
+            "hull_available=0;"
+          ],
+          "#": 60
+        },
+        {
+          "Type": "Top",
+          "Name": "",
+          "Pos.x": 324,
+          "Pos.y": 325,
+          "Parent": -1,
+          "Code.Type": "Turn",
+          "Code": [
+            "hull_sizes[1]=700;",
+            "hull_sizes[2]=1100;",
+            "hull_sizes[3]=1500;",
+            "hull_costs[1]=150;",
+            "hull_costs[2]=200;",
+            "hull_costs[3]=250;",
+            "base_cost=(1000000/8)*GalaxyTechLevel()/100;"
+          ],
+          "#": 63
+        },
+        {
+          "Type": "Top",
+          "Name": "",
+          "Pos.x": 0,
+          "Pos.y": 475,
+          "Parent": -1,
+          "Code.Type": "Turn",
+          "Code": [
+            "FreeItem(GetItemFromShip(Player(),FindItemInShip(Player(),AncientCrystal)));",
+            "if (RangerBaseNodes(Player())>=nodes_needed){RangerBaseNodes(Player(),RangerBaseNodes(Player())-nodes_needed);",
+            "nodes_get=nodes_needed;}",
+            "if (nodes_get<nodes_needed){nodes_get=RangerBaseNodes(Player());RangerBaseNodes(Player(),0);}",
+            "GetNodesFromShip(Player(),nodes_needed-nodes_get);",
+            "base_id=Id(GetShipRuins(Player()));",
+            "base_name=ShipName(GetShipRuins(Player()));",
+            "research_start_date=CurTurn();"
+          ],
+          "#": 69
+        },
+        {
+          "Type": "Top",
+          "Name": "",
+          "Pos.x": 844,
+          "Pos.y": 445,
+          "Parent": -1,
+          "Code.Type": "Turn",
+          "Code": [
+            "message_research_complete=0;",
+            "hull_available=3;",
+            "research_start_date=0;"
+          ],
+          "#": 70
+        },
+        {
+          "Type": "Top",
+          "Name": "",
+          "Pos.x": 764,
+          "Pos.y": 415,
+          "Parent": -1,
+          "Code.Type": "Turn",
+          "Code": [
+            "message_research_complete=0;",
+            "hull_available=3;",
+            "research_start_date=0;"
+          ],
+          "#": 95
+        },
+        {
+          "Type": "Top",
+          "Name": "",
+          "Pos.x": 884,
+          "Pos.y": 565,
+          "Parent": -1,
+          "Code.Type": "Turn",
+          "Code": [
+            "variant_chosen=3;",
+            "hull_available=hull_available-1;",
+            "ShipMoney(Player(),ShipMoney(Player())-base_cost*hull_costs[hull_variants[variant_chosen]]);",
+            "Sound('Sound.Buy');",
+            "quest_item=CreateHull(2,hull_sizes[hull_variants[variant_chosen]],GalaxyTechLevel(),ShipOwner(GetShipRuins(Player())));",
+            "ItemCost(quest_item,base_cost*hull_costs[hull_variants[variant_chosen]]);",
+            "bonus_num=FindBonusByName(\"Тень Империи\");",
+            "if (bonus_num>-1){SpecialToEquipment(bonus_num,quest_item);}",
+            "AddItemToStorage(GetShipRuins(Player()),quest_item);",
+            "CapitalShipStats(quest_item,1,1000);",
+            "GetAchievementHULL();",
+            "ArrayDelete(hull_variants,variant_chosen);"
+          ],
+          "#": 96
+        },
+        {
+          "Type": "Top",
+          "Name": "",
+          "Pos.x": 924,
+          "Pos.y": 565,
+          "Parent": -1,
+          "Code.Type": "Turn",
+          "Code": [
+            "variant_chosen=2;",
+            "hull_available=hull_available-1;",
+            "ShipMoney(Player(),ShipMoney(Player())-base_cost*hull_costs[hull_variants[variant_chosen]]);",
+            "Sound('Sound.Buy');",
+            "quest_item=CreateHull(2,hull_sizes[hull_variants[variant_chosen]],GalaxyTechLevel(),ShipOwner(GetShipRuins(Player())));",
+            "ItemCost(quest_item,base_cost*hull_costs[hull_variants[variant_chosen]]);",
+            "bonus_num=FindBonusByName(\"Тень Империи\");",
+            "if (bonus_num>-1){SpecialToEquipment(bonus_num,quest_item);}",
+            "AddItemToStorage(GetShipRuins(Player()),quest_item);",
+            "CapitalShipStats(quest_item,1,1000);",
+            "GetAchievementHULL();",
+            "ArrayDelete(hull_variants,variant_chosen);"
+          ],
+          "#": 97
+        },
+        {
+          "Type": "Top",
+          "Name": "",
+          "Pos.x": 964,
+          "Pos.y": 565,
+          "Parent": -1,
+          "Code.Type": "Turn",
+          "Code": [
+            "variant_chosen=1;",
+            "hull_available=hull_available-1;",
+            "ShipMoney(Player(),ShipMoney(Player())-base_cost*hull_costs[hull_variants[variant_chosen]]);",
+            "Sound('Sound.Buy');",
+            "quest_item=CreateHull(2,hull_sizes[hull_variants[variant_chosen]],GalaxyTechLevel(),ShipOwner(GetShipRuins(Player())));",
+            "ItemCost(quest_item,base_cost*hull_costs[hull_variants[variant_chosen]]);",
+            "bonus_num=FindBonusByName(\"Тень Империи\");",
+            "if (bonus_num>-1){SpecialToEquipment(bonus_num,quest_item);}",
+            "AddItemToStorage(GetShipRuins(Player()),quest_item);",
+            "CapitalShipStats(quest_item,1,1000);",
+            "GetAchievementHULL();",
+            "ArrayDelete(hull_variants,variant_chosen);"
+          ],
+          "#": 98
+        }
+      ],
+      "Places": [],
+      "Planets": [
+        {
+          "Type": "TPlanet",
+          "Name": "PlanetNew",
+          "Pos.x": 54,
+          "Pos.y": 115,
+          "Parent": -1,
+          "#": 19,
+          "Race": 62,
+          "Owner": 62,
+          "Economy": 14,
+          "Goverment": 62,
+          "RangeMin": 0,
+          "RangeMax": 100,
+          "Dialog": -1,
+          "+Star": "StarNew"
+        }
+      ],
+      "Ships": [
+        {
+          "Type": "TStarShip",
+          "Name": "",
+          "Pos.x": 0,
+          "Pos.y": 115,
+          "Parent": -1,
+          "#": 18,
+          "Count": 1,
+          "Owner": 62,
+          "Ship.Type": 126,
+          "Player": true,
+          "SpeedMin": 0,
+          "SpeedMax": 10000,
+          "Weapon": 0,
+          "CargoHook": 0,
+          "EmptySpace": 0,
+          "StatusTraderMin": 0,
+          "StatusTraderMax": 100,
+          "StatusWarriorMin": 0,
+          "StatusWarriorMax": 100,
+          "StatusPirateMin": 0,
+          "StatusPirateMax": 100,
+          "StrengthMin": "0",
+          "StrengthMax": "0",
+          "Ruins": "",
+          "+Star": "StarNew"
+        }
+      ],
+      "Stars": [
+        {
+          "Type": "TStar",
+          "Name": "StarNew",
+          "Pos.x": 27,
+          "Pos.y": 85,
+          "Parent": -1,
+          "#": 17,
+          "Constellation": 0,
+          "Priority": 0,
+          "NoKling": false,
+          "NoComeKling": false
+        }
+      ],
+      "States": [
+        {
+          "Type": "TState",
+          "Name": "StateNew",
+          "Pos.x": 54,
+          "Pos.y": 175,
+          "Parent": -1,
+          "#": 26,
+          "Move": 0,
+          "MoveObj": -1,
+          "Attack.Count": 0,
+          "TakeItem": -1,
+          "TakeAllItem": false,
+          "OnTalk": "",
+          "OnActCode": "",
+          "EType": 0,
+          "EUnique": "",
+          "EMsg": ""
+        }
+      ],
+      "Variables": [
+        {
+          "Type": "TVar",
+          "Name": "base_name",
+          "Pos.x": 0,
+          "Pos.y": 0,
+          "Parent": -1,
+          "#": 0,
+          "Var.Type": "Str",
+          "Init": "",
+          "Global": false
+        },
+        {
+          "Type": "TVar",
+          "Name": "list_visited",
+          "Pos.x": 120,
+          "Pos.y": 0,
+          "Parent": -1,
+          "#": 1,
+          "Var.Type": "None",
+          "Init": "",
+          "Global": false
+        },
+        {
+          "Type": "TVar",
+          "Name": "crystal_created",
+          "Pos.x": 330,
+          "Pos.y": 0,
+          "Parent": -1,
+          "#": 2,
+          "Var.Type": "Int",
+          "Init": "0",
+          "Global": false
+        },
+        {
+          "Type": "TVar",
+          "Name": "quest_item",
+          "Pos.x": 540,
+          "Pos.y": 0,
+          "Parent": -1,
+          "#": 3,
+          "Var.Type": "Dword",
+          "Init": "0",
+          "Global": false
+        },
+        {
+          "Type": "TVar",
+          "Name": "nodes_needed",
+          "Pos.x": 690,
+          "Pos.y": 0,
+          "Parent": -1,
+          "#": 4,
+          "Var.Type": "Int",
+          "Init": "500",
+          "Global": false
+        },
+        {
+          "Type": "TVar",
+          "Name": "nodes_get",
+          "Pos.x": 900,
+          "Pos.y": 0,
+          "Parent": -1,
+          "#": 5,
+          "Var.Type": "Int",
+          "Init": "0",
+          "Global": false
+        },
+        {
+          "Type": "TVar",
+          "Name": "research_start_date",
+          "Pos.x": 1050,
+          "Pos.y": 0,
+          "Parent": -1,
+          "#": 6,
+          "Var.Type": "Int",
+          "Init": "0",
+          "Global": false
+        },
+        {
+          "Type": "TVar",
+          "Name": "base_id",
+          "Pos.x": 1320,
+          "Pos.y": 0,
+          "Parent": -1,
+          "#": 7,
+          "Var.Type": "Int",
+          "Init": "0",
+          "Global": false
+        },
+        {
+          "Type": "TVar",
+          "Name": "message_research_complete",
+          "Pos.x": 1440,
+          "Pos.y": 0,
+          "Parent": -1,
+          "#": 8,
+          "Var.Type": "Int",
+          "Init": "0",
+          "Global": false
+        },
+        {
+          "Type": "TVar",
+          "Name": "hull_available",
+          "Pos.x": 0,
+          "Pos.y": 25,
+          "Parent": -1,
+          "#": 9,
+          "Var.Type": "Int",
+          "Init": "0",
+          "Global": false
+        },
+        {
+          "Type": "TVar",
+          "Name": "hull_sizes",
+          "Pos.x": 210,
+          "Pos.y": 25,
+          "Parent": -1,
+          "#": 10,
+          "Var.Type": "None",
+          "Init": "",
+          "Global": false
+        },
+        {
+          "Type": "TVar",
+          "Name": "hull_costs",
+          "Pos.x": 360,
+          "Pos.y": 25,
+          "Parent": -1,
+          "#": 11,
+          "Var.Type": "None",
+          "Init": "",
+          "Global": false
+        },
+        {
+          "Type": "TVar",
+          "Name": "hull_variants",
+          "Pos.x": 510,
+          "Pos.y": 25,
+          "Parent": -1,
+          "#": 12,
+          "Var.Type": "None",
+          "Init": "",
+          "Global": false
+        },
+        {
+          "Type": "TVar",
+          "Name": "base_cost",
+          "Pos.x": 720,
+          "Pos.y": 25,
+          "Parent": -1,
+          "#": 13,
+          "Var.Type": "Int",
+          "Init": "0",
+          "Global": false
+        },
+        {
+          "Type": "TVar",
+          "Name": "variant_chosen",
+          "Pos.x": 870,
+          "Pos.y": 25,
+          "Parent": -1,
+          "#": 14,
+          "Var.Type": "Int",
+          "Init": "0",
+          "Global": false
+        },
+        {
+          "Type": "TVar",
+          "Name": "bonus_num",
+          "Pos.x": 1080,
+          "Pos.y": 25,
+          "Parent": -1,
+          "#": 15,
+          "Var.Type": "Int",
+          "Init": "0",
+          "Global": false
+        },
+        {
+          "Type": "TVar",
+          "Name": "num_planets_needed",
+          "Pos.x": 1230,
+          "Pos.y": 25,
+          "Parent": -1,
+          "#": 16,
+          "Var.Type": "Int",
+          "Init": "30",
+          "Global": false
+        }
+      ],
+      "Statements": [
+        {
+          "Type": "Tif",
+          "Name": "",
+          "Pos.x": 242,
+          "Pos.y": 295,
+          "Parent": -1,
+          "Code.Type": "Turn",
+          "Code": [
+            "Id(GetShipRuins(Player()))!=base_id"
+          ],
+          "#": 58
+        },
+        {
+          "Type": "Tif",
+          "Name": "",
+          "Pos.x": 212,
+          "Pos.y": 325,
+          "Parent": -1,
+          "Code.Type": "Turn",
+          "Code": [
+            "!IdToShip(base_id)"
+          ],
+          "#": 59
+        },
+        {
+          "Type": "Tif",
+          "Name": "",
+          "Pos.x": 273,
+          "Pos.y": 325,
+          "Parent": -1,
+          "Code.Type": "Turn",
+          "Code": [
+            "IdToShip(base_id)"
+          ],
+          "#": 61
+        },
+        {
+          "Type": "Tif",
+          "Name": "",
+          "Pos.x": 719,
+          "Pos.y": 295,
+          "Parent": -1,
+          "Code.Type": "Turn",
+          "Code": [
+            "Id(GetShipRuins(Player()))==base_id"
+          ],
+          "#": 62
+        },
+        {
+          "Type": "Tif",
+          "Name": "",
+          "Pos.x": 404,
+          "Pos.y": 325,
+          "Parent": -1,
+          "Code.Type": "Turn",
+          "Code": [
+            "hull_available==3"
+          ],
+          "#": 64
+        },
+        {
+          "Type": "Tif",
+          "Name": "",
+          "Pos.x": 524,
+          "Pos.y": 325,
+          "Parent": -1,
+          "Code.Type": "Turn",
+          "Code": [
+            "hull_available==2"
+          ],
+          "#": 65
+        },
+        {
+          "Type": "Tif",
+          "Name": "",
+          "Pos.x": 644,
+          "Pos.y": 325,
+          "Parent": -1,
+          "Code.Type": "Turn",
+          "Code": [
+            "hull_available==1"
+          ],
+          "#": 66
+        },
+        {
+          "Type": "Tif",
+          "Name": "",
+          "Pos.x": 804,
+          "Pos.y": 325,
+          "Parent": -1,
+          "Code.Type": "Turn",
+          "Code": [
+            "message_research_complete"
+          ],
+          "#": 67
+        },
+        {
+          "Type": "Tif",
+          "Name": "",
+          "Pos.x": 25,
+          "Pos.y": 385,
+          "Parent": -1,
+          "Code.Type": "Turn",
+          "Code": [
+            "(GetNodesFromShip(Player())+RangerBaseNodes(Player()))>=nodes_needed"
+          ],
+          "#": 68
+        },
+        {
+          "Type": "Tif",
+          "Name": "",
+          "Pos.x": 724,
+          "Pos.y": 475,
+          "Parent": -1,
+          "Code.Type": "Turn",
+          "Code": [
+            "ArrayDim(hull_variants)>1"
+          ],
+          "#": 71
+        },
+        {
+          "Type": "Tif",
+          "Name": "",
+          "Pos.x": 724,
+          "Pos.y": 505,
+          "Parent": -1,
+          "Code.Type": "Turn",
+          "Code": [
+            "ShipMoney(Player())>=base_cost*hull_costs[hull_variants[1]]"
+          ],
+          "#": 72
+        },
+        {
+          "Type": "Tif",
+          "Name": "",
+          "Pos.x": 764,
+          "Pos.y": 475,
+          "Parent": -1,
+          "Code.Type": "Turn",
+          "Code": [
+            "ArrayDim(hull_variants)>2"
+          ],
+          "#": 73
+        },
+        {
+          "Type": "Tif",
+          "Name": "",
+          "Pos.x": 764,
+          "Pos.y": 505,
+          "Parent": -1,
+          "Code.Type": "Turn",
+          "Code": [
+            "ShipMoney(Player())>=base_cost*hull_costs[hull_variants[2]]"
+          ],
+          "#": 74
+        },
+        {
+          "Type": "Tif",
+          "Name": "",
+          "Pos.x": 804,
+          "Pos.y": 475,
+          "Parent": -1,
+          "Code.Type": "Turn",
+          "Code": [
+            "ArrayDim(hull_variants)>3"
+          ],
+          "#": 75
+        },
+        {
+          "Type": "Tif",
+          "Name": "",
+          "Pos.x": 804,
+          "Pos.y": 505,
+          "Parent": -1,
+          "Code.Type": "Turn",
+          "Code": [
+            "ShipMoney(Player())>=base_cost*hull_costs[hull_variants[3]]"
+          ],
+          "#": 76
+        },
+        {
+          "Type": "Tif",
+          "Name": "",
+          "Pos.x": 364,
+          "Pos.y": 385,
+          "Parent": -1,
+          "Code.Type": "Turn",
+          "Code": [
+            "ArrayDim(hull_variants)>1"
+          ],
+          "#": 77
+        },
+        {
+          "Type": "Tif",
+          "Name": "",
+          "Pos.x": 364,
+          "Pos.y": 415,
+          "Parent": -1,
+          "Code.Type": "Turn",
+          "Code": [
+            "ShipMoney(Player())>=base_cost*hull_costs[hull_variants[1]]"
+          ],
+          "#": 78
+        },
+        {
+          "Type": "Tif",
+          "Name": "",
+          "Pos.x": 404,
+          "Pos.y": 385,
+          "Parent": -1,
+          "Code.Type": "Turn",
+          "Code": [
+            "ArrayDim(hull_variants)>2"
+          ],
+          "#": 79
+        },
+        {
+          "Type": "Tif",
+          "Name": "",
+          "Pos.x": 404,
+          "Pos.y": 415,
+          "Parent": -1,
+          "Code.Type": "Turn",
+          "Code": [
+            "ShipMoney(Player())>=base_cost*hull_costs[hull_variants[2]]"
+          ],
+          "#": 80
+        },
+        {
+          "Type": "Tif",
+          "Name": "",
+          "Pos.x": 444,
+          "Pos.y": 385,
+          "Parent": -1,
+          "Code.Type": "Turn",
+          "Code": [
+            "ArrayDim(hull_variants)>3"
+          ],
+          "#": 81
+        },
+        {
+          "Type": "Tif",
+          "Name": "",
+          "Pos.x": 444,
+          "Pos.y": 415,
+          "Parent": -1,
+          "Code.Type": "Turn",
+          "Code": [
+            "ShipMoney(Player())>=base_cost*hull_costs[hull_variants[3]]"
+          ],
+          "#": 82
+        },
+        {
+          "Type": "Tif",
+          "Name": "",
+          "Pos.x": 484,
+          "Pos.y": 385,
+          "Parent": -1,
+          "Code.Type": "Turn",
+          "Code": [
+            "ArrayDim(hull_variants)>1"
+          ],
+          "#": 83
+        },
+        {
+          "Type": "Tif",
+          "Name": "",
+          "Pos.x": 484,
+          "Pos.y": 415,
+          "Parent": -1,
+          "Code.Type": "Turn",
+          "Code": [
+            "ShipMoney(Player())>=base_cost*hull_costs[hull_variants[1]]"
+          ],
+          "#": 84
+        },
+        {
+          "Type": "Tif",
+          "Name": "",
+          "Pos.x": 524,
+          "Pos.y": 385,
+          "Parent": -1,
+          "Code.Type": "Turn",
+          "Code": [
+            "ArrayDim(hull_variants)>2"
+          ],
+          "#": 85
+        },
+        {
+          "Type": "Tif",
+          "Name": "",
+          "Pos.x": 524,
+          "Pos.y": 415,
+          "Parent": -1,
+          "Code.Type": "Turn",
+          "Code": [
+            "ShipMoney(Player())>=base_cost*hull_costs[hull_variants[2]]"
+          ],
+          "#": 86
+        },
+        {
+          "Type": "Tif",
+          "Name": "",
+          "Pos.x": 564,
+          "Pos.y": 385,
+          "Parent": -1,
+          "Code.Type": "Turn",
+          "Code": [
+            "ArrayDim(hull_variants)>3"
+          ],
+          "#": 87
+        },
+        {
+          "Type": "Tif",
+          "Name": "",
+          "Pos.x": 564,
+          "Pos.y": 415,
+          "Parent": -1,
+          "Code.Type": "Turn",
+          "Code": [
+            "ShipMoney(Player())>=base_cost*hull_costs[hull_variants[3]]"
+          ],
+          "#": 88
+        },
+        {
+          "Type": "Tif",
+          "Name": "",
+          "Pos.x": 604,
+          "Pos.y": 385,
+          "Parent": -1,
+          "Code.Type": "Turn",
+          "Code": [
+            "ArrayDim(hull_variants)>1"
+          ],
+          "#": 89
+        },
+        {
+          "Type": "Tif",
+          "Name": "",
+          "Pos.x": 604,
+          "Pos.y": 415,
+          "Parent": -1,
+          "Code.Type": "Turn",
+          "Code": [
+            "ShipMoney(Player())>=base_cost*hull_costs[hull_variants[1]]"
+          ],
+          "#": 90
+        },
+        {
+          "Type": "Tif",
+          "Name": "",
+          "Pos.x": 644,
+          "Pos.y": 385,
+          "Parent": -1,
+          "Code.Type": "Turn",
+          "Code": [
+            "ArrayDim(hull_variants)>2"
+          ],
+          "#": 91
+        },
+        {
+          "Type": "Tif",
+          "Name": "",
+          "Pos.x": 644,
+          "Pos.y": 415,
+          "Parent": -1,
+          "Code.Type": "Turn",
+          "Code": [
+            "ShipMoney(Player())>=base_cost*hull_costs[hull_variants[2]]"
+          ],
+          "#": 92
+        },
+        {
+          "Type": "Tif",
+          "Name": "",
+          "Pos.x": 684,
+          "Pos.y": 385,
+          "Parent": -1,
+          "Code.Type": "Turn",
+          "Code": [
+            "ArrayDim(hull_variants)>3"
+          ],
+          "#": 93
+        },
+        {
+          "Type": "Tif",
+          "Name": "",
+          "Pos.x": 684,
+          "Pos.y": 415,
+          "Parent": -1,
+          "Code.Type": "Turn",
+          "Code": [
+            "ShipMoney(Player())>=base_cost*hull_costs[hull_variants[3]]"
+          ],
+          "#": 94
+        }
+      ]
+    }
+  ],
+  "Visual.Links": [
+    {
+      "Type": "TGraphLink",
+      "Begin": 18,
+      "End": 17,
+      "Nom": 0,
+      "Arrow": true
+    },
+    {
+      "Type": "TGraphLink",
+      "Begin": 19,
+      "End": 17,
+      "Nom": 0,
+      "Arrow": true
+    },
+    {
+      "Type": "TGraphLink",
+      "Begin": 21,
+      "End": 19,
+      "Nom": 0,
+      "Arrow": true
+    },
+    {
+      "Type": "TGraphLink",
+      "Begin": 21,
+      "End": 26,
+      "Nom": 0,
+      "Arrow": true
+    },
+    {
+      "Type": "TGraphLink",
+      "Begin": 27,
+      "End": 29,
+      "Nom": 0,
+      "Arrow": true
+    },
+    {
+      "Type": "TGraphLink",
+      "Begin": 28,
+      "End": 58,
+      "Nom": 0,
+      "Arrow": true
+    },
+    {
+      "Type": "TGraphLink",
+      "Begin": 58,
+      "End": 59,
+      "Nom": 0,
+      "Arrow": true
+    },
+    {
+      "Type": "TGraphLink",
+      "Begin": 59,
+      "End": 60,
+      "Nom": 0,
+      "Arrow": true
+    },
+    {
+      "Type": "TGraphLink",
+      "Begin": 60,
+      "End": 41,
+      "Nom": 0,
+      "Arrow": true
+    },
+    {
+      "Type": "TGraphLink",
+      "Begin": 58,
+      "End": 61,
+      "Nom": 0,
+      "Arrow": true
+    },
+    {
+      "Type": "TGraphLink",
+      "Begin": 61,
+      "End": 40,
+      "Nom": 0,
+      "Arrow": true
+    },
+    {
+      "Type": "TGraphLink",
+      "Begin": 28,
+      "End": 62,
+      "Nom": 0,
+      "Arrow": true
+    },
+    {
+      "Type": "TGraphLink",
+      "Begin": 62,
+      "End": 63,
+      "Nom": 0,
+      "Arrow": true
+    },
+    {
+      "Type": "TGraphLink",
+      "Begin": 62,
+      "End": 64,
+      "Nom": 0,
+      "Arrow": true
+    },
+    {
+      "Type": "TGraphLink",
+      "Begin": 64,
+      "End": 36,
+      "Nom": 0,
+      "Arrow": true
+    },
+    {
+      "Type": "TGraphLink",
+      "Begin": 62,
+      "End": 65,
+      "Nom": 0,
+      "Arrow": true
+    },
+    {
+      "Type": "TGraphLink",
+      "Begin": 65,
+      "End": 37,
+      "Nom": 0,
+      "Arrow": true
+    },
+    {
+      "Type": "TGraphLink",
+      "Begin": 62,
+      "End": 66,
+      "Nom": 0,
+      "Arrow": true
+    },
+    {
+      "Type": "TGraphLink",
+      "Begin": 66,
+      "End": 38,
+      "Nom": 0,
+      "Arrow": true
+    },
+    {
+      "Type": "TGraphLink",
+      "Begin": 62,
+      "End": 67,
+      "Nom": 0,
+      "Arrow": true
+    },
+    {
+      "Type": "TGraphLink",
+      "Begin": 67,
+      "End": 33,
+      "Nom": 0,
+      "Arrow": true
+    },
+    {
+      "Type": "TGraphLink",
+      "Begin": 29,
+      "End": 43,
+      "Nom": 0,
+      "Arrow": true
+    },
+    {
+      "Type": "TGraphLink",
+      "Begin": 30,
+      "End": 68,
+      "Nom": 0,
+      "Arrow": true
+    },
+    {
+      "Type": "TGraphLink",
+      "Begin": 68,
+      "End": 44,
+      "Nom": 0,
+      "Arrow": true
+    },
+    {
+      "Type": "TGraphLink",
+      "Begin": 30,
+      "End": 45,
+      "Nom": 0,
+      "Arrow": true
+    },
+    {
+      "Type": "TGraphLink",
+      "Begin": 31,
+      "End": 46,
+      "Nom": 0,
+      "Arrow": true
+    },
+    {
+      "Type": "TGraphLink",
+      "Begin": 32,
+      "End": 69,
+      "Nom": 0,
+      "Arrow": true
+    },
+    {
+      "Type": "TGraphLink",
+      "Begin": 32,
+      "End": 47,
+      "Nom": 0,
+      "Arrow": true
+    },
+    {
+      "Type": "TGraphLink",
+      "Begin": 33,
+      "End": 48,
+      "Nom": 0,
+      "Arrow": true
+    },
+    {
+      "Type": "TGraphLink",
+      "Begin": 33,
+      "End": 49,
+      "Nom": 0,
+      "Arrow": true
+    },
+    {
+      "Type": "TGraphLink",
+      "Begin": 34,
+      "End": 70,
+      "Nom": 0,
+      "Arrow": true
+    },
+    {
+      "Type": "TGraphLink",
+      "Begin": 34,
+      "End": 50,
+      "Nom": 0,
+      "Arrow": true
+    },
+    {
+      "Type": "TGraphLink",
+      "Begin": 35,
+      "End": 71,
+      "Nom": 0,
+      "Arrow": true
+    },
+    {
+      "Type": "TGraphLink",
+      "Begin": 71,
+      "End": 72,
+      "Nom": 0,
+      "Arrow": true
+    },
+    {
+      "Type": "TGraphLink",
+      "Begin": 72,
+      "End": 55,
+      "Nom": 0,
+      "Arrow": true
+    },
+    {
+      "Type": "TGraphLink",
+      "Begin": 35,
+      "End": 73,
+      "Nom": 0,
+      "Arrow": true
+    },
+    {
+      "Type": "TGraphLink",
+      "Begin": 73,
+      "End": 74,
+      "Nom": 0,
+      "Arrow": true
+    },
+    {
+      "Type": "TGraphLink",
+      "Begin": 74,
+      "End": 54,
+      "Nom": 0,
+      "Arrow": true
+    },
+    {
+      "Type": "TGraphLink",
+      "Begin": 35,
+      "End": 75,
+      "Nom": 0,
+      "Arrow": true
+    },
+    {
+      "Type": "TGraphLink",
+      "Begin": 75,
+      "End": 76,
+      "Nom": 0,
+      "Arrow": true
+    },
+    {
+      "Type": "TGraphLink",
+      "Begin": 76,
+      "End": 53,
+      "Nom": 0,
+      "Arrow": true
+    },
+    {
+      "Type": "TGraphLink",
+      "Begin": 35,
+      "End": 52,
+      "Nom": 0,
+      "Arrow": true
+    },
+    {
+      "Type": "TGraphLink",
+      "Begin": 36,
+      "End": 77,
+      "Nom": 0,
+      "Arrow": true
+    },
+    {
+      "Type": "TGraphLink",
+      "Begin": 77,
+      "End": 78,
+      "Nom": 0,
+      "Arrow": true
+    },
+    {
+      "Type": "TGraphLink",
+      "Begin": 78,
+      "End": 55,
+      "Nom": 0,
+      "Arrow": true
+    },
+    {
+      "Type": "TGraphLink",
+      "Begin": 36,
+      "End": 79,
+      "Nom": 0,
+      "Arrow": true
+    },
+    {
+      "Type": "TGraphLink",
+      "Begin": 79,
+      "End": 80,
+      "Nom": 0,
+      "Arrow": true
+    },
+    {
+      "Type": "TGraphLink",
+      "Begin": 80,
+      "End": 54,
+      "Nom": 0,
+      "Arrow": true
+    },
+    {
+      "Type": "TGraphLink",
+      "Begin": 36,
+      "End": 81,
+      "Nom": 0,
+      "Arrow": true
+    },
+    {
+      "Type": "TGraphLink",
+      "Begin": 81,
+      "End": 82,
+      "Nom": 0,
+      "Arrow": true
+    },
+    {
+      "Type": "TGraphLink",
+      "Begin": 82,
+      "End": 53,
+      "Nom": 0,
+      "Arrow": true
+    },
+    {
+      "Type": "TGraphLink",
+      "Begin": 36,
+      "End": 52,
+      "Nom": 0,
+      "Arrow": true
+    },
+    {
+      "Type": "TGraphLink",
+      "Begin": 37,
+      "End": 83,
+      "Nom": 0,
+      "Arrow": true
+    },
+    {
+      "Type": "TGraphLink",
+      "Begin": 83,
+      "End": 84,
+      "Nom": 0,
+      "Arrow": true
+    },
+    {
+      "Type": "TGraphLink",
+      "Begin": 84,
+      "End": 55,
+      "Nom": 0,
+      "Arrow": true
+    },
+    {
+      "Type": "TGraphLink",
+      "Begin": 37,
+      "End": 85,
+      "Nom": 0,
+      "Arrow": true
+    },
+    {
+      "Type": "TGraphLink",
+      "Begin": 85,
+      "End": 86,
+      "Nom": 0,
+      "Arrow": true
+    },
+    {
+      "Type": "TGraphLink",
+      "Begin": 86,
+      "End": 54,
+      "Nom": 0,
+      "Arrow": true
+    },
+    {
+      "Type": "TGraphLink",
+      "Begin": 37,
+      "End": 87,
+      "Nom": 0,
+      "Arrow": true
+    },
+    {
+      "Type": "TGraphLink",
+      "Begin": 87,
+      "End": 88,
+      "Nom": 0,
+      "Arrow": true
+    },
+    {
+      "Type": "TGraphLink",
+      "Begin": 88,
+      "End": 53,
+      "Nom": 0,
+      "Arrow": true
+    },
+    {
+      "Type": "TGraphLink",
+      "Begin": 37,
+      "End": 52,
+      "Nom": 0,
+      "Arrow": true
+    },
+    {
+      "Type": "TGraphLink",
+      "Begin": 38,
+      "End": 89,
+      "Nom": 0,
+      "Arrow": true
+    },
+    {
+      "Type": "TGraphLink",
+      "Begin": 89,
+      "End": 90,
+      "Nom": 0,
+      "Arrow": true
+    },
+    {
+      "Type": "TGraphLink",
+      "Begin": 90,
+      "End": 55,
+      "Nom": 0,
+      "Arrow": true
+    },
+    {
+      "Type": "TGraphLink",
+      "Begin": 38,
+      "End": 91,
+      "Nom": 0,
+      "Arrow": true
+    },
+    {
+      "Type": "TGraphLink",
+      "Begin": 91,
+      "End": 92,
+      "Nom": 0,
+      "Arrow": true
+    },
+    {
+      "Type": "TGraphLink",
+      "Begin": 92,
+      "End": 54,
+      "Nom": 0,
+      "Arrow": true
+    },
+    {
+      "Type": "TGraphLink",
+      "Begin": 38,
+      "End": 93,
+      "Nom": 0,
+      "Arrow": true
+    },
+    {
+      "Type": "TGraphLink",
+      "Begin": 93,
+      "End": 94,
+      "Nom": 0,
+      "Arrow": true
+    },
+    {
+      "Type": "TGraphLink",
+      "Begin": 94,
+      "End": 53,
+      "Nom": 0,
+      "Arrow": true
+    },
+    {
+      "Type": "TGraphLink",
+      "Begin": 38,
+      "End": 52,
+      "Nom": 0,
+      "Arrow": true
+    },
+    {
+      "Type": "TGraphLink",
+      "Begin": 39,
+      "End": 51,
+      "Nom": 0,
+      "Arrow": true
+    },
+    {
+      "Type": "TGraphLink",
+      "Begin": 40,
+      "End": 56,
+      "Nom": 0,
+      "Arrow": true
+    },
+    {
+      "Type": "TGraphLink",
+      "Begin": 41,
+      "End": 57,
+      "Nom": 0,
+      "Arrow": true
+    },
+    {
+      "Type": "TGraphLink",
+      "Begin": 42,
+      "End": 50,
+      "Nom": 0,
+      "Arrow": true
+    },
+    {
+      "Type": "TGraphLink",
+      "Begin": 43,
+      "End": 30,
+      "Nom": 0,
+      "Arrow": true
+    },
+    {
+      "Type": "TGraphLink",
+      "Begin": 44,
+      "End": 32,
+      "Nom": 0,
+      "Arrow": true
+    },
+    {
+      "Type": "TGraphLink",
+      "Begin": 45,
+      "End": 31,
+      "Nom": 0,
+      "Arrow": true
+    },
+    {
+      "Type": "TGraphLink",
+      "Begin": 48,
+      "End": 95,
+      "Nom": 0,
+      "Arrow": true
+    },
+    {
+      "Type": "TGraphLink",
+      "Begin": 95,
+      "End": 35,
+      "Nom": 0,
+      "Arrow": true
+    },
+    {
+      "Type": "TGraphLink",
+      "Begin": 49,
+      "End": 34,
+      "Nom": 0,
+      "Arrow": true
+    },
+    {
+      "Type": "TGraphLink",
+      "Begin": 52,
+      "End": 42,
+      "Nom": 0,
+      "Arrow": true
+    },
+    {
+      "Type": "TGraphLink",
+      "Begin": 53,
+      "End": 96,
+      "Nom": 0,
+      "Arrow": true
+    },
+    {
+      "Type": "TGraphLink",
+      "Begin": 96,
+      "End": 39,
+      "Nom": 0,
+      "Arrow": true
+    },
+    {
+      "Type": "TGraphLink",
+      "Begin": 54,
+      "End": 97,
+      "Nom": 0,
+      "Arrow": true
+    },
+    {
+      "Type": "TGraphLink",
+      "Begin": 97,
+      "End": 39,
+      "Nom": 0,
+      "Arrow": true
+    },
+    {
+      "Type": "TGraphLink",
+      "Begin": 55,
+      "End": 98,
+      "Nom": 0,
+      "Arrow": true
+    },
+    {
+      "Type": "TGraphLink",
+      "Begin": 98,
+      "End": 39,
+      "Nom": 0,
+      "Arrow": true
+    }
+  ],
+  "Rect.Text": [
+    {
+      "Type": "TGraphRectText",
+      "Rect.Left": 632,
+      "Rect.Top": -268,
+      "Rect.Right": 1339,
+      "Rect.Bottom": -80,
+      "FStyle": 0,
+      "FColor": 10710818,
+      "BStyle": 0,
+      "BColor": 14474460,
+      "BSize": 1,
+      "BCoef": "0.300000011920929",
+      "AlignX": 0,
+      "AlignY": 0,
+      "AlignRect": false,
+      "Text": "SCR Decompiling PC_destroyer\r\n\r\nChangeState(...) -> Link to StateName\r\nDChange(...) -> Link to DMsg.Num\r\nDAdd(...) -> Link to AMsg.Num",
+      "Color": 16777215,
+      "Font": "Segoe UI",
+      "FontSize": 10,
+      "fsBold": true,
+      "fsItalic": false,
+      "fsUnderline": false
+    }
+  ],
+  "GraphPoint.Count": 99,
+  "GraphLink.Count": 89,
+  "Variables.Count": 17,
+  "Stars.Count": 1,
+  "Planets.Count": 1,
+  "Ships.Count": 1,
+  "States.Count": 1,
+  "Groups.Count": 1,
+  "Places.Count": 0,
+  "Items.Count": 1,
+  "Ethers.Count": 0,
+  "Dialogs.Count": 2,
+  "DialogMessages.Count": 14,
+  "DialogAnswers.Count": 15,
+  "Operations.Count": 12,
+  "Statements.Count": 33,
+  "Loops.Count": 0
+}
