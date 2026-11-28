@@ -8,5 +8,5 @@
 
 **Только для Universe Redux 1.6.**
 
-[Скачать накопительный архив фиксов Redux 1.6](https://github.com/cheniska/Space-Rangers-Mods/releases/download/redux-v1.6-fixes-2026-11-27/Universe_Redux_1.6_Fixes_2026-11-27.7z)
+[Скачать накопительный архив фиксов Redux 1.6](https://github.com/cheniska/Space-Rangers-Mods/releases/download/redux/Universe_Redux_1.6_Fixes_2026-11-27.7z)
 
