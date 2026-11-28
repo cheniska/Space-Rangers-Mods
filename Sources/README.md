@@ -7,6 +7,7 @@
 - [Redux](Redux/Mods/)
 - [Reflection](Reflection/Mods/)
 - [Community Mods](Community/Mods/)
+- [Solar](Solar/Mods/)
 
 Доступные нативные исходники Redux лежат рядом с конфигами и RSON соответствующего мода.
 
