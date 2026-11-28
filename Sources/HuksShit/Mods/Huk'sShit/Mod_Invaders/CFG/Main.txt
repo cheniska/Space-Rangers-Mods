@@ -1,0 +1,808 @@
+Data ^{
+    Race ^{
+        Color ^{
+            AMod_Invaders=255,130,0
+        }
+        Emblem ^{
+            2AMod_Invaders=Alpha,Graphicks.Emblem
+        }
+    }
+    SE ^{
+        Item ^{
+            AMod_Invaders0 ^{
+                1Image=Bm.Container.16_0
+                2Image=Bm.Container.20_0
+                ImageMap=Bm.Container.Map0
+                PosZ=Item
+            }
+            AMod_Invaders1 ^{
+                1Image=Bm.Container.20_0
+                2Image=Bm.Container.25_0
+                ImageMap=Bm.Container.Map0
+                PosZ=Item
+            }
+            AMod_Invaders2 ^{
+                1Image=Bm.Container.25_0
+                2Image=Bm.Container.32_0
+                ImageMap=Bm.Container.Map0
+                PosZ=Item
+            }
+            AMod_Invaders3 ^{
+                1Image=Bm.Container.32_0
+                2Image=Bm.Container.38_0
+                ImageMap=Bm.Container.Map0
+                PosZ=Item
+            }
+            AMod_InvadersParts0_0 ^{
+                1Image=Bm.Container.2AMod_InvadersParts_1_0
+                2Image=Bm.Container.2AMod_InvadersParts_1_0
+                ImageMap=Bm.Container.Map0
+                PosZ=Item
+            }
+            AMod_InvadersParts0_1 ^{
+                1Image=Bm.Container.2AMod_InvadersParts_1_0
+                2Image=Bm.Container.2AMod_InvadersParts_1_0
+                ImageMap=Bm.Container.Map0
+                PosZ=Item
+            }
+            AMod_InvadersParts0_2 ^{
+                1Image=Bm.Container.2AMod_InvadersParts_1_1
+                2Image=Bm.Container.2AMod_InvadersParts_1_1
+                ImageMap=Bm.Container.Map0
+                PosZ=Item
+            }
+            AMod_InvadersParts0_3 ^{
+                1Image=Bm.Container.2AMod_InvadersParts_1_1
+                2Image=Bm.Container.2AMod_InvadersParts_1_1
+                ImageMap=Bm.Container.Map0
+                PosZ=Item
+            }
+            AMod_InvadersParts0_4 ^{
+                1Image=Bm.Container.2AMod_InvadersParts_1_2
+                2Image=Bm.Container.2AMod_InvadersParts_1_2
+                ImageMap=Bm.Container.Map0
+                PosZ=Item
+            }
+            AMod_InvadersParts1_0 ^{
+                1Image=Bm.Container.2AMod_InvadersParts_2_0
+                2Image=Bm.Container.2AMod_InvadersParts_2_0
+                ImageMap=Bm.Container.Map0
+                PosZ=Item
+            }
+            AMod_InvadersParts1_1 ^{
+                1Image=Bm.Container.2AMod_InvadersParts_2_0
+                2Image=Bm.Container.2AMod_InvadersParts_2_0
+                ImageMap=Bm.Container.Map0
+                PosZ=Item
+            }
+            AMod_InvadersParts1_2 ^{
+                1Image=Bm.Container.2AMod_InvadersParts_2_0
+                2Image=Bm.Container.2AMod_InvadersParts_2_0
+                ImageMap=Bm.Container.Map0
+                PosZ=Item
+            }
+            AMod_InvadersParts1_3 ^{
+                1Image=Bm.Container.2AMod_InvadersParts_2_0
+                2Image=Bm.Container.2AMod_InvadersParts_2_0
+                ImageMap=Bm.Container.Map0
+                PosZ=Item
+            }
+            AMod_InvadersParts1_4 ^{
+                1Image=Bm.Container.2AMod_InvadersParts_2_1
+                2Image=Bm.Container.2AMod_InvadersParts_2_1
+                ImageMap=Bm.Container.Map0
+                PosZ=Item
+            }
+            AMod_InvadersParts2_0 ^{
+                1Image=Bm.Container.2AMod_InvadersParts_2_1
+                2Image=Bm.Container.2AMod_InvadersParts_2_1
+                ImageMap=Bm.Container.Map0
+                PosZ=Item
+            }
+            AMod_InvadersParts2_1 ^{
+                1Image=Bm.Container.2AMod_InvadersParts_2_1
+                2Image=Bm.Container.2AMod_InvadersParts_2_1
+                ImageMap=Bm.Container.Map0
+                PosZ=Item
+            }
+            AMod_InvadersParts2_2 ^{
+                1Image=Bm.Container.2AMod_InvadersParts_2_1
+                2Image=Bm.Container.2AMod_InvadersParts_2_1
+                ImageMap=Bm.Container.Map0
+                PosZ=Item
+            }
+            AMod_InvadersParts2_3 ^{
+                1Image=Bm.Container.2AMod_InvadersParts_2_2
+                2Image=Bm.Container.2AMod_InvadersParts_2_2
+                ImageMap=Bm.Container.Map0
+                PosZ=Item
+            }
+            AMod_InvadersParts2_4 ^{
+                1Image=Bm.Container.2AMod_InvadersParts_2_2
+                2Image=Bm.Container.2AMod_InvadersParts_2_2
+                ImageMap=Bm.Container.Map0
+                PosZ=Item
+            }
+            AMod_InvadersParts3_0 ^{
+                1Image=Bm.Container.2AMod_InvadersParts_3_0
+                2Image=Bm.Container.2AMod_InvadersParts_3_0
+                ImageMap=Bm.Container.Map0
+                PosZ=Item
+            }
+            AMod_InvadersParts3_1 ^{
+                1Image=Bm.Container.2AMod_InvadersParts_3_0
+                2Image=Bm.Container.2AMod_InvadersParts_3_0
+                ImageMap=Bm.Container.Map0
+                PosZ=Item
+            }
+            AMod_InvadersParts3_2 ^{
+                1Image=Bm.Container.2AMod_InvadersParts_3_1
+                2Image=Bm.Container.2AMod_InvadersParts_3_1
+                ImageMap=Bm.Container.Map0
+                PosZ=Item
+            }
+            AMod_InvadersParts3_3 ^{
+                1Image=Bm.Container.2AMod_InvadersParts_3_1
+                2Image=Bm.Container.2AMod_InvadersParts_3_1
+                ImageMap=Bm.Container.Map0
+                PosZ=Item
+            }
+            AMod_InvadersParts3_4 ^{
+                1Image=Bm.Container.2AMod_InvadersParts_3_2
+                2Image=Bm.Container.2AMod_InvadersParts_3_2
+                ImageMap=Bm.Container.Map0
+                PosZ=Item
+            }
+            ArksItem ^{
+                1Image=Bm.Items.2ArksItem_a
+                2Image=Bm.Items.2ArksItem_a
+                ImageMap=Bm.Container.Map0
+                PosZ=Item
+            }
+        }
+        Missile ^{
+            wArksGun4 ^{
+                PosZ=Missile
+            }
+        }
+        Ruins ^{
+            AMod_InvadersRuin ^{
+                Image=Graphicks.ArkBaseN
+                ImageI=GI,Graphicks.ArkBaseN_gi
+                ImageMap=GI,Graphicks.MapArkBaseN
+                PosZ=Ruins
+            }
+            InvadersArk ^{
+                Image=Graphicks.ArkBaseN
+                ImageI=GI,Graphicks.ArkBaseN_gi
+                ImageMap=GI,Graphicks.MapArkBaseN
+                PosZ=Ruins
+            }
+        }
+        Ship ^{
+            Akrin ^{
+                InvadersHull1 ^{
+                    1ImageP=GI,Graphicks.Ship01N_gi
+                    2ImageP=GI,Graphicks.Ship01N_gi
+                    Anim ^{
+                        0=1,[70,48-100]
+                        Normal=2,[70,0-48]
+                    }
+                    AnimS ^{
+                        Normal=2,[70,0-48]
+                    }
+                    Image=Graphicks.Ship01N_hai
+                    ImageMap=Graphicks.MapArkShipN
+                    ImageS=Graphicks.Ship01N_hai_s
+                    PosZ=Ship
+                    SizeImage=128,128
+                    SmeCenterImage=64,64
+                    SmeImage=64,64
+                    SmeImageMap=2,2
+                    StateTime=2000
+                    Tail1=64,90
+                }
+                InvadersHull2 ^{
+                    1ImageP=GI,Graphicks.Ship02N_gi
+                    2ImageP=GI,Graphicks.Ship02N_gi
+                    Anim ^{
+                        0=1,[70,48-100]
+                        Normal=2,[70,0-48]
+                    }
+                    AnimS ^{
+                        Normal=2,[70,0-48]
+                    }
+                    Image=Graphicks.Ship02N_hai
+                    ImageMap=Graphicks.MapArkShipN
+                    ImageS=Graphicks.Ship02N_hai_s
+                    PosZ=Ship
+                    SizeImage=128,128
+                    SmeCenterImage=64,64
+                    SmeImage=64,64
+                    SmeImageMap=2,2
+                    StateTime=2000
+                }
+                InvadersHull3 ^{
+                    1ImageP=GI,Graphicks.Ship03N_gi
+                    2ImageP=GI,Graphicks.Ship03N_gi
+                    Anim ^{
+                        0=1,[70,48-100]
+                        Normal=2,[70,0-48]
+                    }
+                    AnimS ^{
+                        Normal=2,[70,0-48]
+                    }
+                    Image=Graphicks.Ship03N_hai
+                    ImageMap=Graphicks.MapArkShipN
+                    ImageS=Graphicks.Ship03N_hai_s
+                    PosZ=Ship
+                    SizeImage=128,128
+                    SmeCenterImage=64,64
+                    SmeImage=64,64
+                    SmeImageMap=2,2
+                    StateTime=2000
+                }
+            }
+        }
+        Sound ^{
+            Loop ^{
+                Ruins ^{
+                    ArkBaseN ^{
+                        10=3000,Sound.LoopRuins01
+                    }
+                }
+            }
+            Rnd ^{
+                Ruins ^{
+                    ArkBaseN ^{
+                    }
+                }
+            }
+        }
+    }
+    Script ^{
+        mod_invaders=1,Script.mod_invaders
+    }
+}
+ML ^{
+    CustomForm_Mod_Invaders ^{
+        Border=0,0,1024,767
+        CodeBeforeRun ^{
+            01=unknown block=newarray(1); int param=CT('Balance_Panel.Mod_Invaders_text.UpgradeIMBA',block), a=0; str name='';
+            02=for(a=0;a<param;a=a+1)
+            03 ^{
+                01=name=GetVariableName(block[a]);
+                02=CustomInterfaceText('CFMIDV_'+name,DeleteTags(Format(block[a],'<value>',UICheckElement('StarMap','MIDV_'+name,'Text'))));
+            }
+            04=name='InvadersStarMax';
+            05=CustomInterfaceText('CFMIDV_'+name,DeleteTags(Format(CT('Balance_Panel.Mod_Invaders_text.InvadersStarMax'),'<value>',UICheckElement('StarMap','MIDV_'+name,'Text'))));
+            06=name='IMBA_CostCreate';
+            07=CustomInterfaceText('CFMIDV_'+name,DeleteTags(Format(CT('Balance_Panel.Mod_Invaders_text.IMBA_CostCreate'),'<value>',UICheckElement('StarMap','MIDV_'+name,'Text'))));
+        }
+        Panel ^{
+            GraphButton ^{
+                ImageDown=GI,Bm.FormMessageBox.2OkD
+                ImageNormal=GI,Bm.FormMessageBox.2OkN
+                ImageNormalA=GI,Bm.FormMessageBox.2OkA
+                Kind=Normal
+                KindHit=Rect
+                Name=CustomForm_Mod_Invaders_Exit
+                OnPressCode ^{
+                    01=CloseCustomForm(1);
+                }
+                Pos=422,560,0
+                Size=79,34
+                Style=Style.GB.SoundNormal
+            }
+            Image ^{
+                Image=GI,Bm.FormAchievements.BG
+                Pos=0,0,10
+                Size=904,620
+            }
+            Label ^{
+                AlignX=Center
+                Font=Font.2Ranger
+                Pos=338,6,0
+                Size=233,25
+                Text=Mod_Invaders
+                TextColor=50,240,252
+            }
+            Name=CustomForm_Mod_Invaders_MainPanel
+            Panel ^{
+                GraphButton ^{
+                    Caption=Balance_Panel.Mod_Invaders_text.IMBA_btn
+                    CaptionColorDown=0,0,0
+                    CaptionColorDownA=0,0,0
+                    CaptionColorNormal=0,0,0
+                    CaptionColorNormalA=0,0,0
+                    CaptionShadow=1
+                    CaptionShadowColorDown=151,225,238
+                    CaptionShadowColorDownA=151,225,238
+                    CaptionShadowColorNormal=151,225,238
+                    CaptionShadowColorNormalA=151,225,238
+                    CaptionSme=0,-2,1,-1
+                    Font=Font.2Ranger
+                    ImageDown=GI,Bm.FormPlanet.2QuestButD
+                    ImageNormal=GI,Bm.FormPlanet.2QuestButN
+                    ImageNormalA=GI,Bm.FormPlanet.2QuestButA
+                    Kind=Normal
+                    KindHit=Rect
+                    Name=UpgradeIMBA_MinDmg_Btn
+                    OnPressCode ^{
+                        01=str name='UpgradeIMBA_MinDmg';
+                        02=int value=TextBox(CT('Balance_Panel.Mod_Invaders_text.IMBA_btn_text_box'));
+                        02=if(value==0)exit;
+                        03=InterfaceText('StarMap','MIDV_'+name,value);
+                        04=str text=CT('Balance_Panel.Mod_Invaders_text.UpgradeIMBA.'+name);
+                        05=text=DeleteTags(Format(text,'<value>',value));
+                        06=CustomInterfaceText('CFMIDV_'+name,text);
+                    }
+                    Pos=270,70,-1
+                    Size=116,21
+                    Style=Style.GB.SoundNormal
+                }
+                GraphButton ^{
+                    Caption=Balance_Panel.Mod_Invaders_text.IMBA_btn
+                    CaptionColorDown=0,0,0
+                    CaptionColorDownA=0,0,0
+                    CaptionColorNormal=0,0,0
+                    CaptionColorNormalA=0,0,0
+                    CaptionShadow=1
+                    CaptionShadowColorDown=151,225,238
+                    CaptionShadowColorDownA=151,225,238
+                    CaptionShadowColorNormal=151,225,238
+                    CaptionShadowColorNormalA=151,225,238
+                    CaptionSme=0,-2,1,-1
+                    Font=Font.2Ranger
+                    ImageDown=GI,Bm.FormPlanet.2QuestButD
+                    ImageNormal=GI,Bm.FormPlanet.2QuestButN
+                    ImageNormalA=GI,Bm.FormPlanet.2QuestButA
+                    Kind=Normal
+                    KindHit=Rect
+                    Name=UpgradeIMBA_MaxDmg_Btn
+                    OnPressCode ^{
+                        01=str name='UpgradeIMBA_MaxDmg';
+                        02=int value=TextBox(CT('Balance_Panel.Mod_Invaders_text.IMBA_btn_text_box'));
+                        02=if(value==0)exit;
+                        03=InterfaceText('StarMap','MIDV_'+name,value);
+                        04=str text=CT('Balance_Panel.Mod_Invaders_text.UpgradeIMBA.'+name);
+                        05=text=DeleteTags(Format(text,'<value>',value));
+                        06=CustomInterfaceText('CFMIDV_'+name,text);
+                    }
+                    Pos=270,90,-1
+                    Size=116,21
+                    Style=Style.GB.SoundNormal
+                }
+                GraphButton ^{
+                    Caption=Balance_Panel.Mod_Invaders_text.IMBA_btn
+                    CaptionColorDown=0,0,0
+                    CaptionColorDownA=0,0,0
+                    CaptionColorNormal=0,0,0
+                    CaptionColorNormalA=0,0,0
+                    CaptionShadow=1
+                    CaptionShadowColorDown=151,225,238
+                    CaptionShadowColorDownA=151,225,238
+                    CaptionShadowColorNormal=151,225,238
+                    CaptionShadowColorNormalA=151,225,238
+                    CaptionSme=0,-2,1,-1
+                    Font=Font.2Ranger
+                    ImageDown=GI,Bm.FormPlanet.2QuestButD
+                    ImageNormal=GI,Bm.FormPlanet.2QuestButN
+                    ImageNormalA=GI,Bm.FormPlanet.2QuestButA
+                    Kind=Normal
+                    KindHit=Rect
+                    Name=UpgradeIMBA_Range_Btn
+                    OnPressCode ^{
+                        01=str name='UpgradeIMBA_Range';
+                        02=int value=TextBox(CT('Balance_Panel.Mod_Invaders_text.IMBA_btn_text_box'));
+                        02=if(value==0)exit;
+                        03=InterfaceText('StarMap','MIDV_'+name,value);
+                        04=str text=CT('Balance_Panel.Mod_Invaders_text.UpgradeIMBA.'+name);
+                        05=text=DeleteTags(Format(text,'<value>',value));
+                        06=CustomInterfaceText('CFMIDV_'+name,text);
+                    }
+                    Pos=270,110,-1
+                    Size=116,21
+                    Style=Style.GB.SoundNormal
+                }
+                GraphButton ^{
+                    Caption=Balance_Panel.Mod_Invaders_text.IMBA_btn
+                    CaptionColorDown=0,0,0
+                    CaptionColorDownA=0,0,0
+                    CaptionColorNormal=0,0,0
+                    CaptionColorNormalA=0,0,0
+                    CaptionShadow=1
+                    CaptionShadowColorDown=151,225,238
+                    CaptionShadowColorDownA=151,225,238
+                    CaptionShadowColorNormal=151,225,238
+                    CaptionShadowColorNormalA=151,225,238
+                    CaptionSme=0,-2,1,-1
+                    Font=Font.2Ranger
+                    ImageDown=GI,Bm.FormPlanet.2QuestButD
+                    ImageNormal=GI,Bm.FormPlanet.2QuestButN
+                    ImageNormalA=GI,Bm.FormPlanet.2QuestButA
+                    Kind=Normal
+                    KindHit=Rect
+                    Name=UpgradeIMBA_Cost_Btn
+                    OnPressCode ^{
+                        01=str name='UpgradeIMBA_Cost';
+                        02=int value=TextBox(CT('Balance_Panel.Mod_Invaders_text.IMBA_btn_text_box'));
+                        02=if(value==0)exit;
+                        03=InterfaceText('StarMap','MIDV_'+name,value);
+                        04=str text=CT('Balance_Panel.Mod_Invaders_text.UpgradeIMBA.'+name);
+                        05=text=DeleteTags(Format(text,'<value>',value));
+                        06=CustomInterfaceText('CFMIDV_'+name,text);
+                    }
+                    Pos=270,130,-1
+                    Size=116,21
+                    Style=Style.GB.SoundNormal
+                }
+                GraphButton ^{
+                    Caption=Balance_Panel.Mod_Invaders_text.IMBA_btn
+                    CaptionColorDown=0,0,0
+                    CaptionColorDownA=0,0,0
+                    CaptionColorNormal=0,0,0
+                    CaptionColorNormalA=0,0,0
+                    CaptionShadow=1
+                    CaptionShadowColorDown=151,225,238
+                    CaptionShadowColorDownA=151,225,238
+                    CaptionShadowColorNormal=151,225,238
+                    CaptionShadowColorNormalA=151,225,238
+                    CaptionSme=0,-2,1,-1
+                    Font=Font.2Ranger
+                    ImageDown=GI,Bm.FormPlanet.2QuestButD
+                    ImageNormal=GI,Bm.FormPlanet.2QuestButN
+                    ImageNormalA=GI,Bm.FormPlanet.2QuestButA
+                    Kind=Normal
+                    KindHit=Rect
+                    Name=UpgradeIMBA_Size_Btn
+                    OnPressCode ^{
+                        01=str name='UpgradeIMBA_Size';
+                        02=int value=TextBox(CT('Balance_Panel.Mod_Invaders_text.IMBA_btn_text_box'));
+                        02=if(value==0)exit;
+                        03=InterfaceText('StarMap','MIDV_'+name,value);
+                        04=str text=CT('Balance_Panel.Mod_Invaders_text.UpgradeIMBA.'+name);
+                        05=text=DeleteTags(Format(text,'<value>',value));
+                        06=CustomInterfaceText('CFMIDV_'+name,text);
+                    }
+                    Pos=270,150,-1
+                    Size=116,21
+                    Style=Style.GB.SoundNormal
+                }
+                GraphButton ^{
+                    Caption=Balance_Panel.Mod_Invaders_text.IMBA_standart
+                    CaptionColorDown=0,0,0
+                    CaptionColorDownA=0,0,0
+                    CaptionColorNormal=0,0,0
+                    CaptionColorNormalA=0,0,0
+                    CaptionShadow=1
+                    CaptionShadowColorDown=151,225,238
+                    CaptionShadowColorDownA=151,225,238
+                    CaptionShadowColorNormal=151,225,238
+                    CaptionShadowColorNormalA=151,225,238
+                    CaptionSme=0,-2,1,-1
+                    Font=Font.2Ranger
+                    ImageDown=GI,Bm.FormPlanet.2QuestButD
+                    ImageNormal=GI,Bm.FormPlanet.2QuestButN
+                    ImageNormalA=GI,Bm.FormPlanet.2QuestButA
+                    Kind=Normal
+                    KindHit=Rect
+                    Name=UpgradeIMBA_Stndrt_Btn
+                    OnPressCode ^{
+                        01=unknown block=newarray(1); int param=CT('Balance_Panel.Mod_Invaders_text.UpgradeIMBA',block), a=0, default=0; str name='';
+                        02=for(a=0;a<param;a=a+1)
+                        03 ^{
+                            01=name=GetVariableName(block[a]);
+                            02=default=CT('Mod_Invaders.DefaultValue.'+name);
+                            03=CustomInterfaceText('CFMIDV_'+name,DeleteTags(Format(block[a],'<value>',default)));
+                            04=InterfaceText('StarMap','MIDV_'+name,default);
+                        }
+                    }
+                    Pos=30,180,-1
+                    Size=116,21
+                    Style=Style.GB.SoundNormal
+                }
+                Label ^{
+                    AlignX=Left
+                    Font=Font.2Normal
+                    Pos=30,50,-1
+                    Size=233,25
+                    Text=Balance_Panel.Mod_Invaders_text.IMBA_up
+                    TextColor=0,0,0
+                }
+                Label ^{
+                    AlignX=Left
+                    Font=Font.2Normal
+                    Name=CFMIDV_UpgradeIMBA_MinDmg
+                    Pos=40,70,-1
+                    Size=233,25
+                    Text=Balance_Panel.Mod_Invaders_text.UpgradeIMBA_MinDmg
+                    TextColor=0,0,0
+                }
+                Label ^{
+                    AlignX=Left
+                    Font=Font.2Normal
+                    Name=CFMIDV_UpgradeIMBA_MaxDmg
+                    Pos=40,90,-1
+                    Size=233,25
+                    Text=Balance_Panel.Mod_Invaders_text.UpgradeIMBA_MaxDmg
+                    TextColor=0,0,0
+                }
+                Label ^{
+                    AlignX=Left
+                    Font=Font.2Normal
+                    Name=CFMIDV_UpgradeIMBA_Range
+                    Pos=40,110,-1
+                    Size=233,25
+                    Text=Balance_Panel.Mod_Invaders_text.UpgradeIMBA_Range
+                    TextColor=0,0,0
+                }
+                Label ^{
+                    AlignX=Left
+                    Font=Font.2Normal
+                    Name=CFMIDV_UpgradeIMBA_Cost
+                    Pos=40,130,-1
+                    Size=233,25
+                    Text=Balance_Panel.Mod_Invaders_text.UpgradeIMBA_Cost
+                    TextColor=0,0,0
+                }
+                Label ^{
+                    AlignX=Left
+                    Font=Font.2Normal
+                    Name=CFMIDV_UpgradeIMBA_Size
+                    Pos=40,150,-1
+                    Size=233,25
+                    Text=Balance_Panel.Mod_Invaders_text.UpgradeIMBA_Size
+                    TextColor=0,0,0
+                }
+                Name=UpgradeIMBA
+                Pos=0,0,0
+                Size=900,600
+            }
+            Panel ^{
+                GraphButton ^{
+                    Caption=Balance_Panel.Mod_Invaders_text.IMBA_btn
+                    CaptionColorDown=0,0,0
+                    CaptionColorDownA=0,0,0
+                    CaptionColorNormal=0,0,0
+                    CaptionColorNormalA=0,0,0
+                    CaptionShadow=1
+                    CaptionShadowColorDown=151,225,238
+                    CaptionShadowColorDownA=151,225,238
+                    CaptionShadowColorNormal=151,225,238
+                    CaptionShadowColorNormalA=151,225,238
+                    CaptionSme=0,-2,1,-1
+                    Font=Font.2Ranger
+                    ImageDown=GI,Bm.FormPlanet.2QuestButD
+                    ImageNormal=GI,Bm.FormPlanet.2QuestButN
+                    ImageNormalA=GI,Bm.FormPlanet.2QuestButA
+                    Kind=Normal
+                    KindHit=Rect
+                    Name=InvadersStarMax_Btn
+                    OnPressCode ^{
+                        01=str name='InvadersStarMax';
+                        02=int value=TextBox(CT('Balance_Panel.Mod_Invaders_text.IMBA_btn_text_box'));
+                        02=if(value==0)exit;
+                        03=InterfaceText('StarMap','MIDV_'+name,value);
+                        04=str text=CT('Balance_Panel.Mod_Invaders_text.'+name);
+                        05=text=DeleteTags(Format(text,'<value>',value));
+                        06=CustomInterfaceText('CFMIDV_'+name,text);
+                    }
+                    Pos=0,30,-1
+                    Size=116,21
+                    Style=Style.GB.SoundNormal
+                }
+                GraphButton ^{
+                    Caption=Balance_Panel.Mod_Invaders_text.IMBA_standart
+                    CaptionColorDown=0,0,0
+                    CaptionColorDownA=0,0,0
+                    CaptionColorNormal=0,0,0
+                    CaptionColorNormalA=0,0,0
+                    CaptionShadow=1
+                    CaptionShadowColorDown=151,225,238
+                    CaptionShadowColorDownA=151,225,238
+                    CaptionShadowColorNormal=151,225,238
+                    CaptionShadowColorNormalA=151,225,238
+                    CaptionSme=0,-2,1,-1
+                    Font=Font.2Ranger
+                    ImageDown=GI,Bm.FormPlanet.2QuestButD
+                    ImageNormal=GI,Bm.FormPlanet.2QuestButN
+                    ImageNormalA=GI,Bm.FormPlanet.2QuestButA
+                    Kind=Normal
+                    KindHit=Rect
+                    Name=InvadersStarMax_Stndrt_Btn
+                    OnPressCode ^{
+                        01=str name='InvadersStarMax';
+                        02=int value=CT('Mod_Invaders.DefaultValue.'+name);
+                        03=InterfaceText('StarMap','MIDV_'+name,value);
+                        04=str text=CT('Balance_Panel.Mod_Invaders_text.'+name);
+                        05=text=DeleteTags(Format(text,'<value>',value));
+                        06=CustomInterfaceText('CFMIDV_'+name,text);
+                    }
+                    Pos=0,60,-1
+                    Size=116,21
+                    Style=Style.GB.SoundNormal
+                }
+                Label ^{
+                    AlignX=Left
+                    Font=Font.2Normal
+                    Name=CFMIDV_InvadersStarMax
+                    Pos=0,0,-1
+                    Size=500,25
+                    Text=Balance_Panel.Mod_Invaders_text.InvadersStarMax
+                    TextColor=0,0,0
+                }
+                Name=UpgradeIMBA
+                Pos=30,210,0
+                Size=900,600
+            }
+            Panel ^{
+                GraphButton ^{
+                    Caption=Balance_Panel.Mod_Invaders_text.IMBA_btn
+                    CaptionColorDown=0,0,0
+                    CaptionColorDownA=0,0,0
+                    CaptionColorNormal=0,0,0
+                    CaptionColorNormalA=0,0,0
+                    CaptionShadow=1
+                    CaptionShadowColorDown=151,225,238
+                    CaptionShadowColorDownA=151,225,238
+                    CaptionShadowColorNormal=151,225,238
+                    CaptionShadowColorNormalA=151,225,238
+                    CaptionSme=0,-2,1,-1
+                    Font=Font.2Ranger
+                    ImageDown=GI,Bm.FormPlanet.2QuestButD
+                    ImageNormal=GI,Bm.FormPlanet.2QuestButN
+                    ImageNormalA=GI,Bm.FormPlanet.2QuestButA
+                    Kind=Normal
+                    KindHit=Rect
+                    Name=IMBA_CostCreate_Btn
+                    OnPressCode ^{
+                        01=str name='IMBA_CostCreate';
+                        02=int value=TextBox(CT('Balance_Panel.Mod_Invaders_text.IMBA_btn_text_box'));
+                        02=if(value==0)exit;
+                        03=InterfaceText('StarMap','MIDV_'+name,value);
+                        04=str text=CT('Balance_Panel.Mod_Invaders_text.'+name);
+                        05=text=DeleteTags(Format(text,'<value>',value));
+                        06=CustomInterfaceText('CFMIDV_'+name,text);
+                    }
+                    Pos=320,0,-1
+                    Size=116,21
+                    Style=Style.GB.SoundNormal
+                }
+                GraphButton ^{
+                    Caption=Balance_Panel.Mod_Invaders_text.IMBA_standart
+                    CaptionColorDown=0,0,0
+                    CaptionColorDownA=0,0,0
+                    CaptionColorNormal=0,0,0
+                    CaptionColorNormalA=0,0,0
+                    CaptionShadow=1
+                    CaptionShadowColorDown=151,225,238
+                    CaptionShadowColorDownA=151,225,238
+                    CaptionShadowColorNormal=151,225,238
+                    CaptionShadowColorNormalA=151,225,238
+                    CaptionSme=0,-2,1,-1
+                    Font=Font.2Ranger
+                    ImageDown=GI,Bm.FormPlanet.2QuestButD
+                    ImageNormal=GI,Bm.FormPlanet.2QuestButN
+                    ImageNormalA=GI,Bm.FormPlanet.2QuestButA
+                    Kind=Normal
+                    KindHit=Rect
+                    Name=IMBA_CostCreate_Stndrt_Btn
+                    OnPressCode ^{
+                        01=str name='IMBA_CostCreate';
+                        02=int value=CT('Mod_Invaders.DefaultValue.'+name);
+                        03=InterfaceText('StarMap','MIDV_'+name,value);
+                        04=str text=CT('Balance_Panel.Mod_Invaders_text.'+name);
+                        05=text=DeleteTags(Format(text,'<value>',value));
+                        06=CustomInterfaceText('CFMIDV_'+name,text);
+                    }
+                    Pos=0,20,-1
+                    Size=116,21
+                    Style=Style.GB.SoundNormal
+                }
+                Label ^{
+                    AlignX=Left
+                    Font=Font.2Normal
+                    Name=CFMIDV_IMBA_CostCreate
+                    Pos=0,0,-1
+                    Size=500,25
+                    Text=Balance_Panel.Mod_Invaders_text.InvadersStarMax
+                    TextColor=0,0,0
+                }
+                Name=IMBA_CostCreate
+                Pos=420,50,0
+                Size=900,600
+            }
+            Pos=50,50,0
+            PosAutoCorrection=True
+            PosAutoCorrectionXCoef=0.5
+            PosAutoCorrectionYCoef=0.5
+            Size=904,650
+        }
+    }
+    StarMap ^{
+        Panel ^{
+            Panel ^{
+                Mod_Invaders_Value ^{
+                    Panel ^{
+                        Active=False
+                        Label ^{
+                            AlignX=Center
+                            AlignY=Center
+                            Name=MIDV_InvadersStarMax
+                            Pos=0,0,0
+                            Size=500,30
+                            Text=Mod_Invaders.DefaultValue.InvadersStarMax
+                            TextColor=0,0,0
+                        }
+                        Label ^{
+                            AlignX=Center
+                            AlignY=Center
+                            Name=MIDV_UpgradeIMBA_Cost
+                            Pos=0,0,0
+                            Size=500,30
+                            Text=Mod_Invaders.DefaultValue.UpgradeIMBA_Cost
+                            TextColor=0,0,0
+                        }
+                        Label ^{
+                            AlignX=Center
+                            AlignY=Center
+                            Name=MIDV_UpgradeIMBA_MaxDmg
+                            Pos=0,0,0
+                            Size=500,30
+                            Text=Mod_Invaders.DefaultValue.UpgradeIMBA_MaxDmg
+                            TextColor=0,0,0
+                        }
+                        Label ^{
+                            AlignX=Center
+                            AlignY=Center
+                            Name=MIDV_UpgradeIMBA_MinDmg
+                            Pos=0,0,0
+                            Size=500,30
+                            Text=Mod_Invaders.DefaultValue.UpgradeIMBA_MinDmg
+                            TextColor=0,0,0
+                        }
+                        Label ^{
+                            AlignX=Center
+                            AlignY=Center
+                            Name=MIDV_UpgradeIMBA_Range
+                            Pos=0,0,0
+                            Size=500,30
+                            Text=Mod_Invaders.DefaultValue.UpgradeIMBA_Range
+                            TextColor=0,0,0
+                        }
+                        Label ^{
+                            AlignX=Center
+                            AlignY=Center
+                            Name=MIDV_UpgradeIMBA_Size
+                            Pos=0,0,0
+                            Size=500,30
+                            Text=Mod_Invaders.DefaultValue.UpgradeIMBA_Size
+                            TextColor=0,0,0
+                        }
+                        Label ^{
+                            AlignX=Center
+                            AlignY=Center
+                            Name=MIDV_InvadersStarMax
+                            Pos=0,0,0
+                            Size=500,30
+                            Text=Mod_Invaders.DefaultValue.InvadersStarMax
+                            TextColor=0,0,0
+                        }
+                        Label ^{
+                            AlignX=Center
+                            AlignY=Center
+                            Name=MIDV_IMBA_CostCreate
+                            Pos=0,0,0
+                            Size=500,30
+                            Text=Mod_Invaders.DefaultValue.IMBA_CostCreate
+                            TextColor=0,0,0
+                        }
+                        Pos=0,0,0
+                        Size=500,500
+                    }
+                }
+            }
+        }
+    }
+}

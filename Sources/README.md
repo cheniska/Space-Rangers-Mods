@@ -8,6 +8,8 @@
 - [Reflection](Reflection/Mods/)
 - [Community Mods](Community/Mods/)
 - [Solar](Solar/Mods/)
+- [Solyanka](Solyanka/Mods/) — частично поддерживаемый сборник, включая AnotherMods.
+- [Huk’sShit](HuksShit/Mods/) — частично поддерживаемый сборник.
 
 Доступные нативные исходники Redux лежат рядом с конфигами и RSON соответствующего мода.
 

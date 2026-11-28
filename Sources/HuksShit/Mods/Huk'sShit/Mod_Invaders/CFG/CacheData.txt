@@ -1,0 +1,72 @@
+Bm ^{
+    Captain ^{
+        2AMod_Invaders0a=mods\Huk'sShit\Mod_Invaders\Data\Graphicks\InvadersFace.gai
+        2AMod_Invaders0i=mods\Huk'sShit\Mod_Invaders\Data\Graphicks\InvadersFace.gi
+    }
+    Container ^{
+        2AMod_InvadersParts_1_0=mods\Huk'sShit\Mod_Invaders\Data\Graphicks\remains1_0.gai
+        2AMod_InvadersParts_1_1=mods\Huk'sShit\Mod_Invaders\Data\Graphicks\remains1_1.gai
+        2AMod_InvadersParts_1_2=mods\Huk'sShit\Mod_Invaders\Data\Graphicks\remains1_2.gai
+        2AMod_InvadersParts_2_0=mods\Huk'sShit\Mod_Invaders\Data\Graphicks\remains2_0.gai
+        2AMod_InvadersParts_2_1=mods\Huk'sShit\Mod_Invaders\Data\Graphicks\remains2_1.gai
+        2AMod_InvadersParts_2_2=mods\Huk'sShit\Mod_Invaders\Data\Graphicks\remains2_2.gai
+        2AMod_InvadersParts_3_0=mods\Huk'sShit\Mod_Invaders\Data\Graphicks\remains3_0.gai
+        2AMod_InvadersParts_3_1=mods\Huk'sShit\Mod_Invaders\Data\Graphicks\remains3_1.gai
+        2AMod_InvadersParts_3_2=mods\Huk'sShit\Mod_Invaders\Data\Graphicks\remains3_2.gai
+    }
+    Items ^{
+        2AMod_InvadersParts0_s=mods\Huk'sShit\Mod_Invaders\Data\Graphicks\remains.gi
+        2AMod_InvadersParts1_s=mods\Huk'sShit\Mod_Invaders\Data\Graphicks\remains.gi
+        2AMod_InvadersParts2_s=mods\Huk'sShit\Mod_Invaders\Data\Graphicks\remains.gi
+        2AMod_InvadersParts3_s=mods\Huk'sShit\Mod_Invaders\Data\Graphicks\remains.gi
+        2AMod_InvadersParts4_s=mods\Huk'sShit\Mod_Invaders\Data\Graphicks\remains.gi
+        2ArksItem_a=mods\Huk'sShit\Mod_Invaders\Data\Graphicks\ArksItem.gai
+        2HullInvadersHull1i=mods\Huk'sShit\Mod_Invaders\Data\Graphicks\ship01.gi
+        2HullInvadersHull2i=mods\Huk'sShit\Mod_Invaders\Data\Graphicks\ship02.gi
+        2HullInvadersHull3i=mods\Huk'sShit\Mod_Invaders\Data\Graphicks\ship03.gi
+        2WArksGun1a=mods\Huk'sShit\Mod_Invaders\Data\Graphicks\gun1_a.gai
+        2WArksGun1i=mods\Huk'sShit\Mod_Invaders\Data\Graphicks\gun1_i.gi
+        2WArksGun1s=mods\Huk'sShit\Mod_Invaders\Data\Graphicks\gun1_s.gi
+        2WArksGun2a=mods\Huk'sShit\Mod_Invaders\Data\Graphicks\gun2_a.gai
+        2WArksGun2i=mods\Huk'sShit\Mod_Invaders\Data\Graphicks\gun2_i.gi
+        2WArksGun2s=mods\Huk'sShit\Mod_Invaders\Data\Graphicks\gun2_s.gi
+        2WArksGun4a=mods\Huk'sShit\Mod_Invaders\Data\Graphicks\gun4_a.gai
+        2WArksGun4i=mods\Huk'sShit\Mod_Invaders\Data\Graphicks\gun4_i.gi
+        2WArksGun4s=mods\Huk'sShit\Mod_Invaders\Data\Graphicks\gun4_s.gi
+    }
+    ItemsUseless ^{
+        2ArksItem_s=mods\Huk'sShit\Mod_Invaders\Data\Graphicks\ArksItem.gi
+    }
+    Missile ^{
+        wArksGun4=mods\Huk'sShit\Mod_Invaders\Data\Graphicks\gun4_m.hai
+        wArksGun4_2i=mods\Huk'sShit\Mod_Invaders\Data\Graphicks\gun4_m.gi
+    }
+    MsgPlayer ^{
+        2Galaxy_AlertA=mods\Huk'sShit\Mod_Invaders\Data\Graphicks\2Galaxy_Alert_A.gi
+        2Galaxy_AlertD=mods\Huk'sShit\Mod_Invaders\Data\Graphicks\2Galaxy_Alert_D.gi
+        2Galaxy_AlertN=mods\Huk'sShit\Mod_Invaders\Data\Graphicks\2Galaxy_Alert_N.gi
+    }
+}
+Graphicks ^{
+    ArkBaseN=mods\Huk'sShit\Mod_Invaders\Data\Graphicks\ArkBase.gai
+    ArkBaseN_gi=mods\Huk'sShit\Mod_Invaders\Data\Graphicks\ArkBase.gi
+    Emblem=mods\Huk'sShit\Mod_Invaders\Data\Graphicks\Emblem.png
+    MapArkBaseN=mods\Huk'sShit\Mod_Invaders\Data\Graphicks\MapArkBase.gi
+    MapArkShipN=mods\Huk'sShit\Mod_Invaders\Data\Graphicks\MapArkShip.png
+    Ship01N_gi=mods\Huk'sShit\Mod_Invaders\Data\Graphicks\ship01.gi
+    Ship01N_hai=mods\Huk'sShit\Mod_Invaders\Data\Graphicks\ship01.hai
+    Ship01N_hai_s=mods\Huk'sShit\Mod_Invaders\Data\Graphicks\ship01s.hai
+    Ship02N_gi=mods\Huk'sShit\Mod_Invaders\Data\Graphicks\ship02.gi
+    Ship02N_hai=mods\Huk'sShit\Mod_Invaders\Data\Graphicks\ship02.hai
+    Ship02N_hai_s=mods\Huk'sShit\Mod_Invaders\Data\Graphicks\ship02s.hai
+    Ship03N_gi=mods\Huk'sShit\Mod_Invaders\Data\Graphicks\ship03.gi
+    Ship03N_hai=mods\Huk'sShit\Mod_Invaders\Data\Graphicks\ship03.hai
+    Ship03N_hai_s=mods\Huk'sShit\Mod_Invaders\Data\Graphicks\ship03s.hai
+}
+Script ^{
+    mod_invaders=Mods\Huk'sShit\Mod_Invaders\data\Script\mod_invaders.scr
+}
+Sound ^{
+    bugaga=mods\Huk'sShit\Mod_Invaders\Data\Sound\bugaga.wav
+    shotArksGun4=sound\shot\shot03.wav
+}
